@@ -285,5 +285,5 @@
  "zdog234",
  "zzag"
   ],
-  "message": "We require contributors to sign our Contributor License Agreement, and we don\"t have one on file for {{usersWithoutCLA}}. In order for us to review and merge your code, please e-sign the PDF at https://conda.io/en/latest/contributing.html#conda-contributor-license-agreement.  We then need to manually verify your signature.  We will ping the bot to refresh the PR status when we have confirmed your signature."
+  "message": "We require contributors to sign our Contributor License Agreement, and we don\'t have one on file for {{usersWithoutCLA}}. In order for us to review and merge your code, please e-sign the PDF at https://conda.io/en/latest/contributing.html#conda-contributor-license-agreement.  We then need to manually verify your signature.  We will ping the bot to refresh the PR status when we have confirmed your signature."
 }
