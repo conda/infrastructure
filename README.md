@@ -13,6 +13,6 @@ Feel also free to:
   * Share ideas about new features and changes you'd like to see
   * Engage with other community members
 
-Please start by creating a discusson first before you open an issue directly.
+Please start by creating a discussion first before you open an issue directly.
 
-Welcome others and are open-minded. Remember that this is a community we build together 💪.
+Welcome others and be open-minded. Remember that this is a community we build together 💪.
