@@ -1,0 +1,23 @@
+name: Sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/boards.yml
+      - .github/workflows/issues.yml
+      - .github/workflows/labels.yml
+
+env:
+  DRY_RUN: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: BetaHuhn/repo-file-sync-action@v1.16.3
+        with:
+          GH_PAT: ${{ secrets.SYNC_TOKEN }}
+          PR_LABELS: false
+          COMMIT_BODY: Sync from infra

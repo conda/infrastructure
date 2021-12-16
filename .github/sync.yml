@@ -1,0 +1,8 @@
+group:
+  - repos: |
+      conda/conda
+      conda/conda-build
+    files: |
+      .github/workflows/boards.yml
+      .github/workflows/issues.yml
+      .github/workflows/labels.yml
