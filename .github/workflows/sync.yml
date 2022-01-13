@@ -7,6 +7,7 @@ on:
       - .github/workflows/boards.yml
       - .github/workflows/issues.yml
       - .github/workflows/labels.yml
+  workflow_dispatch:
 
 env:
   DRY_RUN: false
