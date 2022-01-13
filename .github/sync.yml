@@ -2,7 +2,10 @@ group:
   - repos: |
       conda/conda
       conda/conda-build
-    files: |
-      .github/workflows/boards.yml
-      .github/workflows/issues.yml
-      .github/workflows/labels.yml
+    files:
+      - source: .github/workflows/boards.yml
+        dest: .github/workflows/boards.yml
+      - source: .github/workflows/issues.yml
+        dest: .github/workflows/issues.yml
+      - source: .github/workflows/labels.yml
+        dest: .github/workflows/labels.yml
