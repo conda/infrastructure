@@ -47,8 +47,8 @@
 # Sync
 - name: sync::anaconda
   description: sync internally with Anaconda, Inc. ticket tracker
-  color: #ededed
-  aliases: [sync]
+  color: #5B2B76
+  aliases: []
 
 # Duplicates
 - name: duplicate
@@ -180,17 +180,21 @@
 
 # OS
 - name: os::linux
-  description: relevant to Linux systems
+  description: relevant to Linux
   color: #d0e0e3
   aliases: []
 - name: os::macos
-  description: relevant to macOS systems
+  description: relevant to macOS
   color: #d0e0e3
   aliases: [tag-macos, osx, os-mac]
 - name: os::windows
-  description: relevant to Windows systems
+  description: relevant to Windows
   color: #d0e0e3
   aliases: [tag-windows, windows, os-win]
+- name: os::wsl
+  description: relevant to Windows Subsystem for Linux
+  color: #d0e0e3
+  aliases: []
 
 # Stale
 - name: stale
