@@ -9,9 +9,6 @@ on:
       - .github/workflows/labels.yml
   workflow_dispatch:
 
-env:
-  DRY_RUN: false
-
 jobs:
   sync:
     runs-on: ubuntu-latest
