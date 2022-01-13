@@ -47,8 +47,8 @@
 # Sync
 - name: sync::anaconda
   description: sync internally with Anaconda, Inc. ticket tracker
-  color: #ededed
-  aliases: [sync]
+  color: #5B2B76
+  aliases: []
 
 # Duplicates
 - name: duplicate
