@@ -1,285 +1,285 @@
 # General
 - name: mitigated
   description: a workaround has been identified
-  color: #43b049
+  color: 43b049
   aliases: []
 - name: good-first-issue
   description: great for new contributors, code change is envisioned to be trivial/relatively straight-forward
-  color: #43b049
+  color: 43b049
   aliases: [effort-low, knowledge-low, Size-XS, Size-S]
 - name: help-wanted
   description: we don't know the solution or we especially want a community member to contribute the code change
-  color: #43b049
+  color: 43b049
   aliases: []
 - name: unreproducible
   description: we are unable to replicate the issue
-  color: #ff8c00
+  color: ff8c00
   aliases: []
 - name: off-topic
   description: not related to project, discussion is spam, or is otherwise nonsensical
-  color: #ff8c00
+  color: ff8c00
   aliases: [reso-invalid, invalid]
 - name: works-as-intended
   description: not a bug or feature is undesired; the project functions as intended
-  color: #ff8c00
+  color: ff8c00
   aliases: [reso-wontfix]
 
 # Bots
 - name: cla-signed
   description: "[bot] added once the contributor has signed the CLA"
-  color: #ededed
+  color: ededed
   aliases: []
 - name: locked
   description: "[bot] locked due to inactivity"
-  color: #85BDB1
+  color: 85BDB1
   aliases: []
 
 # Planning
 - name: backlog
   description: issue has been triaged but has not been earmarked for any upcoming release
-  color: #ededed
+  color: ededed
   aliases: [1_Backlog_Long_Term]
 - name: sprint
   description: issue has been pulled into current sprint and is actively being worked on
-  color: #ededed
+  color: ededed
   aliases: []
 
 # Sync
 - name: sync::anaconda
   description: sync internally with Anaconda, Inc. ticket tracker
-  color: #5B2B76
+  color: 5B2B76
   aliases: []
 
 # Duplicates
 - name: duplicate
   description: this is a duplicate of another issue
-  color: #0c2132
+  color: 0c2132
   aliases: [reso-duplicate]
 - name: duplicate::primary
   description: if an issue has duplicates, this is the consolidated, primary issue
-  color: #0c2132
+  color: 0c2132
   aliases: [consolidation-main]
 
 # Pending
 - name: pending::feedback
   description: indicates we are waiting on feedback from the user
-  color: #d4c5f9
+  color: d4c5f9
   aliases: [waiting-on-response]
 - name: pending::discussion
   description: contains some ongoing discussion that needs to be resolved prior to proceeding
-  color: #d4c5f9
+  color: d4c5f9
   aliases: [type-discussion, 2_Needs_Decision]
 - name: pending::release
   description: the resolution is pending a new release
-  color: #d4c5f9
+  color: d4c5f9
   aliases: []
 - name: pending::support
   description: indicates user is waiting on support from triage engineers
-  color: #5319E7
+  color: 5319E7
   aliases: []
 
 # Modifiers
 - name: ¡blocking!
   description: used to indicate a blocker for a pending release
-  color: #b60205
+  color: b60205
   aliases: []
 - name: ¡breaking!
   description: used to indicate that the code change will likely require a minor or major version bump
-  color: #b60205
+  color: b60205
   aliases: [deprecation_or_behavior_change]
 - name: ¡security!
   description: used to indicate a security vulnerability
-  color: #b60205
+  color: b60205
   aliases: [tag-security]
 - name: ¡important!
   description: used to indicate particularly notable information
-  color: #b60205
+  color: b60205
   aliases: [type-advisory]
 
 # Types
 - name: type::bug
   description: describes erroneous operation, use severity::* to classify the type
-  color: #b60205
+  color: b60205
   aliases: [bug]
 - name: type::feature
   description: request for a new feature or capability
-  color: #fff2cc
+  color: fff2cc
   aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type, "type::enhancement", "tag::features"]
 - name: type::documentation
   description: request for improved documentation
-  color: #fff2cc
+  color: fff2cc
   aliases: [tag-documentation, documentation, "tag::documentation"]
 - name: type::support
   description: neither a bug nor feature, is really just a user having questions or difficulty somewhere
-  color: #fff2cc
+  color: fff2cc
   aliases: [type-question, question, "type::question"]
 - name: type::tech-debt
   description: identified, requests removal, or resolve some technical debt
-  color: #fff2cc
+  color: fff2cc
   aliases: []
 - name: type::poc
   description: indicates some proof of concept or MVP work
-  color: #fff2cc
+  color: fff2cc
   aliases: []
 - name: type::task
   description: indicates a change that doesn't pertain to the code itself, e.g. updating CI/CQ, rebuilding package
-  color: #fff2cc
+  color: fff2cc
   aliases: [type-new_test, "type::new-test"]
 
 # Severity
 - name: severity::1
   description: blocker; broken functionality with no workaround
-  color: #b60205
+  color: b60205
   aliases: [s1, s-1]
 - name: severity::2
   description: critical; broken functionality with an unacceptably complex workaround
-  color: #ff8c00
+  color: ff8c00
   aliases: [s2, s-2]
 - name: severity::3
   description: major; broken functionality with a workaround
-  color: #fde275
+  color: fde275
   aliases: [s3, s-3]
 - name: severity::4
   description: low; functionality is inconvenient
-  color: #43b04b
+  color: 43b04b
   aliases: []
 
 # Source
 - name: source::governance
   description: created by members of the conda governance (https://github.com/conda-incubator/governance)
-  color: #c2e0c6
+  color: c2e0c6
   aliases: [source-core]
 - name: source::auto
   description: create as a result of a crash report or through other automatically reported means
-  color: #c2e0c6
+  color: c2e0c6
   aliases: [source-auto_report]
 - name: source::contributor
   description: created by a frequent contributor
-  color: #c2e0c6
+  color: c2e0c6
   aliases: []
 - name: source::qa
   description: created by or for the QA team
-  color: #c2e0c6
+  color: c2e0c6
   aliases: []
 - name: source::enterprise
   description: created by or for an enterprise customer
-  color: #c2e0c6
+  color: c2e0c6
   aliases: [source-ent, ent]
 - name: source::partner
   description: created by or for an Anaconda, Inc. partner company
-  color: #c2e0c8
+  color: c2e0c8
   aliases: []
 - name: source::anaconda
   description: created by members of Anaconda, Inc.
-  color: #c2e0c6
+  color: c2e0c6
   aliases: [source-cio, cio]
 - name: source::community
   description: catch-all for issues filed by community members
-  color: #c2e0c6
+  color: c2e0c6
   aliases: []
 
 # OS
 - name: os::linux
   description: relevant to Linux
-  color: #d0e0e3
+  color: d0e0e3
   aliases: []
 - name: os::macos
   description: relevant to macOS
-  color: #d0e0e3
+  color: d0e0e3
   aliases: [tag-macos, osx, os-mac]
 - name: os::windows
   description: relevant to Windows
-  color: #d0e0e3
+  color: d0e0e3
   aliases: [tag-windows, windows, os-win]
 - name: os::wsl
   description: relevant to Windows Subsystem for Linux
-  color: #d0e0e3
+  color: d0e0e3
   aliases: []
 
 # Stale
 - name: stale
   description: "[bot] marked as stale due to inactivity"
-  color: #E79676
+  color: E79676
   aliases: [stale-marked]
 - name: stale::recovered
   description: "[bot] recovered after being marked as stale"
-  color: #40A6B3
+  color: 40A6B3
   aliases: []
 - name: stale::closed
   description: "[bot] closed after being marked as stale"
-  color: #86A8D8
+  color: 86A8D8
   aliases: []
 
 # Hackathons
 - name: hack::HackIllinois2019
   description: issues found or suggested changes proposed during HackIllinois2019
-  color: #6ce29e
+  color: 6ce29e
   aliases: [HackIllinois2019]
 - name: hack::SciPy2017
   description: issues found or suggested changes proposed during SciPy2017
-  color: #6ce29e
+  color: 6ce29e
   aliases: [SciPy2017]
 
 # Tags
 - name: tag::performance
   description: related to degraded performance
-  color: #86C579
+  color: 86C579
   aliases: []
 - name: tag::encoding-error
   description: related to an encoding error
-  color: #86C579
+  color: 86C579
   aliases: []
 - name: tag::api
   description: related to the public API
-  color: #86C579
+  color: 86C579
   aliases: []
 - name: tag::reproducibility
   description: related to producing reproducible results
-  color: #86C579
+  color: 86C579
   aliases: [reproducibility]
 
 # Deprecated
 - name: type::packaging
   description: "[deprecated] redirect issue to https://github.com/ContinuumIO/anaconda-issues"
-  color: #888888
+  color: 888888
   aliases: []
 - name: type::installer
   description: "[deprecated] redirect issue to https://github.com/ContinuumIO/anaconda-issues"
-  color: #888888
+  color: 888888
   aliases: []
 - name: epic
   description: "[deprecated] use milestones"
-  color: #888888
+  color: 888888
   aliases: []
 - name: needs-review
   description: "[deprecated] use project boards"
-  color: #888888
+  color: 888888
   aliases: [4_Needs_Review]
 - name: in-progress
   description: "[deprecated] use project boards"
-  color: #888888
+  color: 888888
   aliases: [3_In_Progress]
 - name: effort-medium
   description: "[deprecated]"
-  color: #888888
+  color: 888888
   aliases: []
 - name: effort-high
   description: "[deprecated]"
-  color: #888888
+  color: 888888
   aliases: []
 - name: knowledge-medium
   description: "[deprecated]"
-  color: #888888
+  color: 888888
   aliases: []
 - name: knowledge-high
   description: "[deprecated]"
-  color: #888888
+  color: 888888
   aliases: []
 - name: priority-high
   description: "[deprecated] use severity::*"
-  color: #888888
+  color: 888888
   aliases: []
 - name: priority-low
   description: "[deprecated] use severity::*"
-  color: #888888
+  color: 888888
   aliases: []
