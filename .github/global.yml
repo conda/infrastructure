@@ -22,7 +22,7 @@
 - name: works-as-intended
   description: not a bug or feature is undesired; the project functions as intended
   color: "ff8c00"
-  aliases: [reso-wontfix]
+  aliases: [reso-wontfix, wontfix]
 
 # Bots
 - name: cla-signed
