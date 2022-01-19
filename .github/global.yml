@@ -2,19 +2,15 @@
 - name: mitigated
   description: a workaround has been identified
   color: "43b049"
-  aliases: []
 - name: good-first-issue
   description: great for new contributors, code change is envisioned to be trivial/relatively straight-forward
   color: "43b049"
-  aliases: [effort-low, knowledge-low, Size-XS, Size-S]
 - name: help-wanted
   description: we don't know the solution or we especially want a community member to contribute the code change
   color: "43b049"
-  aliases: []
 - name: unreproducible
   description: we are unable to replicate the issue
   color: "ff8c00"
-  aliases: []
 - name: off-topic
   description: not related to project, discussion is spam, or is otherwise nonsensical
   color: "ff8c00"
@@ -28,11 +24,9 @@
 - name: cla-signed
   description: "[bot] added once the contributor has signed the CLA"
   color: "ededed"
-  aliases: []
 - name: locked
   description: "[bot] locked due to inactivity"
   color: "85BDB1"
-  aliases: []
 
 # Planning
 - name: backlog
@@ -42,13 +36,11 @@
 - name: sprint
   description: issue has been pulled into current sprint and is actively being worked on
   color: "ededed"
-  aliases: []
 
 # Sync
 - name: sync::anaconda
   description: sync internally with Anaconda, Inc. ticket tracker
   color: "5B2B76"
-  aliases: []
 
 # Duplicates
 - name: duplicate
@@ -72,17 +64,14 @@
 - name: pending::release
   description: the resolution is pending a new release
   color: "d4c5f9"
-  aliases: []
 - name: pending::support
   description: indicates user is waiting on support from triage engineers
   color: "5319E7"
-  aliases: []
 
 # Modifiers
 - name: ¡blocking!
   description: used to indicate a blocker for a pending release
   color: "b60205"
-  aliases: []
 - name: ¡breaking!
   description: used to indicate that the code change will likely require a minor or major version bump
   color: "b60205"
@@ -104,27 +93,25 @@
 - name: type::feature
   description: request for a new feature or capability
   color: "fff2cc"
-  aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type, "type::enhancement", "tag::features"]
+  aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type]
 - name: type::documentation
   description: request for improved documentation
   color: "fff2cc"
-  aliases: [tag-documentation, documentation, "tag::documentation"]
+  aliases: [tag-documentation, documentation]
 - name: type::support
   description: neither a bug nor feature, is really just a user having questions or difficulty somewhere
   color: "fff2cc"
-  aliases: [type-question, question, "type::question"]
+  aliases: [type-question, question]
 - name: type::tech-debt
   description: identified, requests removal, or resolve some technical debt
   color: "fff2cc"
-  aliases: []
 - name: type::poc
   description: indicates some proof of concept or MVP work
   color: "fff2cc"
-  aliases: []
 - name: type::task
   description: indicates a change that doesn't pertain to the code itself, e.g. updating CI/CQ, rebuilding package
   color: "fff2cc"
-  aliases: [type-new_test, "type::new-test"]
+  aliases: [type-new_test]
 
 # Severity
 - name: severity::1
@@ -142,7 +129,6 @@
 - name: severity::4
   description: low; functionality is inconvenient
   color: "43b04b"
-  aliases: []
 
 # Source
 - name: source::governance
@@ -156,11 +142,9 @@
 - name: source::contributor
   description: created by a frequent contributor
   color: "c2e0c6"
-  aliases: []
 - name: source::qa
   description: created by or for the QA team
   color: "c2e0c6"
-  aliases: []
 - name: source::enterprise
   description: created by or for an enterprise customer
   color: "c2e0c6"
@@ -168,7 +152,6 @@
 - name: source::partner
   description: created by or for an Anaconda, Inc. partner company
   color: "c2e0c8"
-  aliases: []
 - name: source::anaconda
   description: created by members of Anaconda, Inc.
   color: "c2e0c6"
@@ -176,13 +159,11 @@
 - name: source::community
   description: catch-all for issues filed by community members
   color: "c2e0c6"
-  aliases: []
 
 # OS
 - name: os::linux
   description: relevant to Linux
   color: "d0e0e3"
-  aliases: []
 - name: os::macos
   description: relevant to macOS
   color: "d0e0e3"
@@ -194,7 +175,6 @@
 - name: os::wsl
   description: relevant to Windows Subsystem for Linux
   color: "d0e0e3"
-  aliases: []
 
 # Stale
 - name: stale
@@ -204,11 +184,9 @@
 - name: stale::recovered
   description: "[bot] recovered after being marked as stale"
   color: "40A6B3"
-  aliases: []
 - name: stale::closed
   description: "[bot] closed after being marked as stale"
   color: "86A8D8"
-  aliases: []
 
 # Hackathons
 - name: hack::HackIllinois2019
@@ -224,15 +202,12 @@
 - name: tag::performance
   description: related to degraded performance
   color: "86C579"
-  aliases: []
 - name: tag::encoding-error
   description: related to an encoding error
   color: "86C579"
-  aliases: []
 - name: tag::api
   description: related to the public API
   color: "86C579"
-  aliases: []
 - name: tag::reproducibility
   description: related to producing reproducible results
   color: "86C579"
