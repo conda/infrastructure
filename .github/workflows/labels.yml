@@ -12,8 +12,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: kenodegard/label-sync@multiple-and-pretty
-        # uses: EndBug/label-sync@v2.0.0  # pending EndBug/label-sync#106 & EndBug/label-sync#107
+      - uses: EndBug/label-sync@v2.1.0
         with:
           config-file: |
             https://raw.githubusercontent.com/conda/infra/main/.github/labels.yml
