@@ -17,7 +17,6 @@ group:
       conda/conda_build_test_recipe
       conda/constructor
       conda/cookiecutter-conda-python
-      conda/infra
       conda/issue-tracker
       conda/menuinst
       conda/pycosat
