@@ -12,6 +12,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: EndBug/label-sync@v2.1.0
         with:
           config-file: |
