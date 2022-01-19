@@ -5,7 +5,6 @@
 - name: good-first-issue
   description: great for new contributors, code change is envisioned to be trivial/relatively straight-forward
   color: "43b049"
-  aliases: [effort-low, knowledge-low, Size-XS, Size-S]
 - name: help-wanted
   description: we don't know the solution or we especially want a community member to contribute the code change
   color: "43b049"
@@ -94,15 +93,15 @@
 - name: type::feature
   description: request for a new feature or capability
   color: "fff2cc"
-  aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type, "type::enhancement", "tag::features"]
+  aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type]
 - name: type::documentation
   description: request for improved documentation
   color: "fff2cc"
-  aliases: [tag-documentation, documentation, "tag::documentation"]
+  aliases: [tag-documentation, documentation]
 - name: type::support
   description: neither a bug nor feature, is really just a user having questions or difficulty somewhere
   color: "fff2cc"
-  aliases: [type-question, question, "type::question"]
+  aliases: [type-question, question]
 - name: type::tech-debt
   description: identified, requests removal, or resolve some technical debt
   color: "fff2cc"
@@ -112,7 +111,7 @@
 - name: type::task
   description: indicates a change that doesn't pertain to the code itself, e.g. updating CI/CQ, rebuilding package
   color: "fff2cc"
-  aliases: [type-new_test, "type::new-test"]
+  aliases: [type-new_test]
 
 # Severity
 - name: severity::1
