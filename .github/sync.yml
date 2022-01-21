@@ -1,11 +1,8 @@
 group:
   - repos: |
       conda/actions
-      conda/ceps
-      conda/clabot-config
       conda/conda
       conda/conda-benchmarks
-      conda/conda-bots
       conda/conda-build
       conda/conda-content-trust
       conda/conda-docs
@@ -13,10 +10,8 @@ group:
       conda/conda-package-handling
       conda/conda-prefix-replacement
       conda/conda-verify
-      conda/conda_build_test_recipe
       conda/constructor
       conda/cookiecutter-conda-python
-      conda/issue-tracker
       conda/menuinst
       conda/pycosat
       conda/schemas
