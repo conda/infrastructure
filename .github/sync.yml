@@ -1,7 +1,20 @@
 group:
   - repos: |
+      conda/actions
       conda/conda
+      conda/conda-benchmarks
       conda/conda-build
+      conda/conda-content-trust
+      conda/conda-docs
+      conda/conda-pack
+      conda/conda-package-handling
+      conda/conda-prefix-replacement
+      conda/conda-verify
+      conda/constructor
+      conda/cookiecutter-conda-python
+      conda/menuinst
+      conda/pycosat
+      conda/schemas
     files:
       - source: .github/workflows/boards.yml
         dest: .github/workflows/boards.yml

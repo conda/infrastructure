@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - .github/sync.yml  # trigger sync if sync config is modified
       - .github/workflows/boards.yml
       - .github/workflows/issues.yml
       - .github/workflows/labels.yml
