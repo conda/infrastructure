@@ -19,5 +19,4 @@ jobs:
         with:
           GH_PAT: ${{ secrets.SYNC_TOKEN }}
           PR_LABELS: false
-          COMMIT_BODY: Sync from infra
           CONFIG_PATH: .github/sync.yml
