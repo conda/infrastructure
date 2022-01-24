@@ -1,4 +1,5 @@
 group:
+  # triaging & label syncing
   - repos: |
       conda/actions
       conda/conda
@@ -22,3 +23,27 @@ group:
         dest: .github/workflows/issues.yml
       - source: .github/workflows/labels.yml
         dest: .github/workflows/labels.yml
+  # stale syncing
+  - repos: |
+      conda/actions
+      conda/ceps
+      conda/clabot-config
+      conda/conda
+      conda/conda-benchmarks
+      conda/conda-bots
+      conda/conda-build
+      conda/conda-content-trust
+      conda/conda-docs
+      conda/conda-pack
+      conda/conda-package-handling
+      conda/conda-prefix-replacement
+      conda/conda-verify
+      conda/constructor
+      conda/cookiecutter-conda-python
+      conda/issue-tracker
+      conda/menuinst
+      conda/pycosat
+      conda/schemas
+    files:
+      - source: .github/workflows/stale.yml
+        dest: .github/workflows/stale.yml
