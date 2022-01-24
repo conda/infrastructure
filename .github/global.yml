@@ -5,9 +5,11 @@
 - name: good-first-issue
   description: great for new contributors, code change is envisioned to be trivial/relatively straight-forward
   color: "43b049"
+  aliases: ["good first issue"]
 - name: help-wanted
   description: we don't know the solution or we especially want a community member to contribute the code change
   color: "43b049"
+  aliases: ["help wanted"]
 - name: unreproducible
   description: we are unable to replicate the issue
   color: "ff8c00"
