@@ -14,27 +14,15 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - id: stale_issue
-        uses: KJ002/read-yaml@1.5
+      - id: read_yaml
+        uses: conda/actions/read-yaml@v22.2.0
         with:
-          file: .github/messages.yml
-          key-path: stale-issue
-      - id: close_issue
-        uses: KJ002/read-yaml@1.5
-        with:
-          file: .github/messages.yml
-          key-path: close-issue
-      - id: stale_pr
-        uses: KJ002/read-yaml@1.5
-        with:
-          file: .github/messages.yml
-          key-path: stale-pr
-      - id: close_pr
-        uses: KJ002/read-yaml@1.5
-        with:
-          file: .github/messages.yml
-          key-path: close-pr
+          path: .github/messages.yml
+          scopes: |
+            stale-issue: stale-issue
+            close-issue: close-issue
+            stale-pr: stale-pr
+            close-pr: close-pr
       - uses: actions/stale@v4
         id: stale
         with:
@@ -48,13 +36,13 @@ jobs:
           days-before-pr-close: 30
 
           # Comment on the staled issues
-          stale-issue-message: ${{ steps.stale_issue.outputs.data }}
+          stale-issue-message: ${{ steps.read_yaml.outputs.stale-issue }}
           # Comment on the staled issues while closed
-          close-issue-message: ${{ steps.close_issue.outputs.data }}
+          close-issue-message: ${{ steps.read_yaml.outputs.close-issue }}
           # Comment on the staled PRs
-          stale-pr-message: ${{ steps.stale_pr.outputs.data }}
+          stale-pr-message: ${{ steps.read_yaml.outputs.stale-pr }}
           # Comment on the staled PRs while closed
-          close-pr-message: ${{ steps.close_pr.outputs.data }}
+          close-pr-message: ${{ steps.read_yaml.outputs.close-pr }}
           # Label to apply on staled issues
           stale-issue-label: 'stale'
           # Label to apply on closed issues
