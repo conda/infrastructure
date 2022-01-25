@@ -17,17 +17,13 @@ jobs:
   lock:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - id: lock_issue
-        uses: KJ002/read-yaml@1.5
+      - id: read_yaml
+        uses: conda/actions/read-yaml@v22.2.0
         with:
-          file: .github/messages.yml
-          key-path: lock-issue
-      - id: lock_pr
-        uses: KJ002/read-yaml@1.5
-        with:
-          file: .github/messages.yml
-          key-path: lock-pr
+          path: .github/messages.yml
+          scopes: |
+            lock-issue: lock-issue
+            lock-pr: lock-pr
       - uses: dessant/lock-threads@v2
         with:
           # Number of days of inactivity before a closed issue is locked
@@ -39,7 +35,7 @@ jobs:
           # Labels to add before locking an issue, value must be a comma separated list of labels or ''
           issue-lock-labels: 'locked'
           # Comment to post before locking an issue
-          issue-lock-comment: ${{ steps.lock_issue.outputs.data }}
+          issue-lock-comment: ${{ steps.read_yaml.outputs.lock-issue }}
           # Reason for locking an issue, value must be one of resolved, off-topic, too heated, spam or ''
           issue-lock-reason: 'resolved'
 
@@ -52,7 +48,7 @@ jobs:
           # Labels to add before locking a pull request, value must be a comma separated list of labels or ''
           pr-lock-labels: 'locked'
           # Comment to post before locking a pull request
-          pr-lock-comment: ${{ steps.lock_pr.outputs.data }}
+          pr-lock-comment: ${{ steps.read_yaml.outputs.lock-pr }}
           # Reason for locking a pull request, value must be one of resolved, off-topic, too heated, spam or ''
           pr-lock-reason: 'resolved'
 
