@@ -58,7 +58,7 @@
 - name: pending::feedback
   description: indicates we are waiting on feedback from the user
   color: "d4c5f9"
-  aliases: [waiting-on-response]
+  aliases: [waiting-on-response, info-needed]
 - name: pending::discussion
   description: contains some ongoing discussion that needs to be resolved prior to proceeding
   color: "d4c5f9"
@@ -91,11 +91,11 @@
 - name: type::bug
   description: describes erroneous operation, use severity::* to classify the type
   color: "b60205"
-  aliases: [bug]
+  aliases: [bug, type-bug]
 - name: type::feature
   description: request for a new feature or capability
   color: "fff2cc"
-  aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type]
+  aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type, type-feature]
 - name: type::documentation
   description: request for improved documentation
   color: "fff2cc"
@@ -161,6 +161,7 @@
 - name: source::community
   description: catch-all for issues filed by community members
   color: "c2e0c6"
+  aliases: [source-community]
 
 # OS
 - name: os::linux
@@ -169,7 +170,7 @@
 - name: os::macos
   description: relevant to macOS
   color: "d0e0e3"
-  aliases: [tag-macos, osx, os-mac]
+  aliases: [tag-macos, osx, os-mac, macos]
 - name: os::windows
   description: relevant to Windows
   color: "d0e0e3"
