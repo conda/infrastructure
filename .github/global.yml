@@ -16,11 +16,11 @@
 - name: off-topic
   description: not related to project, discussion is spam, or is otherwise nonsensical
   color: "ff8c00"
-  aliases: [reso-invalid, invalid]
+  aliases: [reso-invalid, invalid, "reso:invalid"]
 - name: works-as-intended
   description: not a bug or feature is undesired; the project functions as intended
   color: "ff8c00"
-  aliases: [reso-wontfix, wontfix]
+  aliases: [reso-wontfix, wontfix, "reso:wontfix"]
 
 # Bots
 - name: cla-signed
@@ -48,7 +48,7 @@
 - name: duplicate
   description: this is a duplicate of another issue
   color: "0c2132"
-  aliases: [reso-duplicate]
+  aliases: [reso-duplicate, "reso:duplicate"]
 - name: duplicate::primary
   description: if an issue has duplicates, this is the consolidated, primary issue
   color: "0c2132"
@@ -62,7 +62,7 @@
 - name: pending::discussion
   description: contains some ongoing discussion that needs to be resolved prior to proceeding
   color: "d4c5f9"
-  aliases: [type-discussion, 2_Needs_Decision]
+  aliases: [type-discussion, 2_Needs_Decision, "type:discussion"]
 - name: pending::release
   description: the resolution is pending a new release
   color: "d4c5f9"
@@ -91,11 +91,11 @@
 - name: type::bug
   description: describes erroneous operation, use severity::* to classify the type
   color: "b60205"
-  aliases: [bug, type-bug]
+  aliases: [bug, type-bug, "Type: Bug", "type:bug"]
 - name: type::feature
   description: request for a new feature or capability
   color: "fff2cc"
-  aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type, type-feature]
+  aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type, type-feature, "Type: Feature", "type:enhancement"]
 - name: type::documentation
   description: request for improved documentation
   color: "fff2cc"
@@ -103,7 +103,7 @@
 - name: type::support
   description: neither a bug nor feature, is really just a user having questions or difficulty somewhere
   color: "fff2cc"
-  aliases: [type-question, question]
+  aliases: [type-question, question, "Type: Question", "type:question"]
 - name: type::tech-debt
   description: identified, requests removal, or resolve some technical debt
   color: "fff2cc"
@@ -113,7 +113,7 @@
 - name: type::task
   description: indicates a change that doesn't pertain to the code itself, e.g. updating CI/CQ, rebuilding package
   color: "fff2cc"
-  aliases: [type-new_test]
+  aliases: [type-new_test, "Type: Maintenance", "type:task"]
 
 # Severity
 - name: severity::1
@@ -147,34 +147,36 @@
 - name: source::qa
   description: created by or for the QA team
   color: "c2e0c6"
+  aliases: ["source:qa"]
 - name: source::enterprise
   description: created by or for an enterprise customer
   color: "c2e0c6"
-  aliases: [source-ent, ent]
+  aliases: [source-ent, ent, "source:enterprise"]
 - name: source::partner
   description: created by or for an Anaconda, Inc. partner company
   color: "c2e0c8"
 - name: source::anaconda
   description: created by members of Anaconda, Inc.
   color: "c2e0c6"
-  aliases: [source-cio, cio]
+  aliases: [source-cio, cio, "source:internal"]
 - name: source::community
   description: catch-all for issues filed by community members
   color: "c2e0c6"
-  aliases: [source-community]
+  aliases: [source-community, "source:public"]
 
 # OS
 - name: os::linux
   description: relevant to Linux
   color: "d0e0e3"
+  aliases: ["os:linux"]
 - name: os::macos
   description: relevant to macOS
   color: "d0e0e3"
-  aliases: [tag-macos, osx, os-mac, macos]
+  aliases: [tag-macos, osx, os-mac, macos, "os:osx"]
 - name: os::windows
   description: relevant to Windows
   color: "d0e0e3"
-  aliases: [tag-windows, windows, os-win]
+  aliases: [tag-windows, windows, os-win, "os:windows"]
 - name: os::wsl
   description: relevant to Windows Subsystem for Linux
   color: "d0e0e3"
