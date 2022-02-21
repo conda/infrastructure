@@ -12,6 +12,7 @@ on:
 
 jobs:
   stale:
+    if: '!github.event.repository.fork'
     runs-on: ubuntu-latest
     steps:
       - id: read_yaml
