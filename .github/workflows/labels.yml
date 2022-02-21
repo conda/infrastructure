@@ -10,6 +10,7 @@ on:
 
 jobs:
   sync:
+    if: '!github.event.repository.fork'
     runs-on: ubuntu-latest
     env:
       GLOBAL: https://raw.githubusercontent.com/conda/infra/main/.github/global.yml
