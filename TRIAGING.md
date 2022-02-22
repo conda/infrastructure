@@ -38,7 +38,7 @@ There will always be broad-scope design and architecture implementations that th
 
 ### Who triages?
 
-<!-- NOTE FOR WHILE THIS PR IS IN DRAFT MODE: This section is totally a WIP, there is no official triaging engineer team yet to link to -->
+<!-- This section is still a WIP, there is no official triaging engineer team yet to link to -->
 
 Triaging engineers are a `conda` governance [sub-team](https://github.com/conda-incubator/governance#sub-teams); they are a group of Anaconda and community members who are responsible for making decisions regarding closing issues and setting feature work priorities, amongst other triage-related tasks. The list of current members is listed [here](future link)
 
@@ -87,14 +87,32 @@ Issues are "backlogged" when they have been triaged but not yet earmarked for an
 
 ### What is the purpose of a "development sprint"?
 
-[TODO]
+After issues have been triaged and backlogged, they will eventually be moved into the "To Do" or "In Progress" columns on the [sprint board](https://github.com/orgs/conda/projects/8) and get one or more sprint cycles dedicated to them.
+
+The purpose of a development sprint is to enable a steady delivery of enhancements, features, and bug fixes by setting aside pre-determined portions of time that are meant for focusing on specifically-assigned items.
+
+Sprints also serve to focus the engineering team's attention on more accurate planning for what is to come during the entire release cycle, as well as keep the scope of development work concise. They enable the setting aside of dedicated time for the engineers to resolve any problems with the work involved, instead of pushing these problems to the end of the release cycle when there may not be any time remaining to fix issues.
+
+The `conda` team's development sprints are currently two weeks long.
 
 
 ### How does labeling work?
 
-[TODO]
+Labeling is a very important means for triaging engineers to keep track of the current state of an issue with regards to the asynchronous nature of communicating with users. Utilizing the proper labels helps to identify the severity of the issue as well as to quickly understand the current state of a discussion.
+
+Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, `[type::bug]`, `[type::feature]`, and `[type::documentation]`, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, `[os::linux]`, `[os::macos]`, and `[os::windows]`), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
+
+Please note that there are also design automation policies in place. For example, if an issue is labeled as `[pending::feedback]` and `[unreproducible]`, that issue will be auto-closed after a month of inactivity.
 
 
 ### How are new labels defined?
 
-[TODO]
+Labels are defined using a scoped syntax with an optional high-level category (_e.g._, source, tag, type, etc.) and a specific topic, much like the following:
+
+- `[topic]`
+- `[category::topic]`
+- `[category::topic-phrase]`
+
+This syntax helps with triage enforcement; at minimum, both `type` and `source` labels should be specified on each issue before moving it from "`Triaging`" to "`Ready`".
+
+There are a number of labels that have been defined for the different `conda` projects. In order to create a streamlined triaging process, label terminologies are standardized using similar (if not the same) labels.
