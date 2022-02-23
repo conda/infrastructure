@@ -18,7 +18,7 @@ jobs:
       - id: read_yaml
         uses: conda/actions/read-yaml@v22.2.0
         with:
-          path: .github/messages.yml
+          path: https://raw.githubusercontent.com/conda/infra/main/.github/messages.yml
           scopes: |
             stale-issue: stale-issue
             close-issue: close-issue
@@ -32,7 +32,7 @@ jobs:
           # Idle number of days before closing stale issues/PRs (default: 7)
           days-before-issue-close: 90
           # Idle number of days before marking PRs stale (default: 60)
-          days-before-pr-stale: 360
+          days-before-pr-stale: 365
           # Idle number of days before closing stale PRs (default: 7)
           days-before-pr-close: 30
 
