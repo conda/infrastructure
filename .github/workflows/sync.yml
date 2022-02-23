@@ -9,6 +9,7 @@ on:
       - .github/workflows/boards.yml
       - .github/workflows/issues.yml
       - .github/workflows/labels.yml
+      - .github/workflows/stale_support.yml
   workflow_dispatch:
 
 jobs:

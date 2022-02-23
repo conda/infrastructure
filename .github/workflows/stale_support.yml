@@ -1,0 +1,86 @@
+name: 'Mark Issues as Stale, Close Stale Issues'
+on:
+  issues:
+    types: [ labeled ]
+
+jobs:
+  stale:
+    if: ${{ github.event.label.name = 'support' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v4
+        id: stale
+        with:
+          # Idle number of days before marking issues stale (default: 60)
+          days-before-issue-stale: 21
+          # Idle number of days before closing stale issues/PRs (default: 7)
+          days-before-issue-close: 7
+
+          # Comment on the staled issues
+          stale-issue-message: |
+            Hi there, thank you for your contribution to Conda!
+
+            This issue has been **automatically marked as stale** because it has not had recent activity. It will be closed after one more week if no further activity occurs.
+
+            If you would like this issue to remain open, please:
+
+            1. Verify that you can still reproduce the issue in the latest version of Conda
+
+            2. Comment that the issue is still reproducible and include:
+
+              - What version of Conda you reproduced the issue on
+              - What OS and version you reproduced the issue on
+              - What steps you followed to reproduce the issue
+
+            3. It would also be helpful to have the output of the following commands available:
+
+              - `conda info`
+              - `conda config --show-sources`
+              - `conda list --show-channel-urls`
+
+            **NOTE:** If this issue was closed prematurely, please leave a comment and we will gladly reopen the issue.
+
+            In case this issue was originally about a project that is covered by the [Anaconda issue tracker](https://github.com/ContinuumIO/anaconda-issues/issues) (e.g. Anaconda, Miniconda, packages built by Anaconda, Inc. like Anaconda Navigator etc), please reopen the issue there again.
+
+            Thanks!
+          # Comment on the staled issues while closed
+          close-issue-message: |
+            Hi again!
+
+            This issue has been closed since it has not had recent activity.
+            Please don't hesitate to leave a comment if that was done prematurely.
+
+            Thank you for your contribution.
+
+          # Label to apply on staled issues
+          stale-issue-label: 'stale'
+          # Label to apply on closed issues
+          close-issue-label: 'stale::closed'
+
+          # Issues with these labels will never be considered stale
+          exempt-issue-labels: 'stale::recovered,severity::1,source::partner,¡important!,¡security!,Epic,priority-high'
+          # Issues with these labels will never be considered stale
+          exempt-pr-labels: 'stale::recovered,severity::1,source::partner,¡important!,¡security!,Epic,priority-high'
+
+          # Max number of operations per run
+          operations-per-run: ${{ secrets.STALE_OPERATIONS_PER_RUN || 100 }}
+          # Remove stale label from issues on updates/comments
+          remove-stale-when-updated: true
+
+          # Add specified labels to issues when they become unstale
+          labels-to-add-when-unstale: 'stale::recovered'
+          labels-to-remove-when-unstale: 'stale,stale::closed'
+
+          # Dry-run (default: false)
+          debug-only: false
+          # Order to get issues (default: false)
+          ascending: true
+
+          # Exempt all issues with milestones from stale
+          exempt-all-milestones: true
+
+          # Assignees on issues exempted from stale
+          exempt-assignees: mingwandroid  # <---- is this applicable here?
+
+      - name: Print outputs
+        run: echo ${{ join(steps.stale.outputs.*, ',') }}

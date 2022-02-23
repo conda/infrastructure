@@ -22,3 +22,5 @@ group:
         dest: .github/workflows/issues.yml
       - source: .github/workflows/labels.yml
         dest: .github/workflows/labels.yml
+      - source: .github/workflows/stale_support.yml
+        dest: .github/workflows/stale_support.yml
