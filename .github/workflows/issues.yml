@@ -1,6 +1,8 @@
 name: Automate Issues
 
 on:
+  # NOTE: github.event is issue_comment payload:
+  # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#issue_comment
   issue_comment:
     types: [created]
 
