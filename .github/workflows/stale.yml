@@ -23,9 +23,9 @@ jobs:
         id: stale
         with:
           # Idle number of days before marking issues stale (default: 60)
-          days-before-issue-stale: 365
+          days-before-issue-stale: ${{ (github.event.label.name == 'type::support') && 21 || 365 }}
           # Idle number of days before closing stale issues/PRs (default: 7)
-          days-before-issue-close: 90
+          days-before-issue-close: ${{ (github.event.label.name == 'type::support') && 7 || 90 }}
           # Idle number of days before marking PRs stale (default: 60)
           days-before-pr-stale: 365
           # Idle number of days before closing stale PRs (default: 7)
