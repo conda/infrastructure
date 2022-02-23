@@ -21,7 +21,7 @@ jobs:
       - id: read_yaml
         uses: conda/actions/read-yaml@v22.2.0
         with:
-          path: .github/messages.yml
+          path: https://raw.githubusercontent.com/conda/infra/main/.github/messages.yml
           scopes: |
             lock-issue: lock-issue
             lock-pr: lock-pr
