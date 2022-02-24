@@ -1,4 +1,5 @@
 group:
+  # triaging & label syncing
   - repos: |
       conda/actions
       conda/conda
@@ -22,3 +23,10 @@ group:
         dest: .github/workflows/issues.yml
       - source: .github/workflows/labels.yml
         dest: .github/workflows/labels.yml
+  # stale syncing
+  - repos: |
+      conda/conda
+      conda/conda-build
+    files:
+      - source: .github/workflows/stale.yml
+        dest: .github/workflows/stale.yml
