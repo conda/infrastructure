@@ -23,8 +23,8 @@ jobs:
         with:
           path: https://raw.githubusercontent.com/conda/infra/main/.github/messages.yml
           scopes: |
-            lock-issue: lock-issue
-            lock-pr: lock-pr
+            lock_issue: lock-issue
+            lock_pr: lock-pr
       - uses: dessant/lock-threads@v2
         with:
           # Number of days of inactivity before a closed issue is locked
@@ -36,7 +36,7 @@ jobs:
           # Labels to add before locking an issue, value must be a comma separated list of labels or ''
           issue-lock-labels: 'locked'
           # Comment to post before locking an issue
-          issue-lock-comment: ${{ steps.read_yaml.outputs.lock-issue }}
+          issue-lock-comment: ${{ steps.read_yaml.outputs.lock_issue }}
           # Reason for locking an issue, value must be one of resolved, off-topic, too heated, spam or ''
           issue-lock-reason: 'resolved'
 
@@ -49,7 +49,7 @@ jobs:
           # Labels to add before locking a pull request, value must be a comma separated list of labels or ''
           pr-lock-labels: 'locked'
           # Comment to post before locking a pull request
-          pr-lock-comment: ${{ steps.read_yaml.outputs.lock-pr }}
+          pr-lock-comment: ${{ steps.read_yaml.outputs.lock_pr }}
           # Reason for locking a pull request, value must be one of resolved, off-topic, too heated, spam or ''
           pr-lock-reason: 'resolved'
 
