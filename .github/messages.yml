@@ -21,6 +21,14 @@ close-issue: |
   **NOTE:** If this issue was closed prematurely, please leave a comment.
 
   Thanks!
+lock-issue: |
+  Hi there, thank you for your contribution!
+
+  This issue has been **automatically locked** because it has not had recent activity after being closed.
+
+  Please open a new issue if needed.
+
+  Thanks!
 
 stale-pr: |
   Hi there, thank you for your contribution!
@@ -41,5 +49,13 @@ close-pr: |
   This pull request has been closed since it has not had recent activity.
 
   **NOTE:** If this pull request was closed prematurely, please leave a comment.
+
+  Thanks!
+lock-pr: |
+  Hi there, thank you for your contribution!
+
+  This pull request has been **automatically locked** because it has not had recent activity after being closed.
+
+  Please open a new issue or pull request if needed.
 
   Thanks!

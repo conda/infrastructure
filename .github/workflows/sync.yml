@@ -12,6 +12,7 @@ on:
       - .github/workflows/issues.yml
       - .github/workflows/labels.yml
       - .github/workflows/stale.yml
+      - .github/workflows/lock.yml
 
   # NOTE: github.event is workflow_dispatch payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch

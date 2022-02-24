@@ -30,3 +30,10 @@ group:
     files:
       - source: .github/workflows/stale.yml
         dest: .github/workflows/stale.yml
+  # lock syncing
+  - repos: |
+      conda/conda
+      conda/conda-build
+    files:
+      - source: .github/workflows/lock.yml
+        dest: .github/workflows/lock.yml
