@@ -19,11 +19,6 @@ jobs:
         uses: conda/actions/read-yaml@v22.2.1
         with:
           path: https://raw.githubusercontent.com/conda/infra/main/.github/messages.yml
-          scopes: |
-            stale_issue: stale-issue
-            close_issue: close-issue
-            stale_pr: stale-pr
-            close_pr: close-pr
       - uses: actions/stale@v4
         id: stale
         with:
@@ -37,13 +32,13 @@ jobs:
           days-before-pr-close: 30
 
           # Comment on the staled issues
-          stale-issue-message: ${{ steps.read_yaml.outputs.stale_issue || 'undefined' }}
+          stale-issue-message: ${{ fromJSON(steps.read_yaml.outputs.value)["stale-issue"] }}
           # Comment on the staled issues while closed
-          close-issue-message: ${{ steps.read_yaml.outputs.close_issue || 'undefined' }}
+          close-issue-message: ${{ fromJSON(steps.read_yaml.outputs.value)["close-issue"] }}
           # Comment on the staled PRs
-          stale-pr-message: ${{ steps.read_yaml.outputs.stale_pr || 'undefined' }}
+          stale-pr-message: ${{ fromJSON(steps.read_yaml.outputs.value)["stale-pr"] }}
           # Comment on the staled PRs while closed
-          close-pr-message: ${{ steps.read_yaml.outputs.close_pr || 'undefined' }}
+          close-pr-message: ${{ fromJSON(steps.read_yaml.outputs.value)["close-pr"] }}
           # Label to apply on staled issues
           stale-issue-label: 'stale'
           # Label to apply on closed issues
