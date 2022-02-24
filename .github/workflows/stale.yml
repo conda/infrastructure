@@ -37,13 +37,13 @@ jobs:
           days-before-pr-close: 30
 
           # Comment on the staled issues
-          stale-issue-message: ${{ steps.read_yaml.outputs.stale_issue }}
+          stale-issue-message: ${{ steps.read_yaml.outputs.stale_issue || 'undefined' }}
           # Comment on the staled issues while closed
-          close-issue-message: ${{ steps.read_yaml.outputs.close_issue }}
+          close-issue-message: ${{ steps.read_yaml.outputs.close_issue || 'undefined' }}
           # Comment on the staled PRs
-          stale-pr-message: ${{ steps.read_yaml.outputs.stale_pr }}
+          stale-pr-message: ${{ steps.read_yaml.outputs.stale_pr || 'undefined' }}
           # Comment on the staled PRs while closed
-          close-pr-message: ${{ steps.read_yaml.outputs.close_pr }}
+          close-pr-message: ${{ steps.read_yaml.outputs.close_pr || 'undefined' }}
           # Label to apply on staled issues
           stale-issue-label: 'stale'
           # Label to apply on closed issues
