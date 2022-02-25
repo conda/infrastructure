@@ -1,11 +1,15 @@
 name: Lock
 
 on:
+  # NOTE: github.event is workflow_dispatch payload:
+  # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
   workflow_dispatch:
-    # dryrun:
+    # inputs:
+    #   dryrun:
     #     description: "dryrun: Preview locking issues/prs without marking them (true|false)"
     #     required: true
     #     default: "true"
+
   schedule:
     - cron: 0 6 * * *
 
