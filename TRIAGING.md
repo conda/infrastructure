@@ -114,3 +114,33 @@ Labels are defined using a scoped syntax with an optional high-level category (_
 This syntax helps with triage enforcement; at minimum, both `type` and `source` labels should be specified on each issue before moving it from "`Triaging`" to "`Ready`".
 
 There are a number of labels that have been defined for the different `conda` projects. In order to create a streamlined triaging process, label terminologies are standardized using similar (if not the same) labels.
+
+
+### Are there any templates to use as responses for commonly-seen issues?
+
+Some of the same types of issues appear regularly (_e.g._, issues that are duplicates of others, tickets that should be filed in the Anaconda issue tracker, errors that are due to a user's specific setup/environment, etc.).
+
+Below are some boilerplate responses for the most commonly-seen triaging issues:
+
+##### Duplicate Issue
+
+"Closing this issue since this is a duplicate of **[link to primary issue]**; please feel free to add any additional discussion items to that issue directly."
+
+> **Note:** In addition to posting the above comment, make sure to apply the `duplicate` label on the issue being closed and `duplicate::primary` to the issue which was filed originally.
+
+##### Ticket Should be in the Anaconda Issue Tracker
+
+"Thank you for filing this issue! Due to the contents of this ticket being off-topic for this repo, we ask that you please file a new one in the [Anaconda issue tracker](https://github.com/ContinuumIO/anaconda-issues/issues) (it is the place for `conda` installer/package manager issues) if you are still encountering this problem."
+
+> **Note:** Be sure to apply the `off-topic` label for these tickets before closing them out.
+
+##### Requesting an Uninstall/Reinstall of `conda`
+
+"Please uninstall your current version of `conda` and reinstall the latest version. Feel free to use either the [miniconda](https://docs.conda.io/en/latest/miniconda.html) or [anaconda](https://www.anaconda.com/products/individual#windows) installer, whichever is more appropriate for your needs."
+
+##### "Out of Scope" Issue
+
+"Unfortunately, this issue is outside of the scope of support via GitHub; if you continue to experience the problems described here, please post details to the [Nucleus forums](https://community.anaconda.cloud/)."
+
+
+In order to not have to manually type or copy/paste the above repeatedly, please note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option](https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply).
