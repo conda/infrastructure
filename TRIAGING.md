@@ -68,7 +68,7 @@ Issues will remain in the "Triaging" column as long as the issue is in an invest
 
 The additional columns in the triaging board that the issues can be moved to include the following:
 
-- **"Support"** - Any issue moved into this column is a request for support and is not a feature request or a bug report. All issues in this column should include the [`type::support` ](https://github.com/conda/infra/labels/type%3A%3Asupport) label.
+- **"Support"** - Any issue moved into this column is a request for support and is not a feature request or a bug report. All issues in this column should include the https://github.com/conda/infra/labels/type%3A%3Asupport label.
 - **"Ready"** - The issue has revealed a bug or feature request. We have collected enough details to understand the problem/request and to reproduce it on our own. These issues are ready to be moved into the Backlog at the end of the triage rotation during Refinement.
 - **"Closed"** - The issue was closed due to being a duplicate, being redirected to a different project, was a user error, a question that has been resolved, etc.
 
@@ -98,9 +98,9 @@ Sprints also serve to focus the engineering team's attention on more accurate pl
 
 Labeling is a very important means for triaging engineers to keep track of the current state of an issue with regards to the asynchronous nature of communicating with users. Utilizing the proper labels helps to identify the severity of the issue as well as to quickly understand the current state of a discussion.
 
-Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, [`type::bug`](https://github.com/conda/infra/labels/type%3A%3Abug), [`type::feature`](https://github.com/conda/infra/labels/type%3A%3Afeature), and [type::documentation](https://github.com/conda/infra/labels/type%3A%3Adocumentation), where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, [`os::linux`](https://github.com/conda/infra/labels/os%3A%3Alinux), [`os::macos`](https://github.com/conda/infra/labels/os%3A%3Amacos), and [`os::windows`](https://github.com/conda/infra/labels/os%3A%3Awindows)), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
+Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, https://github.com/conda/infra/labels/type%3A%3Abug, https://github.com/conda/infra/labels/type%3A%3Afeature, and https://github.com/conda/infra/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infra/labels/os%3A%3Alinux, https://github.com/conda/infra/labels/os%3A%3Amacos, and https://github.com/conda/infra/labels/os%3A%3Awindows), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
 
-Please note that there are also automation policies in place. For example, if an issue is labeled as [pending::feedback](https://github.com/conda/infra/labels/pending%3A%3Afeedback) and [`unreproducible`](https://github.com/conda/infra/labels/unreproducible), that issue will be auto-closed after a month of inactivity.
+Please note that there are also automation policies in place. For example, if an issue is labeled as https://github.com/conda/infra/labels/pending%3A%3Afeedback and https://github.com/conda/infra/labels/unreproducible, that issue will be auto-closed after a month of inactivity.
 
 
 ### How are new labels defined?
