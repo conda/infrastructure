@@ -116,6 +116,11 @@ This syntax helps with triage enforcement; at minimum, both `type` and `source` 
 There are a number of labels that have been defined for the different `conda` projects. In order to create a streamlined triaging process, label terminologies are standardized using similar (if not the same) labels.
 
 
+### How are new labels added?
+
+New **global** labels (_i.e._, generic labels that apply equally to all `conda` repos) can be added to the `conda/infra`'s [`.github/global.yml` file](https://github.com/conda/infra/blob/main/.github/global.yml); new **local** labels (_i.e._, labels specific to particular `conda` repos) can be added to each repository's `.github/labels.yml` file (_e.g._, `conda/conda`'s [label file](https://github.com/conda/conda/blob/master/.github/labels.yml)). All new labels should follow the labeling syntax described in the "How are new labels defined?" section of this document.
+
+
 ### Are there any templates to use as responses for commonly-seen issues?
 
 Some of the same types of issues appear regularly (_e.g._, issues that are duplicates of others, tickets that should be filed in the Anaconda issue tracker, errors that are due to a user's specific setup/environment, etc.).
