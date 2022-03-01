@@ -34,7 +34,7 @@ At the most basic "bird's eye view" level, triaged issues will fall into the cat
 
 At its core, triaging enables new issues to be sorted into these four categories, which helps to ensure that they will be processed at a velocity similar to or exceeding the rate at which new issues are coming in. One of the benefits of actively triaging issues is to avoid engineer burnout and make necessary work sustainable; this is done by eliminating a never-ending backlog that has not been reviewed by any maintainers.
 
-There will always be broad-scope design and architecture implementations that the `conda` team will be interested in pursuing; by actively triaging issues, the triaging engineers will be able to more easily track and tackle both specific and big-picture goals.
+There will always be broad-scope design and architecture implementations that the `conda` maintainers will be interested in pursuing; by actively triaging issues, the triaging engineers will be able to more easily track and tackle both specific and big-picture goals.
 
 ### Who triages?
 
@@ -59,7 +59,7 @@ Issues in the "Triaging" column of the board have been reviewed by a triaging en
 - Determining if support can be provided for errors and questions
 - Closing out of any duplicate/off-topic issues
 
-The triaging engineer on rotation is not seeking to _resolve_ issues that arise. Instead, the goal is to understand the ticket and to understand whether it is an issue in the first place and to then collect as much relevant information as possible so that the maintainers of `conda` can make an informed decision on the appropriate resolution schedule necessary.
+The triaging engineers on rotation are not seeking to _resolve_ issues that arise. Instead, the goal is to understand the ticket and to understand whether it is an issue in the first place and to then collect as much relevant information as possible so that the maintainers of `conda` can make an informed decision on the appropriate resolution schedule necessary.
 
 Issues will remain in the "Triaging" column as long as the issue is in an investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest but should still be progressing over the course of 1-2 weeks.
 
@@ -93,8 +93,6 @@ The purpose of a development sprint is to enable a steady delivery of enhancemen
 
 Sprints also serve to focus the engineering team's attention on more accurate planning for what is to come during the entire release cycle, as well as keep the scope of development work concise. They enable the setting aside of dedicated time for the engineers to resolve any problems with the work involved, instead of pushing these problems to the end of the release cycle when there may not be any time remaining to fix issues.
 
-The `conda` team's development sprints are currently two weeks long.
-
 
 ### How does labeling work?
 
@@ -102,7 +100,7 @@ Labeling is a very important means for triaging engineers to keep track of the c
 
 Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, [`type::bug`](https://github.com/conda/infra/labels/type%3A%3Abug), [`type::feature`](https://github.com/conda/infra/labels/type%3A%3Afeature), and [type::documentation](https://github.com/conda/infra/labels/type%3A%3Adocumentation), where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, [`os::linux`](https://github.com/conda/infra/labels/os%3A%3Alinux), [`os::macos`](https://github.com/conda/infra/labels/os%3A%3Amacos), and [`os::windows`](https://github.com/conda/infra/labels/os%3A%3Awindows)), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
 
-Please note that there are also design automation policies in place. For example, if an issue is labeled as [pending::feedback](https://github.com/conda/infra/labels/pending%3A%3Afeedback) and [`unreproducible`](https://github.com/conda/infra/labels/unreproducible), that issue will be auto-closed after a month of inactivity.
+Please note that there are also automation policies in place. For example, if an issue is labeled as [pending::feedback](https://github.com/conda/infra/labels/pending%3A%3Afeedback) and [`unreproducible`](https://github.com/conda/infra/labels/unreproducible), that issue will be auto-closed after a month of inactivity.
 
 
 ### How are new labels defined?
