@@ -38,9 +38,7 @@ There will always be broad-scope design and architecture implementations that th
 
 ### Who triages?
 
-<!-- This section is still a WIP, there is no official triaging engineer team yet to link to -->
-
-Triaging engineers are a `conda` governance [sub-team](https://github.com/conda-incubator/governance#sub-teams); they are a group of Anaconda and community members who are responsible for making decisions regarding closing issues and setting feature work priorities, amongst other triage-related tasks. The list of current members is listed [here](future link)
+Triaging engineers are a `conda` governance [sub-team](https://github.com/conda-incubator/governance#sub-teams); they are a group of Anaconda and community members who are responsible for making decisions regarding closing issues and setting feature work priorities, amongst other triage-related tasks.
 
 
 ### How do items show up in triaging?
@@ -127,25 +125,58 @@ Some of the same types of issues appear regularly (_e.g._, issues that are dupli
 
 Below are some boilerplate responses for the most commonly-seen triaging issues:
 
-##### Duplicate Issue
+<details>
+<summary><b>Duplicate Issue</b></summary>
 
-"Closing this issue since this is a duplicate of **[link to primary issue]**; please feel free to add any additional discussion items to that issue directly."
+<pre>
 
-> **Note:** In addition to posting the above comment, make sure to apply the `duplicate` label on the issue being closed and `duplicate::primary` to the issue which was filed originally.
+This is a duplicate of <b>[link to primary issue]</b>; please feel free to continue the discussion there.
+</pre>
 
-##### Ticket Should be in the Anaconda Issue Tracker
+> :warning: Apply the https://github.com/conda/infra/labels/duplicate label to the issue being closed and https://github.com/conda/infra/labels/duplicate%3A%3Aprimary to the original issue.
 
-"Thank you for filing this issue! Due to the contents of this ticket being off-topic for this repo, we ask that you please file a new one in the [Anaconda issue tracker](https://github.com/ContinuumIO/anaconda-issues/issues) (it is the place for `conda` installer/package manager issues) if you are still encountering this problem."
+</details>
 
-> **Note:** Be sure to apply the `off-topic` label for these tickets before closing them out.
+<details>
+<summary><b>Requesting an Uninstall/Reinstall of <code>conda</code></b></summary>
 
-##### Requesting an Uninstall/Reinstall of `conda`
+<pre>
 
-"Please uninstall your current version of `conda` and reinstall the latest version. Feel free to use either the [miniconda](https://docs.conda.io/en/latest/miniconda.html) or [anaconda](https://www.anaconda.com/products/individual#windows) installer, whichever is more appropriate for your needs."
+Please uninstall your current version of `conda` and reinstall the latest version.
+Feel free to use either the [miniconda](https://docs.conda.io/en/latest/miniconda.html)
+or [anaconda](https://www.anaconda.com/products/individual#windows) installer,
+whichever is more appropriate for your needs.
+</pre>
 
-##### "Out of Scope" Issue
+</details>
 
-"Unfortunately, this issue is outside of the scope of support via GitHub; if you continue to experience the problems described here, please post details to the [Nucleus forums](https://community.anaconda.cloud/)."
+<details>
+<summary><b>Redirect to Anaconda Issue Tracker</b></summary>
 
+<pre>
+
+Thank you for filing this issue! Unfortunately, this is off-topic for this repo.
+If you are still encountering this issue please reopen in the
+[Anaconda issue tracker](https://github.com/ContinuumIO/anaconda-issues/issues)
+where `conda` installer/package issues are addressed.
+</pre>
+
+> :warning: Apply the https://github.com/conda/infra/labels/off-topic label to these tickets before closing them out.
+
+</details>
+
+<details>
+<summary><b>Redirecting to Nucleus Forums</b></summary>
+
+<pre>
+
+Unfortunately, this issue is outside the scope of support we offer via GitHub;
+if you continue to experience the problems described here,
+please post details to the [Nucleus forums](https://community.anaconda.cloud/).
+</pre>
+
+> :warning: Apply the https://github.com/conda/infra/labels/off-topic label to these tickets before closing them out.
+
+</details>
 
 In order to not have to manually type or copy/paste the above repeatedly, please note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option](https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply).
