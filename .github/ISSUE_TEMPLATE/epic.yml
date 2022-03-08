@@ -1,7 +1,6 @@
 name: Epic
 description: (for conda-core team only) A collection of smaller related tickets
-labels:
-  - type::epic
+labels: [epic]
 body:
   - type: textarea
     attributes:
