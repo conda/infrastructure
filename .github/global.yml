@@ -31,6 +31,9 @@
   color: "85BDB1"
 
 # Planning
+- name: epic
+  description: "a highlevel collection of smaller related issues"
+  color: "ededed"
 - name: backlog
   description: issue has been triaged but has not been earmarked for any upcoming release
   color: "ededed"
