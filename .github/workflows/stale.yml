@@ -11,6 +11,8 @@ on:
         default: "true"
 
   schedule:
+    # on the hour, every 24 hours
+    # https://crontab.guru/#0_4_*_*_*
     - cron: 0 4 * * *
 
 jobs:

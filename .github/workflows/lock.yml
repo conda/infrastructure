@@ -11,7 +11,9 @@ on:
     #     default: "true"
 
   schedule:
-    - cron: 0 6 * * *
+    # on the hour, every 24 hours
+    # https://crontab.guru/#0_5_*_*_*
+    - cron: 0 5 * * *
 
 permissions:
   issues: write
