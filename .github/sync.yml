@@ -1,5 +1,4 @@
 group:
-  # triaging & label syncing
   - repos: |
       conda/actions
       conda/conda
@@ -13,27 +12,26 @@ group:
       conda/conda-verify
       conda/constructor
       conda/cookiecutter-conda-python
+      conda/issue-tracker
       conda/menuinst
       conda/pycosat
       conda/schemas
     files:
+      # triage, backlog, & sprint board logic
       - source: .github/workflows/boards.yml
         dest: .github/workflows/boards.yml
+      # issue logic
       - source: .github/workflows/issues.yml
         dest: .github/workflows/issues.yml
+      # label syncing
       - source: .github/workflows/labels.yml
         dest: .github/workflows/labels.yml
-  # stale syncing
-  - repos: |
-      conda/conda
-      conda/conda-build
-    files:
+      # stale issues
       - source: .github/workflows/stale.yml
         dest: .github/workflows/stale.yml
-  # lock syncing
-  - repos: |
-      conda/conda
-      conda/conda-build
-    files:
+      # lock issues
       - source: .github/workflows/lock.yml
         dest: .github/workflows/lock.yml
+      # epic issue form
+      - source: .github/ISSUE_TEMPLATE/epic.yml
+        dest: .github/ISSUE_TEMPLATE/epic.yml
