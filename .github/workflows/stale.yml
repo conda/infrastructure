@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+        # The issues labeled "support" have a more aggressive stale/close timeline from the rest
         only-issue-labels: ['type::support', null]
     steps:
       - id: read_yaml
@@ -58,7 +59,7 @@ jobs:
           exempt-issue-labels: 'stale::recovered,good-first-issue,help-wanted,severity::1,source::partner,¡important!,¡security!,type::tech-debt,Epic,priority-high'
           # Issues with these labels will never be considered stale
           exempt-pr-labels: 'stale::recovered,good-first-issue,help-wanted,severity::1,source::partner,¡important!,¡security!,type::tech-debt,Epic,priority-high'
-          # The issue labels that have a different stale/close timeline from the rest
+          # Only issues with these labels are checked whether they are stale
           only-issue-labels: ${{ matrix.only-issue-labels }}
 
           # Max number of operations per run
