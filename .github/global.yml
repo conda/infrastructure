@@ -117,8 +117,8 @@
   description: indicates a change that doesn't pertain to the code itself, e.g. updating CI/CQ, rebuilding package
   color: "fff2cc"
   aliases: ["Type: Maintenance", "type:task"]
-- name: type::test
-  description: issues with or request for new tests
+- name: type::testing
+  description: issues about tests or the test infrastructure
   color: "fff2cc"
   aliases: [type-new_test]
 
