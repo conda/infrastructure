@@ -10,3 +10,9 @@ repos:
       - id: check-yaml
       # catch git merge/rebase problems
       - id: check-merge-conflict
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.14.0
+    hooks:
+      # verify github syntaxes
+      - id: check-github-actions
+      - id: check-github-workflows
