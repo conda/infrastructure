@@ -32,6 +32,9 @@ group:
       # lock issues
       - source: .github/workflows/lock.yml
         dest: .github/workflows/lock.yml
+      # CLA check
+      - source: .github/workflows/cla.yml
+        dest: .github/workflows/cla.yml
       # epic issue form
       - source: .github/ISSUE_TEMPLATE/epic.yml
         dest: .github/ISSUE_TEMPLATE/epic.yml
