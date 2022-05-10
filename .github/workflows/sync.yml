@@ -9,10 +9,13 @@ on:
       - .github/sync.yml  # trigger sync if sync config is modified
       - .github/workflows/sync.yml  # trigger sync if sync workflow is modified
       - .github/workflows/boards.yml
+      - .github/workflows/project.yml
       - .github/workflows/issues.yml
       - .github/workflows/labels.yml
       - .github/workflows/stale.yml
       - .github/workflows/lock.yml
+      - .github/workflows/cla.yml
+      - .github/ISSUE_TEMPLATE/epic.yml
 
   # NOTE: github.event is workflow_dispatch payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
