@@ -57,9 +57,9 @@ jobs:
           close-pr-label: 'stale::closed'
 
           # Issues with these labels will never be considered stale
-          exempt-issue-labels: 'stale::recovered,good-first-issue,help-wanted,severity::1,source::partner,¡important!,¡security!,type::tech-debt,epic,priority-high'
+          exempt-issue-labels: 'stale::recovered,epic'
           # Issues with these labels will never be considered stale
-          exempt-pr-labels: 'stale::recovered,good-first-issue,help-wanted,severity::1,source::partner,¡important!,¡security!,type::tech-debt,epic,priority-high'
+          exempt-pr-labels: 'stale::recovered,epic'
           # Only issues with these labels are checked whether they are stale
           only-issue-labels: ${{ matrix.only-issue-labels }}
 
