@@ -43,7 +43,7 @@ Triaging engineers are a `conda` governance [sub-team](https://github.com/conda-
 
 ### How do items show up in triaging?
 
-New issues that are opened in any of the repositories in the [`conda` GitHub project](https://github.com/conda) will show up in the `New` column of the [Triaging board](https://github.com/orgs/conda/projects/4). This process is executed via [GitHub Actions](https://docs.github.com/en/actions). The two main GitHub Actions workflows utilized for this purpose are [Issues](https://github.com/conda/infra/blob/main/.github/workflows/issues.yml) and [Boards](https://github.com/conda/infra/blob/main/.github/workflows/boards.yml).
+New issues that are opened in any of the repositories in the [`conda` GitHub project](https://github.com/conda) will show up in the `Sorting` view of the [Planning project](https://github.com/orgs/conda/projects/2/views/11). This process is executed via [GitHub Actions](https://docs.github.com/en/actions). The two main GitHub Actions workflows utilized for this purpose are [Issues](https://github.com/conda/infra/blob/main/.github/workflows/issues.yml) and [Project](https://github.com/conda/infra/blob/main/.github/workflows/project.yml).
 
 The GitHub Actions in the `conda/infra` repository are viewed as canonical; the [Sync workflow](https://github.com/conda/infra/blob/main/.github/workflows/sync.yml) sends out any modifications to [other `conda` repositories](https://github.com/conda/infra/blob/main/.github/sync.yml#L3-L17) from there.
 

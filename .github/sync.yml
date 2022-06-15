@@ -17,9 +17,6 @@ group:
       conda/pycosat
       conda/schemas
     files:
-      # triage, backlog, & sprint board logic
-      - source: .github/workflows/boards.yml
-        dest: .github/workflows/boards.yml
       # beta project
       - source: .github/workflows/project.yml
         dest: .github/workflows/project.yml
