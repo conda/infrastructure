@@ -8,7 +8,6 @@ on:
     paths:
       - .github/sync.yml  # trigger sync if sync config is modified
       - .github/workflows/sync.yml  # trigger sync if sync workflow is modified
-      - .github/workflows/boards.yml
       - .github/workflows/project.yml
       - .github/workflows/issues.yml
       - .github/workflows/labels.yml
