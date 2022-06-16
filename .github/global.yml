@@ -209,6 +209,9 @@
   description: issues found or suggested changes proposed during SciPy2017
   color: "6ce29e"
   aliases: [SciPy2017]
+- name: hack::SciPy2022
+  description: issues found or suggested changes proposed during SciPy2022
+  color: "6ce29e"
 
 # Tags
 - name: tag::performance
