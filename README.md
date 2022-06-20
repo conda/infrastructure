@@ -28,3 +28,8 @@ We have defined a number of GitHub Workflows that are synced out to other repos 
   * 🏷️ Label standardization
   * 🔒 Marking issues & PRs as stale, closing stale items, and locking inactive items
   * 🔄 Dispersing workflow changes to other repos
+
+## Community License Agreement
+
+📝 We store the config file for the GitHub Workflow in the `cla` directory, which helps us keep track of the [conda community license agreement](https://docs.conda.io/projects/conda/en/latest/dev-guide/contributing.html#conda-contributor-license-agreement) in the various
+repos of the conda GitHub organization.
