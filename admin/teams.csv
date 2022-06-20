@@ -1,0 +1,11 @@
+name,description,privacy
+Bots,Various bots used in the conda org,closed
+Community contributors,,closed
+conda-core,Core conda team. Can merge PRs into main-line feature release branches.,closed
+conda-limited-write,,secret
+Distribution Contractors,Gives access to Distribution team resources for contractors,closed
+docs,The team working on all-things docs,closed
+issue-tracker,Project team for the conda issue tracker repo.,closed
+Owner,,secret
+PMs,project managers,secret
+Quansight,A team for Quansight staff to work on Conda,closed
