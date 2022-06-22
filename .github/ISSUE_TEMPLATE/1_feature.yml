@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Processing feature requests is time consuming so please fill out the following form as completely as possible. **The more complete you are the more likely we can provide a speedier response.**
+        Processing feature requests is time-consuming so please fill out the following form as completely as possible. **The more complete this form is, the more likely we can provide a speedier response.**
 
         > ⚠️ Requests that are incomplete or missing information will simply be closed.
 
@@ -17,7 +17,7 @@ body:
     id: checks
     attributes:
       label: Checklist
-      description: Please confirm and check all the following options.
+      description: Please confirm and check all of the following options.
       options:
         - label: I added a descriptive title
           required: true
