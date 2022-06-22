@@ -1,6 +1,7 @@
-name: Epic
-description: (for conda-core team only) A collection of smaller related tickets
-labels: [epic]
+name: "[private] Epic"
+description: "[for conda team only] A collection of related tickets."
+labels:
+  - epic
 body:
   - type: textarea
     attributes:
@@ -16,9 +17,6 @@ body:
       label: Linked Issues & PRs
       description: List all issues related to this epic.
       value: |
-        - #
-        - #
-        - #
-        ...
+        - [ ] #
     validations:
       required: true
