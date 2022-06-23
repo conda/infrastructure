@@ -16,7 +16,7 @@ In an effort to decrease the context switching/learning barrier between the diff
 | <a name="6"></a>6 | Only use `assert` in tests. | [`flake8-useless-assert`](https://github.com/decorator-factory/flake8-useless-assert) |
 | <a name="7"></a>7 | Use American English. | [`flake8-spellcheck`](https://github.com/MichaelAquilina/flake8-spellcheck) |
 | <a name="7.1"></a>7.1 | Use descriptive variable names: <ul><li>no one-char variables</li><li>avoid abbreviations</li><li>avoid overloading builtins</li></ul> | [`flake8-variables-names`](https://github.com/best-doctor/flake8-variables-names) |
-| <a name="8"></a>8 | When indicating a change that requires a future version of Python (or dropping a currently supported version) use the following format:<br>`# FUTURE: <minimum Python requirement>, <details>`<br>e.g.:<br>`# FUTURE: Python 3.9+, replace with ...` | |
+| <a name="8"></a>8 | When indicating a change that requires a future version of Python (or dropping a currently-supported version), use the following format:<br>`# FUTURE: <minimum Python requirement>, <details>`<br>e.g.:<br>`# FUTURE: Python 3.9+, replace with ...` | |
 
 | Other Tooling |
 |---|
