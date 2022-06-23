@@ -10,6 +10,16 @@ repos:
       - id: check-yaml
       # catch git merge/rebase problems
       - id: check-merge-conflict
+  - repo: local
+    hooks:
+      - id: sort-json
+        name: Sort json files alphabetically
+        entry: ./sort_json.py
+        language: system
+        files: ^.clabot$
+        require_serial: true
+        args: [--sort-keys=contributors]
+
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.16.0
     hooks:
