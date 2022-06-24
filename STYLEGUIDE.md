@@ -12,6 +12,7 @@ In an effort to decrease the context switching/learning barrier between the diff
 | <a name="3"></a>3 | Prefer `pathlib` over `os.path`. | [`flake8-use-pathlib`](https://gitlab.com/RoPP/flake8-use-pathlib) |
 | <a name="4"></a>4 | Use typing (or gradually enforce for preexisting projects). | [`flake8-annotations`](https://github.com/sco1/flake8-annotations) |
 | <a name="4.1"></a>4.1 | Define typing aliases at the top of files. | |
+| <a name="4.2"></a>4.2 | Use `TYPE_CHECKING` import guard. | [`flake8-typing-imports`](https://github.com/asottile/flake8-typing-imports)
 | <a name="5"></a>5 | Define loggers at the top of files. | |
 | <a name="6"></a>6 | Only use `assert` in tests. | [`flake8-useless-assert`](https://github.com/decorator-factory/flake8-useless-assert) |
 | <a name="7"></a>7 | Use American English. | [`flake8-spellcheck`](https://github.com/MichaelAquilina/flake8-spellcheck) |
