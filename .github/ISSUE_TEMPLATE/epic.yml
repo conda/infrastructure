@@ -1,5 +1,5 @@
-name: "[private] Epic"
-description: "[for conda team only] A collection of related tickets."
+name: "Epic"
+description: "A collection of related tickets."
 labels:
   - epic
 body:

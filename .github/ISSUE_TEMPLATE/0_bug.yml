@@ -6,13 +6,14 @@ body:
   - type: markdown
     attributes:
       value: |
-        Processing bug reports is time-consuming so please fill out the following form as completely as possible. **The more complete this form is, the more likely we can provide a speedier response.**
+        Because processing new bug reports is time-consuming, we would like to ask you to fill out the following form to the best of your ability and as completely as possible.
+        
+        > **Note**
+        > ⚠️ Bug reports that are incomplete or missing information may be closed as inactionable.
 
-        > ⚠️ Reports that are incomplete or missing information will simply be closed.
+        Since there are already a lot of open issues, please also take a moment to search existing ones to see if your bug has already been reported. If you find something related, please upvote that issue and provide additional details as necessary.
 
-        Since there are already a lot of open issues, please take a moment to search existing ones to see if your bug has already been reported. If you find something related, please upvote that report and provide additional details as necessary.
-
-        > 💐 Thanks for helping to make Conda better! We would be unable to do the things we do without our community!
+        💐 Thank you for helping to make Conda better. We would be unable to improve Conda without our community!
   - type: checkboxes
     id: checks
     attributes:
@@ -63,7 +64,7 @@ body:
       description: |
         The packages installed into your environment can offer clues as to the problem you are facing.
 
-        Please ensure you have activated the environment within which you are encountering this bug and run the following command from your command line and paste the output below.
+        Please activate the environment within which you are encountering this bug, run the following command from your command line, and paste the output below.
 
         ```bash
         conda list --show-channel-urls
