@@ -2,7 +2,8 @@
 
 This is a centralized location for infrastructure codes and any related inquiries or discussions.
 
-<table><tr><td><b>⚠️ This is not a forum for end-user questions.</td></tr></table>
+> **Note**
+> This is not a forum for end-user questions.
 
 ## 👋 Welcome!
 

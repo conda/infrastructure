@@ -14,6 +14,8 @@ on:
       - .github/workflows/stale.yml
       - .github/workflows/lock.yml
       - .github/workflows/cla.yml
+      - .github/ISSUE_TEMPLATE/0_bug.yml
+      - .github/ISSUE_TEMPLATE/1_feature.yml
       - .github/ISSUE_TEMPLATE/epic.yml
 
   # NOTE: github.event is workflow_dispatch payload:

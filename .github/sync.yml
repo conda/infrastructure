@@ -35,6 +35,10 @@ group:
       # CLA check
       - source: .github/workflows/cla.yml
         dest: .github/workflows/cla.yml
-      # epic issue form
+      # issue forms
+      - source: .github/ISSUE_TEMPLATE/0_bug.yml
+        dest: .github/ISSUE_TEMPLATE/0_bug.yml
+      - source: .github/ISSUE_TEMPLATE/1_feature.yml
+        dest: .github/ISSUE_TEMPLATE/1_feature.yml
       - source: .github/ISSUE_TEMPLATE/epic.yml
         dest: .github/ISSUE_TEMPLATE/epic.yml
