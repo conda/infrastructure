@@ -57,7 +57,7 @@ Issues in the ["Sorting" tab of the project board](https://github.com/orgs/conda
 
 The sorting engineers on rotation are not seeking to _resolve_ issues that arise. Instead, the goal is to understand the ticket and to determine whether it is an issue in the first place, and then to collect as much relevant information as possible so that the maintainers of `conda` can make an informed decision about the appropriate resolution schedule.
 
-Issues will remain in the "Sorting" tab as long as the issue is in an investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest but should still be progressing over the course of 1-2 weeks.
+Issues will remain in the "Sorting" tab as long as the issue is in an investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest, but should still be progressing over the course of 1-2 weeks.
 
 
 ### When do items move out of the "Sorting" tab?
