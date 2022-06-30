@@ -1,21 +1,39 @@
 ## The Issue Sorting Process at `conda`
 
+> **Note:**
+> This process is similar to that of "triaging" but we've chosen to use different terminology because "triaging" is a word related to very weighty topics (*i.e.*, injuries and war) and we would like to be sensitive to those connotations. Additionally, we are taking a more "fuzzy" approach, *e.g.*, severities may not be assigned, etc.
+
 "Issue Sorting" refers to the process of assessing the priority of incoming issues. Below is a high-level diagram of the flow of tickets:
 
 ```mermaid
 flowchart LR
-    issue_new(New Issues)
+    subgraph flow_sorting [Issue Sorting]
+        board_sorting{{Sorting}}
+        board_support{{Support}}
 
-    subgraph board_sorting [Sorting Board]
-    col_sorting{{Sorting}}
-    col_support{{Support}}
-    col_closed{{Closed}}
-    col_sorting<-->col_support-->col_closed
-    col_sorting-->col_closed
+        board_sorting<-->board_support
     end
 
-    issue_new-->col_sorting
-   col_sorting-->Backlog
+    subgraph flow_refinement [Refinement]
+        board_backlog{{Backlog}}
+
+        board_backlog-- refine -->board_backlog
+    end
+
+    subgraph flow_sprint [Sprint]
+        board_sprint{{Sprint}}
+    end
+
+    state_new(New Issues)
+    state_closed(Closed)
+
+    state_new-->board_sorting
+    board_sorting-- investigated -->board_backlog
+    board_sorting-- duplicates, off-topic -->state_closed
+    board_support-- resolved, unresponsive -->state_closed
+    board_backlog-- pending work -->board_sprint
+    board_backlog-- resolved, irrelevant -->state_closed
+    board_sprint-- resolved -->state_closed
 ```
 
 In order to explain how various `conda` issues are evaluated, the following document will provide information about our sorting process in the form of an FAQ.
