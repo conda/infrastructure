@@ -73,7 +73,7 @@ The additional tabs in the project board that the issues can be moved to include
 
 All sorted issues will be reviewed by sorting engineers during a weekly Refinement meeting in order to understand how those particular issues fit into the short- and long-term roadmap of `conda`. These meetings enable the sorting engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
 
-Once issues are deemed ready to be worked on, they will be moved to the [`conda` Backlog tab of the Planning baord](https://github.com/orgs/conda/projects/2/views/13) on GitHub. Once actively in progress, the issues will be moved to the [Sprint tab of the Planning board](https://github.com/orgs/conda/projects/2/views/14) and then closed out once the work is complete.
+Once issues are deemed ready to be worked on, they will be moved to the [`conda` Backlog tab of the Planning board](https://github.com/orgs/conda/projects/2/views/13) on GitHub. Once actively in progress, the issues will be moved to the [Sprint tab of the Planning board](https://github.com/orgs/conda/projects/2/views/14) and then closed out once the work is complete.
 
 
 ### What is the purpose of having a "Backlog"?
