@@ -1,91 +1,89 @@
-## The Triaging Process at `conda`
+## The Issue Sorting Process at `conda`
 
-"Triaging" refers to the process of assessing the priority of incoming issues. Below is a high-level diagram of the flow of tickets:
+"Issue Sorting" refers to the process of assessing the priority of incoming issues. Below is a high-level diagram of the flow of tickets:
 
 ```mermaid
 flowchart LR
     issue_new(New Issues)
 
-    subgraph board_triaging [Triaging Board]
-    col_triaging{{Triaging}}
+    subgraph board_sorting [Sorting Board]
+    col_sorting{{Sorting}}
     col_support{{Support}}
-    col_ready{{Ready}}
     col_closed{{Closed}}
-    col_triaging<-->col_support-->col_closed
-    col_triaging-->col_ready
-    col_triaging-->col_closed
+    col_sorting<-->col_support-->col_closed
+    col_sorting-->col_closed
     end
 
-    issue_new-->col_triaging
-   col_ready-->Backlog
+    issue_new-->col_sorting
+   col_sorting-->Backlog
 ```
 
-In order to explain how various `conda` issues are evaluated, the following document will provide information about our triaging process in the form of an FAQ.
+In order to explain how various `conda` issues are evaluated, the following document will provide information about our sorting process in the form of an FAQ.
 
 
-### Why triage?
+### Why sort issues?
 
-At the most basic "bird's eye view" level, triaged issues will fall into the category of four main priority levels:
+At the most basic "bird's eye view" level, sorted issues will fall into the category of four main priority levels:
 
 - Do now
 - Do sometime
 - Provide user support
 - Never do (_i.e._, close)
 
-At its core, triaging enables new issues to be sorted into these four categories, which helps to ensure that they will be processed at a velocity similar to or exceeding the rate at which new issues are coming in. One of the benefits of actively triaging issues is to avoid engineer burnout and make necessary work sustainable; this is done by eliminating a never-ending backlog that has not been reviewed by any maintainers.
+At its core, sorting enables new issues to be placed into these four categories, which helps to ensure that they will be processed at a velocity similar to or exceeding the rate at which new issues are coming in. One of the benefits of actively sorting issues is to avoid engineer burnout and to make necessary work sustainable; this is done by eliminating a never-ending backlog that has not been reviewed by any maintainers.
 
-There will always be broad-scope design and architecture implementations that the `conda` maintainers will be interested in pursuing; by actively triaging issues, the triaging engineers will be able to more easily track and tackle both specific and big-picture goals.
+There will always be broad-scope design and architecture implementations that the `conda` maintainers will be interested in pursuing; by actively organizing issues, the sorting engineers will be able to more easily track and tackle both specific and big-picture goals.
 
-### Who triages?
+### Who does the sorting?
 
-Triaging engineers are a `conda` governance [sub-team](https://github.com/conda-incubator/governance#sub-teams); they are a group of Anaconda and community members who are responsible for making decisions regarding closing issues and setting feature work priorities, amongst other triage-related tasks.
+Sorting engineers are a `conda` governance [sub-team](https://github.com/conda-incubator/governance#sub-teams); they are a group of Anaconda and community members who are responsible for making decisions regarding closing issues and setting feature work priorities, amongst other sorting-related tasks.
 
 
-### How do items show up in triaging?
+### How do items show up for sorting?
 
 New issues that are opened in any of the repositories in the [`conda` GitHub project](https://github.com/conda) will show up in the `Sorting` view of the [Planning project](https://github.com/orgs/conda/projects/2/views/11). This process is executed via [GitHub Actions](https://docs.github.com/en/actions). The two main GitHub Actions workflows utilized for this purpose are [Issues](https://github.com/conda/infra/blob/main/.github/workflows/issues.yml) and [Project](https://github.com/conda/infra/blob/main/.github/workflows/project.yml).
 
 The GitHub Actions in the `conda/infra` repository are viewed as canonical; the [Sync workflow](https://github.com/conda/infra/blob/main/.github/workflows/sync.yml) sends out any modifications to [other `conda` repositories](https://github.com/conda/infra/blob/main/.github/sync.yml#L3-L17) from there.
 
 
-### What is done about the issues in "triaging" mode?
+### What is done about the issues in "sorting" mode?
 
-Issues in the "Triaging" column of the board have been reviewed by a triaging engineer and are considered ready for the following procedures:
+Issues in the ["Sorting" tab of the project board](https://github.com/orgs/conda/projects/2/views/11) have been reviewed by a sorting engineer and are considered ready for the following procedures:
 
 - Mitigation via short-term workarounds and fixes
 - Redirection to the correct project
 - Determining if support can be provided for errors and questions
 - Closing out of any duplicate/off-topic issues
 
-The triaging engineers on rotation are not seeking to _resolve_ issues that arise. Instead, the goal is to understand the ticket and to understand whether it is an issue in the first place and to then collect as much relevant information as possible so that the maintainers of `conda` can make an informed decision on the appropriate resolution schedule necessary.
+The sorting engineers on rotation are not seeking to _resolve_ issues that arise. Instead, the goal is to understand the ticket and to determine whether it is an issue in the first place and to then collect as much relevant information as possible so that the maintainers of `conda` can make an informed decision about the appropriate resolution schedule.
 
-Issues will remain in the "Triaging" column as long as the issue is in an investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest but should still be progressing over the course of 1-2 weeks.
+Issues will remain in the "Sorting" tab as long as the issue is in an investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest but should still be progressing over the course of 1-2 weeks.
 
 
-### When do items move out of the "Triaging" column?
+### When do items move out of the "Sorting" tab?
 
-The additional columns in the triaging board that the issues can be moved to include the following:
+The additional tabs in the project board that the issues can be moved to include the following:
 
-- **"Support"** - Any issue moved into this column is a request for support and is not a feature request or a bug report. All issues in this column should include the https://github.com/conda/infra/labels/type%3A%3Asupport label.
-- **"Ready"** - The issue has revealed a bug or feature request. We have collected enough details to understand the problem/request and to reproduce it on our own. These issues are ready to be moved into the Backlog at the end of the triage rotation during Refinement.
+- **"Support"** - Any issue in the ["Support" tab of the Planning board](https://github.com/orgs/conda/projects/2/views/12) is a request for support and is not a feature request or a bug report. All issues considered "support" should include the https://github.com/conda/infra/labels/type%3A%3Asupport label.
+- **"Backlog"** - The issue has revealed a bug or feature request. We have collected enough details to understand the problem/request and to reproduce it on our own. These issues have been moved into the [Backlog tab of the Planning board](https://github.com/orgs/conda/projects/2/views/13) at the end of the sorting rotation during Refinement.
 - **"Closed"** - The issue was closed due to being a duplicate, being redirected to a different project, was a user error, a question that has been resolved, etc.
 
 
-### Where do items go after being triaged?
+### Where do items go after being sorted?
 
-All triaged issues will be reviewed by triaging engineers during a weekly Refinement meeting in order to understand how the triaged issues fit into the short- and long-term roadmap of `conda`. These meetings enable the triaging engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
+All sorted issues will be reviewed by sorting engineers during a weekly Refinement meeting in order to understand how those particular issues fit into the short- and long-term roadmap of `conda`. These meetings enable the sorting engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
 
-Once issues are deemed ready to be worked on, they will be moved to the [`conda` Backlog project board](https://github.com/orgs/conda/projects/5) on GitHub. Once actively in progress, the issues will be moved to the [Sprint project board](https://github.com/orgs/conda/projects/8) and then closed out once the work is complete.
+Once issues are deemed ready to be worked on, they will be moved to the [`conda` Backlog tab of the Planning baord](https://github.com/orgs/conda/projects/2/views/13) on GitHub. Once actively in progress, the issues will be moved to the [Sprint tab of the Planning board](https://github.com/orgs/conda/projects/2/views/14) and then closed out once the work is complete.
 
 
-### What is the purpose of having a "backlog"?
+### What is the purpose of having a "Backlog"?
 
-Issues are "backlogged" when they have been triaged but not yet earmarked for an upcoming release. Weekly Refinement meetings are a time when the `conda` engineers will transition issues from "[Triage](https://github.com/orgs/conda/projects/4)" to "[Backlog](https://github.com/orgs/conda/projects/5)". Additionally, this time of handoff will include discussions around the kind of issues that were raised, which provides an opportunity to identify any patterns that may point to a larger problem.
+Issues are "backlogged" when they have been sorted but not yet earmarked for an upcoming release. Weekly Refinement meetings are a time when the `conda` engineers will transition issues from "[Sorting](https://github.com/orgs/conda/projects/2/views/11)" to "[Backlog](https://github.com/orgs/conda/projects/2/views/13)". Additionally, this time of handoff will include discussions around the kind of issues that were raised, which provides an opportunity to identify any patterns that may point to a larger problem.
 
 
 ### What is the purpose of a "development sprint"?
 
-After issues have been triaged and backlogged, they will eventually be moved into the "To Do" or "In Progress" columns on the [sprint board](https://github.com/orgs/conda/projects/8) and get one or more sprint cycles dedicated to them.
+After issues have been sorted and backlogged, they will eventually be moved into the "Sprint Candidate", "Short-Term", "Medium-Term", "Long-Term", or "No Time Frame" sections of the [Backlog tab of the Planning baord](https://github.com/orgs/conda/projects/2/views/13) and get one or more sprint cycles dedicated to them.
 
 The purpose of a development sprint is to enable a steady delivery of enhancements, features, and bug fixes by setting aside pre-determined portions of time that are meant for focusing on specifically-assigned items.
 
@@ -94,7 +92,7 @@ Sprints also serve to focus the engineering team's attention on more accurate pl
 
 ### How does labeling work?
 
-Labeling is a very important means for triaging engineers to keep track of the current state of an issue with regards to the asynchronous nature of communicating with users. Utilizing the proper labels helps to identify the severity of the issue as well as to quickly understand the current state of a discussion.
+Labeling is a very important means for sorting engineers to keep track of the current state of an issue with regards to the asynchronous nature of communicating with users. Utilizing the proper labels helps to identify the severity of the issue as well as to quickly understand the current state of a discussion.
 
 Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, https://github.com/conda/infra/labels/type%3A%3Abug, https://github.com/conda/infra/labels/type%3A%3Afeature, and https://github.com/conda/infra/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infra/labels/os%3A%3Alinux, https://github.com/conda/infra/labels/os%3A%3Amacos, and https://github.com/conda/infra/labels/os%3A%3Awindows), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
 
@@ -109,9 +107,9 @@ Labels are defined using a scoped syntax with an optional high-level category (_
 - `[category::topic]`
 - `[category::topic-phrase]`
 
-This syntax helps with triage enforcement; at minimum, both `type` and `source` labels should be specified on each issue before moving it from "`Triaging`" to "`Ready`".
+This syntax helps with issue sorting enforcement; at minimum, both `type` and `source` labels should be specified on each issue before moving it from "`Sorting`" to "`Backlog`".
 
-There are a number of labels that have been defined for the different `conda` projects. In order to create a streamlined triaging process, label terminologies are standardized using similar (if not the same) labels.
+There are a number of labels that have been defined for the different `conda` projects. In order to create a streamlined sorting process, label terminologies are standardized using similar (if not the same) labels.
 
 
 ### How are new labels added?
@@ -123,7 +121,7 @@ New **global** labels (_i.e._, generic labels that apply equally to all `conda` 
 
 Some of the same types of issues appear regularly (_e.g._, issues that are duplicates of others, tickets that should be filed in the Anaconda issue tracker, errors that are due to a user's specific setup/environment, etc.).
 
-Below are some boilerplate responses for the most commonly-seen triaging issues:
+Below are some boilerplate responses for the most commonly-seen issues to be sorted:
 
 <details>
 <summary><b>Duplicate Issue</b></summary>
