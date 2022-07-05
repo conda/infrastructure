@@ -1,7 +1,7 @@
 ## The Issue Sorting Process at `conda`
 
 > **Note:**
-> This process is similar to that of "triaging" but we've chosen to use different terminology because "triaging" is a word related to very weighty topics (*i.e.*, injuries and war) and we would like to be sensitive to those connotations. Additionally, we are taking a more "fuzzy" approach, *e.g.*, severities may not be assigned, etc.
+> This process is similar to that of "triaging", but we've chosen to use different terminology because "triaging" is a word related to very weighty topics (*i.e.*, injuries and war) and we would like to be sensitive to those connotations. Additionally, we are taking a more "fuzzy" approach to sorting (*e.g.*, severities may not be assigned, etc.).
 
 "Issue Sorting" refers to the process of assessing the priority of incoming issues. Below is a high-level diagram of the flow of tickets:
 
