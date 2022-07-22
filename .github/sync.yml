@@ -42,3 +42,31 @@ group:
         dest: .github/ISSUE_TEMPLATE/1_feature.yml
       - source: .github/ISSUE_TEMPLATE/epic.yml
         dest: .github/ISSUE_TEMPLATE/epic.yml
+  # projects with releases
+  - repos: |
+      conda/actions
+      conda/conda
+      conda/conda-benchmarks
+      conda/conda-build
+      conda/conda-content-trust
+      conda/conda-docs
+      conda/conda-pack
+      conda/conda-package-handling
+      conda/conda-prefix-replacement
+      conda/conda-verify
+      conda/constructor
+      conda/cookiecutter-conda-python
+      conda/menuinst
+      conda/pycosat
+      conda/schemas
+    files:
+      # PR template
+      - source: .github/PULL_REQUEST_TEMPLATE_w_releases.md
+        dest: .github/PULL_REQUEST_TEMPLATE.md
+  # projects without releases
+  - repos: |
+      conda/issue-tracker
+    files:
+      # PR template
+      - source: .github/PULL_REQUEST_TEMPLATE_wo_releases.md
+        dest: .github/PULL_REQUEST_TEMPLATE.md

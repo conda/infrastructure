@@ -1,0 +1,1 @@
+PULL_REQUEST_TEMPLATE_wo_releases.md
