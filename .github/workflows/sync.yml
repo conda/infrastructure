@@ -17,6 +17,8 @@ on:
       - .github/ISSUE_TEMPLATE/0_bug.yml
       - .github/ISSUE_TEMPLATE/1_feature.yml
       - .github/ISSUE_TEMPLATE/epic.yml
+      - .github/PULL_REQUEST_TEMPLATE/with_releases.md
+      - .github/PULL_REQUEST_TEMPLATE/without_releases.md
 
   # NOTE: github.event is workflow_dispatch payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
