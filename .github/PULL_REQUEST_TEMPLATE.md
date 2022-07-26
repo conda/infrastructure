@@ -1,1 +1,1 @@
-PULL_REQUEST_TEMPLATE_wo_releases.md
+PULL_REQUEST_TEMPLATE/without_releases.md
