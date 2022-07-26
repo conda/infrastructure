@@ -2,8 +2,6 @@
 
 In an effort to decrease the context switching/learning barrier between the different projects within the Conda org, a standard set of code styles is defined. The intention of these guidelines is not to overburden or complicate the contribution process; if any style starts to become a burden, its inherent benefit should be reevaluated.
 
-> ⚠️ See conda-incubator/ceps#24 for our policy regarding the Python versions Conda projects need to support. Conda plugins must also support this range of versions in order to continue to be of value to current users.
-
 | | Policy | Tooling |
 |---|---|---|
 | <a name="0"></a>0 | Use `black` (or `darker` for preexisting projects). | [`black`](https://github.com/psf/black) [`darker`](https://github.com/akaihola/darker) |
