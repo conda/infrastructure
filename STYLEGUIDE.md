@@ -14,7 +14,8 @@ In an effort to decrease the context switching/learning barrier between the diff
 | <a name="5"></a>5 | Define loggers at the top of files. | |
 | <a name="6"></a>6 | Only use `assert` in tests. | [`flake8-useless-assert`](https://github.com/decorator-factory/flake8-useless-assert) |
 | <a name="7"></a>7 | Use American English. | [`flake8-spellcheck`](https://github.com/MichaelAquilina/flake8-spellcheck) |
-| <a name="7.1"></a>7.1 | Use descriptive variable names: <ul><li>no one-char variables</li><li>avoid abbreviations</li><li>avoid overloading builtins</li></ul> | [`flake8-variables-names`](https://github.com/best-doctor/flake8-variables-names) |
+| <a name="7.1"></a>7.1 | Use inclusive language. See these other great resources for details: <ul><li>[Google](https://developers.google.com/style/inclusive-documentation)</li><li>[HubSpot](https://blog.hubspot.com/marketing/inclusive-language)</li><li>[Apple](https://support.apple.com/guide/applestyleguide/intro-apdcb2a65d68/1.0/web/1.0)</li></ul> | |
+| <a name="7.2"></a>7.2 | Use descriptive variable names: <ul><li>no one-char variables</li><li>avoid abbreviations</li><li>avoid overloading builtins</li></ul> | [`flake8-variables-names`](https://github.com/best-doctor/flake8-variables-names) |
 
 | Other Tooling |
 |---|
