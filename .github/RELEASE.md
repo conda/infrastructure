@@ -84,11 +84,11 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     (rever) $ rever --activities authors <VERSION> [--force]
     ```
 
-    - If rever finds that any of the authors are not correctly represented in `.authors.yml` it will produce an error, if the author that the error pertains to is:
+    - If rever finds that any of the authors are not correctly represented in `.authors.yml` it will produce an error. If the author that the error pertains to is:
         - **a new contributor**: the snippet suggested by rever should be added to the `.authors.yml` file.
         - **an existing contributor**, a result of using a new name/email combo: find the existing author in `.authors.yml` and add the new name/email combo to that author's `aliases` and `alterative_emails`.
 
-    - Once you have successfully run `rever --activities authors` with no errors, review the commit made by rever. This commit will contain updates to one or more of the author files (`.authors.yml`, `.mailmap`, and `AUTHORS.md`). Due to the race condition between `.authors.yml` and `.mailmap` we want to extract changes made to any of the following keys in `.authors.yml` and commit them separately from the other changes in the rever commit:
+    - Once you have successfully run `rever --activities authors` with no errors, review the commit made by rever. This commit will contain updates to one or more of the author files (`.authors.yml`, `.mailmap`, and `AUTHORS.md`). Due to the race condition between `.authors.yml` and `.mailmap`, we want to extract changes made to any of the following keys in `.authors.yml` and commit them separately from the other changes in the rever commit:
         -  `name`
         -  `email`
         -  `github`
@@ -97,7 +97,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
       Other keys (e.g., `num_commits` and `first_commit`) do not need to be included in this separate commit as they will be overwritten by rever.
 
-    - Here's a sample run where we undo the commit made by revert in order to commit the changes to `.authors.yml` separately:
+    - Here's a sample run where we undo the commit made by rever in order to commit the changes to `.authors.yml` separately:
 
         ```bash
         (rever) $ rever --activities authors 22.9.0 --force
@@ -128,9 +128,9 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
         git shortlog -se
         ```
 
-      Compare this list with `AUTHORS.md`, if they have any discrepancies, additional modifications to `.authors.yml` is needed, so repeat the above steps as needed.
+      Compare this list with `AUTHORS.md`. If they have any discrepancies, additional modifications to `.authors.yml` is needed, so repeat the above steps as needed.
 
-    - Once you are pleased with how the author files we want to undo the revert commit and commit the `.mailmap` changes separately:
+    - Once you are pleased with how the author's file looks, we want to undo the rever commit and commit the `.mailmap` changes separately:
 
         ```bash
         # undo commit (but preserve changes)
