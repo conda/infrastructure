@@ -47,8 +47,6 @@
 
 2. Ensure `rever.xsh` and `news/TEMPLATE` is up to date. These are synced from https://github.com/conda/infra.
 
-3. Ensure all news snippets are using Markdown, **not** reStructuredTest.
-
 <details>
 <summary>4. Run Rever.</summary>
 
@@ -156,7 +154,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
         ```
 
 
-4. Review news snippets (ensure they are all using the correct format) and add additional snippets for undocumented PRs/changes as necessary.
+4. Review news snippets (ensure they are all using the correct Markdown format, **not** reStructuredTest) and add additional snippets for undocumented PRs/changes as necessary.
 
     > **Note:**
     > We've found it useful to name news snippets with the following format: `<PR #>-<DESCRIPTIVE SLUG>`.
