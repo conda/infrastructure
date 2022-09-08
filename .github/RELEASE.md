@@ -1,3 +1,5 @@
+<!-- These docs are updated and synced from https://github.com/conda/infra -->
+
 ## Release Process
 
 [epic template]: issues/new?assignees=&labels=epic&template=epic.yml

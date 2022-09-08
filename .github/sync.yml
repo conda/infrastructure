@@ -75,7 +75,7 @@ group:
       # PR template
       - source: .github/PULL_REQUEST_TEMPLATE/without_releases.md
         dest: .github/PULL_REQUEST_TEMPLATE.md
-  # rever release based projects
+  # projects with rever releases
   - repos: |
       conda/conda
       conda/conda-build
@@ -84,3 +84,9 @@ group:
       # rever config
       - source: .github/rever.xsh
         dest: rever.xsh
+      # news snippet template
+      - source: .github/TEMPLATE
+        dest: news/TEMPLATE
+      # release docs
+      - source: .github/RELEASE.md
+        dest: RELEASE.md
