@@ -45,7 +45,7 @@ Placeholder for `conda 22.9.0` release.
 </details>
 
 
-### 2. Ensure `rever.xsh` and `news/TEMPLATE` is up to date.
+### 2. Ensure `rever.xsh` and `news/TEMPLATE` are up to date.
 
 These are synced from https://github.com/conda/infra.
 
@@ -156,7 +156,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
         ```
 
 
-4. Review news snippets (ensure they are all using the correct Markdown format, **not** reStructuredTest) and add additional snippets for undocumented PRs/changes as necessary.
+4. Review news snippets (ensure they are all using the correct Markdown format, **not** reStructuredText) and add additional snippets for undocumented PRs/changes as necessary.
 
     > **Note:**
     > We've found it useful to name news snippets with the following format: `<PR #>-<DESCRIPTIVE SLUG>`.
@@ -169,7 +169,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     > * Add `win-arm64` as a known platform (subdir). (#11778)
     > ```
 
-    - I find it helpful to use [GitHub's compare view][compare] to review what changes are to be included in this release.
+    - You can utilize [GitHub's compare view][compare] to review what changes are to be included in this release.
 
     - Add a new news snippet for any PRs of importance that are missing.
 
