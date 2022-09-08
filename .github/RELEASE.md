@@ -7,48 +7,50 @@
 [compare]: compare
 [release notes]: releases/new
 
-1. Open an issue in the applicable project for the upcoming release with the following details.
+### 1. Open an issue in the applicable project for the upcoming release with the following details.
 
-    > **Note:**
-    > The [epic template][epic template] is perfect for this, just remember to remove the https://github.com/conda/infra/labels/epic label.
-
-    <details>
-    <summary><code>GitHub Issue Template</code></summary>
-
-    ```markdown
-    ### Summary
-
-    Placeholder for `conda 22.9.0` release.
-
-    ### Tasks
-
-    [milestone]: https://github.com/conda/conda/milestone/56
-    [releases]: https://github.com/conda/conda/releases
-    [main]: https://github.com/AnacondaRecipes/conda-feedstock
-    [conda-forge]: https://github.com/conda-forge/conda-feedstock
-
-    - [ ] [Complete outstanding PRs][milestone]
-    - [ ] Create release PR
-        - See release process https://github.com/conda/infra/issues/541
-    - [ ] [Publish Release][releases]
-    - [ ] Create/update `22.9.x` branch
-    - [ ] Feedstocks
-        - [ ] Bump version [Anaconda's main][main]
-        - [ ] Bump version [conda-forge][conda-forge]
-        - Link any other feedstock PRs that are necessary
-    - [ ] Handoff to the Anaconda packaging team
-    - [ ] Announce release
-        - [ ] Slack
-        - [ ] Twitter
-    ```
-
-    </details>
-
-
-2. Ensure `rever.xsh` and `news/TEMPLATE` is up to date. These are synced from https://github.com/conda/infra.
+> **Note:**
+> The [epic template][epic template] is perfect for this, just remember to remove the https://github.com/conda/infra/labels/epic label.
 
 <details>
-<summary>4. Run Rever.</summary>
+<summary><code>GitHub Issue Template</code></summary>
+
+```markdown
+### Summary
+
+Placeholder for `conda 22.9.0` release.
+
+### Tasks
+
+[milestone]: https://github.com/conda/conda/milestone/56
+[releases]: https://github.com/conda/conda/releases
+[main]: https://github.com/AnacondaRecipes/conda-feedstock
+[conda-forge]: https://github.com/conda-forge/conda-feedstock
+
+- [ ] [Complete outstanding PRs][milestone]
+- [ ] Create release PR
+    - See release process https://github.com/conda/infra/issues/541
+- [ ] [Publish Release][releases]
+- [ ] Create/update `22.9.x` branch
+- [ ] Feedstocks
+    - [ ] Bump version [Anaconda's main][main]
+    - [ ] Bump version [conda-forge][conda-forge]
+    - Link any other feedstock PRs that are necessary
+- [ ] Handoff to the Anaconda packaging team
+- [ ] Announce release
+    - [ ] Slack
+    - [ ] Twitter
+```
+
+</details>
+
+
+### 2. Ensure `rever.xsh` and `news/TEMPLATE` is up to date.
+
+These are synced from https://github.com/conda/infra.
+
+<details>
+<summary><h3>3. Run Rever.</h3></summary>
 
 Currently, there are only 2 activities we use rever for, (1) aggregating the authors and (2) updating the changelog. Aggregating the authors can be an error-prone process and also suffers from builtin race conditions (i.e. to generate an updated `.authors.yml` we need an updated `.mailmap` but to have an updated `.mailmap` we need an updated `.authors.yml`). This is why the following steps are very heavy-handed (and potentially repetitive) in running rever commands, undoing commits, squashing/reordering commits, etc.
 
