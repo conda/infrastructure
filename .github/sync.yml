@@ -84,9 +84,6 @@ group:
       # rever config
       - source: .github/rever.xsh
         dest: rever.xsh
-      # news snippet template
-      - source: .github/TEMPLATE
-        dest: news/TEMPLATE
       # release docs
       - source: .github/RELEASE.md
         dest: RELEASE.md
