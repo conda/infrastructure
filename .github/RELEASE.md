@@ -2,10 +2,10 @@
 
 ## Release Process
 
-[epic template]: issues/new?assignees=&labels=epic&template=epic.yml
+[epic template]: ../../issues/new?assignees=&labels=epic&template=epic.yml
 [rever docs]: https://regro.github.io/rever-docs
-[compare]: compare
-[release notes]: releases/new
+[compare]: ../../compare
+[release notes]: ../../releases/new
 
 ### 1. Open an issue in the applicable project for the upcoming release with the following details.
 
