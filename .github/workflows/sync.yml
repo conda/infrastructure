@@ -19,6 +19,8 @@ on:
       - .github/ISSUE_TEMPLATE/epic.yml
       - .github/PULL_REQUEST_TEMPLATE/with_releases.md
       - .github/PULL_REQUEST_TEMPLATE/without_releases.md
+      - .github/rever.xsh
+      - .github/TEMPLATE
 
   # NOTE: github.event is workflow_dispatch payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
