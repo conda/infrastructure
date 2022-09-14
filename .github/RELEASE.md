@@ -8,7 +8,7 @@
 [epic template]: ../../issues/new?assignees=&labels=epic&template=epic.yml
 [rever docs]: https://regro.github.io/rever-docs
 [compare]: ../../compare
-[release notes]: ../../releases/new
+[new release]: ../../releases/new
 [release docs]: https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes
 
 ### 1. Open the Release Issue.
@@ -40,7 +40,7 @@ Placeholder for `conda YY.M.0` release.
     - [ ] Bump version [Anaconda's main][main]
     - [ ] Bump version [conda-forge][conda-forge]
     - Link any other feedstock PRs that are necessary
-- [ ] Handoff to the Anaconda packaging team
+- [ ] Hand off to the Anaconda packaging team
 - [ ] Announce release
     - [ ] Slack
     - [ ] Twitter
@@ -239,7 +239,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 7. Since rever does not include stats on first-time contributors, we will need to add this manually.
 
-    - Use [GitHub's auto-generated release notes][release notes] to get a list of all new contributors (and their first PR) and manually merge this list with the contributor list in `CHANGELOG.md`. See [GitHub docs][release docs] for how to auto-generate the release notes.
+    - Use [GitHub's auto-generated release notes][new release] to get a list of all new contributors (and their first PR) and manually merge this list with the contributor list in `CHANGELOG.md`. See [GitHub docs][release docs] for how to auto-generate the release notes.
 
     - Commit these final changes:
 
@@ -266,18 +266,55 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     (rever) $ git push -u upstream release-YY.M.0
     ```
 
+9. Open the Release PR.
+
+    <details>
+    <summary>GitHub PR Template</summary>
+
+    ```markdown
+    ### Description
+
+    ✂️ snip snip ✂️ the making of a new release.
+
+    Xref #<RELEASE ISSUE>
+    ```
+
+    </details>
+
+10. Update Release Issue to include a link to the Release PR.
+
+11. [Create][new release] the release and **SAVE AS A DRAFT** with the following values:
+
+    > **Note:**
+    > Only publish the release after the Release PR is merged, until then always **save as draft**.
+
+    | Field | Value |
+    |---|---|
+    | Choose a tag | `YY.M.0` |
+    | Target | `main` |
+    | Body | copy/paste blurb from `CHANGELOG.md` |
+
 </details>
 
-### 4. Open the Release PR.
+### 4. Wait for review and approval of Release PR.
 
-1. GitHub PR Template
+### 5. Merge Release PR and Publish Release.
 
-```markdown
-### Description
+### 6. Create a new branch (`YY.M.x`) corresponding with the release.
 
-✂️ snip snip ✂️ the making of a new release.
+### 7. Open PRs to bump main and conda-forge feedstocks to use `YY.M.0`.
 
-Xref #<RELEASE ISSUE>
-```
+### 8. Hand off to Anaconda's packaging team.
 
-2. Update Release Issue to include a link to the Release PR.
+<details>
+<summary>Internal process</summary>
+
+1. Open packaging request in #package_requests, include links to the Release PR and feedstock PRs.
+
+2. Message packaging team/PM to let them know that a release has occurred and that you are the release manager.
+
+</details>
+
+### 9. Continue championing and shepherding.
+
+Remember to continue updating the Release Issue with the latest details as tasks are completed.
