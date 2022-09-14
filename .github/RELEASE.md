@@ -9,6 +9,7 @@
 [rever docs]: https://regro.github.io/rever-docs
 [compare]: ../../compare
 [release notes]: ../../releases/new
+[release docs]: https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes
 
 ### 1. Open the Release Issue.
 
@@ -238,7 +239,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 7. Since rever does not include stats on first-time contributors, we will need to add this manually.
 
-    - Use [GitHub's auto-generated release notes][release notes] to get a list of all new contributors (and their first PR) and manually update the contributor list in `CHANGELOG.md`.
+    - Use [GitHub's auto-generated release notes][release notes] to get a list of all new contributors (and their first PR) and manually merge this list with the contributor list in `CHANGELOG.md`. See [GitHub docs][release docs] for how to auto-generate the release notes.
 
     - Commit these final changes:
 
