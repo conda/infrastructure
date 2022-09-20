@@ -8,11 +8,12 @@ for all projects falling underneath the [conda](github.com/conda) organization.
 
 ### What is a Spike?
 
-A spike is a term that is borrowed from extreme programming and agile development. At conda,
-we use spikes to analyze a bug report more thoroughly or while planning our future epics.
-These spike issues help us determine exactly what needs to be done to implement the bug fix or
-epic and many times result in the creation of one or more issues to carry out this work.
-Below, we will cover some common scenarios for how spikes are created.
+A "spike" is a term that is borrowed from extreme programming and agile development,
+and it usually defines issues that are more research oriented and less about the actual
+implementation themselves. At conda, we use spikes to analyze bug reports
+more thoroughly or while planning our future epics to implement new features. These spike
+issues help us determine exactly what needs to be done to implement the bug fix or epic and
+many times result in the creation of one or more new issues to carry out this work.
 
 ### When do I create a spike?
 
@@ -37,21 +38,21 @@ because this may not be known when we first begin work on the epic.
 
 - Preface the issue title with, "SPIKE 🔍" (or add a label???)
 - Ensure there is enough background information on the issue for a would-be assignee
-- Ensure that the issue has clear deliverables. These should state exactly what needs to be done.
-  For example, if we expect to create another issue as result of this spike, that should be stated.
+- Ensure that the issue has clear deliverables. These should state exactly what needs to be done
+  For example, if we expect to create another issue as result of this spike, that should be stated
 
 #### When planning an epic
 
 - Preface the issue title with, "SPIKE 🔍" (or add a label???)
 - Ensure there is enough background information on the issue for a would-be assignee
 - State exactly what is unknown that we need to determine so that we can convert this
-  knowledge into deliverables for other issues.
+  knowledge into deliverables for other issues
 - Ensure that the deliverables have been clearly defined and whether other issues
-  need to be created as a result of this spike.
+  need to be created as a result of this spike
 
 ### How do I complete a spike?
 
-Being able to determine whether a spike is complete should be an easy task provided
+Determining whether a spike is complete should be an easy task provided
 that the deliverables have been clearly defined. When this is not the case, you should
 not work on the issue and instead attempt to clarify the deliverables with those also
 working on the project.
