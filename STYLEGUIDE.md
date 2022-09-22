@@ -16,6 +16,7 @@
 [flake8-docstrings]: https://github.com/PyCQA/flake8-docstrings
 [check-docstring-first]: https://github.com/pre-commit/pre-commit-hooks#check-docstring-first
 [docformatter]: https://github.com/PyCQA/docformatter
+[sphinx.ext.autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#directive-autoproperty
 
 ## Conda Style Guide
 
@@ -36,6 +37,8 @@ In an effort to decrease the context switching/learning barrier between the diff
 | <h5>7.1</h5> | Use inclusive language. See these other great resources for details: <ul><li>[Google][inclusive-google]</li><li>[HubSpot][inclusive-hubspot]</li><li>[Apple][inclusive-apple]</li></ul> | |
 | <h5>7.2</h5> | Use descriptive variable names: <ul><li>no one-char variables</li><li>avoid abbreviations</li><li>avoid overloading builtins</li></ul> | [`flake8-variables-names`][flake8-variables-names] |
 | <h5>8</h5> | When indicating a change that requires a future version of Python (or dropping a currently-supported version), use the following format:<br>`# FUTURE: <minimum Python requirement>, <details>`<br>e.g.:<br>`# FUTURE: Python 3.9+, replace with ...` | |
+| <h5>9</h5> | All public functions and module constants must include a docstring. | [`flake8-docstrings`][flake8-docstrings] [`docformatter`][docformatter] |
+| <h5>9.1</h5> | Module constants are documented using Sphinx autodoc syntax:<br><pre># before constant<br>#: The Answer to the Ultimate Question of Life<br>ANSWER = 42<br><br># or inline<br>ANSWER = 42  #: Life</pre> | [`sphinx.ext.autodoc`][sphinx.ext.autodoc] |
 
 | Other Tooling |
 |---|
