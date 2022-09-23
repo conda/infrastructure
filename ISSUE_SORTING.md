@@ -1,7 +1,18 @@
-## The Issue Sorting Process at `conda`
+## Issue Sorting
 
-> **Note:**
+> **Note**
 > This process is similar to that of "triaging", but we've chosen to use different terminology because "triaging" is a word related to very weighty topics (*i.e.*, injuries and war) and we would like to be sensitive to those connotations. Additionally, we are taking a more "fuzzy" approach to sorting (*e.g.*, severities may not be assigned, etc.).
+
+This document seeks to outline how we as a community should use GitHub Issues to track bugs and feature requests while still catering to development practices (e.g. release cycles, feature planning, priority sorting, etc.).
+
+Topics:
+  - [What is Issue Sorting?](#what-is-issue-sorting)
+  - [Types of tickets](#types-of-tickets)
+    - [Normal Ticket/Issue](#normal-ticket-issue)
+    - [Epics](#epics)
+    - [Spikes](#spikes)
+
+### What is Issue Sorting?
 
 "Issue Sorting" refers to the process of assessing the priority of incoming issues. Below is a high-level diagram of the flow of tickets:
 
@@ -149,7 +160,8 @@ Below are some boilerplate responses for the most commonly-seen issues to be sor
 This is a duplicate of <b>[link to primary issue]</b>; please feel free to continue the discussion there.
 </pre>
 
-> :warning: Apply the https://github.com/conda/infra/labels/duplicate label to the issue being closed and https://github.com/conda/infra/labels/duplicate%3A%3Aprimary to the original issue.
+> **Warning**
+> Apply the https://github.com/conda/infra/labels/duplicate label to the issue being closed and https://github.com/conda/infra/labels/duplicate%3A%3Aprimary to the original issue.
 
 </details>
 
@@ -177,7 +189,8 @@ If you are still encountering this issue please reopen in the
 where `conda` installer/package issues are addressed.
 </pre>
 
-> :warning: Apply the https://github.com/conda/infra/labels/off-topic label to these tickets before closing them out.
+> **Warning**
+> Apply the https://github.com/conda/infra/labels/off-topic label to these tickets before closing them out.
 
 </details>
 
@@ -191,8 +204,24 @@ if you continue to experience the problems described here,
 please post details to the [Nucleus forums](https://community.anaconda.cloud/).
 </pre>
 
-> :warning: Apply the https://github.com/conda/infra/labels/off-topic label to these tickets before closing them out.
+> **Warning**
+> Apply the https://github.com/conda/infra/labels/off-topic label to these tickets before closing them out.
 
 </details>
 
 In order to not have to manually type or copy/paste the above repeatedly, please note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option](https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply).
+
+
+### Types of Tickets
+
+#### Normal Ticket/Issue
+
+TODO
+
+#### Epics
+
+TODO
+
+#### Spikes
+
+TODO
