@@ -1,4 +1,5 @@
 group:
+  # all repos
   - repos: |
       conda/actions
       conda/conda
@@ -43,6 +44,12 @@ group:
         dest: .github/ISSUE_TEMPLATE/1_feature.yml
       - source: .github/ISSUE_TEMPLATE/epic.yml
         dest: .github/ISSUE_TEMPLATE/epic.yml
+      # issue sorting
+      - source: ISSUE_SORTING.md
+        dest: ISSUE_SORTING.md
+      # code of conduct
+      - source: CODE_OF_CONDUCT.md
+        dest: CODE_OF_CONDUCT.md
   # projects with releases
   - repos: |
       conda/actions
@@ -65,7 +72,7 @@ group:
       - source: .github/PULL_REQUEST_TEMPLATE/with_releases.md
         dest: .github/PULL_REQUEST_TEMPLATE.md
       # news snippet template
-      - source: .github/TEMPLATE
+      - source: .github/sync/TEMPLATE
         dest: news/TEMPLATE
   # projects without releases
   - repos: |
@@ -82,8 +89,8 @@ group:
       conda/conda-package-handling
     files:
       # rever config
-      - source: .github/rever.xsh
+      - source: .github/sync/rever.xsh
         dest: rever.xsh
       # release docs
-      - source: .github/RELEASE.md
+      - source: .github/sync/RELEASE.md
         dest: RELEASE.md
