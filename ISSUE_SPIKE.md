@@ -36,14 +36,13 @@ because this may not be known when we first begin work on the epic.
 
 #### When converting an existing issue
 
-- Preface the issue title with, "SPIKE 🔍" (or add a label???)
+- Preface the issue title with "SPIKE 🔍" (or add a label???)
 - Ensure there is enough background information on the issue for a would-be assignee
-- Ensure that the issue has clear deliverables. These should state exactly what needs to be done
-  For example, if we expect to create another issue as result of this spike, that should be stated
+- Ensure that the issue has clear deliverables; these should state exactly what needs to be done (e.g., if we expect to create another issue as result of this spike, that should be stated)
 
 #### When planning an epic
 
-- Preface the issue title with, "SPIKE 🔍" (or add a label???)
+- Preface the issue title with "SPIKE 🔍" (or add a label???)
 - Ensure there is enough background information on the issue for a would-be assignee
 - State exactly what is unknown that we need to determine so that we can convert this
   knowledge into deliverables for other issues
@@ -52,7 +51,7 @@ because this may not be known when we first begin work on the epic.
 
 ### How do I complete a spike?
 
-Determining whether a spike is complete should be an easy task provided
+Determining whether a spike is complete should be a straightforward task provided
 that the deliverables have been clearly defined. When this is not the case, you should
-not work on the issue and instead attempt to clarify the deliverables with those also
-working on the project.
+not work on the issue and instead attempt to clarify the deliverables with those who are
+also working on the project.
