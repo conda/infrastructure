@@ -7,7 +7,7 @@ these types of issues are and the steps to take when creating them are all outli
 below. These guidelines apply for all projects falling underneath the
 [conda](github.com/conda) organization.
 
-### What is a Spike?
+### What is a spike?
 
 A spike is a term that is borrowed from extreme programming and agile development.
 They are used when the **outcome of an issue is unknown or even optional**. For example,
@@ -48,10 +48,18 @@ A spike should be created when we do not have enough information to move forward
 a problem. That simply means whenever we are dealing with unknowns or processes which our
 development team has never encountered before, it may be useful for us to create a spike issue.
 
-In our day-to-day work, this may appear when new bug reports or feature requests
+In day-to-day work, this may appear when new bug reports or feature requests
 come in which deal with problems or technologies that our development team is unfamiliar with.
 For all issues which our development team has sufficient knowledge of, these issues should
 instead be created as regular issues.
+
+### When do I **not** create a spike?
+
+Below are some common scenarios where creating a spike is not appropriate:
+
+- Writing a technical specification
+- Design work that would go into drafting how a library our API is going to be created
+- Any work that must be completed or is not optional
 
 ### How do I create a spike?
 
@@ -68,11 +76,6 @@ instead be created as regular issues.
 - Spikes can be created from existing issues. Bug reports are a good example of this. When converting
   existing issues, make sure the issues have all of the requirements from above.
 - If a spike only has a single deliverable and a low timebox, consider adding it as a task to another
-  related issue
-
-### How do I complete a spike?
-
-Determining whether a spike is complete should be an easy task provided
-that the deliverables have been clearly defined. When this is not the case, you should
-not work on the issue and instead attempt to clarify the deliverables with those also
-working on the project.
+  related issue.
+- Spikes need deliverables. If there are no deliverables listed, do not work on the spike and instead
+  determine what these deliverables are before going forward and update the spike.
