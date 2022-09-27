@@ -41,6 +41,9 @@
 - name: sprint
   description: issue has been pulled into current sprint and is actively being worked on
   color: "ededed"
+- name: spike
+  description: issue is for doing research work or prototyping; outcome is optional and not required
+  color: "ededed"
 
 # Sync
 - name: sync::anaconda
