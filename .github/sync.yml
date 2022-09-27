@@ -45,8 +45,8 @@ group:
       - source: .github/ISSUE_TEMPLATE/epic.yml
         dest: .github/ISSUE_TEMPLATE/epic.yml
       # issue sorting
-      - source: ISSUE_SORTING.md
-        dest: ISSUE_SORTING.md
+      - source: HOW_WE_USE_GITHUB.md
+        dest: HOW_WE_USE_GITHUB.md
       # code of conduct
       - source: CODE_OF_CONDUCT.md
         dest: CODE_OF_CONDUCT.md

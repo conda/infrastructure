@@ -20,7 +20,7 @@
 [workflow-project]: /.github/workflows/project.yml
 [labels-local]: /.github/labels.yml
 
-## How we use GitHub
+## How We Use GitHub
 
 > **Note**
 > For easy navigation use [GitHub's table of contents feature][docs-toc].
@@ -235,12 +235,12 @@ please post details to the [Nucleus forums](https://community.anaconda.cloud/).
 
 </details>
 
-In order to not have to manually type or copy/paste the above repeatedly, please note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply.
+In order to not have to manually type or copy/paste the above repeatedly, please note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply].
 
 
 ### Types of Tickets
 
-#### Normal Ticket/Issue
+#### Standard Ticket/Issue
 
 TODO
 
