@@ -27,6 +27,7 @@
 
 This document seeks to outline how we as a community use GitHub Issues to track bugs and feature requests while still catering to development practices & project management (*e.g.*, release cycles, feature planning, priority sorting, etc.).
 
+<!-- only include high-level topics or particularly noteworthy sections here -->
 Topics:
   - [What is Issue Sorting?](#what-is-issue-sorting)
   - [Types of tickets](#types-of-tickets)
