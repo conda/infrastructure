@@ -333,10 +333,13 @@ We cover these two types of spikes as well as some examples below.
 - A time box between one and three days (e.g. four hours; two days)
 - Background information for a would-be assignee
 
-**Quick note about time boxes:**
+```
+Quick note about time boxes:
+
 In "time box" time, one day is the amount of hours in a normal work day (eight hours).
 This does not need to be completed consecutively. So, it is possible to complete a
 spike which has been time boxed for one day over the course of three or four days.
+```
 
 #### Task spikes
 
@@ -397,12 +400,12 @@ feature.
 
 ---
 
-The above example tasks has several, non-trivial deliverables; therefore, it warrants its own
-separate issue. It is also important to note that because this is an issue for a prototype, the
-work is optional and can be discontinued at any time. Further work on it will be determined
-by feedback from the project team or conda community.
+The above example has several tasks which may take considerable time to complete; therefore, it 
+warrants its own separate issue. It is also important to note that because this is an issue for
+a prototype, the work is optional and can be discontinued at any time. Further work on it will
+be determined by feedback from the project team or conda community.
 
-Just like task spikes, issue spike time boxes can also be renogiated and reset if the project
+Just like task spikes, issue spike time boxes can also be renegotiated and reset if the project
 team feels that further work is necessary or warranted.
 
 #### Additional guidelines to be aware of
