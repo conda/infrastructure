@@ -245,22 +245,22 @@ In order to not have to manually type or copy/paste the above repeatedly, please
 The following section describes the different types of issues that we create in our GitHub
 projects and how/why they are used.
 
-### Standard Ticket/Issue
+## Standard Ticket/Issue
 
 TODO
 
-### Epics
+## Epics
 
 TODO
 
-### Spikes
+## Spikes
 
 In this section, we go over the procedure to follow when creating spikes. Exactly what
 these types of issues are and the steps to take when creating them are all outlined
 below. These guidelines apply for all projects falling underneath the
 [conda](github.com/conda) organization.
 
-#### What is a spike?
+### What is a spike?
 
 A spike is a term that is borrowed from extreme programming and agile development.
 They are used when the **outcome of a ticket is unknown or even optional**. For example,
@@ -303,7 +303,7 @@ continue -->|Yes,\nset new time box| work
 continue -->|No| finished
 ```
 
-#### When do I create a spike?
+### When do I create a spike?
 
 A spike should be created when we do not have enough information to move forward with solving
 a problem. That simply means whenever we are dealing with unknowns or processes which our
@@ -314,7 +314,7 @@ come in which deal with problems or technologies that our development team is un
 For all issues which our development team has sufficient knowledge of, these issues should
 instead proceed as regular issues.
 
-#### When do I **not** create a spike?
+### When do I **not** create a spike?
 
 Below are some common scenarios where creating a spike is not appropriate:
 
@@ -322,13 +322,13 @@ Below are some common scenarios where creating a spike is not appropriate:
 - Design work that would go into drafting how an API is going to look and function
 - Any work that must be completed or is not optional
 
-#### How do I create and complete a spike?
+### How do I create and complete a spike?
 
 The following section describes the exact process of creating and completing
 a spike. There are two types of spikes to be aware of: "task spikes" and "issue spikes".
 We cover these two types of spikes as well as some examples below.
 
-##### Requirements for all spikes
+#### Requirements for all spikes
 
 - A time box between one and three days (e.g. four hours; two days)
 - Background information for a would-be assignee
@@ -340,7 +340,7 @@ We cover these two types of spikes as well as some examples below.
   spike which has been time boxed for one day over the course of three or four days.
 </p>
 
-##### Task spikes
+#### Task spikes
 
 Task spikes belong to an existing issue. Common use cases for these types of spikes is 
 determining if a feature request is viable and if we want to pursue it further, or if a
@@ -367,7 +367,7 @@ working on it will write up as much information as they can about the bug report
 Afterwards, they will work together with other devlopers to determine further development is
 warranted. If so, the time box will be redefined and reset.
 
-##### Issue spikes
+#### Issue spikes
 
 Issue spikes are much like task spikes except that they have enough work to warrant an entire
 issue to themselves. These are often created when planning new features or investigating new
@@ -403,7 +403,7 @@ by feedback from the project team or conda community.
 Just like task spikes, issue spike time boxes can also be renogiated and reset if the project
 team feels that further work is necessary or warranted.
 
-##### Additional guidelines to be aware of
+#### Additional guidelines to be aware of
 
 - Spikes can be created from existing issues. Bug reports are a good example of this. When converting
   existing issues, make sure the issues have all of the requirements from above for "issue spikes".
