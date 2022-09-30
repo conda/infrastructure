@@ -66,7 +66,7 @@ instead proceed as regular issues.
 Below are some common scenarios where creating a spike is not appropriate:
 
 - Writing a technical specification
-- Design work that would go into drafting how a library our API is going to be created
+- Design work that would go into drafting how an API is going to look and function
 - Any work that must be completed or is not optional
 
 ### How do I create a spike?
