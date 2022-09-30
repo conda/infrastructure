@@ -400,7 +400,7 @@ feature.
 
 ---
 
-The above example has several tasks which may take considerable time to complete; therefore, it 
+The above example has several tasks which may take considerable time to complete; therefore, it
 warrants its own separate issue. It is also important to note that because this is an issue for
 a prototype, the work is optional and can be discontinued at any time. Further work on it will
 be determined by feedback from the project team or conda community.
