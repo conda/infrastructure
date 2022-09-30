@@ -238,7 +238,7 @@ please post details to the [Nucleus forums](https://community.anaconda.cloud/).
 
 In order to not have to manually type or copy/paste the above repeatedly, please note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply].
 
-<hr >
+---
 
 ## Types of issues
 
@@ -380,6 +380,8 @@ When creating an issue spike, do the following:
 
 Here's an example issue spike:
 
+---
+
 **Description**
 
 In order to better understand the needs of conda users, we intend to create a prototype for a new
@@ -392,6 +394,8 @@ feature.
 - [ ] Create a technical specification for this new feature
 - [ ] Create a pull request demonstrating how this feature works with an example use case of it
 - [ ] Present these findings at the upcoming conda community meeting
+
+---
 
 The above example tasks has several, non-trivial deliverables; therefore, it warrants its own
 separate issue. It is also important to note that because this is an issue for a prototype, the
