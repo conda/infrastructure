@@ -230,3 +230,14 @@
   description: related to producing reproducible results
   color: "86C579"
   aliases: [reproducibility]
+
+# Documentation
+- name: documentation::testing
+  description: related to writing tests
+  color: "31A354"
+- name: documentation::developer
+  description: related to API and internal workings of project
+  color: "31A354"
+- name: documentation::user
+  description: related to documentation describing how the project is used
+  color: "31A354"
