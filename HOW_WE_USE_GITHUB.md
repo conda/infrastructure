@@ -342,7 +342,7 @@ We cover these two types of spikes as well as some examples below.
 
 ##### Task spikes
 
-Task spikes belong to an existing issue. Common use cases for these types of spikes is 
+Task spikes belong to an existing issue. Common use cases for these types of spikes is
 determining if a feature request is viable and if we want to pursue it further, or if a
 reported bug is worth addressing.
 
@@ -410,4 +410,3 @@ team feels that further work is necessary or warranted.
 - If a spike only has a single task and a low time box, consider adding it as a task to another
   related issue (it would then become a "task spike" on that issue)
 - Spikes need tasks. If there are no tasks listed, do not work on the spike; instead, determine what these tasks are and then update the spike with that information.
-
