@@ -1,5 +1,5 @@
 group:
-  # all repos
+  # all projects
   - repos: |
       conda/actions
       conda/conda
@@ -9,8 +9,9 @@ group:
       conda/conda-docs
       conda/conda-pack
       conda/conda-package-handling
-      conda/conda-prefix-replacement
       conda/conda-plugin-template
+      conda/conda-prefix-replacement
+      conda/conda-standalone
       conda/conda-verify
       conda/constructor
       conda/cookiecutter-conda-python
@@ -61,6 +62,7 @@ group:
       conda/conda-pack
       conda/conda-package-handling
       conda/conda-prefix-replacement
+      conda/conda-standalone
       conda/conda-verify
       conda/constructor
       conda/cookiecutter-conda-python
