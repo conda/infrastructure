@@ -71,13 +71,13 @@ Below are some common scenarios where creating a spike is not appropriate:
 
 ### How do I create a spike?
 
-#### All spikes need to following information
+#### Requirements for all spikes
 
 - The "spike" label
 - A timebox between 0 and 3 days (e.g. 4 hours; 2 days)
 - Background information for a would-be assignee
 - Clear deliverables. These should state exactly what needs to be done.
-  For example, if we expect to create another issue as result of this spike, that should be stated.
+  For example, if we expect to create another issue as a result of this spike, that should be stated.
 
 #### Additional guidelines to be aware of
 
@@ -85,5 +85,4 @@ Below are some common scenarios where creating a spike is not appropriate:
   existing issues, make sure the issues have all of the requirements from above.
 - If a spike only has a single deliverable and a low timebox, consider adding it as a task to another
   related issue.
-- Spikes need deliverables. If there are no deliverables listed, do not work on the spike and instead
-  determine what these deliverables are before going forward and update the spike.
+- Spikes need deliverables. If there are no deliverables listed, do not work on the spike; instead, determine what these deliverables are and then update the spike with that information.
