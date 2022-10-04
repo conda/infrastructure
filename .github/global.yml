@@ -232,12 +232,15 @@
   aliases: [reproducibility]
 
 # Documentation
-- name: documentation::testing
-  description: related to writing tests
+- name: documentation::tutorials
+  description: related to tutorials (learning-oriented)
   color: "31A354"
-- name: documentation::developer
-  description: related to API and internal workings of project
+- name: documentation::how-tos
+  description: related to how-tos (task-oriented)
   color: "31A354"
-- name: documentation::user
-  description: related to documentation describing how the project is used
+- name: documentation::reference
+  description: related to the API and internals (information-oriented)
+  color: "31A354"
+- name: documentation::explanation
+  description: related to higher-level clarification (understanding-oriented)
   color: "31A354"
