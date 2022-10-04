@@ -230,3 +230,17 @@
   description: related to producing reproducible results
   color: "86C579"
   aliases: [reproducibility]
+
+# Documentation
+- name: documentation::tutorials
+  description: related to tutorials (learning-oriented)
+  color: "77b2dc"
+- name: documentation::how-tos
+  description: related to how-tos (task-oriented)
+  color: "77b2dc"
+- name: documentation::reference
+  description: related to the API and internals (information-oriented)
+  color: "77b2dc"
+- name: documentation::explanation
+  description: related to higher-level clarification (understanding-oriented)
+  color: "77b2dc"
