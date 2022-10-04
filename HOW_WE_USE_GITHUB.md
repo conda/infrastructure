@@ -274,13 +274,12 @@ is often to explore the problem space more. For research oriented tasks, the end
 of this research may be that a feature request simply is not viable at the moment and
 would result in putting a stop to that work.
 
-Finally, spikes are **time boxed**. This means that we set a definite limit on how long
+Finally, spikes are **timeboxed**. This means that we set a definite limit on how long
 we want our contributors to work on a spike. We do this to prevent contributors
 from falling into a rabbit hole they may never return from (scary!). Instead, we set
-a time limit, typically between 1 and 3 "days", to perform work on the spike and then
-have the assignee report back to the development team. If the tasks defined in
-the spike have not yet been completed, a decision is made on whether it makes sense
-to perform further work on the spike.
+a time limit to perform work on the spike and then have the assignee report back to
+the development team. If the tasks defined in the spike have not yet been completed,
+a decision is made on whether it makes sense to perform further work on the spike.
 
 Below is what that workflow looks like:
 
@@ -289,7 +288,7 @@ flowchart LR
 
 %% nodes
 create[Create spike]
-work[Work on spike for\ntime box amount]
+work[Timeboxed work on spike]
 done{Is it done?}
 finished[Finished]
 continue{More time?}
@@ -299,19 +298,19 @@ create --> work
 work --> done
 done -->|No| continue
 done -->|Yes| finished
-continue -->|Yes,\nset new time box| work
+continue -->|Yes,\nrestart timebox| work
 continue -->|No| finished
 ```
 
 ### When do I create a spike?
 
 A spike should be created when we do not have enough information to move forward with solving
-a problem. That simply means whenever we are dealing with unknowns or processes which our
+a problem. That simply means whenever we are dealing with unknowns or processes which the
 development team has never encountered before, it may be useful for us to create a spike.
 
 In day-to-day work, this may appear when new bug reports or feature requests
-come in which deal with problems or technologies that our development team is unfamiliar with.
-For all issues which our development team has sufficient knowledge of, these issues should
+come in which deal with problems or technologies that the development team is unfamiliar with.
+For all issues which the development team has sufficient knowledge of, these issues should
 instead proceed as regular issues.
 
 ### When do I **not** create a spike?
