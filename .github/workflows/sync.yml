@@ -37,7 +37,7 @@ jobs:
         with:
           GH_PAT: ${{ secrets.SYNC_TOKEN }}
           PR_LABELS: false
-          CONFIG_PATH: .github/sync.yml
+          CONFIG_PATH: .github/sync/config.yml
           COMMIT_EACH_FILE: false
           GIT_USERNAME: Conda Bot
           GIT_EMAIL: conda-bot@users.noreply.github.com
