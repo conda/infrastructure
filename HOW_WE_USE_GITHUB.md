@@ -353,7 +353,7 @@ reported bug is worth addressing or how best to address it.
 
 When creating a task spike, do the following:
 
-- Under the issues' "tasks" (sometimes called "What should be done?"), add a description 
+- Under the issues' "tasks" (sometimes called "What should be done?"), add a description
   of the spike and what needs to be done
 - Add a timebox next to this task (either "low", "medium" or "high")
 - If necessary, add further sub-tasks one level underneath the spike task
