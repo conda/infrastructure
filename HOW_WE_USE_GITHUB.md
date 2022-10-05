@@ -264,7 +264,7 @@ below. These guidelines apply for all projects falling underneath the
 
 A spike is a term that is borrowed from extreme programming and agile development.
 They are used when the **outcome of a ticket is unknown or even optional**. For example,
-when first coming across a problem that has not been solved before, a team may choose
+when first coming across a problem that has not been solved before, a project may choose
 to either research the problem or create a prototype in order to better understand it.
 
 Additionally, spikes represent work that **may or may not actually be completed
@@ -278,7 +278,7 @@ Finally, spikes are **timeboxed**. This means that we set a definite limit on ho
 we want our contributors to work on a spike. We do this to prevent contributors
 from falling into a rabbit hole they may never return from (scary!). Instead, we set
 a time limit to perform work on the spike and then have the assignee report back to
-the development team. If the tasks defined in the spike have not yet been completed,
+the project team. If the tasks defined in the spike have not yet been completed,
 a decision is made on whether it makes sense to perform further work on the spike.
 
 Below is what that workflow looks like:
@@ -306,18 +306,18 @@ continue -->|No| finished
 
 A spike should be created when we do not have enough information to move forward with solving
 a problem. That simply means whenever we are dealing with unknowns or processes which the
-development team has never encountered before, it may be useful for us to create a spike.
+project team has never encountered before, it may be useful for us to create a spike.
 
 In day-to-day work, this may appear when new bug reports or feature requests
-come in which deal with problems or technologies that the development team is unfamiliar with.
-For all issues which the development team has sufficient knowledge of, these issues should
+come in which deal with problems or technologies that the project team is unfamiliar with.
+For all issues which the project team has sufficient knowledge of, these issues should
 instead proceed as regular issues.
 
 ### When do I **not** create a spike?
 
 Below are some common scenarios where creating a spike is not appropriate:
 
-- Writing a technical specification
+- Writing a technical specification for a feature we know how to implement
 - Design work that would go into drafting how an API is going to look and function
 - Any work that must be completed or is not optional
 
@@ -329,43 +329,52 @@ We cover these two types of spikes as well as some examples below.
 
 #### Requirements for all spikes
 
-- A time box between one and three days (e.g. four hours; two days)
+- A timebox at a level of either "low", "medium" or "high" (more on this below)
 - Background information for a would-be assignee
 
-```
-Quick note about time boxes:
+#### Timebox levels
 
-In "time box" time, one day is the amount of hours in a normal work day (eight hours).
-This does not need to be completed consecutively. So, it is possible to complete a
-spike which has been time boxed for one day over the course of three or four days.
-```
+Our timebox levels try to give project teams and would-be contributors an idea
+of how much work is desired/expected for a given spike.  Our three timebox levels
+are defined as follows:
+
+- **Low** two to six hours of work
+- **Medium** - six to 12 hours of work
+- **High** - 12 to 24 hours of work
+
+It is important to note that these hours do not have to be completely consecutively, but
+you are encouraged to keep the timelines of your project team in mind if applicable.
 
 #### Task spikes
 
 Task spikes belong to an existing issue. Common use cases for these types of spikes is
 determining if a feature request is viable and if we want to pursue it further, or if a
-reported bug is worth addressing.
+reported bug is worth addressing or how best to address it.
 
 When creating a task spike, do the following:
 
-- Under the ticket tasks, add a description of the spike and what needs to be done
-- Add a time box next to this task
+- Under the issues' "tasks" (sometimes called "What should be done?"), add a description 
+  of the spike and what needs to be done
+- Add a timebox next to this task (either "low", "medium" or "high")
 - If necessary, add further sub-tasks one level underneath the spike task
 
 Here's an example of what that looks like:
 
-- [ ] Create a proposed fix for this bug  (time box: _1 day_)
+---
+
+- [ ] Create a proposed fix for this bug  (timebox: low)
   - [ ] Create a pull request with your proposed approach
   - [ ] Justify and explain your approach on this pull request
 
-For the example above, the developer will create a prototype for a bug fix that will later
-be discussed with the project team. We have limited it to a one day time box to indicate that we
-do not want to spend any more time that on the proposal.
+---
 
-If a prototype has not been drafted by the time the day limit has been reached, the developer
-working on it will write up as much information as they can about the bug report on the issue.
-Afterwards, they will work together with other devlopers to determine further development is
-warranted. If so, the time box will be redefined and reset.
+For the example above, the contributor will create a prototype for a bug fix that will later
+be discussed with the project team or the wider conda community. The authors of the spike have
+specified "low" as the timebox level, which indicates that they do not want to spend too much
+time researching this issue.
+
+If work is still ongoing after reaching the timebox limit specified, the contributor is encouraged
+to contact the spike authors to report their findings to see if further work is desired.
 
 #### Issue spikes
 
@@ -380,7 +389,7 @@ When creating an issue spike, do the following:
   For example, if we expect to create another issue as a result of this spike, that should be stated
   there.
 
-Here's an example issue spike:
+Here is an example issue spike:
 
 ---
 
@@ -389,7 +398,7 @@ Here's an example issue spike:
 In order to better understand the needs of conda users, we intend to create a prototype for a new
 feature.
 
-**Time box:** 3 days
+**Timebox:** High
 
 **Task List**
 
@@ -399,18 +408,19 @@ feature.
 
 ---
 
-The above example has several tasks which may take considerable time to complete; therefore, it
-warrants its own separate issue. It is also important to note that because this is an issue for
-a prototype, the work is optional and can be discontinued at any time. Further work on it will
-be determined by feedback from the project team or conda community.
+The example above outlines all the steps necessary in order to create a prototype to present to
+the conda community or project team. For this particular spike, the authors have specified its
+timebox as "high", so as a contributor, you should plan to spend a considerable amount of time
+on this spike.
 
-Just like task spikes, issue spike time boxes can also be renegotiated and reset if the project
-team feels that further work is necessary or warranted.
+As someone working on a spike such as this, you are also highly encourage to keep all applicable
+information and discussions on this issue. This helps encourage a culture of asnychronous communication,
+and also helps us keep public records of important conversations that can be easily referenced later.
 
 #### Additional guidelines to be aware of
 
 - Spikes can be created from existing issues. Bug reports are a good example of this. When converting
   existing issues, make sure the issues have all of the requirements from above for "issue spikes".
-- If a spike only has a single task and a low time box, consider adding it as a task to another
+- If a spike only has a single task and a low timebox, consider adding it as a task to another
   related issue (it would then become a "task spike" on that issue)
 - Spikes need tasks. If there are no tasks listed, do not work on the spike; instead, determine what these tasks are and then update the spike with that information.
