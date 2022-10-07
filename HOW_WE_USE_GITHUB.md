@@ -262,7 +262,7 @@ below. These guidelines apply for all projects falling underneath the
 
 ### What is a spike?
 
-A spike is a term that is borrowed from extreme programming and agile development.
+"Spike" is a term that is borrowed from extreme programming and agile development.
 They are used when the **outcome of a ticket is unknown or even optional**. For example,
 when first coming across a problem that has not been solved before, a project may choose
 to either research the problem or create a prototype in order to better understand it.
@@ -270,7 +270,7 @@ to either research the problem or create a prototype in order to better understa
 Additionally, spikes represent work that **may or may not actually be completed
 or implemented**. An example of this are prototypes created to explore possible solutions.
 Not all prototypes are implemented and the purpose of creating a prototype
-is often to explore the problem space more. For research oriented tasks, the end result
+is often to explore the problem space more. For research-oriented tasks, the end result
 of this research may be that a feature request simply is not viable at the moment and
 would result in putting a stop to that work.
 
@@ -342,7 +342,7 @@ are defined as follows:
 - **Medium** - six to 12 hours of work
 - **High** - 12 to 24 hours of work
 
-It is important to note that these hours do not have to be completely consecutively, but
+It is important to note that these hours do not have to be completed consecutively, but
 you are encouraged to keep the timelines of your project team in mind if applicable.
 
 #### Task spikes
@@ -417,7 +417,7 @@ As someone working on a spike such as this, you are also highly encourage to kee
 information and discussions on this issue. This helps encourage a culture of asnychronous communication,
 and also helps us keep public records of important conversations that can be easily referenced later.
 
-#### Additional guidelines to be aware of
+#### Additional guidelines
 
 - Spikes can be created from existing issues. Bug reports are a good example of this. When converting
   existing issues, make sure the issues have all of the requirements from above for "issue spikes".
