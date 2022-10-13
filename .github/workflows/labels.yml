@@ -19,7 +19,7 @@ jobs:
       GLOBAL: https://raw.githubusercontent.com/conda/infra/main/.github/global.yml
       LOCAL: .github/labels.yml
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - id: has_local
         uses: andstor/file-existence-action@v1.0.1
         with:
