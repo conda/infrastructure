@@ -305,12 +305,12 @@ continue -->|No| finished
 ### When do I create a spike?
 
 A spike should be created when we do not have enough information to move forward with solving
-a problem. That simply means whenever we are dealing with unknowns or processes which the
+a problem. That simply means that, whenever we are dealing with unknowns or processes the
 project team has never encountered before, it may be useful for us to create a spike.
 
-In day-to-day work, this may appear when new bug reports or feature requests
-come in which deal with problems or technologies that the project team is unfamiliar with.
-For all issues which the project team has sufficient knowledge of, these issues should
+In day-to-day work, this kind of situation may appear when new bug reports or feature 
+requests come in that deal with problems or technologies that the project team is 
+unfamiliar with. All issues that the project team has sufficient knowledge of should 
 instead proceed as regular issues.
 
 ### When do I **not** create a spike?
@@ -329,21 +329,21 @@ We cover these two types of spikes as well as some examples below.
 
 #### Requirements for all spikes
 
-- A timebox at a level of either "low", "medium" or "high" (more on this below)
+- A timebox at a level of either "low", "medium", or "high" (more on this below)
 - Background information for a would-be assignee
 
 #### Timebox levels
 
 Our timebox levels try to give project teams and would-be contributors an idea
-of how much work is desired/expected for a given spike.  Our three timebox levels
+of how much work is desired/expected for a given spike. Our three timebox levels
 are defined as follows:
 
-- **Low** two to six hours of work
+- **Low** - two to six hours of work
 - **Medium** - six to 12 hours of work
 - **High** - 12 to 24 hours of work
 
 It is important to note that these hours do not have to be completed consecutively, but
-you are encouraged to keep the timelines of your project team in mind if applicable.
+you are encouraged to keep the timelines of your project team in mind, if applicable.
 
 #### Task spikes
 
@@ -355,7 +355,7 @@ When creating a task spike, do the following:
 
 - Under the issues' "tasks" (sometimes called "What should be done?"), add a description
   of the spike and what needs to be done
-- Add a timebox next to this task (either "low", "medium" or "high")
+- Add a timebox next to this task (either "low", "medium", or "high")
 - If necessary, add further sub-tasks one level underneath the spike task
 
 Here's an example of what that looks like:
@@ -413,8 +413,8 @@ the conda community or project team. For this particular spike, the authors have
 timebox as "high", so as a contributor, you should plan to spend a considerable amount of time
 on this spike.
 
-As someone working on a spike such as this, you are also highly encourage to keep all applicable
-information and discussions on this issue. This helps encourage a culture of asnychronous communication,
+As someone working on a spike like this, you are also highly encourage to keep all applicable
+information and discussions within the GitHub issue. This helps encourage a culture of asnychronous communication,
 and also helps us keep public records of important conversations that can be easily referenced later.
 
 #### Additional guidelines
