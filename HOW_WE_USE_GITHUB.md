@@ -308,9 +308,9 @@ A spike should be created when we do not have enough information to move forward
 a problem. That simply means that, whenever we are dealing with unknowns or processes the
 project team has never encountered before, it may be useful for us to create a spike.
 
-In day-to-day work, this kind of situation may appear when new bug reports or feature 
-requests come in that deal with problems or technologies that the project team is 
-unfamiliar with. All issues that the project team has sufficient knowledge of should 
+In day-to-day work, this kind of situation may appear when new bug reports or feature
+requests come in that deal with problems or technologies that the project team is
+unfamiliar with. All issues that the project team has sufficient knowledge of should
 instead proceed as regular issues.
 
 ### When do I **not** create a spike?
