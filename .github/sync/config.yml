@@ -49,9 +49,6 @@ group:
       # issue sorting
       - source: HOW_WE_USE_GITHUB.md
         dest: HOW_WE_USE_GITHUB.md
-      # code of conduct
-      - source: CODE_OF_CONDUCT.md
-        dest: CODE_OF_CONDUCT.md
   # projects with releases
   - repos: |
       conda/actions
@@ -98,3 +95,30 @@ group:
       # release docs
       - source: .github/sync/RELEASE.md
         dest: RELEASE.md
+group:
+# Code of Conduct sync
+  - repos: |
+      conda/.github
+      conda/actions
+      conda/conda
+      conda/conda-benchmarks
+      conda/conda-build
+      conda/conda-content-trust
+      conda/conda-docs
+      conda/conda-index
+      conda/conda-pack
+      conda/conda-package-handling
+      conda/conda-package-streaming
+      conda/conda-plugin-template
+      conda/conda-prefix-replacement
+      conda/conda-standalone
+      conda/conda-verify
+      conda/constructor
+      conda/cookiecutter-conda-python
+      conda/issue-tracker
+      conda/menuinst
+      conda/pycosat
+      conda/schemas
+    files:
+      - source: CODE_OF_CONDUCT.md
+        dest: CODE_OF_CONDUCT.md
