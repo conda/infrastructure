@@ -119,11 +119,11 @@ The conda Organization prioritizes marginalized people’s safety over privilege
 
 The CoC Committee does not influence behavior and membership in spaces outside the conda Organization. However, if you are being harassed by a member of the conda community outside our spaces, you may still report it to the CoC Committee. We will take all good-faith reports of harassment by conda community members seriously. This includes harassment outside our spaces and harassment that took place at any point in time.
 
-The CoC Committee reserves the right to exclude people from conda Organization spaces based on their past behavior, including behavior outside conda Organization spaces and behavior towards people who are not in the conda community.  
+The CoC Committee reserves the right to exclude people from conda Organization spaces based on their past behavior, including behavior outside conda Organization spaces and behavior towards people who are not in the conda community.
 
 # Confidentiality and Public Statements to the Community
 
-The CoC Committee will keep the identity of the reporter confidential. 
+The CoC Committee will keep the identity of the reporter confidential.
 
 All CoC cases will be reported to the community.  The level of detail in reports will vary from case to case. Reports will describe at least the type of infraction that was reported, and the Committee's decision and any action taken.  In most cases, the report will not include personally identifiable information.
 
@@ -131,8 +131,8 @@ All CoC cases will be reported to the community.  The level of detail in reports
 
 > **If you feel your safety is in jeopardy or the situation is an emergency, we urge you to contact local law enforcement before making a report to the event's Code of Conduct committee members, [representatives](#coc-representatives), or other staff.** (In the U.S., call 911.)
 
-Live events present particular challenges: 
-  
+Live events present particular challenges:
+
 **Code of conduct reports, and consequences that stem from them, merit a thoughtful and deliberative process.  Decisions and consequences matter for the reporter, the reported, and for the community at large.  However, many reports, especially at live events, require rapid action to quickly address the behavior being reported.**
 
 To better support situations where immediate action may be required, these guidelines are used *during* live events:
@@ -149,7 +149,7 @@ At conda Organization events, Code of Conduct committee members or representativ
 
 For reports made during live events, or in any situation where urgent action is needed:
 
-* Any two (or more) event organizers, event staff, CoC Committee members or CoC representatives can decide if immediate action is to be taken and what that action is.  In exceptionally dangerous situations, this decision can be made by a single person.  
+* Any two (or more) event organizers, event staff, CoC Committee members or CoC representatives can decide if immediate action is to be taken and what that action is.  In exceptionally dangerous situations, this decision can be made by a single person.
 * These rapid decisions can be reconsidered during the event as more information becomes available.
 * The scope of any rapid decision is limited to the current event / situation.
 * The report, any related information, and any decisions and consequences will be reported to the full Code of Conduct Committee as soon as possible.
@@ -174,7 +174,7 @@ If you believe someone is violating the code of conduct, please report this in a
 
 All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances.  The conda CoC Committee commits to maintaining confidentiality with regard to the reporter of an incident.
 
-For possibly unintentional breaches of the code of conduct, you may want to respond to the person and point out this code of conduct (either in public or in private, whatever is most appropriate). If you would prefer not to do that, please report the issue to the conda CoC Committee directly. 
+For possibly unintentional breaches of the code of conduct, you may want to respond to the person and point out this code of conduct (either in public or in private, whatever is most appropriate). If you would prefer not to do that, please report the issue to the conda CoC Committee directly.
 
 Take care of each other. Alert someone if you notice a dangerous situation, someone in distress, or violations of this code of conduct, even if they seem inconsequential.
 
@@ -217,7 +217,7 @@ If you are concerned about making a report that will be read by all committee me
 
 ## Acknowledgment and Responding to Immediate Needs
 
-CoC Committee members and/or event staff will attempt to ensure your safety and help with any immediate needs.  The CoC Committee will make every effort to **acknowledge receipt within 24 hours** (and we'll aim for much more quickly than that).  
+CoC Committee members and/or event staff will attempt to ensure your safety and help with any immediate needs.  The CoC Committee will make every effort to **acknowledge receipt within 24 hours** (and we'll aim for much more quickly than that).
 
 ## Reviewing the Report
 
@@ -289,7 +289,7 @@ You can reach the entire CoC Committee by emailing [conduct@conda.org](mailto:co
 | Name | Contact | Employer / Funding | Steering Council Member | Current Term Ends |
 | ---- | ---- | ---- | ---- | --- |
 | [Dave Clements](https://github.com/tnabtaf) | dcl&#101;ments&#64;anaconda&#46;com, +1 541 914 6324 | [Anaconda](https://anaconda.com/) | | 2023-07-01 |
-| [Mahe Iram Khan](https://github.com/ForgottenProgramme) | | [Anaconda](https://anadonda.com/) | | 2023-07-01 | 
+| [Mahe Iram Khan](https://github.com/ForgottenProgramme) | | [Anaconda](https://anadonda.com/) | | 2023-07-01 |
 | [Ken Odegard](https://github.com/kenodegard) | kodegard&#64;anaconda&#46;com | [Anaconda](https://anaconda.com/) | | 2023-07-01 |
 | [Crystal Soja](https://github.com/csoja), Co-Chair | | [Anaconda](https://anaconda.com/) | | 2023-07-01 |
 | [Eric Dill](https://github.com/ericdill), Co-Chair | | [Voltron Data](https://voltrondata.com/) | Yes | 2024-07-01 |
@@ -311,13 +311,13 @@ Anyone from the community who is interested and able to do CoC Committee work is
 
 ## Shared Funding
 
-Unlike the Steering Council, we are not limiting the number of Committee members who share a common source of funding. However, if a report involves someone who shares funding with CoC Committee members, then the remainder of the committee may vote to exclude some or all Committee members with that same funding, even if that excludes a majority of the CoC Committee. This should be done only if the separately funded Committee members feel that the common funding is interfering with decision making.  
+Unlike the Steering Council, we are not limiting the number of Committee members who share a common source of funding. However, if a report involves someone who shares funding with CoC Committee members, then the remainder of the committee may vote to exclude some or all Committee members with that same funding, even if that excludes a majority of the CoC Committee. This should be done only if the separately funded Committee members feel that the common funding is interfering with decision making.
 
 Note: This requires tracking the funding sources of CoC Committee members.
 
 ## Overlap with Steering Council Membership
 
-Committee members can also be on the conda Organization Steering Council.  However, Steering Council members have to make up less than 50% of the Code of Conduct Committee.  
+Committee members can also be on the conda Organization Steering Council.  However, Steering Council members have to make up less than 50% of the Code of Conduct Committee.
 
 # Ombudsperson
 
@@ -338,4 +338,3 @@ This code of conduct is based on the [NumFOCUS code of conduct template](https:/
 The NumFOCUS code of conduct template was itself adapted from numerous sources, including the [*Geek Feminism wiki, created by the Ada Initiative and other volunteers, which is under a Creative Commons Zero license*](http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy), the [*Contributor Covenant version 1.2.0*](http://contributor-covenant.org/version/1/2/0/), the [*Bokeh Code of Conduct*](https://github.com/bokeh/bokeh/blob/master/CODE_OF_CONDUCT.md), the [*SciPy Code of Conduct*](https://github.com/jupyter/governance/blob/master/conduct/enforcement.md), the [*Carpentries Code of Conduct*](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html#enforcement-manual), and the [*NeurIPS Code of Conduct*](https://neurips.cc/public/CodeOfConduct).
 
 **The conda Organization Code of Conduct is licensed under the [Creative Commons Attribution 3.0 Unported License](https://creativecommons.org/licenses/by/3.0/).**
-
