@@ -95,8 +95,7 @@ group:
       # release docs
       - source: .github/sync/RELEASE.md
         dest: RELEASE.md
-group:
-# Code of Conduct sync
+  # Code of Conduct sync
   - repos: |
       conda/.github
       conda/actions
