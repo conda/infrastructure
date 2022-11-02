@@ -1,5 +1,8 @@
 # Conda Organization Code of Conduct
 
+> **Note**
+> Below is the short version of our CoC, see the long version [here](https://github.com/conda-incubator/governance/blob/main/CODE_OF_CONDUCT.md).
+
 # The Short Version
 
 Be kind to others. Do not insult or put down others. Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for the conda Organization.
