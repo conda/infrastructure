@@ -19,6 +19,3 @@ Thank you for helping make this a welcoming, friendly community for all.
 * Report a code of conduct incident via email: [conduct@conda.org](mailto:conduct@conda.org).
 * Contact [an individual committee member](#committee-membership) or [CoC event representative](#coc-representatives) to report an incident in confidence.
 
-&nbsp;
-
-See the longer version of the Code of Conduct [here](https://github.com/conda-incubator/governance/blob/main/CODE_OF_CONDUCT.md).
