@@ -8,6 +8,7 @@ group:
       conda/conda-build
       conda/conda-content-trust
       conda/conda-docs
+      conda/conda-index
       conda/conda-pack
       conda/conda-package-handling
       conda/conda-plugin-template
@@ -57,6 +58,7 @@ group:
       conda/conda-build
       conda/conda-content-trust
       conda/conda-docs
+      conda/conda-index
       conda/conda-pack
       conda/conda-package-handling
       conda/conda-prefix-replacement
