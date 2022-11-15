@@ -6,22 +6,24 @@ on:
   push:
     branches: [main]
     paths:
-      - .github/sync.yml  # trigger sync if sync config is modified
-      - .github/workflows/sync.yml  # trigger sync if sync workflow is modified
-      - .github/workflows/project.yml
-      - .github/workflows/issues.yml
-      - .github/workflows/labels.yml
-      - .github/workflows/stale.yml
-      - .github/workflows/lock.yml
-      - .github/workflows/cla.yml
       - .github/ISSUE_TEMPLATE/0_bug.yml
       - .github/ISSUE_TEMPLATE/1_feature.yml
       - .github/ISSUE_TEMPLATE/epic.yml
       - .github/PULL_REQUEST_TEMPLATE/with_releases.md
       - .github/PULL_REQUEST_TEMPLATE/without_releases.md
-      - .github/rever.xsh
-      - .github/TEMPLATE
-      - .github/RELEASE.md
+      - .github/sync/config.yml  # trigger sync if config is modified
+      - .github/sync/RELEASE.md
+      - .github/sync/rever.xsh
+      - .github/sync/TEMPLATE
+      - .github/workflows/cla.yml
+      - .github/workflows/issues.yml
+      - .github/workflows/labels.yml
+      - .github/workflows/lock.yml
+      - .github/workflows/project.yml
+      - .github/workflows/stale.yml
+      - .github/workflows/sync.yml  # trigger sync if workflow is modified
+      - CODE_OF_CONDUCT.md
+      - HOW_WE_USE_GITHUB.md
 
   # NOTE: github.event is workflow_dispatch payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
