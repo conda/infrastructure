@@ -21,7 +21,7 @@ repos:
         args: [--sort-keys=contributors]
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.19.2
+    rev: 0.20.0
     hooks:
       # verify github syntaxes
       - id: check-github-actions
