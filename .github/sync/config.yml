@@ -112,6 +112,7 @@ group:
       conda/conda-docs
       conda/conda-index
       conda/conda-libmamba-solver
+      conda/conda-lock
       conda/conda-pack
       conda/conda-package-handling
       conda/conda-package-streaming
