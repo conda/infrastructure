@@ -103,6 +103,7 @@ group:
   - repos: |
       conda/.github
       conda/actions
+      conda/communications
       conda/conda
       conda/conda-benchmarks
       conda/conda-build
