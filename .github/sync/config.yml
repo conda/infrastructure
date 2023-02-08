@@ -122,6 +122,7 @@ group:
       conda/conda-verify
       conda/constructor
       conda/cookiecutter-conda-python
+      conda/grayskull
       conda/issue-tracker
       conda/menuinst
       conda/pycosat
