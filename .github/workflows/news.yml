@@ -1,0 +1,98 @@
+name: Add News
+
+on:
+  issue_comment:
+    types:
+      - created
+  pull_request_target:
+    types:
+      - reopened
+      - opened
+      - synchronize
+
+jobs:
+  check:
+    if: >-
+      !github.event.repository.fork
+      && (
+        github.event.comment.body == '@conda-bot please add news'
+        || github.event_name == 'pull_request_target'
+      )
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract PR branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: pr_branch_name
+
+      - name: Extract PR number
+        shell: bash
+        run: echo ${{ github.event.pull_request.number }}
+        id: pr_number
+
+  createFile:
+    name: Add news
+    runs-on: ubuntu-latest
+    steps:
+      - uses: conda/actions/check-cla@v23.1.0
+      - uses: 1arp/create-a-file-action@0.2
+        with:
+          path: "news"
+          file: "${{ steps.pr_number }}-${{ steps.pr_branch_name }}"
+          content: |
+            ### Enhancements
+
+            * <news item>
+
+            ### Bug fixes
+
+            * <news item>
+
+            ### Deprecations
+
+            * <news item>
+
+            ### Docs
+
+            * <news item>
+
+            ### Other
+
+            * <news item>
+
+      # steps:
+      # build:
+      #   runs-on: ubuntu-latest
+
+      # - name: Create news file
+      #   shell: bash
+      #   run:
+      #     # Create a variable that concatenates the PR number and PR branch name
+      #     # Create a file using that variable as the filename
+      #     |
+      #     file_name="${{ steps.pr_number }}-${{ steps.pr_branch_name }}"
+      #     touch $file_name
+
+      # - name: Populate file
+      #   shell: bash
+      #   run: |
+      #     echo -e "### Enhancements" >> $file_name
+      #     echo -e >> $file_name
+      #     echo -e "  * <news item>">> $file_name
+      #     echo -e >> $file_name
+      #     echo -e "### Bug fixes" >> $file_name
+      #     echo -e >> $file_name
+      #     echo -e "  * <news item>">> $file_name
+      #     echo -e >> $file_name
+      #     echo -e "### Deprecations" >> $file_name
+      #     echo -e >> $file_name
+      #     echo -e "  * <news item>">> $file_name
+      #     echo -e >> $file_name
+      #     echo -e "### Docs" >> $file_name
+      #     echo -e >> $file_name
+      #     echo -e "  * <news item>">> $file_name
+      #     echo -e >> $file_name
+      #     echo -e "### Other" >> $file_name
+      #     echo -e >> $file_name
+      #     echo -e "  * <news item>">> $file_name
