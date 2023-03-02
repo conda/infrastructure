@@ -35,7 +35,6 @@ jobs:
     name: Add news
     runs-on: ubuntu-latest
     steps:
-      - uses: conda/actions/check-cla@v23.1.0
       - uses: 1arp/create-a-file-action@0.2
         with:
           path: "news"
@@ -60,39 +59,3 @@ jobs:
             ### Other
 
             * <news item>
-
-      # steps:
-      # build:
-      #   runs-on: ubuntu-latest
-
-      # - name: Create news file
-      #   shell: bash
-      #   run:
-      #     # Create a variable that concatenates the PR number and PR branch name
-      #     # Create a file using that variable as the filename
-      #     |
-      #     file_name="${{ steps.pr_number }}-${{ steps.pr_branch_name }}"
-      #     touch $file_name
-
-      # - name: Populate file
-      #   shell: bash
-      #   run: |
-      #     echo -e "### Enhancements" >> $file_name
-      #     echo -e >> $file_name
-      #     echo -e "  * <news item>">> $file_name
-      #     echo -e >> $file_name
-      #     echo -e "### Bug fixes" >> $file_name
-      #     echo -e >> $file_name
-      #     echo -e "  * <news item>">> $file_name
-      #     echo -e >> $file_name
-      #     echo -e "### Deprecations" >> $file_name
-      #     echo -e >> $file_name
-      #     echo -e "  * <news item>">> $file_name
-      #     echo -e >> $file_name
-      #     echo -e "### Docs" >> $file_name
-      #     echo -e >> $file_name
-      #     echo -e "  * <news item>">> $file_name
-      #     echo -e >> $file_name
-      #     echo -e "### Other" >> $file_name
-      #     echo -e >> $file_name
-      #     echo -e "  * <news item>">> $file_name
