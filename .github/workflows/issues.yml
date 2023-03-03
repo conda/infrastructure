@@ -22,7 +22,6 @@ jobs:
       && github.event.action == 'created'
       && !github.event.issue.pull_request
       && contains(github.event.issue.labels.*.name, 'pending::feedback')
-
     runs-on: ubuntu-latest
     steps:
       # remove [pending::feedback]
