@@ -53,7 +53,6 @@ group:
         dest: HOW_WE_USE_GITHUB.md
   # projects with releases
   - repos: |
-      conda/actions
       conda/conda
       conda/conda-benchmarks
       conda/conda-build
@@ -81,6 +80,7 @@ group:
   # projects without releases
   - repos: |
       conda/.github
+      conda/actions
       conda/conda-plugin-template
       conda/issue-tracker
     files:
