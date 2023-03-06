@@ -235,6 +235,7 @@
   aliases: [reproducibility]
 - name: tag::ux
   description: related to user experience
+  color: "86C579"
 
 # Documentation
 - name: documentation::tutorials
