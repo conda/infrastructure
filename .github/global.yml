@@ -126,6 +126,7 @@
   aliases: [type-new_test]
 - name: type::deprecation
   description: requests removal of deprecated feature(s)
+  color: "fff2cc"
 
 # Severity
 - name: severity::1
