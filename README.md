@@ -25,7 +25,7 @@ Welcome others and be open-minded. Remember that this is a community we build to
 ## GitHub Workflows
 
 We have defined a number of GitHub Workflows that are synced out to other repos within the Conda GitHub Org. These workflows accomplish:
-  * 🤖 Automation used for Issue Sorting/Backlog/Sprint project boards
+  * 🤖 Automation used for Issue Sorting/Support/Backlog/Kanban project boards
   * 🏷️ Label standardization
   * 🔒 Marking issues & PRs as stale, closing stale items, and locking inactive items
   * 🔄 Dispersing workflow changes to other repos
