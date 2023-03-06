@@ -111,7 +111,7 @@
   color: "fff2cc"
   aliases: [type-question, question, "Type: Question", "type:question"]
 - name: type::tech-debt
-  description: identified, requests removal, or resolve some technical debt
+  description: identifies or resolves some technical debt
   color: "fff2cc"
 - name: type::poc
   description: indicates some proof of concept or MVP work
@@ -124,6 +124,8 @@
   description: issues about tests or the test infrastructure
   color: "fff2cc"
   aliases: [type-new_test]
+- name: type::deprecation
+  description: requests removal of deprecated feature(s)
 
 # Severity
 - name: severity::1
