@@ -41,6 +41,7 @@
 - name: in-progress
   description: issue is actively being worked on
   color: "ededed"
+  aliases: [sprint]
 - name: spike
   description: issue is for doing research work or prototyping; outcome is optional and not required
   color: "ededed"
