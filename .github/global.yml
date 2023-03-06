@@ -230,6 +230,8 @@
   description: related to producing reproducible results
   color: "86C579"
   aliases: [reproducibility]
+- name: tag::ux
+  description: related to user experience
 
 # Documentation
 - name: documentation::tutorials
