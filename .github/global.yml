@@ -38,8 +38,8 @@
   description: issue has been triaged but has not been earmarked for any upcoming release
   color: "ededed"
   aliases: [1_Backlog_Long_Term]
-- name: sprint
-  description: issue has been pulled into current sprint and is actively being worked on
+- name: in-progress
+  description: issue is actively being worked on
   color: "ededed"
 - name: spike
   description: issue is for doing research work or prototyping; outcome is optional and not required
