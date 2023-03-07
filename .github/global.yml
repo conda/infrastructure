@@ -52,9 +52,9 @@
 
 # Duplicates
 - name: duplicate
-  description: > 
-    can be used for issues or pull requests (PRs) to indicate that the tagged issue/PR 
-    is a duplicate of another issue/PR: e.g., issue/PR covers the same concerns as another issue/PR, 
+  description: >
+    can be used for issues or pull requests (PRs) to indicate that the tagged issue/PR
+    is a duplicate of another issue/PR: e.g., issue/PR covers the same concerns as another issue/PR,
     PR resolves the same issue as another PR, etc.
   color: "0c2132"
   aliases: [reso-duplicate, "reso:duplicate"]
