@@ -253,3 +253,17 @@
 - name: documentation::explanation
   description: related to higher-level clarification (understanding-oriented)
   color: "77b2dc"
+
+# Upstream & Downstream
+- name: upstream
+  description: this issue/PR is caused by an upstream dependency
+  color: "85a3ad"
+- name: downstream
+  description: this issue/PR impacts a downstream dependency
+  color: "85a3ad"
+- name: downstream::anaconda
+  description: this issue/PR impacts Anaconda's packaging teams
+  color: "85a3ad"
+- name: downstream::conda-forge
+  description: this issue/PR impacts the conda-forge community
+  color: "85a3ad"
