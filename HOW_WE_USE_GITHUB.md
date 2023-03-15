@@ -268,7 +268,7 @@ TODO
 
 #### Spikes
 
-##### What is a spike? 
+##### What is a spike?
 "Spike" is a term that is borrowed from extreme programming and agile development. They are used when the **outcome of a ticket is unknown or even optional**. For example, when first coming across a problem that has not been solved before, a project may choose to either research the problem or create a prototype in order to better understand it.
 
 Additionally, spikes represent work that **may or may not actually be completed or implemented**. An example of this are prototypes created to explore possible solutions. Not all prototypes are implemented and the purpose of creating a prototype is often to explore the problem space more. For research-oriented tasks, the end result of this research may be that a feature request simply is not viable at the moment and would result in putting a stop to that work.
@@ -299,4 +299,3 @@ If you do **not** have permissions, please indicate that you are working on an i
 If you are assigned to an issue but will not be able to continue work on it, please comment to indicate that you will no longer be working on it and press `unassign me`, next to your username in the `Assignees` section of the issue page (top right).
 
 If you **do** have permissions, please assign yourself to the issue by pressing `assign myself` under the `Assignees` section of the issue page (top right).
-
