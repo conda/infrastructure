@@ -12,8 +12,8 @@
 [docs-actions]: https://docs.github.com/en/actions
 [docs-saved-reply]: https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply
 
-[workflow-sync]: https://github.com/conda/infra/blob/main/.github/workflows/sync.yml
-[labels-global]: https://github.com/conda/infra/blob/main/.github/global.yml
+[workflow-sync]: https://github.com/conda/infrastructure/blob/main/.github/workflows/sync.yml
+[labels-global]: https://github.com/conda/infrastructure/blob/main/.github/global.yml
 
 <!-- relative URLs -->
 [workflow-issues]: /.github/workflows/issues.yml
@@ -30,10 +30,12 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 <!-- only include high-level topics or particularly noteworthy sections here -->
 Topics:
   - [What is Issue Sorting?](#what-is-issue-sorting)
+  - [Issue Sorting Procedures](#issue-sorting-procedures)
   - [Types of tickets](#types-of-tickets)
     - [Normal Ticket/Issue](#normal-ticketissue)
     - [Epics](#epics)
     - [Spikes](#spikes)
+  - [Working on tickets](#working-on-tickets)
 
 
 ### What is "Issue Sorting"?
@@ -99,12 +101,12 @@ Sorting engineers are a `conda` governance [sub-team][sub-team]; they are a grou
 
 New issues that are opened in any of the repositories in the [`conda` GitHub project][conda-org] will show up in the `Sorting` view of the [Planning project][project-planning]. This process is executed via [GitHub Actions][docs-actions]. The two main GitHub Actions workflows utilized for this purpose are [Issues][workflow-issues] and [Project][workflow-project].
 
-The GitHub Actions in the `conda/infra` repository are viewed as canonical; the [Sync workflow][workflow-sync] sends out any modifications to other `conda` repositories from there.
+The GitHub Actions in the `conda/infrastructure` repository are viewed as canonical; the [Sync workflow][workflow-sync] sends out any modifications to other `conda` repositories from there.
 
 
 #### What is done about the issues in "sorting" mode?
 
-Issues in the ["Sorting" tab of the project board][project-sorting] have been reviewed by a sorting engineer and are considered ready for the following procedures:
+Issues in the ["Sorting" tab of the project board][project-sorting] are considered ready for the following procedures:
 
 - Mitigation via short-term workarounds and fixes
 - Redirection to the correct project
@@ -115,19 +117,19 @@ The sorting engineers on rotation are not seeking to _resolve_ issues that arise
 
 Issues will remain in the "Sorting" tab as long as the issue is in an investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest, but should still be progressing over the course of 1-2 weeks.
 
+For more information on the sorting process, see [Issue Sorting Procedures](#issue-sorting-procedures).
+
 
 #### When do items move out of the "Sorting" tab?
 
-The additional tabs in the project board that the issues can be moved to include the following:
+Items move out of the "Sorting" tab once the investigatory phase described in [What is done about the issues in "sorting" mode?](#what-is-done-about-the-issues-in-sorting-mode) has concluded and the sorting engineer has enough information to make a decision about the appropriate resolution schedule for the issue. The additional tabs in the project board that the issues can be moved to include the following:
 
 - **"Support"** - Any issue in the ["Support" tab of the Planning board][project-support] is a request for support and is not a feature request or a bug report. All issues considered "support" should include the https://github.com/conda/infra/labels/type%3A%3Asupport label.
 - **"Backlog"** - The issue has revealed a bug or feature request. We have collected enough details to understand the problem/request and to reproduce it on our own. These issues have been moved into the [Backlog tab of the Planning board][project-backlog] at the end of the sorting rotation during Refinement.
 - **"Closed"** - The issue was closed due to being a duplicate, being redirected to a different project, was a user error, a question that has been resolved, etc.
 
 
-#### Where do items go after being sorted?
-
-All sorted issues will be reviewed by sorting engineers during a weekly Refinement meeting in order to understand how those particular issues fit into the short- and long-term roadmap of `conda`. These meetings enable the sorting engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
+#### Where do work tickets go after being sorted?
 
 Once issues are deemed ready to be worked on, they will be moved to the [`conda` Backlog tab of the Planning board][project-backlog] on GitHub. Once actively in progress, the issues will be moved to the [In Progress tab of the Planning board][project-in-progress] and then closed out once the work is complete.
 
@@ -136,14 +138,38 @@ Once issues are deemed ready to be worked on, they will be moved to the [`conda`
 
 Issues are "backlogged" when they have been sorted but not yet earmarked for an upcoming release. Weekly Refinement meetings are a time when the `conda` engineers will transition issues from "[Sorting][project-sorting]" to "[Backlog][project-backlog]". Additionally, this time of handoff will include discussions around the kind of issues that were raised, which provides an opportunity to identify any patterns that may point to a larger problem.
 
+### Issue Sorting Procedures
+
+### How are issues sorted?
+
+Issues in the ["Sorting" tab of the project board][project-sorting] are reviewed by issue sorting engineers, who take rotational sorting shifts. In the process of sorting issues, engineers label the issues and move them to the other tabs of the project board for further action.
+
+Issues that require input from multiple members of the sorting team will be brought up during a weekly Refinement meeting in order to understand how those particular issues fit into the short- and long-term roadmap of `conda`. These meetings enable the sorting engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
 
 #### How does labeling work?
 
 Labeling is a very important means for sorting engineers to keep track of the current state of an issue with regards to the asynchronous nature of communicating with users. Utilizing the proper labels helps to identify the severity of the issue as well as to quickly understand the current state of a discussion.
 
-Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, https://github.com/conda/infra/labels/type%3A%3Abug, https://github.com/conda/infra/labels/type%3A%3Afeature, and https://github.com/conda/infra/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infra/labels/os%3A%3Alinux, https://github.com/conda/infra/labels/os%3A%3Amacos, and https://github.com/conda/infra/labels/os%3A%3Awindows), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
+Each label has an associated description that clarifies how the label should be used. To see a label's description, find the label either in `conda/infrastructure`'s [`.github/global.yml` file][labels-global] or, if it is not there, in the relevant repository's `.github/labels.yml` file. Label colors are used to distinguish labels by category.
 
-Please note that there are also automation policies in place. For example, if an issue is labeled as https://github.com/conda/infra/labels/pending%3A%3Afeedback and https://github.com/conda/infra/labels/unreproducible, that issue will be auto-closed after a month of inactivity.
+Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, https://github.com/conda/infrastructure/labels/type%3A%3Abug, https://github.com/conda/infrastructure/labels/type%3A%3Afeature, and https://github.com/conda/infrastructure/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infrastructure/labels/os%3A%3Alinux, https://github.com/conda/infrastructure/labels/os%3A%3Amacos, and https://github.com/conda/infrastructure/labels/os%3A%3Awindows), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
+
+Please note that there are also automation policies in place. For example, if an issue is labeled as https://github.com/conda/infrastructure/labels/pending%3A%3Afeedback and https://github.com/conda/infrastructure/labels/unreproducible, that issue will be auto-closed after a month of inactivity.
+
+
+#### What labels are required for each issue?
+
+At minimum, both `type` and `source` labels should be specified on each issue before moving it from "`Sorting`" to "`Backlog`". All issues that are bugs should also be tagged with a `severity` label.
+
+The `type` labels are exclusive of each other: each sorted issue should have exactly one `type` label. These labels give high-level information on the issue's classification (e.g., bug, feature, tech debt, etc.)
+
+The `source` labels are exclusive of each other: each sorted issue should have exactly one `source` label. These labels give information on the sub-group to which the issue's author belongs (e.g., a partner, a frequent contributor, the wider community). Through these labels, the conda organization hopes to gain insight into how well we're meeting the needs of various groups.
+
+The `severity` labels are exclusive of each other and should only be used when the `type::bug` label is also applied. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
+
+Please review the descriptions of the `type`, `source` and `severity` labels in  `conda/infrastructure`'s [`.github/global.yml` file][labels-global] prior to use.
+
+
 
 
 #### How are new labels defined?
@@ -154,14 +180,14 @@ Labels are defined using a scoped syntax with an optional high-level category (_
 - `[category::topic]`
 - `[category::topic-phrase]`
 
-This syntax helps with issue sorting enforcement; at minimum, both `type` and `source` labels should be specified on each issue before moving it from "`Sorting`" to "`Backlog`".
+This syntax helps with issue sorting enforcement, as it helps to ensure that sorted issues are, at minimum, categorized by type and source.
 
 There are a number of labels that have been defined for the different `conda` projects. In order to create a streamlined sorting process, label terminologies are standardized using similar (if not the same) labels.
 
 
 #### How are new labels added?
 
-New **global** labels (_i.e._, generic labels that apply equally to all `conda` repos) can be added to the `conda/infra`'s [`.github/global.yml` file][labels-global]; new **local** labels (_i.e._, labels specific to particular `conda` repos) can be added to each repository's [`.github/labels.yml`][labels-local] file. All new labels should follow the labeling syntax described in the "How are new labels defined?" section of this document.
+New **global** labels (_i.e._, generic labels that apply equally to all `conda` repos) can be added to the `conda/infrastructure`'s [`.github/global.yml` file][labels-global]; new **local** labels (_i.e._, labels specific to particular `conda` repos) can be added to each repository's [`.github/labels.yml`][labels-local] file. All new labels should follow the labeling syntax described in the "How are new labels defined?" section of this document. Global labels are synced out to all repositories as part of the [workflow sync][workflow-sync] process.
 
 
 #### Are there any templates to use as responses for commonly-seen issues?
@@ -179,7 +205,7 @@ This is a duplicate of <b>[link to primary issue]</b>; please feel free to conti
 </pre>
 
 > **Warning**
-> Apply the https://github.com/conda/infra/labels/duplicate label to the issue being closed and https://github.com/conda/infra/labels/duplicate%3A%3Aprimary to the original issue.
+> Apply the https://github.com/conda/infrastructure/labels/duplicate label to the issue being closed and https://github.com/conda/infrastructure/labels/duplicate%3A%3Aprimary to the original issue.
 
 </details>
 
@@ -208,7 +234,7 @@ where `conda` installer/package issues are addressed.
 </pre>
 
 > **Warning**
-> Apply the https://github.com/conda/infra/labels/off-topic label to these tickets before closing them out.
+> Apply the https://github.com/conda/infrastructure/labels/off-topic label to these tickets before closing them out.
 
 </details>
 
@@ -223,7 +249,7 @@ please post details to the [Nucleus forums](https://community.anaconda.cloud/).
 </pre>
 
 > **Warning**
-> Apply the https://github.com/conda/infra/labels/off-topic label to these tickets before closing them out.
+> Apply the https://github.com/conda/infrastructure/labels/off-topic label to these tickets before closing them out.
 
 </details>
 
@@ -242,4 +268,35 @@ TODO
 
 #### Spikes
 
-TODO
+##### What is a spike? 
+"Spike" is a term that is borrowed from extreme programming and agile development. They are used when the **outcome of a ticket is unknown or even optional**. For example, when first coming across a problem that has not been solved before, a project may choose to either research the problem or create a prototype in order to better understand it.
+
+Additionally, spikes represent work that **may or may not actually be completed or implemented**. An example of this are prototypes created to explore possible solutions. Not all prototypes are implemented and the purpose of creating a prototype is often to explore the problem space more. For research-oriented tasks, the end result of this research may be that a feature request simply is not viable at the moment and would result in putting a stop to that work.
+
+Finally, spikes are **timeboxed**. This means that we set a definite limit on how long we want our contributors to work on a spike. We do this to prevent contributors from falling into a rabbit hole they may never return from (scary!). Instead, we set a time limit to perform work on the spike and then have the assignee report back to the project team. If the tasks defined in the spike have not yet been completed, a decision is made on whether it makes sense to perform further work on the spike.
+
+Below is what that workflow looks like:
+
+###### When do I create a spike?
+A spike should be created when we do not have enough information to move forward with solving a problem. That simply means that, whenever we are dealing with unknowns or processes the project team has never encountered before, it may be useful for us to create a spike.
+
+In day-to-day work, this kind of situation may appear when new bug reports or feature requests come in that deal with problems or technologies that the project team is unfamiliar with. All issues that the project team has sufficient knowledge of should instead proceed as regular issues.
+
+###### When do I not create a spike?
+Below are some common scenarios where creating a spike is not appropriate:
+
+- Writing a technical specification for a feature we know how to implement
+- Design work that would go into drafting how an API is going to look and function
+- Any work that must be completed or is not optional
+
+
+### Working on Tickets
+
+#### How do I assign myself to a ticket I am actively reviewing?
+
+If you do **not** have permissions, please indicate that you are working on an issue ticket by commenting on the issue. Someone who has permissions will assign you to the ticket. If two weeks have passed without a pull request or an additional comment requesting information, you may be removed from the issue and the issue reassigned.
+
+If you are assigned to an issue but will not be able to continue work on it, please comment to indicate that you will no longer be working on it and press `unassign me`, next to your username in the `Assignees` section of the issue page (top right).
+
+If you **do** have permissions, please assign yourself to the issue by pressing `assign myself` under the `Assignees` section of the issue page (top right).
+
