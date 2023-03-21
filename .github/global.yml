@@ -53,14 +53,11 @@
 
 # Duplicates
 - name: duplicate
-  description: >
-    can be used for issues or pull requests (PRs) to indicate that the tagged issue/PR
-    is a duplicate of another issue/PR: e.g., issue/PR covers the same concerns as another issue/PR,
-    PR resolves the same issue as another PR, etc.
+  description: indicate issues/PRs that are duplicates of another
   color: "0c2132"
   aliases: [reso-duplicate, "reso:duplicate"]
 - name: duplicate::primary
-  description: if an issue or pull request has duplicates, this is the consolidated, primary issue/pull request
+  description: if an issue/PR has duplicates, this is the consolidated, primary issue/PR
   color: "0c2132"
   aliases: [consolidation-main]
 
