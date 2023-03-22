@@ -159,7 +159,7 @@ Global automation procedures synced out from the `conda/infrastructure` repo inc
 
 ### Issue Sorting Procedures
 
-### How are issues sorted?
+#### How are issues sorted?
 
 Issues in the ["Sorting" tab of the project board][project-sorting] are reviewed by issue sorting engineers, who take rotational sorting shifts. In the process of sorting issues, engineers label the issues and move them to the other tabs of the project board for further action.
 
