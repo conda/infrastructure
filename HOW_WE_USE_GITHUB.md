@@ -14,6 +14,7 @@
 
 [workflow-sync]: https://github.com/conda/infrastructure/blob/main/.github/workflows/sync.yml
 [labels-global]: https://github.com/conda/infrastructure/blob/main/.github/global.yml
+[stale]: https://github.com/conda/infrastructure/blob/main/.github/workflows/stale.yml
 
 <!-- relative URLs -->
 [workflow-issues]: /.github/workflows/issues.yml
@@ -137,7 +138,7 @@ Once issues are deemed ready to be worked on, they will be moved to the [`conda`
 
 #### What is the purpose of having a "Backlog"?
 
-Issues are "backlogged" when they have been sorted but not yet earmarked for an upcoming release. Weekly Refinement meetings are a time when the `conda` engineers will transition issues from "[Sorting][project-sorting]" to "[Backlog][project-backlog]". Additionally, this time of handoff will include discussions around the kind of issues that were raised, which provides an opportunity to identify any patterns that may point to a larger problem.
+Issues are "backlogged" when they have been sorted but not yet earmarked for an upcoming release. Weekly refinement meetings are a time when the `conda` engineers will transition issues from "[Sorting][project-sorting]" to "[Backlog][project-backlog]". Additionally, this time of handoff will include discussions around the kind of issues that were raised, which provides an opportunity to identify any patterns that may point to a larger problem.
 
 ### Issue Sorting Procedures
 
@@ -145,7 +146,7 @@ Issues are "backlogged" when they have been sorted but not yet earmarked for an 
 
 Issues in the ["Sorting" tab of the project board][project-sorting] are reviewed by issue sorting engineers, who take rotational sorting shifts. In the process of sorting issues, engineers label the issues and move them to the other tabs of the project board for further action.
 
-Issues that require input from multiple members of the sorting team will be brought up during a weekly Refinement meeting in order to understand how those particular issues fit into the short- and long-term roadmap of `conda`. These meetings enable the sorting engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
+Issues that require input from multiple members of the sorting team will be brought up during a weekly refinement meeting in order to understand how those particular issues fit into the short- and long-term roadmap of `conda`. These meetings enable the sorting engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
 
 #### How does labeling work?
 
@@ -155,7 +156,7 @@ Each label has an associated description that clarifies how the label should be 
 
 Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, https://github.com/conda/infrastructure/labels/type%3A%3Abug, https://github.com/conda/infrastructure/labels/type%3A%3Afeature, and https://github.com/conda/infrastructure/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infrastructure/labels/os%3A%3Alinux, https://github.com/conda/infrastructure/labels/os%3A%3Amacos, and https://github.com/conda/infrastructure/labels/os%3A%3Awindows), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
 
-Please note that there are also automation policies in place. For example, if an issue is labeled as https://github.com/conda/infrastructure/labels/pending%3A%3Afeedback and https://github.com/conda/infrastructure/labels/unreproducible, that issue will be auto-closed after a month of inactivity.
+Please note that there are also automation policies in place. For example, if an issue is labeled as https://github.com/conda/infrastructure/labels/pending%3A%3Asupport, that issue will be marked https://github.com/conda/infrastructure/labels/stale after 21 days of inactivity and auto-closed after seven more days without activity. This particular automation policy is carried out through the [stale workflow][stale]. This workflow also marks all inactive pull requests and inactive issues not labelled as https://github.com/conda/infrastructure/labels/pending%3A%3Asupport as stale after 1 year (365 days) without activity and closes them if they remain inactive for a further 30 days. 
 
 
 #### What labels are required for each issue?
