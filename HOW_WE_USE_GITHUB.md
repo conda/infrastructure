@@ -184,7 +184,7 @@ The `type` labels are exclusive of each other: each sorted issue should have exa
 
 The `source` labels are exclusive of each other: each sorted issue should have exactly one `source` label. These labels give information on the sub-group to which the issue's author belongs (e.g., a partner, a frequent contributor, the wider community). Through these labels, the conda organization hopes to gain insight into how well we're meeting the needs of various groups.
 
-The `severity` labels are exclusive of each other and should only be used when the `type::bug` label is also applied. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
+The `severity` labels are exclusive of each other and while required for the `type::bug` label it can also be applied to other types to indicate demand or need. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
 
 Please review the descriptions of the `type`, `source` and `severity` labels on the [labels page][labels-page] prior to use.
 
