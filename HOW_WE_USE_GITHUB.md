@@ -22,6 +22,7 @@
 [workflow-project]: /.github/workflows/project.yml
 [labels-local]: /.github/labels.yml
 [labels-page]: ../../labels
+[bug-label]: ../../labels/type%3A%3Abug
 
 ## How We Use GitHub
 
@@ -155,7 +156,7 @@ Labeling is a very important means for sorting engineers to keep track of the cu
 
 Each label has an associated description that clarifies how the label should be used. To see a label's description, find the label either in `conda/infrastructure`'s [`.github/global.yml` file][labels-global] or, if it is not there, in the relevant repository's `.github/labels.yml` file. Label colors are used to distinguish labels by category.
 
-Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, https://github.com/conda/infrastructure/labels/type%3A%3Abug, https://github.com/conda/infrastructure/labels/type%3A%3Afeature, and https://github.com/conda/infrastructure/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infrastructure/labels/os%3A%3Alinux, https://github.com/conda/infrastructure/labels/os%3A%3Amacos, and https://github.com/conda/infrastructure/labels/os%3A%3Awindows), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
+Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, [bug-label], https://github.com/conda/infrastructure/labels/type%3A%3Afeature, and https://github.com/conda/infrastructure/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infrastructure/labels/os%3A%3Alinux, https://github.com/conda/infrastructure/labels/os%3A%3Amacos, and https://github.com/conda/infrastructure/labels/os%3A%3Awindows), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
 
 Please note that there are also automation policies in place. For example, if an issue is labeled as https://github.com/conda/infrastructure/labels/pending%3A%3Afeedback and https://github.com/conda/infrastructure/labels/unreproducible, that issue will be auto-closed after a month of inactivity.
 
