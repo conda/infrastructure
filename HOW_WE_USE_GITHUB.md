@@ -141,7 +141,7 @@ Once issues are deemed ready to be worked on, they will be moved to the [`conda`
 
 #### What is the purpose of having a "Backlog"?
 
-Issues are "backlogged" when they have been sorted but not yet earmarked for an upcoming release. Weekly refinement meetings are a time when the `conda` engineers will transition issues from "[Sorting][project-sorting]" to "[Backlog][project-backlog]". Additionally, this time of handoff will include discussions around the kind of issues that were raised, which provides an opportunity to identify any patterns that may point to a larger problem.
+Issues are "backlogged" when they have been sorted but not yet earmarked for an upcoming release.
 
 
 #### What automation procedures are currently in place?
