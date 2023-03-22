@@ -29,6 +29,9 @@
 - name: locked
   description: "[bot] locked due to inactivity"
   color: "85BDB1"
+- name: dependencies
+  description: "[bot] PRs that update a dependency file"
+  color: "0366d6"
 
 # Planning
 - name: epic
