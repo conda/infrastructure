@@ -21,6 +21,7 @@
 [workflow-issues]: /.github/workflows/issues.yml
 [workflow-project]: /.github/workflows/project.yml
 [labels-local]: /.github/labels.yml
+[labels-page]: ../../labels
 
 ## How We Use GitHub
 
@@ -169,7 +170,7 @@ The `source` labels are exclusive of each other: each sorted issue should have e
 
 The `severity` labels are exclusive of each other and should only be used when the `type::bug` label is also applied. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
 
-Please review the descriptions of the `type`, `source` and `severity` labels on the `conda/infrastructure` [labels page][infra-labels] prior to use. All labels used on each repository can be seen at the repository's labels page: visit `github.com/conda/<repository>/labels`, after updating the link with the relevant conda repository name.
+Please review the descriptions of the `type`, `source` and `severity` labels on the [labels page][labels-page] prior to use.
 
 
 #### How are new labels defined?
