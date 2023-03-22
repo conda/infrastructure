@@ -15,6 +15,9 @@
 [workflow-sync]: https://github.com/conda/infrastructure/blob/main/.github/workflows/sync.yml
 [labels-global]: https://github.com/conda/infrastructure/blob/main/.github/global.yml
 [stale]: https://github.com/conda/infrastructure/blob/main/.github/workflows/stale.yml
+[cla]: https://github.com/conda/infrastructure/blob/main/.github/workflows/cla.yml
+[lock]: https://github.com/conda/infrastructure/blob/main/.github/workflows/lock.yml
+[project-workflow]: https://github.com/conda/infrastructure/blob/main/.github/workflows/project.yml
 
 <!-- relative URLs -->
 [workflow-issues]: /.github/workflows/issues.yml
@@ -141,6 +144,19 @@ Once issues are deemed ready to be worked on, they will be moved to the [`conda`
 Issues are "backlogged" when they have been sorted but not yet earmarked for an upcoming release. Weekly refinement meetings are a time when the `conda` engineers will transition issues from "[Sorting][project-sorting]" to "[Backlog][project-backlog]". Additionally, this time of handoff will include discussions around the kind of issues that were raised, which provides an opportunity to identify any patterns that may point to a larger problem.
 
 
+#### What automation procedures are currently in place?
+
+Global automation procedures synced out from the `conda/infrastructure` repo include:
+- [Marking of issues and pull requests as stale][stale], resulting in:
+  - issues marked as https://github.com/conda/infrastructure/labels/pending%3A%3Asupport being labelled stale after 21 days of inactivity and being closed after 7 further days of inactivity (that is, closed after 30 inactive days total)
+  - all other inactive issues (not labelled as https://github.com/conda/infrastructure/labels/pending%3A%3Asupport) being labelled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
+  - all inactive pull requests being labelled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
+- [Locking of closed issues and pull requests with no further activity][lock] after 365 days
+- [Adding new issues and pull requests to the respective project boards][project-workflow]
+- [Creation of pull requests to facilitate easier adding of accounts that have signed the CLA][cla] to `.clabot`, following verification procedures
+- [Syncing out of templates, labels, workflows and documentation][workflow-sync] from `conda/infrastructure` to the other conda organization repositories
+
+
 ### Issue Sorting Procedures
 
 ### How are issues sorted?
@@ -157,7 +173,7 @@ Each label has an associated description that clarifies how the label should be 
 
 Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, https://github.com/conda/infrastructure/labels/type%3A%3Abug, https://github.com/conda/infrastructure/labels/type%3A%3Afeature, and https://github.com/conda/infrastructure/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue shouldn’t be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infrastructure/labels/os%3A%3Alinux, https://github.com/conda/infrastructure/labels/os%3A%3Amacos, and https://github.com/conda/infrastructure/labels/os%3A%3Awindows), an issue could be labeled with one or more depending on the system(s) the issue is occurring on.
 
-Please note that there are also automation policies in place. For example, if an issue is labeled as https://github.com/conda/infrastructure/labels/pending%3A%3Asupport, that issue will be marked https://github.com/conda/infrastructure/labels/stale after 21 days of inactivity and auto-closed after seven more days without activity (30 inactive days total). This particular automation policy is carried out through the [stale workflow][stale].
+Please note that there are also automation policies in place that are affected by labelling. For example, if an issue is labeled as https://github.com/conda/infrastructure/labels/pending%3A%3Asupport, that issue will be marked https://github.com/conda/infrastructure/labels/stale after 21 days of inactivity and auto-closed after seven more days without activity (30 inactive days total), which is earlier than issues without this label. See [What automation procedures are currently in place?](#what-automation-procedures-are-currently-in-place) for more details.
 
 
 #### What labels are required for each issue?
