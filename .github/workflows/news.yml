@@ -1,3 +1,4 @@
+---
 name: Add News
 
 on:
@@ -13,8 +14,7 @@ on:
 jobs:
   check:
     if: >-
-      !github.event.repository.fork
-      && (
+      !github.event.repository.fork && (
         github.event.comment.body == '@conda-bot please add news'
         || github.event_name == 'pull_request_target'
       )
@@ -31,11 +31,13 @@ jobs:
         run: echo ${{ github.event.pull_request.number }}
         id: pr_number
 
-  createFile:
-    name: Add news
-    runs-on: ubuntu-latest
-    steps:
-      - uses: 1arp/create-a-file-action@0.2
+      - name: Create File
+        if: contains(steps.check_comment.outputs.comment, 'please add news')
+        id: create_file
+        uses: actions/checkout@v2
+
+      - name: Populate File
+        uses: 1arp/create-a-file-action@0.2
         with:
           path: "news"
           file: "${{ steps.pr_number }}-${{ steps.pr_branch_name }}"
@@ -59,3 +61,19 @@ jobs:
             ### Other
 
             * <news item>
+
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Commit File
+        if: steps.create_file.outputs
+        run: |
+          git config --local user.email user@example.com
+          git config --local user.name ${{ github.actor }}
+          git add .
+          git commit -m "Add news snippet"
+          git push
+        env:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
