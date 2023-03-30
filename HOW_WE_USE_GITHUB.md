@@ -163,7 +163,7 @@ Global automation procedures synced out from the `conda/infrastructure` repo inc
 
 Issues in the ["Sorting" tab of the project board][project-sorting] are reviewed by issue sorting engineers, who take rotational sorting shifts. In the process of sorting issues, engineers label the issues and move them to the other tabs of the project board for further action.
 
-Issues that require input from multiple members of the sorting team will be brought up during a weekly refinement meeting in order to understand how those particular issues fit into the short- and long-term roadmap of `conda`. These meetings enable the sorting engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
+Issues that require input from multiple members of the sorting team will be brought up during a weekly refinement meeting in order to understand how those particular issues fit into the short- and long-term roadmap. These meetings enable the sorting engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
 
 #### How does labeling work?
 
