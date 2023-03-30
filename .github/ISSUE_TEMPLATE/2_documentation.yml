@@ -23,7 +23,7 @@ body:
     id: what
     attributes:
       label: What happened?
-      description: Mention here any typos, broken links, missing, incomplete, or outdated information etc. that you have spotted in the conda docs or CLI help.
+      description: Mention here any typos, broken links, or missing, incomplete, or outdated information, etc. that you have noticed in the conda docs or CLI help.
     validations:
       required: true
   - type: textarea
