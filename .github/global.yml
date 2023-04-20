@@ -2,10 +2,12 @@
 - name: mitigated
   description: a workaround has been identified
   color: "43b049"
-- name: good-first-issue
+# this doesn't follow our labeling style because GitHub only populates the
+# https://github.com/conda/conda/contribute page with this exact label
+- name: good first issue
   description: great for new contributors, code change is envisioned to be trivial/relatively straight-forward
   color: "43b049"
-  aliases: ["good first issue"]
+  aliases: ["good-first-issue"]
 - name: help-wanted
   description: we don't know the solution or we especially want a community member to contribute the code change
   color: "43b049"
