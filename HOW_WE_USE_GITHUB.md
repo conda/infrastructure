@@ -51,7 +51,7 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 > **Note**
 > "Issue sorting" is similar to that of "triaging", but we've chosen to use different terminology because "triaging" is a word related to very weighty topics (_e.g._, injuries and war) and we would like to be sensitive to those connotations. Additionally, we are taking a more "fuzzy" approach to sorting (_e.g._, severities may not be assigned, etc.).
 
-"Issue Sorting" refers to the process of assessing the priority of incoming issues. Below is a high-level diagram of the flow of tickets:
+"Issue Sorting" refers to the process of assessing the priority of incoming issues. Below is a high-level diagram of the flow of issues:
 
 ```mermaid
 flowchart LR
@@ -200,7 +200,7 @@ New **global** labels (_i.e._, labels that apply equally to all repositories wit
 
 ### Are there any templates to use as responses for commonly-seen issues?
 
-Some of the same types of issues appear regularly (_e.g._, issues that are duplicates of others, tickets that should be filed in the Anaconda issue tracker, errors that are due to a user's specific setup/environment, etc.).
+Some of the same types of issues appear regularly (_e.g._, issues that are duplicates of others, issues that should be filed in the Anaconda issue tracker, errors that are due to a user's specific setup/environment, etc.).
 
 Below are some boilerplate responses for the most commonly-seen issues to be sorted:
 
