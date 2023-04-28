@@ -148,6 +148,7 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
   - all inactive pull requests being labelled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
 - [Locking of closed issues and pull requests with no further activity][workflow-lock] after 365 days
 - [Adding new issues and pull requests to the respective project boards][workflow-project]
+- [Indicate an issue ready for the sorting engineer's attention by toggling https://github.com/conda/infrastructure/labels/pending%3A%3Afeedback with https://github.com/conda/infrastructure/labels/pending%3A%3Asupport after a contributor leaves a comment][workflow-issues]
 - [Verifying that contributors have signed the CLA][workflow-cla] before allowing pull requests to be merged
 - [Syncing out templates, labels, workflows and documentation][workflow-sync] from [`conda/infrastructure`][infrastructure] to the other repositories
 
