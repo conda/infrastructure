@@ -37,11 +37,11 @@ This document seeks to outline how we as a community use GitHub Issues to track 
   - [What is "Issue Sorting"?](#what-is-issue-sorting)
   - [Issue Sorting Procedures](#issue-sorting-procedures)
   - [Commit Signing](#commit-signing)
-  - [Types of Tickets](#types-of-tickets)
-    - [Standard Ticket/Issue](#standard-ticketissue)
+  - [Types of Issues](#types-of-issues)
+    - [Standard Issue](#standard-issue)
     - [Epics](#epics)
     - [Spikes](#spikes)
-  - [Working on Tickets](#working-on-tickets)
+  - [Working on Issues](#working-on-issues)
 
 > **Note**
 > This document is written in the style of an FAQ, for easier navigation use [GitHub's table of contents feature][docs-toc].
@@ -99,11 +99,11 @@ There will always be broad-scope design and architecture implementations that th
 
 ### Who does the sorting?
 
-Sorting engineers are a conda governance [sub-team][sub-team]; they are a group of Anaconda, Inc. and community members who are responsible for making decisions regarding closing issues and setting feature work priorities, among other sorting-related tasks.
+Sorting engineers are a conda governance [sub-team][sub-team]; they are a group of community members who are responsible for making decisions regarding closing issues and setting feature work priorities, among other sorting-related tasks.
 
 ### How do items show up for sorting?
 
-New issues that are opened in any of the repositories in the [conda GitHub project][conda-org] will show up in the "Sorting" tab of the [Planning project][project-planning]. There are two [GitHub Actions][docs-actions] workflows utilized for this purpose; [`.github/workflows/issues.yml`][workflow-issues] and [`.github/workflows/projet.yml`][workflow-project].
+New issues that are opened in any of the repositories in the [conda GitHub organization][conda-org] will show up in the "Sorting" tab of the [Planning project][project-planning]. There are two [GitHub Actions][docs-actions] workflows utilized for this purpose; [`.github/workflows/issues.yml`][workflow-issues] and [`.github/workflows/projet.yml`][workflow-project].
 
 The GitHub Actions in the [`conda/infrastructure`][infrastructure] repository are viewed as canonical; the [`.github/workflows/sync.yml` workflow][workflow-sync] sends out any modifications to other `conda` repositories from there.
 
@@ -116,7 +116,7 @@ Issues in the ["Sorting" tab of the project board][project-sorting] are consider
 - Determining if support can be provided for errors and questions
 - Closing out of any duplicate/off-topic issues
 
-The sorting engineers on rotation are not seeking to _resolve_ issues that arise. Instead, the goal is to understand the ticket and to determine whether it is an issue in the first place, and then to collect as much relevant information as possible so that the maintainers can make an informed decision about the appropriate resolution schedule.
+The sorting engineers on rotation are not seeking to _resolve_ issues that arise. Instead, the goal is to understand the issue and to determine whether it is legitimate, and then to collect as much relevant information as possible so that the maintainers can make an informed decision about the appropriate resolution schedule.
 
 Issues will remain in the ["Sorting" tab][project-sorting] as long as the issue is in an investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest, but should still be progressing over the course of 1-2 weeks.
 
@@ -130,7 +130,7 @@ Items move out of the ["Sorting" tab][project-sorting] once the investigatory ph
 - **"Backlog"** - The issue has revealed a bug or feature request. We have collected enough details to understand the problem/request and to reproduce it on our own. These issues have been moved into the [Backlog tab of the Planning board][project-backlog] at the end of the sorting rotation during Refinement. Add the https://github.com/conda/infrastructure/labels/backlog label to move an issue to this tab.
 - **"Closed"** - The issue was closed due to being a duplicate, being redirected to a different project, was a user error, a question that has been resolved, etc.
 
-### Where do work tickets go after being sorted?
+### Where do work issues go after being sorted?
 
 Once issues are deemed ready to be worked on, they will be moved to the ["Backlog" tab of the Planning board][project-backlog]. Once actively in progress, the issues will be moved to the ["In Progress" tab of the Planning board][project-in-progress] and then closed out once the work is complete.
 
@@ -245,7 +245,7 @@ where `conda` installer/package issues are addressed.
 </pre>
 
 > **Warning**
-> Apply the https://github.com/conda/infrastructure/labels/off-topic label to these tickets before closing them out.
+> Apply the https://github.com/conda/infrastructure/labels/off-topic label to these issues before closing them out.
 
 </details>
 
@@ -261,7 +261,7 @@ please post details to the [Nucleus forums](https://community.anaconda.cloud/).
 </pre>
 
 > **Warning**
-> Apply the https://github.com/conda/infrastructure/labels/off-topic label to these tickets before closing them out.
+> Apply the https://github.com/conda/infrastructure/labels/off-topic label to these issues before closing them out.
 
 </details>
 
@@ -274,9 +274,9 @@ related projects. More information about how to set this up within GitHub can be
 
 - [GitHub's signing commits docs][docs-commit-signing]
 
-## Types of Tickets
+## Types of Issues
 
-### Standard Ticket/Issue
+### Standard Issue
 
 TODO
 
@@ -288,7 +288,7 @@ TODO
 
 #### What is a spike?
 
-"Spike" is a term that is borrowed from extreme programming and agile development. They are used when the **outcome of a ticket is unknown or even optional**. For example, when first coming across a problem that has not been solved before, a project may choose to either research the problem or create a prototype in order to better understand it.
+"Spike" is a term that is borrowed from extreme programming and agile development. They are used when the **outcome of an issue is unknown or even optional**. For example, when first coming across a problem that has not been solved before, a project may choose to either research the problem or create a prototype in order to better understand it.
 
 Additionally, spikes represent work that **may or may not actually be completed or implemented**. An example of this are prototypes created to explore possible solutions. Not all prototypes are implemented and the purpose of creating a prototype is often to explore the problem space more. For research-oriented tasks, the end result of this research may be that a feature request simply is not viable at the moment and would result in putting a stop to that work.
 
@@ -308,11 +308,11 @@ Below are some common scenarios where creating a spike is not appropriate:
 - Design work that would go into drafting how an API is going to look and function
 - Any work that must be completed or is not optional
 
-## Working on Tickets
+## Working on Issues
 
-### How do I assign myself to a ticket I am actively reviewing?
+### How do I assign myself to an issue I am actively reviewing?
 
-If you do **not** have permissions, please indicate that you are working on an issue ticket by commenting on the issue. Someone who has permissions will assign you to the ticket. If two weeks have passed without a pull request or an additional comment requesting information, you may be removed from the issue and the issue reassigned.
+If you do **not** have permissions, please indicate that you are working on an issue by leaving a comment. Someone who has permissions will assign you to the issue. If two weeks have passed without a pull request or an additional comment requesting information, you may be removed from the issue and the issue reassigned.
 
 If you are assigned to an issue but will not be able to continue work on it, please comment to indicate that you will no longer be working on it and press `unassign me`, next to your username in the `Assignees` section of the issue page (top right).
 
