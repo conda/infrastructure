@@ -19,6 +19,8 @@
 [lock]: https://github.com/conda/infrastructure/blob/main/.github/workflows/lock.yml
 [project-workflow]: https://github.com/conda/infrastructure/blob/main/.github/workflows/project.yml
 
+[signing-commits]: https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits
+
 <!-- relative URLs -->
 [workflow-issues]: /.github/workflows/issues.yml
 [workflow-project]: /.github/workflows/project.yml
@@ -34,13 +36,14 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 
 <!-- only include high-level topics or particularly noteworthy sections here -->
 Topics:
-  - [What is Issue Sorting?](#what-is-issue-sorting)
-  - [Issue Sorting Procedures](#issue-sorting-procedures)
+  - [What is "Issue Sorting"?](#what-is-issue-sorting)
+  - [Issue sorting procedures](#issue-sorting-procedures)
+  - [Commit signing](#commit-signing)
   - [Types of tickets](#types-of-tickets)
     - [Normal Ticket/Issue](#normal-ticketissue)
     - [Epics](#epics)
     - [Spikes](#spikes)
-  - [Working on Tickets](#working-on-tickets)
+  - [Working on tickets](#working-on-tickets)
 
 
 ### What is "Issue Sorting"?
@@ -109,7 +112,7 @@ New issues that are opened in any of the repositories in the [`conda` GitHub pro
 The GitHub Actions in the `conda/infrastructure` repository are viewed as canonical; the [Sync workflow][workflow-sync] sends out any modifications to other `conda` repositories from there.
 
 
-#### What is done about the issues in "sorting" mode?
+#### What is done about the issues in the "Sorting" tab?
 
 Issues in the ["Sorting" tab of the project board][project-sorting] are considered ready for the following procedures:
 
@@ -157,7 +160,7 @@ Global automation procedures synced out from the `conda/infrastructure` repo inc
 - [Syncing out of templates, labels, workflows and documentation][workflow-sync] from `conda/infrastructure` to the other conda organization repositories
 
 
-### Issue Sorting Procedures
+### Issue sorting procedures
 
 #### How are issues sorted?
 
@@ -273,9 +276,16 @@ please post details to the [Nucleus forums](https://community.anaconda.cloud/).
 In order to not have to manually type or copy/paste the above repeatedly, please note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply].
 
 
-### Types of Tickets
+### Commit signing
 
-#### Standard Ticket/Issue
+For all conda maintainers, we require commit signing and strongly recommend it for all others wishing to contribute to conda
+related projects. More information about how to set this up within GitHub can be found here:
+
+- [Signing Commits][signing-commits]
+
+### Types of tickets
+
+#### Standard ticket/issue
 
 TODO
 
@@ -307,7 +317,7 @@ Below are some common scenarios where creating a spike is not appropriate:
 - Any work that must be completed or is not optional
 
 
-### Working on Tickets
+### Working on tickets
 
 #### How do I assign myself to a ticket I am actively reviewing?
 

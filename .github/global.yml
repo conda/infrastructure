@@ -2,10 +2,12 @@
 - name: mitigated
   description: a workaround has been identified
   color: "43b049"
-- name: good-first-issue
+# this doesn't follow our labeling style because GitHub only populates the
+# https://github.com/conda/conda/contribute page with this exact label
+- name: good first issue
   description: great for new contributors, code change is envisioned to be trivial/relatively straight-forward
   color: "43b049"
-  aliases: ["good first issue"]
+  aliases: ["good-first-issue"]
 - name: help-wanted
   description: we don't know the solution or we especially want a community member to contribute the code change
   color: "43b049"
@@ -29,6 +31,9 @@
 - name: locked
   description: "[bot] locked due to inactivity"
   color: "85BDB1"
+- name: dependencies
+  description: "[bot] PRs that update a dependency file"
+  color: "0366d6"
 
 # Planning
 - name: epic
@@ -53,14 +58,11 @@
 
 # Duplicates
 - name: duplicate
-  description: >
-    can be used for issues or pull requests (PRs) to indicate that the tagged issue/PR
-    is a duplicate of another issue/PR: e.g., issue/PR covers the same concerns as another issue/PR,
-    PR resolves the same issue as another PR, etc.
+  description: indicate issues/PRs that are duplicates of another
   color: "0c2132"
   aliases: [reso-duplicate, "reso:duplicate"]
 - name: duplicate::primary
-  description: if an issue or pull request has duplicates, this is the consolidated, primary issue/pull request
+  description: if an issue/PR has duplicates, this is the consolidated, primary issue/PR
   color: "0c2132"
   aliases: [consolidation-main]
 
