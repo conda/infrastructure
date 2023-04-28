@@ -44,7 +44,7 @@ This document seeks to outline how we as a community use GitHub Issues to track 
   - [Working on Issues](#working-on-issues)
 
 > **Note**
-> This document is written in the style of an FAQ, for easier navigation use [GitHub's table of contents feature][docs-toc].
+> This document is written in the style of an FAQ. For easier navigation, use [GitHub's table of contents feature][docs-toc].
 
 ## What is "Issue Sorting"?
 
@@ -145,12 +145,12 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
 - [Marking of issues and pull requests as stale][workflow-stale], resulting in:
   - issues marked as https://github.com/conda/infrastructure/labels/type%3A%3Asupport being labeled stale after 21 days of inactivity and being closed after 7 further days of inactivity (that is, closed after 30 inactive days total)
   - all other inactive issues (not labeled as https://github.com/conda/infrastructure/labels/type%3A%3Asupport) being labeled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
-  - all inactive pull requests being labelled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
+  - all inactive pull requests being labeled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
 - [Locking of closed issues and pull requests with no further activity][workflow-lock] after 365 days
 - [Adding new issues and pull requests to the respective project boards][workflow-project]
-- [Indicate an issue ready for the sorting engineer's attention by toggling https://github.com/conda/infrastructure/labels/pending%3A%3Afeedback with https://github.com/conda/infrastructure/labels/pending%3A%3Asupport after a contributor leaves a comment][workflow-issues]
-- [Verifying that contributors have signed the CLA][workflow-cla] before allowing pull requests to be merged
-- [Syncing out templates, labels, workflows and documentation][workflow-sync] from [`conda/infrastructure`][infrastructure] to the other repositories
+- [Indicating an issue is ready for the sorting engineer's attention by toggling https://github.com/conda/infrastructure/labels/pending%3A%3Afeedback with https://github.com/conda/infrastructure/labels/pending%3A%3Asupport after a contributor leaves a comment][workflow-issues]
+- [Verifying that contributors have signed the CLA][workflow-cla] before allowing pull requests to be merged; if the contributor hasn't signed the CLA previously, merging is be blocked until a manual review can be done
+- [Syncing out templates, labels, workflows, and documentation][workflow-sync] from [`conda/infrastructure`][infrastructure] to the other repositories
 
 ## Issue Sorting Procedures
 
@@ -166,7 +166,7 @@ Labeling is a very important means for sorting engineers to keep track of the cu
 
 Each label has an associated description that clarifies how the label should be used. Hover on the label to see its description. Label colors are used to distinguish labels by category.
 
-Generally speaking, labels with the same category are considered mutually exclusive but in some cases labels sharing the same category can occur concurrently as they indicate qualifiers as opposed to types. For example, we may have the following types, https://github.com/conda/infrastructure/labels/type%3A%3Abug, https://github.com/conda/infrastructure/labels/type%3A%3Afeature, and https://github.com/conda/infrastructure/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue should not be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infrastructure/labels/os%3A%3Alinux, https://github.com/conda/infrastructure/labels/os%3A%3Amacos, and https://github.com/conda/infrastructure/labels/os%3A%3Awindows), an issue could be labeled with one or more depending on the system(s) the issue occurs on.
+Generally speaking, labels with the same category are considered mutually exclusive, but in some cases labels sharing the same category can occur concurrently, as they indicate qualifiers as opposed to types. For example, we may have the following types, https://github.com/conda/infrastructure/labels/type%3A%3Abug, https://github.com/conda/infrastructure/labels/type%3A%3Afeature, and https://github.com/conda/infrastructure/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue should not be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, https://github.com/conda/infrastructure/labels/os%3A%3Alinux, https://github.com/conda/infrastructure/labels/os%3A%3Amacos, and https://github.com/conda/infrastructure/labels/os%3A%3Awindows), an issue could be labeled with one or more, depending on the system(s) the issue occurs on.
 
 Please note that there are also automation policies in place that are affected by labeling. For example, if an issue is labeled as https://github.com/conda/infrastructure/labels/type%3A%3Asupport, that issue will be marked https://github.com/conda/infrastructure/labels/stale after 21 days of inactivity and auto-closed after seven more days without activity (30 inactive days total), which is earlier than issues without this label. See [What automation procedures are currently in place?](#what-automation-procedures-are-currently-in-place) for more details.
 
@@ -178,9 +178,9 @@ The `type` labels are exclusive of each other: each sorted issue should have exa
 
 The `source` labels are exclusive of each other: each sorted issue should have exactly one `source` label. These labels give information on the sub-group to which the issue's author belongs (_e.g._, a partner, a frequent contributor, the wider community, etc.). Through these labels, maintainers gain insight into how well we're meeting the needs of various groups.
 
-The `severity` labels are exclusive of each other and while required for the https://github.com/conda/infrastructure/labels/type%3A%bug label it can also be applied to other types to indicate demand or need. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
+The `severity` labels are exclusive of each other and, while required for the https://github.com/conda/infrastructure/labels/type%3A%bug label, they can also be applied to other types to indicate demand or need. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
 
-Please review the descriptions of the `type`, `source` and `severity` labels on the [labels page][labels-page] prior to use.
+Please review the descriptions of the `type`, `source`, and `severity` labels on the [labels page][labels-page] prior to use.
 
 ### How are new labels defined?
 
@@ -292,7 +292,7 @@ TODO
 
 Additionally, spikes represent work that **may or may not actually be completed or implemented**. An example of this are prototypes created to explore possible solutions. Not all prototypes are implemented and the purpose of creating a prototype is often to explore the problem space more. For research-oriented tasks, the end result of this research may be that a feature request simply is not viable at the moment and would result in putting a stop to that work.
 
-Finally, spikes are usually **timeboxed** however given the open source/volunteer nature of our contributions we do not enforce this on our contributors. When a timebox is set, this means that we are limiting how long we want someone to work on said spike. We do this to prevent contributors from falling into a rabbit hole they may never return from. Instead, we set a time limit to perform work on the spike and then have the assignee report back. If the tasks defined in the spike have not yet been completed, a decision is made on whether it makes sense to perform further work on the spike.
+Finally, spikes are usually **timeboxed**. However, given the open source/volunteer nature of our contributions, we do not enforce this for our contributors. When a timebox is set, this means that we are limiting how long we want someone to work on said spike. We do this to prevent contributors from falling into a rabbit hole they may never return from. Instead, we set a time limit to perform work on the spike and then have the assignee report back. If the tasks defined in the spike have not yet been completed, a decision is made on whether it makes sense to perform further work on the spike.
 
 #### When do I create a spike?
 
@@ -314,6 +314,6 @@ Below are some common scenarios where creating a spike is not appropriate:
 
 If you do **not** have permissions, please indicate that you are working on an issue by leaving a comment. Someone who has permissions will assign you to the issue. If two weeks have passed without a pull request or an additional comment requesting information, you may be removed from the issue and the issue reassigned.
 
-If you are assigned to an issue but will not be able to continue work on it, please comment to indicate that you will no longer be working on it and press `unassign me`, next to your username in the `Assignees` section of the issue page (top right).
+If you are assigned to an issue but will not be able to continue work on it, please comment to indicate that you will no longer be working on it and press `unassign me` next to your username in the `Assignees` section of the issue page (top right).
 
 If you **do** have permissions, please assign yourself to the issue by pressing `assign myself` under the `Assignees` section of the issue page (top right).
