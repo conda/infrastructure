@@ -1,272 +1,273 @@
+---
 # General
-- name: mitigated
-  description: a workaround has been identified
-  color: "43b049"
-# this doesn't follow our labeling style because GitHub only populates the
-# https://github.com/conda/conda/contribute page with this exact label
-- name: good first issue
-  description: great for new contributors, code change is envisioned to be trivial/relatively straight-forward
-  color: "43b049"
-  aliases: ["good-first-issue"]
-- name: help-wanted
-  description: we don't know the solution or we especially want a community member to contribute the code change
-  color: "43b049"
-  aliases: ["help wanted"]
-- name: unreproducible
-  description: we are unable to replicate the issue
-  color: "ff8c00"
-- name: off-topic
-  description: not related to project, discussion is spam, or is otherwise nonsensical
-  color: "ff8c00"
-  aliases: [reso-invalid, invalid, "reso:invalid"]
-- name: works-as-intended
-  description: not a bug or feature is undesired; the project functions as intended
-  color: "ff8c00"
-  aliases: [reso-wontfix, wontfix, "reso:wontfix"]
+  - name: mitigated
+    description: a workaround has been identified
+    color: 43b049
+  # this doesn't follow our labeling style because GitHub only populates the
+  # https://github.com/conda/conda/contribute page with this exact label
+  - name: good first issue
+    description: great for new contributors, code change is envisioned to be trivial/relatively straight-forward
+    color: 43b049
+    aliases: [good-first-issue]
+  - name: help-wanted
+    description: we don't know the solution or we especially want a community member to contribute the code change
+    color: 43b049
+    aliases: [help wanted]
+  - name: unreproducible
+    description: we are unable to replicate the issue
+    color: ff8c00
+  - name: off-topic
+    description: not related to project, discussion is spam, or is otherwise nonsensical
+    color: ff8c00
+    aliases: [reso-invalid, invalid, reso:invalid]
+  - name: works-as-intended
+    description: not a bug or feature is undesired; the project functions as intended
+    color: ff8c00
+    aliases: [reso-wontfix, wontfix, reso:wontfix]
 
 # Bots
-- name: cla-signed
-  description: "[bot] added once the contributor has signed the CLA"
-  color: "ededed"
-- name: locked
-  description: "[bot] locked due to inactivity"
-  color: "85BDB1"
-- name: dependencies
-  description: "[bot] PRs that update a dependency file"
-  color: "0366d6"
+  - name: cla-signed
+    description: '[bot] added once the contributor has signed the CLA'
+    color: ededed
+  - name: locked
+    description: '[bot] locked due to inactivity'
+    color: 85BDB1
+  - name: dependencies
+    description: '[bot] PRs that update a dependency file'
+    color: 0366d6
 
 # Planning
-- name: epic
-  description: "a highlevel collection of smaller related issues"
-  color: "ededed"
-- name: backlog
-  description: issue has been triaged but has not been earmarked for any upcoming release
-  color: "ededed"
-  aliases: [1_Backlog_Long_Term]
-- name: in-progress
-  description: issue is actively being worked on
-  color: "ededed"
-  aliases: [sprint]
-- name: spike
-  description: issue is for doing research work or prototyping; outcome is optional and not required
-  color: "ededed"
+  - name: epic
+    description: a highlevel collection of smaller related issues
+    color: ededed
+  - name: backlog
+    description: issue has been triaged but has not been earmarked for any upcoming release
+    color: ededed
+    aliases: [1_Backlog_Long_Term]
+  - name: in-progress
+    description: issue is actively being worked on
+    color: ededed
+    aliases: [sprint]
+  - name: spike
+    description: issue is for doing research work or prototyping; outcome is optional and not required
+    color: ededed
 
 # Sync
-- name: sync::anaconda
-  description: sync internally with Anaconda, Inc. ticket tracker
-  color: "5B2B76"
+  - name: sync::anaconda
+    description: sync internally with Anaconda, Inc. ticket tracker
+    color: 5B2B76
 
 # Duplicates
-- name: duplicate
-  description: indicate issues/PRs that are duplicates of another
-  color: "0c2132"
-  aliases: [reso-duplicate, "reso:duplicate"]
-- name: duplicate::primary
-  description: if an issue/PR has duplicates, this is the consolidated, primary issue/PR
-  color: "0c2132"
-  aliases: [consolidation-main]
+  - name: duplicate
+    description: indicate issues/PRs that are duplicates of another
+    color: 0c2132
+    aliases: [reso-duplicate, reso:duplicate]
+  - name: duplicate::primary
+    description: if an issue/PR has duplicates, this is the consolidated, primary issue/PR
+    color: 0c2132
+    aliases: [consolidation-main]
 
 # Pending
-- name: pending::feedback
-  description: indicates we are waiting on feedback from the user
-  color: "d4c5f9"
-  aliases: [waiting-on-response, info-needed]
-- name: pending::discussion
-  description: contains some ongoing discussion that needs to be resolved prior to proceeding
-  color: "d4c5f9"
-  aliases: [type-discussion, 2_Needs_Decision, "type:discussion"]
-- name: pending::release
-  description: the resolution is pending a new release
-  color: "d4c5f9"
-- name: pending::support
-  description: indicates user is waiting on support from triage engineers
-  color: "5319E7"
+  - name: pending::feedback
+    description: indicates we are waiting on feedback from the user
+    color: d4c5f9
+    aliases: [waiting-on-response, info-needed]
+  - name: pending::discussion
+    description: contains some ongoing discussion that needs to be resolved prior to proceeding
+    color: d4c5f9
+    aliases: [type-discussion, 2_Needs_Decision, type:discussion]
+  - name: pending::release
+    description: the resolution is pending a new release
+    color: d4c5f9
+  - name: pending::support
+    description: indicates user is waiting on support from triage engineers
+    color: '5319E7'
 
 # Modifiers
-- name: ¡blocking!
-  description: used to indicate a blocker for a pending release
-  color: "b60205"
-- name: ¡breaking!
-  description: used to indicate that the code change will likely require a minor or major version bump
-  color: "b60205"
-  aliases: [deprecation_or_behavior_change]
-- name: ¡security!
-  description: used to indicate a security vulnerability
-  color: "b60205"
-  aliases: [tag-security]
-- name: ¡important!
-  description: used to indicate particularly notable information
-  color: "b60205"
-  aliases: [type-advisory]
+  - name: ¡blocking!
+    description: used to indicate a blocker for a pending release
+    color: b60205
+  - name: ¡breaking!
+    description: used to indicate that the code change will likely require a minor or major version bump
+    color: b60205
+    aliases: [deprecation_or_behavior_change]
+  - name: ¡security!
+    description: used to indicate a security vulnerability
+    color: b60205
+    aliases: [tag-security]
+  - name: ¡important!
+    description: used to indicate particularly notable information
+    color: b60205
+    aliases: [type-advisory]
 
 # Types
-- name: type::bug
-  description: describes erroneous operation, use severity::* to classify the type
-  color: "b60205"
-  aliases: [bug, type-bug, "Type: Bug", "type:bug"]
-- name: type::feature
-  description: request for a new feature or capability
-  color: "fff2cc"
-  aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type, type-feature, "Type: Feature", "type:enhancement"]
-- name: type::documentation
-  description: request for improved documentation
-  color: "fff2cc"
-  aliases: [tag-documentation, documentation]
-- name: type::support
-  description: neither a bug nor feature, is really just a user having questions or difficulty somewhere
-  color: "fff2cc"
-  aliases: [type-question, question, "Type: Question", "type:question"]
-- name: type::tech-debt
-  description: identifies or resolves some technical debt
-  color: "fff2cc"
-- name: type::poc
-  description: indicates some proof of concept or MVP work
-  color: "fff2cc"
-- name: type::task
-  description: indicates a change that doesn't pertain to the code itself, e.g. updating CI/CQ, rebuilding package
-  color: "fff2cc"
-  aliases: ["Type: Maintenance", "type:task"]
-- name: type::testing
-  description: issues about tests or the test infrastructure
-  color: "fff2cc"
-  aliases: [type-new_test]
-- name: type::deprecation
-  description: requests removal of deprecated feature(s)
-  color: "fff2cc"
+  - name: type::bug
+    description: describes erroneous operation, use severity::* to classify the type
+    color: b60205
+    aliases: [bug, type-bug, 'Type: Bug', type:bug]
+  - name: type::feature
+    description: request for a new feature or capability
+    color: fff2cc
+    aliases: [tag-features, type-enhancement, enhancement, tag-new_package_type, type-feature, 'Type: Feature', type:enhancement]
+  - name: type::documentation
+    description: request for improved documentation
+    color: fff2cc
+    aliases: [tag-documentation, documentation]
+  - name: type::support
+    description: neither a bug nor feature, is really just a user having questions or difficulty somewhere
+    color: fff2cc
+    aliases: [type-question, question, 'Type: Question', type:question]
+  - name: type::tech-debt
+    description: identifies or resolves some technical debt
+    color: fff2cc
+  - name: type::poc
+    description: indicates some proof of concept or MVP work
+    color: fff2cc
+  - name: type::task
+    description: indicates a change that doesn't pertain to the code itself, e.g. updating CI/CQ, rebuilding package
+    color: fff2cc
+    aliases: ['Type: Maintenance', type:task]
+  - name: type::testing
+    description: issues about tests or the test infrastructure
+    color: fff2cc
+    aliases: [type-new_test]
+  - name: type::deprecation
+    description: requests removal of deprecated feature(s)
+    color: fff2cc
 
 # Severity
-- name: severity::1
-  description: blocker; broken functionality with no workaround
-  color: "b60205"
-  aliases: [s1, s-1]
-- name: severity::2
-  description: critical; broken functionality with an unacceptably complex workaround
-  color: "ff8c00"
-  aliases: [s2, s-2]
-- name: severity::3
-  description: major; broken functionality with a workaround
-  color: "fde275"
-  aliases: [s3, s-3]
-- name: severity::4
-  description: low; functionality is inconvenient
-  color: "43b04b"
+  - name: severity::1
+    description: blocker; broken functionality with no workaround
+    color: b60205
+    aliases: [s1, s-1]
+  - name: severity::2
+    description: critical; broken functionality with an unacceptably complex workaround
+    color: ff8c00
+    aliases: [s2, s-2]
+  - name: severity::3
+    description: major; broken functionality with a workaround
+    color: fde275
+    aliases: [s3, s-3]
+  - name: severity::4
+    description: low; functionality is inconvenient
+    color: 43b04b
 
 # Source
-- name: source::governance
-  description: created by members of the conda governance (https://github.com/conda-incubator/governance)
-  color: "c2e0c6"
-  aliases: [source-core]
-- name: source::auto
-  description: create as a result of a crash report or through other automatically reported means
-  color: "c2e0c6"
-  aliases: [source-auto_report]
-- name: source::contributor
-  description: created by a frequent contributor
-  color: "c2e0c6"
-- name: source::qa
-  description: created by or for the QA team
-  color: "c2e0c6"
-  aliases: ["source:qa"]
-- name: source::enterprise
-  description: created by or for an enterprise customer
-  color: "c2e0c6"
-  aliases: [source-ent, ent, "source:enterprise"]
-- name: source::partner
-  description: created by or for an Anaconda, Inc. partner company
-  color: "c2e0c8"
-- name: source::anaconda
-  description: created by members of Anaconda, Inc.
-  color: "c2e0c6"
-  aliases: [source-cio, cio, "source:internal"]
-- name: source::community
-  description: catch-all for issues filed by community members
-  color: "c2e0c6"
-  aliases: [source-community, "source:public"]
+  - name: source::governance
+    description: created by members of the conda governance (https://github.com/conda-incubator/governance)
+    color: c2e0c6
+    aliases: [source-core]
+  - name: source::auto
+    description: create as a result of a crash report or through other automatically reported means
+    color: c2e0c6
+    aliases: [source-auto_report]
+  - name: source::contributor
+    description: created by a frequent contributor
+    color: c2e0c6
+  - name: source::qa
+    description: created by or for the QA team
+    color: c2e0c6
+    aliases: [source:qa]
+  - name: source::enterprise
+    description: created by or for an enterprise customer
+    color: c2e0c6
+    aliases: [source-ent, ent, source:enterprise]
+  - name: source::partner
+    description: created by or for an Anaconda, Inc. partner company
+    color: c2e0c8
+  - name: source::anaconda
+    description: created by members of Anaconda, Inc.
+    color: c2e0c6
+    aliases: [source-cio, cio, source:internal]
+  - name: source::community
+    description: catch-all for issues filed by community members
+    color: c2e0c6
+    aliases: [source-community, source:public]
 
 # OS
-- name: os::linux
-  description: relevant to Linux
-  color: "d0e0e3"
-  aliases: ["os:linux"]
-- name: os::macos
-  description: relevant to macOS
-  color: "d0e0e3"
-  aliases: [tag-macos, osx, os-mac, macos, "os:osx"]
-- name: os::windows
-  description: relevant to Windows
-  color: "d0e0e3"
-  aliases: [tag-windows, windows, os-win, "os:windows"]
-- name: os::wsl
-  description: relevant to Windows Subsystem for Linux
-  color: "d0e0e3"
+  - name: os::linux
+    description: relevant to Linux
+    color: d0e0e3
+    aliases: [os:linux]
+  - name: os::macos
+    description: relevant to macOS
+    color: d0e0e3
+    aliases: [tag-macos, osx, os-mac, macos, os:osx]
+  - name: os::windows
+    description: relevant to Windows
+    color: d0e0e3
+    aliases: [tag-windows, windows, os-win, os:windows]
+  - name: os::wsl
+    description: relevant to Windows Subsystem for Linux
+    color: d0e0e3
 
 # Stale
-- name: stale
-  description: "[bot] marked as stale due to inactivity"
-  color: "E79676"
-  aliases: [stale-marked]
-- name: stale::recovered
-  description: "[bot] recovered after being marked as stale"
-  color: "40A6B3"
-- name: stale::closed
-  description: "[bot] closed after being marked as stale"
-  color: "86A8D8"
+  - name: stale
+    description: '[bot] marked as stale due to inactivity'
+    color: E79676
+    aliases: [stale-marked]
+  - name: stale::recovered
+    description: '[bot] recovered after being marked as stale'
+    color: 40A6B3
+  - name: stale::closed
+    description: '[bot] closed after being marked as stale'
+    color: 86A8D8
 
 # Hackathons
-- name: hack::HackIllinois2019
-  description: issues found or suggested changes proposed during HackIllinois2019
-  color: "6ce29e"
-  aliases: [HackIllinois2019]
-- name: hack::SciPy2017
-  description: issues found or suggested changes proposed during SciPy2017
-  color: "6ce29e"
-  aliases: [SciPy2017]
-- name: hack::SciPy2022
-  description: issues found or suggested changes proposed during SciPy2022
-  color: "6ce29e"
+  - name: hack::HackIllinois2019
+    description: issues found or suggested changes proposed during HackIllinois2019
+    color: 6ce29e
+    aliases: [HackIllinois2019]
+  - name: hack::SciPy2017
+    description: issues found or suggested changes proposed during SciPy2017
+    color: 6ce29e
+    aliases: [SciPy2017]
+  - name: hack::SciPy2022
+    description: issues found or suggested changes proposed during SciPy2022
+    color: 6ce29e
 
 # Tags
-- name: tag::performance
-  description: related to degraded performance
-  color: "86C579"
-- name: tag::encoding-error
-  description: related to an encoding error
-  color: "86C579"
-- name: tag::api
-  description: related to the public API
-  color: "86C579"
-- name: tag::reproducibility
-  description: related to producing reproducible results
-  color: "86C579"
-  aliases: [reproducibility]
-- name: tag::ux
-  description: related to user experience
-  color: "86C579"
+  - name: tag::performance
+    description: related to degraded performance
+    color: 86C579
+  - name: tag::encoding-error
+    description: related to an encoding error
+    color: 86C579
+  - name: tag::api
+    description: related to the public API
+    color: 86C579
+  - name: tag::reproducibility
+    description: related to producing reproducible results
+    color: 86C579
+    aliases: [reproducibility]
+  - name: tag::ux
+    description: related to user experience
+    color: 86C579
 
 # Documentation
-- name: documentation::tutorials
-  description: related to tutorials (learning-oriented)
-  color: "77b2dc"
-- name: documentation::how-tos
-  description: related to how-tos (task-oriented)
-  color: "77b2dc"
-- name: documentation::reference
-  description: related to the API and internals (information-oriented)
-  color: "77b2dc"
-- name: documentation::explanation
-  description: related to higher-level clarification (understanding-oriented)
-  color: "77b2dc"
+  - name: documentation::tutorials
+    description: related to tutorials (learning-oriented)
+    color: 77b2dc
+  - name: documentation::how-tos
+    description: related to how-tos (task-oriented)
+    color: 77b2dc
+  - name: documentation::reference
+    description: related to the API and internals (information-oriented)
+    color: 77b2dc
+  - name: documentation::explanation
+    description: related to higher-level clarification (understanding-oriented)
+    color: 77b2dc
 
 # Upstream & Downstream
-- name: upstream
-  description: this issue/PR is caused by an upstream dependency
-  color: "85a3ad"
-- name: downstream
-  description: this issue/PR impacts a downstream dependency
-  color: "85a3ad"
-- name: downstream::anaconda
-  description: this issue/PR impacts Anaconda's packaging teams
-  color: "85a3ad"
-- name: downstream::conda-forge
-  description: this issue/PR impacts the conda-forge community
-  color: "85a3ad"
+  - name: upstream
+    description: this issue/PR is caused by an upstream dependency
+    color: 85a3ad
+  - name: downstream
+    description: this issue/PR impacts a downstream dependency
+    color: 85a3ad
+  - name: downstream::anaconda
+    description: this issue/PR impacts Anaconda's packaging teams
+    color: 85a3ad
+  - name: downstream::conda-forge
+    description: this issue/PR impacts the conda-forge community
+    color: 85a3ad
