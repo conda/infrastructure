@@ -1,3 +1,4 @@
+---
 name: Stale
 
 on:
@@ -6,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       dryrun:
-        description: "dryrun: Preview stale issues/prs without marking them (true|false)"
+        description: 'dryrun: Preview stale issues/prs without marking them (true|false)'
         required: true
         type: boolean
         default: true
