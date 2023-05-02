@@ -1,12 +1,13 @@
-- name: type::development
-  color: "fff2cc"
-  description: related to developer environment setups
-  aliases: [development]
-- name: type::github
-  color: "fff2cc"
-  description: related to GitHub org administration
-  aliases: [github]
-- name: type::hosting
-  color: "fff2cc"
-  description: related to package hosting, e.g. conda-forge channel on anaconda.org
-  aliases: [hosting]
+---
+  - name: type::development
+    color: '#fff2cc'
+    description: related to developer environment setups
+    aliases: [development]
+  - name: type::github
+    color: '#fff2cc'
+    description: related to GitHub org administration
+    aliases: [github]
+  - name: type::hosting
+    color: '#fff2cc'
+    description: related to package hosting, e.g. conda-forge channel on anaconda.org
+    aliases: [hosting]

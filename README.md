@@ -18,7 +18,7 @@ Feel also free to:
   * 💭 Share ideas about new features and changes you'd like to see
   * 🗣️ Engage with other community members
 
-Please start by creating a discussion first before you open an issue directly.
+Please start by creating a discussion and checking the [Anaconda Status Page](https://anaconda.statuspage.io) for known issues before you open an issue directly.
 
 Welcome others and be open-minded. Remember that this is a community we build together 💪.
 
