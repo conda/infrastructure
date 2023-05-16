@@ -265,6 +265,21 @@ please post details to the [Nucleus forums](https://community.anaconda.cloud/).
 
 </details>
 
+<details>
+<summary><b>Slow solving of conda environment</b></summary>
+
+<!-- this is a code block, any links need to be embedded -->
+<pre>
+Hi <user>,
+
+Thanks for voicing your concern about the performance of our dependency solver. To fix this, our official recommendation is using the "conda-libmamba-solver" instead of the default "classic" solver (more information about the "conda-libmamba-solver" can be found here: https://conda.github.io/conda-libmamba-solver/getting-started/).
+
+We know the old solver is slow which is why we put so much effort into to enabling the libmamba solver to be used within conda. We hope this provides you with a much better experience going forward.
+</pre>
+
+</details>
+
+
 In order to not have to manually type or copy/paste the above repeatedly, note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply].
 
 ## Commit Signing
