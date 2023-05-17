@@ -270,11 +270,11 @@ please post details to the [Nucleus forums](https://community.anaconda.cloud/).
 
 <!-- this is a code block, any links need to be embedded -->
 <pre>
-Hi user,
+Hi [@username],
 
 Thanks for voicing your concern about the performance of our dependency solver. To fix this, our official recommendation is using the "conda-libmamba-solver" instead of the default "classic" solver (more information about the "conda-libmamba-solver" can be found here: https://conda.github.io/conda-libmamba-solver/getting-started/).
 
-We know the old solver is slow which is why we put so much effort into to enabling the libmamba solver to be used within conda. We hope this provides you with a much better experience going forward.
+In most cases "conda-libmamba-solver" should be significantly faster than the "classic" solver. We hope it provides you with a much better experience going forward.
 </pre>
 
 </details>
