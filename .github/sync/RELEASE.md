@@ -1,11 +1,12 @@
 <!-- These docs are updated and synced from https://github.com/conda/infra -->
 
 <!-- links -->
-[epic template]: {{ repo.url }}/issues/new?assignees=&labels=epic&template=epic.yml
+<!-- (some of these have been commented out for now, until the `repo.url` syntax works) -->
+<!-- [epic template]: {{ repo.url }}/issues/new?assignees=&labels=epic&template=epic.yml
+[compare]: {{ repo.url }}/compare
+[new release]: {{ repo.url }}/releases/new -->
 [infrastructure]: https://github.com/conda/infrastructure
 [rever docs]: https://regro.github.io/rever-docs
-[compare]: {{ repo.url }}/compare
-[new release]: {{ repo.url }}/releases/new
 [release docs]: https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes
 
 # Release Process
@@ -13,10 +14,10 @@
 > **Note**
 > Throughout this document are references to the version number as `YY.M.0`, this should be replaced with the correct version number. Do **not** prefix the version with a lowercase `v`.
 
-## 1. Open the Release Issue. (do this ~1 week prior to release)
+## 1. Open the Release Issue and Cut a Release Branch (do this ~1 week prior to release)
 
 > **Note**
-> The [epic template][epic template] is perfect for this, just remember to remove the {{ repo.url }}/labels/epic label.
+> The [epic template](https://github.com/conda/infrastructure/issues/new?assignees=&labels=epic&template=epic.yml) is perfect for this, just remember to remove the **`epic`** label.
 
 Use the issue template below to create the release issue. After creating the release issue, pin it for easy access.
 
@@ -66,9 +67,11 @@ Placeholder for `{{ repo.name }} YY.M.0` release.
     - [ ] Twitter
     - [ ] Matrix
 ```
-
 </details>
 
+
+> **Note**
+> The new release branch should adhere to the naming convention of `YY.M.x`
 
 ## 2. Ensure `rever.xsh` and `news/TEMPLATE` are up to date.
 
@@ -104,7 +107,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 2. Create a versioned branch, this is where rever will make its changes:
 
     ```bash
-    (rever) $ git checkout -b release-YY.M.0
+    (rever) $ git checkout -b changelog-YY.M.0
     ```
 
 2. Run `rever --activities authors`:
@@ -201,7 +204,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     > * Add `win-arm64` as a known platform (subdir). (#11778)
     > ```
 
-    - You can utilize [GitHub's compare view][compare] to review what changes are to be included in this release.
+    - You can utilize [GitHub's compare view](https://github.com/conda/infrastructure/compare) to review what changes are to be included in this release.
 
     - Add a new news snippet for any PRs of importance that are missing.
 
@@ -267,7 +270,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 7. Since rever does not include stats on first-time contributors, we will need to add this manually.
 
-    - Use [GitHub's auto-generated release notes][new release] to get a list of all new contributors (and their first PR) and manually merge this list with the contributor list in `CHANGELOG.md`. See [GitHub docs][release docs] for how to auto-generate the release notes.
+    - Use [GitHub's auto-generated release notes](https://github.com/conda/infrastructure/releases/new) to get a list of all new contributors (and their first PR) and manually merge this list with the contributor list in `CHANGELOG.md`. See [GitHub docs][release docs] for how to auto-generate the release notes.
 
     - Commit these final changes:
 
@@ -291,7 +294,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 8. Push this versioned branch.
 
     ```bash
-    (rever) $ git push -u upstream release-YY.M.0
+    (rever) $ git push -u upstream changelog-YY.M.0
     ```
 
 9. Open the Release PR targing the `YY.M.x` branch.
@@ -311,7 +314,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 10. Update Release Issue to include a link to the Release PR.
 
-11. [Create][new release] the release and **SAVE AS A DRAFT** with the following values:
+11. [Create](https://github.com/conda/infrastructure/releases/new) the release and **SAVE AS A DRAFT** with the following values:
 
     > **Note**
     > Only publish the release after the Release PR is merged, until then always **save as draft**.
