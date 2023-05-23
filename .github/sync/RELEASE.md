@@ -333,6 +333,26 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 ## 6. Merge/cherry pick the release branch over to the `main` branch.
 
+<details>
+<summary>Internal process</summary>
+
+1. From the main "< > Code" page of the repository, select the drop down menu next to the `main` branch button and then select "View all branches" at the very bottom.
+
+2. Find the applicable `YY.MM.x` branch and click the "New pull request" button.
+
+3. "Base" should point to `main` while "Compare" should point to `YY.MM.x`.
+
+4. Ensure that all of the commits being pulled in look accurate, then select "Create pull request".
+
+5. Review and merge the pull request the same as any code change pull request.
+
+> **Note**
+> The commits from the release branch need to be retained in order to be able to compare individual commits;
+> in other words, a "merge commit" is required when merging the resulting pull request vs. a "squash merge".
+> Protected branches will require permissions to be temporarily updated in order to enable this action.
+
+</details>
+
 ## 7. Open PRs to bump main and conda-forge feedstocks to use `YY.M.0`.
 
 ## 8. Hand off to Anaconda's packaging team.
