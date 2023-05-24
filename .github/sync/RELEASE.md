@@ -344,16 +344,17 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 4. Ensure that all of the commits being pulled in look accurate, then select "Create pull request".
 
+> **Note**
+> Make sure NOT to push the "Update Branch" button. If there are [merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts), create a temporary "connector branch" dedicated to fixing merge conflicts separately from the `YY.M.0` and `main` branches.
+
 5. Review and merge the pull request the same as any code change pull request.
 
 > **Note**
-> The commits from the release branch need to be retained in order to be able to compare individual commits;
-> in other words, a "merge commit" is required when merging the resulting pull request vs. a "squash merge".
-> Protected branches will require permissions to be temporarily updated in order to enable this action.
+> The commits from the release branch need to be retained in order to be able to compare individual commits; in other words, a "merge commit" is required when merging the resulting pull request vs. a "squash merge". Protected branches will require permissions to be temporarily updated in order to enable this action.
 
 </details>
 
-## 7. Open PRs to bump main and conda-forge feedstocks to use `YY.M.0`.
+## 7. Open PRs to bump [Anaconda Recipes](https://github.com/AnacondaRecipes/conda-feedstock) and [conda-forge](https://github.com/conda-forge/conda-feedstock) feedstocks to use `YY.M.0`.
 
 ## 8. Hand off to Anaconda's packaging team.
 
