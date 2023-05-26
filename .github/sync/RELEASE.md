@@ -14,7 +14,7 @@
 > **Note**
 > Throughout this document are references to the version number as `YY.M.0`, this should be replaced with the correct version number. Do **not** prefix the version with a lowercase `v`.
 
-## 1. Open the Release Issue and Cut a Release Branch (do this ~1 week prior to release)
+## 1. Open the release issue and cut a release branch. (do this ~1 week prior to release)
 
 > **Note**
 > The [epic template](https://github.com/conda/infrastructure/issues/new?assignees=&labels=epic&template=epic.yml) is perfect for this, just remember to remove the **`epic`** label.
@@ -41,7 +41,6 @@ Placeholder for `{{ repo.name }} YY.M.0` release.
 [main]: https://github.com/AnacondaRecipes/{{ repo.name }}-feedstock
 [conda-forge]: https://github.com/conda-forge/{{ repo.name }}-feedstock
 [ReadTheDocs]: https://readthedocs.com/projects/continuumio-{{ repo.name }}/
-[announcement]: https://github.com/conda/communications
 
 #### The week before release week
 
@@ -62,10 +61,14 @@ Placeholder for `{{ repo.name }} YY.M.0` release.
     <!-- link any other feedstock PRs here -->
 - [ ] Hand off to the Anaconda packaging team
 - [ ] Announce release
-    - [ ] Create release [announcement draft][announcement]
-    - [ ] Discourse
-    - [ ] Twitter
-    - [ ] Matrix
+    - Blog Post (optional)
+        - [ ] conda.org (link to pull request)
+    - Long form
+        - [ ] Create release [announcement draft](https://github.com/conda/communications)
+        - [ ] [Discourse](https://conda.discourse.group/)
+        - [ ] Matrix
+    - Summary
+        - [ ] Twitter
 ```
 </details>
 
@@ -73,12 +76,16 @@ Placeholder for `{{ repo.name }} YY.M.0` release.
 > **Note**
 > The new release branch should adhere to the naming convention of `YY.M.x`
 
-## 2. Ensure `rever.xsh` and `news/TEMPLATE` are up to date.
+## 2. Alert various parties of the new release. (do this ~1 week prior to release)
+
+Let various interested parties know about the new release; at minimum, conda-forge maintainers should be informed about new releases. For major releases, a blog post describing the new features should be created and posted.
+
+## 3. Ensure `rever.xsh` and `news/TEMPLATE` are up to date.
 
 These are synced from [`conda/infrastructure`][infrastructure].
 
 <details>
-<summary><h3>3. Run Rever. (ideally done on the Monday of release week)</h3></summary>
+<summary><h2>4. Run rever. (ideally done on the Monday of release week)</h2></summary>
 
 Currently, there are only 2 activities we use rever for, (1) aggregating the authors and (2) updating the changelog. Aggregating the authors can be an error-prone process and also suffers from builtin race conditions (_i.e._, to generate an updated `.authors.yml` we need an updated `.mailmap` but to have an updated `.mailmap` we need an updated `.authors.yml`). This is why the following steps are very heavy-handed (and potentially repetitive) in running rever commands, undoing commits, squashing/reordering commits, etc.
 
@@ -327,11 +334,11 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 </details>
 
-## 4. Wait for review and approval of Release PR.
+## 5. Wait for review and approval of Release PR.
 
-## 5. Merge Release PR and Publish Release.
+## 6. Merge release PR and publish release.
 
-## 6. Merge/cherry pick the release branch over to the `main` branch.
+## 7. Merge/cherry pick the release branch over to the `main` branch.
 
 <details>
 <summary>Internal process</summary>
@@ -354,9 +361,9 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 </details>
 
-## 7. Open PRs to bump [Anaconda Recipes](https://github.com/AnacondaRecipes/conda-feedstock) and [conda-forge](https://github.com/conda-forge/conda-feedstock) feedstocks to use `YY.M.0`.
+## 8. Open PRs to bump [Anaconda Recipes](https://github.com/AnacondaRecipes/conda-feedstock) and [conda-forge](https://github.com/conda-forge/conda-feedstock) feedstocks to use `YY.M.0`.
 
-## 8. Hand off to Anaconda's packaging team.
+## 9. Hand off to Anaconda's packaging team.
 
 <details>
 <summary>Internal process</summary>
@@ -367,6 +374,6 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 </details>
 
-## 9. Continue championing and shepherding.
+## 10. Continue championing and shepherding.
 
-Remember to continue updating the Release Issue with the latest details as tasks are completed.
+Remember to make all relevant announcements and continue to update the Release Issue with the latest details as tasks are completed.
