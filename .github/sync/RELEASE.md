@@ -17,7 +17,7 @@
 ## 1. Open the release issue and cut a release branch. (do this ~1 week prior to release)
 
 > **Note**
-> The [epic template](https://github.com/conda/infrastructure/issues/new?assignees=&labels=epic&template=epic.yml) is perfect for this, just remember to remove the **`epic`** label.
+> The [epic template](https://github.com/conda/infrastructure/issues/new?assignees=&labels=epic&template=epic.yml) is perfect for this; remember to remove the **`epic`** label.
 
 Use the issue template below to create the release issue. After creating the release issue, pin it for easy access.
 
@@ -74,7 +74,7 @@ Placeholder for `{{ repo.name }} YY.M.0` release.
 
 
 > **Note**
-> The new release branch should adhere to the naming convention of `YY.M.x`
+> The new release branch should adhere to the naming convention of `YY.M.x`.
 
 ## 2. Alert various parties of the new release. (do this ~1 week prior to release)
 
@@ -319,12 +319,12 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
     </details>
 
-10. Update Release Issue to include a link to the Release PR.
+10. Update release issue to include a link to the release PR.
 
 11. [Create](https://github.com/conda/infrastructure/releases/new) the release and **SAVE AS A DRAFT** with the following values:
 
     > **Note**
-    > Only publish the release after the Release PR is merged, until then always **save as draft**.
+    > Only publish the release after the release PR is merged, until then always **save as draft**.
 
     | Field | Value |
     |---|---|
@@ -334,7 +334,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 </details>
 
-## 5. Wait for review and approval of Release PR.
+## 5. Wait for review and approval of release PR.
 
 ## 6. Merge release PR and publish release.
 
@@ -376,4 +376,4 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 ## 10. Continue championing and shepherding.
 
-Remember to make all relevant announcements and continue to update the Release Issue with the latest details as tasks are completed.
+Remember to make all relevant announcements and continue to update the release Issue with the latest details as tasks are completed.
