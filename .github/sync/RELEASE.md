@@ -376,4 +376,4 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 ## 10. Continue championing and shepherding.
 
-Remember to make all relevant announcements and continue to update the release Issue with the latest details as tasks are completed.
+Remember to make all relevant announcements and continue to update the release issue with the latest details as tasks are completed.
