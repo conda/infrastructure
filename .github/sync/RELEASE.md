@@ -1,13 +1,16 @@
 <!-- These docs are updated and synced from https://github.com/conda/infra -->
 
+<!-- (TODO: the first three links here should be updated with the `repo.url` syntax once it works!) -->
+[epic template]: https://github.com/conda/conda/issues/new?assignees=&labels=epic&template=epic.yml
+[compare]: https://github.com/conda/infrastructure/compare
+[new release]: https://github.com/conda/infrastructure/releases/new
 <!-- links -->
-<!-- (some of these have been commented out for now, until the `repo.url` syntax works) -->
-<!-- [epic template]: {{ repo.url }}/issues/new?assignees=&labels=epic&template=epic.yml
-[compare]: {{ repo.url }}/compare
-[new release]: {{ repo.url }}/releases/new -->
 [infrastructure]: https://github.com/conda/infrastructure
 [rever docs]: https://regro.github.io/rever-docs
 [release docs]: https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes
+[merge conflicts]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts
+[Anaconda Recipes]: https://github.com/AnacondaRecipes/conda-feedstock
+[conda-forge]: https://github.com/conda-forge/conda-feedstock
 
 # Release Process
 
@@ -17,7 +20,7 @@
 ## 1. Open the release issue and cut a release branch. (do this ~1 week prior to release)
 
 > **Note**
-> The [epic template](https://github.com/conda/infrastructure/issues/new?assignees=&labels=epic&template=epic.yml) is perfect for this; remember to remove the **`epic`** label.
+> The [epic template][epic template] is perfect for this; remember to remove the **`epic`** label.
 
 Use the issue template below to create the release issue. After creating the release issue, pin it for easy access.
 
@@ -211,7 +214,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     > * Add `win-arm64` as a known platform (subdir). (#11778)
     > ```
 
-    - You can utilize [GitHub's compare view](https://github.com/conda/infrastructure/compare) to review what changes are to be included in this release.
+    - You can utilize [GitHub's compare view][compare] to review what changes are to be included in this release.
 
     - Add a new news snippet for any PRs of importance that are missing.
 
@@ -277,7 +280,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 7. Since rever does not include stats on first-time contributors, we will need to add this manually.
 
-    - Use [GitHub's auto-generated release notes](https://github.com/conda/infrastructure/releases/new) to get a list of all new contributors (and their first PR) and manually merge this list with the contributor list in `CHANGELOG.md`. See [GitHub docs][release docs] for how to auto-generate the release notes.
+    - Use [GitHub's auto-generated release notes][new release] to get a list of all new contributors (and their first PR) and manually merge this list with the contributor list in `CHANGELOG.md`. See [GitHub docs][release docs] for how to auto-generate the release notes.
 
     - Commit these final changes:
 
@@ -321,7 +324,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 10. Update release issue to include a link to the release PR.
 
-11. [Create](https://github.com/conda/infrastructure/releases/new) the release and **SAVE AS A DRAFT** with the following values:
+11. [Create][new release] the release and **SAVE AS A DRAFT** with the following values:
 
     > **Note**
     > Only publish the release after the release PR is merged, until then always **save as draft**.
@@ -352,7 +355,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 4. Ensure that all of the commits being pulled in look accurate, then select "Create pull request".
 
 > **Note**
-> Make sure NOT to push the "Update Branch" button. If there are [merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/about-merge-conflicts), create a temporary "connector branch" dedicated to fixing merge conflicts separately from the `YY.M.0` and `main` branches.
+> Make sure NOT to push the "Update Branch" button. If there are [merge conflicts][merge conflicts], create a temporary "connector branch" dedicated to fixing merge conflicts separately from the `YY.M.0` and `main` branches.
 
 5. Review and merge the pull request the same as any code change pull request.
 
@@ -361,7 +364,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 </details>
 
-## 8. Open PRs to bump [Anaconda Recipes](https://github.com/AnacondaRecipes/conda-feedstock) and [conda-forge](https://github.com/conda-forge/conda-feedstock) feedstocks to use `YY.M.0`.
+## 8. Open PRs to bump [Anaconda Recipes][Anaconda Recipes] and [conda-forge][conda-forge] feedstocks to use `YY.M.0`.
 
 ## 9. Hand off to Anaconda's packaging team.
 
