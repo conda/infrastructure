@@ -66,9 +66,9 @@ Placeholder for `{{ repo.name }} YY.M.0` release.
     - Long form
         - [ ] Create release [announcement draft](https://github.com/conda/communications)
         - [ ] [Discourse](https://conda.discourse.group/)
-        - [ ] Matrix
+        - [ ] [Matrix (conda/conda)](https://matrix.to/#/#conda_conda:gitter.im) (this auto posts from Discourse)
     - Summary
-        - [ ] Twitter
+        - [ ] [Twitter](https://twitter.com/condaproject)
 ```
 </details>
 
@@ -76,9 +76,9 @@ Placeholder for `{{ repo.name }} YY.M.0` release.
 > **Note**
 > The new release branch should adhere to the naming convention of `YY.M.x`.
 
-## 2. Alert various parties of the new release. (do this ~1 week prior to release)
+## 2. Alert various parties of the upcoming release. (do this ~1 week prior to release)
 
-Let various interested parties know about the new release; at minimum, conda-forge maintainers should be informed about new releases. For major releases, a blog post describing the new features should be created and posted.
+Let various interested parties know about the upcoming release; at minimum, conda-forge maintainers should be informed. For major features, a blog post describing the new features should be prepared and posted once the release is completed (see the announcements section of the release issue).
 
 ## 3. Ensure `rever.xsh` and `news/TEMPLATE` are up to date.
 
@@ -357,7 +357,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 5. Review and merge the pull request the same as any code change pull request.
 
 > **Note**
-> The commits from the release branch need to be retained in order to be able to compare individual commits; in other words, a "merge commit" is required when merging the resulting pull request vs. a "squash merge". Protected branches will require permissions to be temporarily updated in order to enable this action.
+> The commits from the release branch need to be retained in order to be able to compare individual commits; in other words, a "merge commit" is required when merging the resulting pull request vs. a "squash merge". Protected branches will require permissions to be temporarily relaxed in order to enable this action.
 
 </details>
 
