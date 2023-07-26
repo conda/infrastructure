@@ -381,7 +381,9 @@ To publish the release, go to the project's release page (e.g., https://github.c
 ## 9. Open PRs to bump [Anaconda Recipes][Anaconda Recipes] and [conda-forge][conda-forge] feedstocks to use `YY.M.0`.
 
 > **Note**
-> Conda-forge's PRs will be auto-created via the `regro-cf-autotick-bot`. If any changes need to be made to the recipe that were not automatically added, create a new branch based off of autotick's branch (autotick's branches usually use the `regro-cf-autotick-bot:XX.YY.0_[short hash]` syntax), add any changes via commits to that new branch, and then open a new PR (`regro-cf-autotick-bot` will close the auto-created PR once the new PR is merged).
+> Conda-forge's PRs will be auto-created via the `regro-cf-autotick-bot`. If any changes need to be made to the recipe that were not automatically added, create a new branch based off of autotick's branch (autotick's branches usually use the `regro-cf-autotick-bot:XX.YY.0_[short hash]` syntax), add any changes via commits to that new branch, and then open a new PR and push it against the `main` branch (`regro-cf-autotick-bot` will close the auto-created PR once the new PR is merged).
+>
+> Make sure to include a comment on the original `autotick-bot` PR that a new pull request has been created, in order to avoid duplicating work!
 
 
 ## 10. Hand off to Anaconda's packaging team.
