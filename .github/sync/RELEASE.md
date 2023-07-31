@@ -14,12 +14,12 @@
 
 # Release Process
 
-> **Note**
+> **Note:**
 > Throughout this document are references to the version number as `YY.M.0`, this should be replaced with the correct version number. Do **not** prefix the version with a lowercase `v`.
 
 ## 1. Open the release issue and cut a release branch. (do this ~1 week prior to release)
 
-> **Note**
+> **Note:**
 > The [epic template][epic template] is perfect for this; remember to remove the **`epic`** label.
 
 Use the issue template below to create the release issue. After creating the release issue, pin it for easy access.
@@ -76,7 +76,7 @@ Placeholder for `{{ repo.name }} YY.M.0` release.
 </details>
 
 
-> **Note**
+> **Note:**
 > The new release branch should adhere to the naming convention of `YY.M.x`.
 
 ## 2. Alert various parties of the upcoming release. (do this ~1 week prior to release)
@@ -122,7 +122,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 2. Run `rever --activities authors`:
 
-    > **Note**
+    > **Note:**
     > Include `--force` when re-running any rever commands for the same `<VERSION>`, otherwise, rever will skip the activity and no changes will be made (i.e., rever remembers if an activity has been run for a given version).
 
     ```bash
@@ -203,7 +203,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 4. Review news snippets (ensure they are all using the correct Markdown format, **not** reStructuredText) and add additional snippets for undocumented PRs/changes as necessary.
 
-    > **Note**
+    > **Note:**
     > We've found it useful to name news snippets with the following format: `<PR #>-<DESCRIPTIVE SLUG>`.
     >
     > We've also found that we like to include the PR #s inline with the text itself, e.g.:
@@ -236,7 +236,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 5. Run `rever --activities changelog`:
 
-    > **Note**
+    > **Note:**
     > This has previously been a notoriously fickle step (likely due to incorrect regex patterns in the `rever.xsh` config file and missing `github` keys in `.authors.yml`) so beware of potential hiccups. If this fails, it's highly likely to be an innocent issue.
 
     ```bash
@@ -326,7 +326,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 11. [Create][new release] the release and **SAVE AS A DRAFT** with the following values:
 
-    > **Note**
+    > **Note:**
     > Only publish the release after the release PR is merged, until then always **save as draft**.
 
     | Field | Value |
@@ -345,14 +345,14 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 Once the release PRs are filed, successful canary builds will be available on `https://anaconda.org/conda-canary/conda/files?channel=rc-{{ repo.name }}-YY.M.x` for manual testing.
 
-> **Note**
+> **Note:**
 > You do not need to apply the `build::review` label for release PRs; every commit to the release branch builds and uploads canary builds to the respective `rc-` label.
 
 ## 7. Merge release PR and publish release.
 
 To publish the release, go to the project's release page (e.g., https://github.com/conda/conda/releases) and add the release notes from `CHANGELOG.md` to the draft release you created earlier. Then publish the release.
 
-> **Note**
+> **Note:**
 > Release notes can be drafted and saved ahead of time.
 
 ## 8. Merge/cherry pick the release branch over to the `main` branch.
@@ -368,22 +368,27 @@ To publish the release, go to the project's release page (e.g., https://github.c
 
 4. Ensure that all of the commits being pulled in look accurate, then select "Create pull request".
 
-> **Note**
+> **Note:**
 > Make sure NOT to push the "Update Branch" button. If there are [merge conflicts][merge conflicts], create a temporary "connector branch" dedicated to fixing merge conflicts separately from the `YY.M.0` and `main` branches.
 
 5. Review and merge the pull request the same as any code change pull request.
 
-> **Note**
+> **Note:**
 > The commits from the release branch need to be retained in order to be able to compare individual commits; in other words, a "merge commit" is required when merging the resulting pull request vs. a "squash merge". Protected branches will require permissions to be temporarily relaxed in order to enable this action.
 
 </details>
 
 ## 9. Open PRs to bump [Anaconda Recipes][Anaconda Recipes] and [conda-forge][conda-forge] feedstocks to use `YY.M.0`.
 
-> **Note**
-> Conda-forge's PRs will be auto-created via the `regro-cf-autotick-bot`. If any changes need to be made to the recipe that were not automatically added, create a new branch based off of autotick's branch (autotick's branches usually use the `regro-cf-autotick-bot:XX.YY.0_[short hash]` syntax), add any changes via commits to that new branch, and then open a new PR and push it against the `main` branch (`regro-cf-autotick-bot` will close the auto-created PR once the new PR is merged).
+> **Note:**
+> Conda-forge's PRs will be auto-created via the `regro-cf-autotick-bot`. Follow the instructions below if any changes need to be made to the recipe that were not automatically added (these instructions are only necessary for anyone who is _not_ a conda-forge feedstock maintainer, since maintainers can push changes directly to the autotick branch):
+> - Create a new branch based off of autotick's branch (autotick's branches usually use the `regro-cf-autotick-bot:XX.YY.0_[short hash]` syntax)
+> - Add any changes via commits to that new branch
+> - Open a new PR and push it against the `main` branch
 >
-> Make sure to include a comment on the original `autotick-bot` PR that a new pull request has been created, in order to avoid duplicating work!
+> Make sure to include a comment on the original `autotick-bot` PR that a new pull request has been created, in order to avoid duplicating work!  `regro-cf-autotick-bot` will close the auto-created PR once the new PR is merged.
+>
+> For more information about this process, please read the ["Pushing to regro-cf-autotick-bot branch" section of the conda-forge documentation](https://conda-forge.org/docs/maintainer/updating_pkgs.html#pushing-to-regro-cf-autotick-bot-branch).
 
 
 ## 10. Hand off to Anaconda's packaging team.
