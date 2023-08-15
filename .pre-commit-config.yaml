@@ -31,3 +31,14 @@ repos:
     hooks:
       # verify github syntaxes
       - id: check-github-workflows
+  - repo: https://github.com/codespell-project/codespell
+    # see setup.cfg
+    rev: v2.2.4
+    hooks:
+      - id: codespell
+        args: [--write]
+  - repo: meta
+    # see https://pre-commit.com/#meta-hooks
+    hooks:
+      - id: check-hooks-apply
+      - id: check-useless-excludes
