@@ -15,65 +15,51 @@ jobs:
   check:
     if: >-
       !github.event.repository.fork && (
-        github.event.comment.body == '@conda-bot please add news'
+        github.event.comment.body == 'please add news'
         || github.event_name == 'pull_request_target'
       )
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+
     steps:
-      - name: Extract PR branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: pr_branch_name
-
-      - name: Extract PR number
-        shell: bash
-        run: echo ${{ github.event.pull_request.number }}
-        id: pr_number
-
-      - name: Create File
-        if: contains(steps.check_comment.outputs.comment, 'please add news')
-        id: create_file
-        uses: actions/checkout@v2
-
-      - name: Populate File
-        uses: 1arp/create-a-file-action@0.2
-        with:
-          path: "news"
-          file: "${{ steps.pr_number }}-${{ steps.pr_branch_name }}"
-          content: |
-            ### Enhancements
-
-            * <news item>
-
-            ### Bug fixes
-
-            * <news item>
-
-            ### Deprecations
-
-            * <news item>
-
-            ### Docs
-
-            * <news item>
-
-            ### Other
-
-            * <news item>
-
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
-      - name: Commit File
-        if: steps.create_file.outputs
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_OUTPUT
+        id: extract_branch
+
+      - name: Add emoji reaction
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          comment-id: ${{ github.event.comment.id }}
+          reactions: '+1'
+
+      - name: News file from template
         run: |
-          git config --local user.email user@example.com
-          git config --local user.name ${{ github.actor }}
-          git add .
-          git commit -m "Add news snippet"
-          git push
+          cp news/TEMPLATE "news/${{ github.event.issue.number }}_${{ steps.extract_branch.outputs.branch }}"
+
+      - name: Check status of the (presumed) PR branch
+        run: |
+          git status
+          git checkout -b $RANDOM
+
+      - name: Commit and Add New News File to the Pull Request
+        uses: EndBug/add-and-commit@v7
         env:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          author_name: ${{ github.actor }}
+          author_email: ${{ github.actor }}@users.noreply.github.com
+          message: "Add news file to this PR"
+          add: "news/${{ github.event.issue.number }}_${{ steps.extract_branch.outputs.branch }}"
+          branch: ${{ steps.extract_branch.outputs.branch }}
+          push: true
