@@ -92,8 +92,9 @@ group:
   - repos: |
       conda/conda
       conda/conda-build
-      conda/conda-package-handling
+      conda/conda-content-trust
       conda/conda-libmamba-solver
+      conda/conda-package-handling
     files:
       # rever config
       - source: .github/sync/rever.xsh
