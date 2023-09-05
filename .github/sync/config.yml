@@ -95,6 +95,7 @@ group:
       conda/conda-content-trust
       conda/conda-libmamba-solver
       conda/conda-package-handling
+      conda/pycosat
     files:
       # rever config
       - source: .github/sync/rever.xsh
