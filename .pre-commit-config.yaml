@@ -1,7 +1,7 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.5.0
     hooks:
       # standard end of line/end of file cleanup
       - id: mixed-line-ending
@@ -33,7 +33,7 @@ repos:
       - id: check-github-workflows
   - repo: https://github.com/codespell-project/codespell
     # see setup.cfg
-    rev: v2.2.5
+    rev: v2.2.6
     hooks:
       - id: codespell
         args: [--write-changes]
