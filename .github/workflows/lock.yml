@@ -32,13 +32,13 @@ jobs:
           issue-lock-reason: resolved
           # Comment to post before locking an issue
           issue-comment: >
-Hi there, thank you for your contribution to conda!
-
-This issue has been automatically locked since it has not had recent activity after it was closed. Please open a new issue for related bugs.
-
-If this was a feature request and you think it has merit, please open a new issue referencing and summarizing the previous discussion, along with the required action items.
-
-Thank you!
+            Hi there, thank you for your contribution to conda!
+            
+            This issue has been automatically locked since it has not had recent activity after it was closed. Please open a new issue for related bugs.
+            
+            If this was a feature request and you think it has merit, please open a new issue referencing and summarizing the previous discussion, along with the required action items.
+            
+            Thank you!
           # Number of days of inactivity before a closed pull request is locked
           pr-inactive-days: 365
           # Do not lock pull requests created before a given timestamp, value must follow ISO 8601
