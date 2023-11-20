@@ -44,4 +44,4 @@ jobs:
 
           # Limit locking to only issues or pull requests, value must be one of issues, prs or ''
           # Limit locking to issues, pull requests or discussions, value must be a comma separated list of issues, prs, discussions or ''
-          process-only: 'issues, prs'
+          process-only: issues, prs
