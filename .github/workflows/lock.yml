@@ -18,7 +18,7 @@ jobs:
     if: '!github.event.repository.fork'
     runs-on: ubuntu-latest
     steps:
-      - uses: dessant/lock-threads@v4
+      - uses: dessant/lock-threads@v5
         with:
           # Number of days of inactivity before a closed issue is locked
           issue-inactive-days: 365
