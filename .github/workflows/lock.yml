@@ -43,4 +43,4 @@ jobs:
           pr-lock-reason: resolved
 
           # Limit locking to issues, pull requests or discussions, value must be a comma separated list of issues, prs, discussions or ''
-          process-only: issues, prs
+          process-only: 'issues, prs'
