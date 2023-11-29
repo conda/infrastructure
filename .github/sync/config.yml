@@ -58,7 +58,6 @@ group:
       conda/conda-benchmarks
       conda/conda-build
       conda/conda-content-trust
-      conda/conda-docs
       conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
@@ -82,6 +81,7 @@ group:
   - repos: |
       conda/.github
       conda/actions
+      conda/conda-docs
       conda/conda-plugin-template
       conda/issue-tracker
     files:
