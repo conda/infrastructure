@@ -2,7 +2,7 @@
 
 This is a centralized location for infrastructure codes and any related inquiries or discussions.
 
-> **Note**
+> [!NOTE]
 > This is not a forum for end-user questions.
 
 ## 👋 Welcome!
