@@ -49,6 +49,8 @@ group:
         dest: .github/ISSUE_TEMPLATE/1_feature.yml
       - source: .github/ISSUE_TEMPLATE/epic.yml
         dest: .github/ISSUE_TEMPLATE/epic.yml
+      - source: .github/ISSUE_TEMPLATE/2_documentation.yml
+        dest: .github/ISSUE_TEMPLATE/2_documentation.yml
       # issue sorting
       - source: HOW_WE_USE_GITHUB.md
         dest: HOW_WE_USE_GITHUB.md
