@@ -10,6 +10,7 @@ on:
       - .github/ISSUE_TEMPLATE/0_bug.yml
       - .github/ISSUE_TEMPLATE/1_feature.yml
       - .github/ISSUE_TEMPLATE/epic.yml
+      - .github/ISSUE_TEMPLATE/2_documentation.yml
       - .github/PULL_REQUEST_TEMPLATE/with_releases.md
       - .github/PULL_REQUEST_TEMPLATE/without_releases.md
       - .github/sync/config.yml  # trigger sync if config is modified
