@@ -18,10 +18,10 @@ jobs:
       pull-requests: write
 
     steps:
-    - name: Profanity filter
-      if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'github-actions[bot]'  }}
-      uses: IEvangelist/profanity-filter@main
-      id: profanity-filter
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        replacement-strategy: asterisk
+      - name: Profanity filter
+        if: ${{ github.actor != 'dependabot[bot]' && github.actor != 'github-actions[bot]'  }}
+        uses: IEvangelist/profanity-filter@main
+        id: profanity-filter
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          replacement-strategy: asterisk

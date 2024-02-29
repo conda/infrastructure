@@ -42,8 +42,8 @@
     description: '[bot] PRs that update a dependency file'
     color: '#0366d6'
   - name: profane content 🤬
-    description: 'Either the title or body text contains profanity'
-    color: 'FBCA04'
+    description: Either the title or body text contains profanity
+    color: FBCA04
 
 # Planning
   - name: epic
