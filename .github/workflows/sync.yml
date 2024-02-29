@@ -1,6 +1,5 @@
 ---
 name: Sync
-
 on:
   # NOTE: github.event is push payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#push
@@ -13,7 +12,7 @@ on:
       - .github/ISSUE_TEMPLATE/2_documentation.yml
       - .github/PULL_REQUEST_TEMPLATE/with_releases.md
       - .github/PULL_REQUEST_TEMPLATE/without_releases.md
-      - .github/sync/config.yml  # trigger sync if config is modified
+      - .github/sync/config.yml # trigger sync if config is modified
       - .github/sync/RELEASE.md
       - .github/sync/rever.xsh
       - .github/sync/TEMPLATE
@@ -23,14 +22,12 @@ on:
       - .github/workflows/lock.yml
       - .github/workflows/project.yml
       - .github/workflows/stale.yml
-      - .github/workflows/sync.yml  # trigger sync if workflow is modified
+      - .github/workflows/sync.yml # trigger sync if workflow is modified
       - CODE_OF_CONDUCT.md
       - HOW_WE_USE_GITHUB.md
-
   # NOTE: github.event is workflow_dispatch payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
   workflow_dispatch:
-
 jobs:
   sync:
     if: '!github.event.repository.fork'

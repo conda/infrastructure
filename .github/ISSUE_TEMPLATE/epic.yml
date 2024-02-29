@@ -32,9 +32,7 @@ body:
     attributes:
       label: Summary
       description: >-
-        Define the highlevel objectives to be accomplished in this epic. Include the
-        bigger picture of what is changing and/or the user story for why the
-        changes are desired/necessary.
+        Define the highlevel objectives to be accomplished in this epic. Include the bigger picture of what is changing and/or the user story for why the changes are desired/necessary.
     validations:
       required: true
   - type: textarea

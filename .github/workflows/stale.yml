@@ -1,6 +1,5 @@
 ---
 name: Stale
-
 on:
   # NOTE: github.event is workflow_dispatch payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
@@ -11,14 +10,11 @@ on:
         required: true
         type: boolean
         default: true
-
   schedule:
     - cron: 0 4 * * *
-
 permissions:
   issues: write
   pull-requests: write
-
 jobs:
   stale:
     if: '!github.event.repository.fork'
@@ -38,13 +34,11 @@ jobs:
         id: read_yaml
         with:
           path: https://raw.githubusercontent.com/conda/infra/main/.github/messages.yml
-
       - uses: actions/stale@v9
         id: stale
         with:
           # Only issues with these labels are checked whether they are stale
           only-issue-labels: ${{ matrix.only-issue-labels }}
-
           # Idle number of days before marking issues stale
           days-before-issue-stale: ${{ matrix.days-before-issue-stale }}
           # Idle number of days before closing stale issues/PRs
@@ -53,7 +47,6 @@ jobs:
           days-before-pr-stale: 365
           # Idle number of days before closing stale PRs
           days-before-pr-close: 30
-
           # Comment on the staled issues
           stale-issue-message: ${{ fromJSON(steps.read_yaml.outputs.value)['stale-issue'] }}
           # Label to apply on staled issues
@@ -62,21 +55,18 @@ jobs:
           close-issue-label: stale::closed
           # Reason to use when closing issues
           close-issue-reason: not_planned
-
           # Comment on the staled PRs
           stale-pr-message: ${{ fromJSON(steps.read_yaml.outputs.value)['stale-pr'] }}
           # Label to apply on staled PRs
           stale-pr-label: stale
           # Label to apply on closed PRs
           close-pr-label: stale::closed
-
           # Remove stale label from issues/PRs on updates/comments
           remove-stale-when-updated: true
           # Add specified labels to issues/PRs when they become unstale
           labels-to-add-when-unstale: stale::recovered
           # Remove specified labels to issues/PRs when they become unstale
           labels-to-remove-when-unstale: stale,stale::closed
-
           # Max number of operations per run
           operations-per-run: ${{ secrets.STALE_OPERATIONS_PER_RUN || 100 }}
           # Dry-run
@@ -85,7 +75,6 @@ jobs:
           ascending: true
           # Delete branch after closing a stale PR
           delete-branch: false
-
           # Issues with these labels will never be considered stale
           exempt-issue-labels: stale::recovered,epic
           # Issues with these labels will never be considered stale
@@ -94,6 +83,5 @@ jobs:
           exempt-all-milestones: true
           # Assignees on issues/PRs exempted from stale
           exempt-assignees: mingwandroid
-
       - name: Print outputs
         run: echo ${{ join(steps.stale.outputs.*, ',') }}

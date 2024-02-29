@@ -1,6 +1,5 @@
 ---
 name: Sync Labels
-
 on:
   # NOTE: github.event is workflow_dispatch payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#workflow_dispatch
@@ -11,7 +10,6 @@ on:
         required: true
         type: boolean
         default: true
-
 jobs:
   sync:
     if: '!github.event.repository.fork'

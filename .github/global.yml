@@ -3,8 +3,8 @@
   - name: mitigated
     description: a workaround has been identified
     color: '#43b049'
-  # this doesn't follow our labeling style because GitHub only populates the
-  # https://github.com/conda/conda/contribute page with this exact label
+# this doesn't follow our labeling style because GitHub only populates the
+# https://github.com/conda/conda/contribute page with this exact label
   - name: good first issue
     description: great for new contributors, code change is envisioned to be trivial/relatively straight-forward
     color: '#43b049'
@@ -30,8 +30,7 @@
       - reso-wontfix
       - wontfix
       - reso:wontfix
-
-# Bots
+    # Bots
   - name: cla-signed
     description: '[bot] added once the contributor has signed the CLA'
     color: '#ededed'
@@ -41,8 +40,7 @@
   - name: dependencies
     description: '[bot] PRs that update a dependency file'
     color: '#0366d6'
-
-# Planning
+  # Planning
   - name: epic
     description: a highlevel collection of smaller related issues
     color: '#ededed'
@@ -57,13 +55,11 @@
   - name: spike
     description: issue is for doing research work or prototyping; outcome is optional and not required
     color: '#ededed'
-
-# Sync
+  # Sync
   - name: sync::anaconda
     description: sync internally with Anaconda, Inc. ticket tracker
     color: '#5B2B76'
-
-# Duplicates
+  # Duplicates
   - name: duplicate
     description: indicate issues/PRs that are duplicates of another
     color: '#0c2132'
@@ -74,8 +70,7 @@
     description: if an issue/PR has duplicates, this is the consolidated, primary issue/PR
     color: '#0c2132'
     aliases: [consolidation-main]
-
-# Pending
+  # Pending
   - name: pending::feedback
     description: indicates we are waiting on feedback from the user
     color: '#d4c5f9'
@@ -93,8 +88,7 @@
   - name: pending::support
     description: indicates user is waiting on support from triage engineers
     color: '5319E7'
-
-# Modifiers
+  # Modifiers
   - name: ¡blocking!
     description: used to indicate a blocker for a pending release
     color: '#b60205'
@@ -110,8 +104,7 @@
     description: used to indicate particularly notable information
     color: '#b60205'
     aliases: [type-advisory]
-
-# Types
+  # Types
   - name: type::bug
     description: describes erroneous operation, use severity::* to classify the type
     color: '#b60205'
@@ -162,8 +155,7 @@
   - name: type::deprecation
     description: requests removal of deprecated feature(s)
     color: '#fff2cc'
-
-# Severity
+  # Severity
   - name: severity::1
     description: blocker; broken functionality with no workaround
     color: '#b60205'
@@ -179,8 +171,7 @@
   - name: severity::4
     description: low; functionality is inconvenient
     color: '#43b04b'
-
-# Source
+  # Source
   - name: source::governance
     description: created by members of the conda governance (https://github.com/conda-incubator/governance)
     color: '#c2e0c6'
@@ -220,8 +211,7 @@
     aliases:
       - source-community
       - source:public
-
-# OS
+    # OS
   - name: os::linux
     description: relevant to Linux
     color: '#d0e0e3'
@@ -247,8 +237,7 @@
   - name: os::wsl
     description: relevant to Windows Subsystem for Linux
     color: '#d0e0e3'
-
-# Stale
+  # Stale
   - name: stale
     description: '[bot] marked as stale due to inactivity'
     color: '#E79676'
@@ -259,8 +248,7 @@
   - name: stale::closed
     description: '[bot] closed after being marked as stale'
     color: '#86A8D8'
-
-# Hackathons
+  # Hackathons
   - name: hack::HackIllinois2019
     description: issues found or suggested changes proposed during HackIllinois2019
     color: '#6ce29e'
@@ -272,8 +260,7 @@
   - name: hack::SciPy2022
     description: issues found or suggested changes proposed during SciPy2022
     color: '#6ce29e'
-
-# Tags
+  # Tags
   - name: tag::performance
     description: related to degraded performance
     color: '#86C579'
@@ -290,8 +277,7 @@
   - name: tag::ux
     description: related to user experience
     color: '#86C579'
-
-# Documentation
+  # Documentation
   - name: documentation::tutorials
     description: related to tutorials (learning-oriented)
     color: '#77b2dc'
@@ -304,8 +290,7 @@
   - name: documentation::explanation
     description: related to higher-level clarification (understanding-oriented)
     color: '#77b2dc'
-
-# Upstream & Downstream
+  # Upstream & Downstream
   - name: upstream
     description: this issue/PR is caused by an upstream dependency
     color: '#85a3ad'

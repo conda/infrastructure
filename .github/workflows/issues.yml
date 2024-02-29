@@ -1,16 +1,13 @@
 ---
 name: Automate Issues
-
 on:
   # NOTE: github.event is issue_comment payload:
   # https://docs.github.com/en/developers/webhooks-and-events/webhooks/webhook-events-and-payloads#issue_comment
   issue_comment:
     types: [created]
-
 env:
   FEEDBACK_LBL: pending::feedback
   SUPPORT_LBL: pending::support
-
 jobs:
   # NOTE: will update label if anyone responds, not just the author/reporter
   # TODO: create conda-issue-sorting team and modify this to toggle label based on
@@ -18,9 +15,7 @@ jobs:
   pending_support:
     # if [pending::feedback] and anyone responds
     if: >-
-      !github.event.repository.fork
-      && !github.event.issue.pull_request
-      && contains(github.event.issue.labels.*.name, 'pending::feedback')
+      !github.event.repository.fork && !github.event.issue.pull_request && contains(github.event.issue.labels.*.name, 'pending::feedback')
     runs-on: ubuntu-latest
     steps:
       # remove [pending::feedback]
