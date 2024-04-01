@@ -13,6 +13,7 @@ group:
       conda/conda-libmamba-solver
       conda/conda-pack
       conda/conda-package-handling
+      conda/conda-package-streaming
       conda/conda-plugin-template
       conda/conda-prefix-replacement
       conda/conda-standalone
@@ -24,7 +25,7 @@ group:
       conda/pycosat
       conda/schemas
     files:
-      # beta project
+      # add to GitHub Project board
       - source: .github/workflows/project.yml
         dest: .github/workflows/project.yml
       # issue logic
