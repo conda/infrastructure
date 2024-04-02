@@ -34,7 +34,7 @@ body:
       label: What?
       description: >-
         What feature or problem will be addressed in this epic?
-      placeholder: "Please describe here."
+      placeholder: Please describe here.
     validations:
       required: true
 
@@ -57,7 +57,7 @@ body:
       label: User impact
       description: >-
         In what specific way(s) will users benefit from this change? (e.g. use cases or performance improvements)
-      placeholder: "Please describe here."
+      placeholder: Please describe here.
     validations:
       required: true
 
