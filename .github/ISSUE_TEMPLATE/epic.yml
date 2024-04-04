@@ -62,13 +62,13 @@ body:
       required: true
 
   - type: textarea
-    id: acceptance_criteria
+    id: goals
     attributes:
-      label: Acceptance criteria
+      label: Goals
       description: >-
-        At what point can we close this epic as "completed"?
+        What goal(s) should this epic accomplish?
       value: |
-        - [ ] <acceptance criterion>
+        - [ ] <goal>
     validations:
       required: true
 
