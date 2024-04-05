@@ -46,8 +46,8 @@ body:
         Why is the reported issue(s) a problem, or why is the proposed feature needed?
         (Research and spike issues can be linked here.)
       value: |
-        Please describe here and/or link to relevant supporting issues.
         - [ ] <supporting issue from user, research, or spike>
+      placeholder: Please describe here and/or link to relevant supporting issues.
     validations:
       required: true
 
@@ -84,16 +84,23 @@ body:
       required: false
 
   - type: textarea
-    id: linked_epics_issues
+    id: blocked_by
     attributes:
-      label: Linked epics and issues
+      label: "This epic is blocked by:"
       description: >-
-        Epics and issues that block or are blocked by this epic.
+        Epics and issues that block this epic.
       value: |
-        ### This epic is blocked by
         - [ ] <dependency epic or issue>
+    validations:
+      required: false
 
-        ### This epic blocks
+  - type: textarea
+    id: blocks
+    attributes:
+      label: "This epic blocks:"
+      description: >-
+        Epics and issues that are blocked by this epic.
+      value: |
         - [ ] <dependency epic or issue>
     validations:
       required: false
