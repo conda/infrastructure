@@ -86,7 +86,7 @@ body:
   - type: textarea
     id: blocked_by
     attributes:
-      label: "This epic is blocked by:"
+      label: 'This epic is blocked by:'
       description: >-
         Epics and issues that block this epic.
       value: |
@@ -97,7 +97,7 @@ body:
   - type: textarea
     id: blocks
     attributes:
-      label: "This epic blocks:"
+      label: 'This epic blocks:'
       description: >-
         Epics and issues that are blocked by this epic.
       value: |
