@@ -37,7 +37,7 @@
     color: '#ededed'
   - name: locked
     description: '[bot] locked due to inactivity'
-    color: '#85BDB1'
+    color: '#85bdb1'
   - name: dependencies
     description: '[bot] PRs that update a dependency file'
     color: '#0366d6'
@@ -61,7 +61,7 @@
 # Sync
   - name: sync::anaconda
     description: sync internally with Anaconda, Inc. ticket tracker
-    color: '#5B2B76'
+    color: '#5b2b76'
 
 # Duplicates
   - name: duplicate
@@ -251,14 +251,14 @@
 # Stale
   - name: stale
     description: '[bot] marked as stale due to inactivity'
-    color: '#E79676'
+    color: '#e79676'
     aliases: [stale-marked]
   - name: stale::recovered
     description: '[bot] recovered after being marked as stale'
-    color: '#40A6B3'
+    color: '#40a6b3'
   - name: stale::closed
     description: '[bot] closed after being marked as stale'
-    color: '#86A8D8'
+    color: '#86a8d8'
 
 # Hackathons
   - name: hack::HackIllinois2019
@@ -276,20 +276,20 @@
 # Tags
   - name: tag::performance
     description: related to degraded performance
-    color: '#86C579'
+    color: '#86c579'
   - name: tag::encoding-error
     description: related to an encoding error
-    color: '#86C579'
+    color: '#86c579'
   - name: tag::api
     description: related to the public API
-    color: '#86C579'
+    color: '#86c579'
   - name: tag::reproducibility
     description: related to producing reproducible results
-    color: '#86C579'
+    color: '#86c579'
     aliases: [reproducibility]
   - name: tag::ux
     description: related to user experience
-    color: '#86C579'
+    color: '#86c579'
 
 # Documentation
   - name: documentation::tutorials
