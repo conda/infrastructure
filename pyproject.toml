@@ -18,5 +18,5 @@ select = [
   "T10",  # flake8-debugger
   "TCH",  # flake8-type-checking
   "UP",  # pyupgrade
-  "W"  # pycodestyle warnings
+  "W",  # pycodestyle warnings
 ]
