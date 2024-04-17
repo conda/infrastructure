@@ -7,14 +7,16 @@ skip = '.git'
 target-version = "py38"
 
 [tool.ruff.lint]
-# E, W = pycodestyle errors and warnings
-# F = pyflakes
-# I = isort
-# D = pydocstyle
-# UP = pyupgrade
-# ISC = flake8-implicit-str-concat
-# TCH = flake8-type-checking
-# T10 = flake8-debugger
-# FA = flake8-future-annotations
-# see also https://docs.astral.sh/ruff/rules/
-select = ["E", "W", "F", "I", "D", "UP", "ISC", "TCH", "T10", "FA"]
+# see https://docs.astral.sh/ruff/rules/
+select = [
+  "D",  # pydocstyle
+  "E",  # pycodestyle errors
+  "F",  # pyflakes
+  "FA",  # flake8-future-annotations
+  "I",  # isort
+  "ISC",  # flake8-implicit-str-concat
+  "T10",  # flake8-debugger
+  "TCH",  # flake8-type-checking
+  "UP",  # pyupgrade
+  "W"  # pycodestyle warnings
+]
