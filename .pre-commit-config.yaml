@@ -7,6 +7,7 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
       # ensure syntaxes are valid
+      - id: check-toml
       - id: check-yaml
       # catch git merge/rebase problems
       - id: check-merge-conflict
@@ -19,6 +20,19 @@ repos:
         files: ^.clabot$
         require_serial: true
         args: [--sort-keys=contributors]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.3.7
+    hooks:
+      # lint & attempt to correct failures (e.g. pyupgrade)
+      - id: ruff
+        args: [--fix]
+      # compatible replacement for black
+      - id: ruff-format
+  - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+    rev: v2.13.0
+    hooks:
+      - id: pretty-format-toml
+        args: [--autofix]
   - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
     rev: 0.2.3
     hooks:
@@ -32,7 +46,7 @@ repos:
       - id: check-github-workflows
       - id: check-dependabot
   - repo: https://github.com/codespell-project/codespell
-    # see setup.cfg
+    # see pyproject.toml
     rev: v2.2.6
     hooks:
       - id: codespell
