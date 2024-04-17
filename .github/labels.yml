@@ -1,4 +1,3 @@
----
   - name: type::development
     color: '#fff2cc'
     description: related to developer environment setups
