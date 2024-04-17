@@ -1,0 +1,22 @@
+[tool.codespell]
+# see https://github.com/codespell-project/codespell#using-a-config-file
+ignore-words-list = "rever,"
+skip = '.git'
+
+[tool.ruff]
+target-version = "py38"
+
+[tool.ruff.lint]
+# see https://docs.astral.sh/ruff/rules/
+select = [
+  "D",  # pydocstyle
+  "E",  # pycodestyle errors
+  "F",  # pyflakes
+  "FA",  # flake8-future-annotations
+  "I",  # isort
+  "ISC",  # flake8-implicit-str-concat
+  "T10",  # flake8-debugger
+  "TCH",  # flake8-type-checking
+  "UP",  # pyupgrade
+  "W",  # pycodestyle warnings
+]
