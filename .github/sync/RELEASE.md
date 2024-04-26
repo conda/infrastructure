@@ -151,7 +151,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 2. Run `rever --activities authors`:
 
-    > [!NOTE]
+    > **Note:** <!-- GH doesn't support nested admonitions, see https://github.com/orgs/community/discussions/16925 -->
     > Include `--force` when re-running any rever commands for the same `<VERSION>`, otherwise, rever will skip the activity and no changes will be made (i.e., rever remembers if an activity has been run for a given version).
 
     ```bash
@@ -232,7 +232,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 4. Review news snippets (ensure they are all using the correct Markdown format, **not** reStructuredText) and add additional snippets for undocumented PRs/changes as necessary.
 
-    > [!NOTE]
+    > **Note:** <!-- GH doesn't support nested admonitions, see https://github.com/orgs/community/discussions/16925 -->
     > We've found it useful to name news snippets with the following format: `<PR #>-<DESCRIPTIVE SLUG>`.
     >
     > We've also found that we like to include the PR #s inline with the text itself, e.g.:
@@ -265,7 +265,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 5. Run `rever --activities changelog`:
 
-    > [!NOTE]
+    > **Note:** <!-- GH doesn't support nested admonitions, see https://github.com/orgs/community/discussions/16925 -->
     > This has previously been a notoriously fickle step (likely due to incorrect regex patterns in the `rever.xsh` config file and missing `github` keys in `.authors.yml`) so beware of potential hiccups. If this fails, it's highly likely to be an innocent issue.
 
     ```bash
@@ -355,7 +355,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 11. [Create][new release] the release and **SAVE AS A DRAFT** with the following values:
 
-    > [!NOTE]
+    > **Note:** <!-- GH doesn't support nested admonitions, see https://github.com/orgs/community/discussions/16925 -->
     > Only publish the release after the release PR is merged, until then always **save as draft**.
 
     | Field | Value |
