@@ -25,7 +25,7 @@
 Use the issue template below to create the release issue. After creating the release issue, pin it for easy access.
 
 <details>
-<summary><code>GitHub Issue Template</code></summary>
+<summary><h3>Release Template</h3></summary>
 
 ```markdown
 ### Summary
@@ -45,7 +45,8 @@ Placeholder for `{{ repo.name }} YY.M.x` release.
 [conda-forge]: https://github.com/conda-forge/{{ repo.name }}-feedstock
 [ReadTheDocs]: https://readthedocs.com/projects/continuumio-{{ repo.name }}/
 
-#### The week before release week
+<details open>  <!-- feel free to remove the open attribute once this section is completed -->
+<summary><h4>The week before release week</h4></summary>
 
 - [ ] Create release branch (named `YY.M.x`)
 - [ ] Ensure release candidates are being successfully built (see `conda-canary/label/rc-{{ repo.name }}-YY.M.x`)
@@ -53,10 +54,14 @@ Placeholder for `{{ repo.name }} YY.M.x` release.
 - [ ] Test release candidates
     <!-- indicate here who has signed off on testing -->
 
-#### Release week
+</details>
+
+<details open>  <!-- feel free to remove the open attribute once this section is completed -->
+<summary><h4>Release week</h4></summary>
 
 - [ ] Create release PR (see [release process][process])
 - [ ] [Publish release][releases]
+- [ ] Merge `YY.M.x` back into `main`
 - [ ] Activate the `YY.M.x` branch on [ReadTheDocs][ReadTheDocs]
 - [ ] Feedstocks
     - [ ] Bump version & update dependencies/tests in [Anaconda, Inc.'s feedstock][main]
@@ -72,7 +77,32 @@ Placeholder for `{{ repo.name }} YY.M.x` release.
         - [ ] [Matrix (conda/conda)](https://matrix.to/#/#conda_conda:gitter.im) (this auto posts from Discourse)
     - Summary
         - [ ] [Twitter](https://twitter.com/condaproject)
+
+</details>
 ```
+</details>
+
+If a patch release is necessary, reopen the original release issue and append the following template to the release issue summary.
+
+<details>
+<summary><h3>Patch Release Template</h3></summary>
+
+```markdown
+<details open>  <!-- feel free to remove the open attribute once this section is completed -->
+<summary><h4>Patch YY.M.N</h4></summary>
+
+- [ ] <!-- list issues & PRs that need to be resolved here -->
+- [ ] Create release PR (see [release process][process])
+- [ ] [Publish release][releases]
+- [ ] Merge `YY.M.x` back into `main`
+- [ ] Feedstocks
+    - [ ] Bump version & update dependencies/tests in [Anaconda, Inc.'s feedstock][main]
+    - [ ] Bump version & update dependencies/tests in [conda-forge feedstock][conda-forge]
+- [ ] Hand off to the Anaconda packaging team
+
+</details>
+```
+
 </details>
 
 > **Note:**
