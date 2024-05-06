@@ -158,7 +158,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     (rever) $ git checkout -b changelog-YY.M.[$patch_number]
     ```
 
-2. Run `rever --activities authors`:
+2. Run `rever --activities authors <VERSION>`:
 
     > **Note:** <!-- GH doesn't support nested admonitions, see https://github.com/orgs/community/discussions/16925 -->
     > Include `--force` when re-running any rever commands for the same `<VERSION>`, otherwise, rever will skip the activity and no changes will be made (i.e., rever remembers if an activity has been run for a given version).
@@ -205,7 +205,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
         (rever) $ git commit -m "Update .authors.yml"
         ```
 
-    - Rerun `rever --activities authors` and finally check that your `.mailmap` is correct by running:
+    - Rerun `rever --activities authors --force <VERSION>` and finally check that your `.mailmap` is correct by running:
 
         ```bash
         git shortlog -se
@@ -233,7 +233,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     - Continue repeating the above processes until the `.authors.yml` and `.mailmap` are corrected to your liking. After completing this, you will have at most two commits on your release branch:
 
         ```bash
-        (rever) $ git cherry -v main
+        (rever) $ git cherry -v <release branch>
         + 86957814cf235879498ed7806029b8ff5f400034 Update .authors.yml
         + 3ec7491f2f58494a62f1491987d66f499f8113ad Update .mailmap
         ```
@@ -252,7 +252,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     > * Add `win-arm64` as a known platform (subdir). (#11778)
     > ```
 
-    - You can utilize [GitHub's compare view][compare] to review what changes are to be included in this release.
+    - You can utilize [GitHub's compare view][compare] to review what changes are to be included in this release. Make sure you compare the current release branch against the previous one (e.g., `24.5.x` would be compared against `24.3.x`)
 
     - Add a new news snippet for any PRs of importance that are missing.
 
@@ -266,7 +266,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     - After completing this, you will have at most three commits on your release branch:
 
         ```bash
-        (rever) $ git cherry -v main
+        (rever) $ git cherry -v <release branch>
         + 86957814cf235879498ed7806029b8ff5f400034 Update .authors.yml
         + 3ec7491f2f58494a62f1491987d66f499f8113ad Update .mailmap
         + 432a9e1b41a3dec8f95a7556632f9a93fdf029fd Update news
@@ -293,7 +293,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     - After completing this, you will have at most three commits on your release branch:
 
         ```bash
-        (rever) $ git cherry -v main
+        (rever) $ git cherry -v <release branch>
         + 86957814cf235879498ed7806029b8ff5f400034 Update .authors.yml
         + 3ec7491f2f58494a62f1491987d66f499f8113ad Update .mailmap
         + 432a9e1b41a3dec8f95a7556632f9a93fdf029fd Update news
@@ -308,7 +308,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     - After completing this, you will have at most five commits on your release branch:
 
         ```bash
-        (rever) $ git cherry -v main
+        (rever) $ git cherry -v <release branch>
         + 86957814cf235879498ed7806029b8ff5f400034 Update .authors.yml
         + 3ec7491f2f58494a62f1491987d66f499f8113ad Update .mailmap
         + 432a9e1b41a3dec8f95a7556632f9a93fdf029fd Update news
@@ -330,7 +330,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     - After completing this, you will have at most six commits on your release branch:
 
         ```bash
-        (rever) $ git cherry -v main
+        (rever) $ git cherry -v <release branch>
         + 86957814cf235879498ed7806029b8ff5f400034 Update .authors.yml
         + 3ec7491f2f58494a62f1491987d66f499f8113ad Update .mailmap
         + 432a9e1b41a3dec8f95a7556632f9a93fdf029fd Update news
