@@ -112,12 +112,21 @@ If a patch release is necessary, reopen the original release issue and append th
 
 Let various interested parties know about the upcoming release; at minimum, conda-forge maintainers should be informed. For major features, a blog post describing the new features should be prepared and posted once the release is completed (see the announcements section of the release issue).
 
-## 3. Ensure `rever.xsh` and `news/TEMPLATE` are up to date.
+## 3. Manually test canary build(s).
+
+### Canary Builds for Manual Testing
+
+Once the release PRs are filed, successful canary builds will be available on `https://anaconda.org/conda-canary/conda/files?channel=rc-{{ repo.name }}-YY.M.x` for manual testing.
+
+> [!NOTE]
+> You do not need to apply the `build::review` label for release PRs; every commit to the release branch builds and uploads canary builds to the respective `rc-` label.
+
+## 4. Ensure `rever.xsh` and `news/TEMPLATE` are up to date.
 
 These are synced from [`conda/infrastructure`][infrastructure].
 
 <details>
-<summary><h2>4. Run rever. (ideally done on the Monday of release week)</h2></summary>
+<summary><h2>5. Run rever. (ideally done on the Monday of release week)</h2></summary>
 
 Currently, there are only 2 activities we use rever for, (1) aggregating the authors and (2) updating the changelog. Aggregating the authors can be an error-prone process and also suffers from builtin race conditions (_i.e._, to generate an updated `.authors.yml` we need an updated `.mailmap` but to have an updated `.mailmap` we need an updated `.authors.yml`). This is why the following steps are very heavy-handed (and potentially repetitive) in running rever commands, undoing commits, squashing/reordering commits, etc.
 
@@ -366,16 +375,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
 </details>
 
-## 5. Wait for review and approval of release PR.
-
-## 6. Manually test canary build(s).
-
-### Canary Builds for Manual Testing
-
-Once the release PRs are filed, successful canary builds will be available on `https://anaconda.org/conda-canary/conda/files?channel=rc-{{ repo.name }}-YY.M.x` for manual testing.
-
-> [!NOTE]
-> You do not need to apply the `build::review` label for release PRs; every commit to the release branch builds and uploads canary builds to the respective `rc-` label.
+## 6. Wait for review and approval of release PR.
 
 ## 7. Merge release PR and publish release.
 
