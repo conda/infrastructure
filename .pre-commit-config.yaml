@@ -21,7 +21,7 @@ repos:
         require_serial: true
         args: [--sort-keys=contributors]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.2
+    rev: v0.4.3
     hooks:
       # lint & attempt to correct failures (e.g. pyupgrade)
       - id: ruff
