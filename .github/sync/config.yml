@@ -1,9 +1,15 @@
 group:
+  # migrate to update.yml workflow
+  - repos: |
+      conda/conda
+    files:
+      - source: .github/workflows/update.yml
+        dest: .github/workflows/update.yml
+
   # all projects
   - repos: |
       conda/.github
       conda/actions
-      conda/conda
       conda/conda-benchmarks
       conda/conda-build
       conda/conda-content-trust
@@ -56,7 +62,6 @@ group:
         dest: HOW_WE_USE_GITHUB.md
   # projects with releases
   - repos: |
-      conda/conda
       conda/conda-benchmarks
       conda/conda-build
       conda/conda-content-trust
@@ -92,7 +97,6 @@ group:
         dest: .github/PULL_REQUEST_TEMPLATE.md
   # projects with rever releases
   - repos: |
-      conda/conda
       conda/conda-build
       conda/conda-content-trust
       conda/conda-libmamba-solver
@@ -110,7 +114,6 @@ group:
       conda/.github
       conda/actions
       conda/communications
-      conda/conda
       conda/conda-benchmarks
       conda/conda-build
       conda/conda-content-trust
