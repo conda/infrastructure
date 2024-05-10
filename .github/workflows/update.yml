@@ -4,7 +4,7 @@ on:
   # every Sunday at 00:36 UTC
   # https://crontab.guru/#36_2_*_*_0
   schedule:
-    - cron: '36 2 * * 0'
+    - cron: 36 2 * * 0
 
   workflow_dispatch:
 
@@ -62,7 +62,7 @@ jobs:
       - name: commit changes
         run: git add . && git commit --message "🤖 updated file(s)" || true
 
-      - if: github.even.commont.body != '@conda-bot render'
+      - if: github.event.comment.body != '@conda-bot render'
         name: create fork
         run: echo FORK=$(gh repo fork --clone=false --default-branch-only | awk '{print $1}') >> $GITHUB_ENV
         shell: bash
