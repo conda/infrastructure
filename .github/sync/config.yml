@@ -1,11 +1,14 @@
 group:
   # migrate to update.yml workflow
+  # after the PR is created in the respective repositories remove it from here again
   - repos: |
       conda/conda
       conda/conda-build
     files:
       - source: .github/workflows/update.yml
         dest: .github/workflows/update.yml
+      - source: templates/config.yml
+        dest: .github/template-files/config.yml
 
   # all projects
   - repos: |
