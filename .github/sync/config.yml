@@ -81,7 +81,7 @@ group:
       - source: .github/PULL_REQUEST_TEMPLATE/with_releases.md
         dest: .github/PULL_REQUEST_TEMPLATE.md
       # news snippet template
-      - source: .github/sync/TEMPLATE
+      - source: templates/releases/TEMPLATE
         dest: news/TEMPLATE
   # projects without releases
   - repos: |
@@ -102,10 +102,10 @@ group:
       conda/pycosat
     files:
       # rever config
-      - source: .github/sync/rever.xsh
+      - source: templates/releases/rever.xsh
         dest: rever.xsh
       # release docs
-      - source: .github/sync/RELEASE.md
+      - source: templates/releases/RELEASE.md
         dest: RELEASE.md
   # Code of Conduct sync
   - repos: |
