@@ -1,3 +1,5 @@
+<!-- edit this in [[ source.html_url ]] -->
+
 <!-- absolute URLs -->
 [conda-org]: https://github.com/conda
 [sub-team]: https://github.com/conda-incubator/governance#sub-teams

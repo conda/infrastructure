@@ -1,3 +1,5 @@
+# edit this in [[ source.html_url ]]
+
 name: Feature Request
 description: Create a feature request.
 labels:
