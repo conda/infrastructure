@@ -39,6 +39,8 @@ conda/infrastructure:
   # [optional] rever release files
   # - src: templates/releases/RELEASE.md
   #   dst: RELEASE.md
+  #   with:
+  #     placeholder: YY.M
   # - src: templates/releases/rever.xsh
   #   dst: rever.xsh
   # - src: templates/releases/TEMPLATE
