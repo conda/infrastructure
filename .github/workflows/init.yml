@@ -36,11 +36,11 @@ jobs:
           git config user.name 'Conda Bot'
           git config user.email '18747875+conda-bot@users.noreply.github.com'
 
-      - name: Copy update.yml
-        run: cp upstream/.github/workflows/update.yml downstream/.github/workflows/update.yml || true
+      - name: Copy (overwrite) update.yml
+        run: cp -f upstream/.github/workflows/update.yml downstream/.github/workflows/update.yml || true
 
-      - name: Copy config.yml
-        run: cp upstream/templates/config.yml downstream/.github/template-files/config.yml || true
+      - name: Copy (do not overwrite) config.yml
+        run: cp -n upstream/templates/config.yml downstream/.github/template-files/config.yml || true
 
       - name: Commit changes
         run: cd downstream && git add . && git commit --message "🤖 updated file(s)" || true
