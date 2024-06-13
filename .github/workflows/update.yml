@@ -39,7 +39,7 @@ jobs:
           token: ${{ secrets.SYNC_TOKEN }}
 
       - if: github.event.comment.body == '@conda-bot render'
-        name: configure git origin
+        name: Configure git origin
         run: |
           echo REPOSITORY=$(curl --silent ${{ github.event.issue.pull_request.url }} | jq --raw-output '.head.repo.full_name') >> $GITHUB_ENV
           echo REF=$(curl --silent ${{ github.event.issue.pull_request.url }} | jq --raw-output '.head.ref') >> $GITHUB_ENV
@@ -48,9 +48,8 @@ jobs:
         with:
           repository: ${{ env.REPOSITORY || github.repository }}
           ref: ${{ env.REF || '' }}
-          token: ${{ secrets.SYNC_TOKEN }}
 
-      - name: configure git user
+      - name: Configure git user
         run: |
           git config user.name 'Conda Bot'
           git config user.email '18747875+conda-bot@users.noreply.github.com'
@@ -59,13 +58,12 @@ jobs:
 
       - uses: conda/actions/template-files@976289d0cfd85139701b26ddd133abdd025a7b5f # v24.5.0
 
-      - name: commit changes
+      - name: Commit changes
         run: git add . && git commit --message "🤖 updated file(s)" || true
 
       - if: github.event.comment.body != '@conda-bot render'
-        name: create fork
+        name: Create fork
         run: echo FORK=$(gh repo fork --clone=false --default-branch-only | awk '{print $1}') >> $GITHUB_ENV
-        shell: bash
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
 
@@ -97,7 +95,7 @@ jobs:
 
       - if: github.event.comment.body == '@conda-bot render'
         id: update
-        name: push changes
+        name: Push changes
         run: git push --force-with-lease
 
       - if: always() && github.event_name == 'issue_comment'
