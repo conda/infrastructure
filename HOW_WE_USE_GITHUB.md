@@ -223,7 +223,6 @@ This is a duplicate of <b>[link to primary issue]</b>; please feel free to conti
 
 <!-- this is a code block, any links need to be embedded -->
 <pre>
-
 Thank you for filing this issue! Unfortunately, this is off-topic for this repo because it is related to an Anaconda product.
 If you are still encountering this issues with Anaconda products or services you have several options for receiving community
 support:
@@ -247,8 +246,11 @@ Community support can be found elsewhere though, and we encourage you to explore
 - [Conda discourse forum](https://conda.discourse.group/)
 - [Community chat channels](https://conda.org/community#chat)
 - [Stack Overflow posts tagged "conda"](https://stackoverflow.com/questions/tagged/conda)
-
 </pre>
+
+> [!WARNING]
+> Apply the https://github.com/conda/infrastructure/labels/off-topic label to these issues before closing them out.
+
 </details>
 
 In order to not have to manually type or copy/paste the above repeatedly, note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply].
