@@ -224,12 +224,12 @@ This is a duplicate of <b>[link to primary issue]</b>; please feel free to conti
 <!-- this is a code block, any links need to be embedded -->
 <pre>
 
-  Thank you for filing this issue! Unfortunately, this is off-topic for this repo because it is related to an Anaconda product.
-  If you are still encountering this issues with Anaconda products or services you have several options for receiving community
-  support:
+Thank you for filing this issue! Unfortunately, this is off-topic for this repo because it is related to an Anaconda product.
+If you are still encountering this issues with Anaconda products or services you have several options for receiving community
+support:
 
-  - [Anaconda community forums](https://community.anaconda.cloud)
-  - [Anaconda issue tracker on GitHub](https://github.com/ContinuumIO/anaconda-issues/issues)
+- [Anaconda community forums](https://community.anaconda.cloud)
+- [Anaconda issue tracker on GitHub](https://github.com/ContinuumIO/anaconda-issues/issues)
 </pre>
 
 > [!WARNING]
@@ -238,17 +238,17 @@ This is a duplicate of <b>[link to primary issue]</b>; please feel free to conti
 </details>
 
 <details>
-  <summary><b>General Off Topic</b></summary>
+<summary><b>General Off Topic</b></summary>
 
-  <pre>
-    Unfortunately, this issue is outside the scope of support we offer via GitHub or is not directly related to this project.
-    Community support can be found elsewhere though, and we encourage you to explore the following options:
+<pre>
+Unfortunately, this issue is outside the scope of support we offer via GitHub or is not directly related to this project.
+Community support can be found elsewhere though, and we encourage you to explore the following options:
 
-    - [Conda discourse forum](https://conda.discourse.group/)
-    - [Community chat channels](https://conda.org/community#chat)
-    - [Stack Overflow posts tagged "conda"](https://stackoverflow.com/questions/tagged/conda)
+- [Conda discourse forum](https://conda.discourse.group/)
+- [Community chat channels](https://conda.org/community#chat)
+- [Stack Overflow posts tagged "conda"](https://stackoverflow.com/questions/tagged/conda)
 
-  </pre>
+</pre>
 </details>
 
 In order to not have to manually type or copy/paste the above repeatedly, note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply].
