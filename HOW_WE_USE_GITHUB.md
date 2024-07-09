@@ -251,8 +251,6 @@ This is a duplicate of <b>[link to primary issue]</b>; please feel free to conti
   </pre>
 </details>
 
-<details>
-
 In order to not have to manually type or copy/paste the above repeatedly, note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply].
 
 ## Commit Signing
