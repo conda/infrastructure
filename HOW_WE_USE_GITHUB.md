@@ -224,7 +224,7 @@ This is a duplicate of <b>[link to primary issue]</b>; please feel free to conti
 <!-- this is a code block, any links need to be embedded -->
 <pre>
 Thank you for filing this issue! Unfortunately, this is off-topic for this repo because it is related to an Anaconda product.
-If you are still encountering this issues with Anaconda products or services you have several options for receiving community
+If you are encountering issues with Anaconda products or services, you have several options for receiving community
 support:
 
 - [Anaconda community forums](https://community.anaconda.cloud)
