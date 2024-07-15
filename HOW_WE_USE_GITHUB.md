@@ -241,7 +241,7 @@ support:
 
 <pre>
 Unfortunately, this issue is outside the scope of support we offer via GitHub or is not directly related to this project.
-Community support can be found elsewhere though, and we encourage you to explore the following options:
+Community support can be found elsewhere, though, and we encourage you to explore the following options:
 
 - [Conda discourse forum](https://conda.discourse.group/)
 - [Community chat channels](https://conda.org/community#chat)
