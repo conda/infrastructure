@@ -1,4 +1,4 @@
-name: Push Update Workflow
+name: Initiate Repository
 
 on:
   workflow_dispatch:

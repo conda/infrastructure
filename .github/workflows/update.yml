@@ -1,4 +1,4 @@
-name: Update
+name: Update Repository
 
 on:
   # every Sunday at 00:36 UTC
