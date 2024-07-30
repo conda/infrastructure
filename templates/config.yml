@@ -1,7 +1,6 @@
 conda/governance:
   # [required] community files
-  - src: CODE_OF_CONDUCT_SHORT.md
-    dst: CODE_OF_CONDUCT.md
+  - CODE_OF_CONDUCT.md
 
 conda/infrastructure:
   # [required] general workflows
