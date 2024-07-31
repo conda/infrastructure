@@ -50,6 +50,7 @@ jobs:
       - name: (upstream) Create PR
         uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e # v6.0.5
         with:
+          path: upstream
           push-to-fork: ${{ env.UPSTREAM }}
           token: ${{ secrets.SYNC_TOKEN }}
           branch: init-${{ github.event.inputs.org }}-${{ github.event.inputs.repo }}
@@ -81,6 +82,7 @@ jobs:
       - name: (downstream) Create PR
         uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e # v6.0.5
         with:
+          path: downstream
           push-to-fork: ${{ env.DOWNSTREAM }}
           token: ${{ secrets.SYNC_TOKEN }}
           branch: init
