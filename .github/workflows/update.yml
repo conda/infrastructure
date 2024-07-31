@@ -51,8 +51,8 @@ jobs:
 
       - name: Configure git user
         run: |
-          git config user.name 'Conda Bot'
-          git config user.email '18747875+conda-bot@users.noreply.github.com'
+          git config --global user.name 'Conda Bot'
+          git config --global user.email '18747875+conda-bot@users.noreply.github.com'
 
       - uses: conda/actions/combine-durations@976289d0cfd85139701b26ddd133abdd025a7b5f # v24.5.0
 
