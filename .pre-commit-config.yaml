@@ -9,6 +9,11 @@ repos:
       # ensure syntaxes are valid
       - id: check-toml
       - id: check-yaml
+        # exclude files that contain jinja templating directives
+        exclude: |
+          (?x)^(
+            templates/issues/bug.yml
+          )
       # catch git merge/rebase problems
       - id: check-merge-conflict
   - repo: local
@@ -39,6 +44,11 @@ repos:
       - id: yamlfmt
         # ruamel.yaml doesn't line wrap correctly (?) so set width to 1M to avoid issues
         args: [--mapping=2, --offset=2, --sequence=4, --width=1000000, --implicit_start]
+        # exclude files that contain jinja templating directives
+        exclude: |
+          (?x)^(
+            templates/issues/bug.yml
+          )
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.29.1
     hooks:
