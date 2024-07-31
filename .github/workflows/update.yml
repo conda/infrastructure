@@ -60,10 +60,10 @@ jobs:
 
       - name: Commit changes
         # no-op if there are no updates
+        continue-on-error: true
         run: |
           git add .
           git commit --message "🤖 updated file(s)"
-          true
 
       - if: github.event.comment.body != '@conda-bot render'
         name: Create fork

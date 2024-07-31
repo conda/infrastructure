@@ -10,6 +10,7 @@ on:
         options:
           - conda
           - conda-incubator
+          - conda-sandbox
         default: conda
       repo:
         description: The repository to push the update workflow to.
@@ -38,15 +39,16 @@ jobs:
 
       - name: (upstream) Remove repository from sync.yml
         # no-op if the repository is not in the sync.yml file
+        continue-on-error: true
         run: sed -i '\%${{ github.event.inputs.org }}/${{ github.event.inputs.repo }}$%d' upstream/.github/sync/config.yml
 
       - name: (upstream) Commit changes
         # no-op if there are no updates
+        continue-on-error: true
         run: |
           cd upstream
           git add .
           git commit --message "🤖 updated file(s)"
-          true
 
       - name: (upstream) Create fork
         # no-op if the repository is already forked
@@ -77,25 +79,25 @@ jobs:
 
       - name: (downstream) Copy (overwrite) update.yml
         # no-op if the latest file already exists in the downstream repository
+        continue-on-error: true
         run: |
           mkdir -p downstream/.github/workflows/
           cp -f upstream/.github/workflows/update.yml downstream/.github/workflows/update.yml
-          true
 
       - name: (downstream) Copy (do not overwrite) config.yml
         # no-op if the file already exists in the downstream repository
+        continue-on-error: true
         run: |
           mkdir -p downstream/.github/template-files/
           cp -n upstream/templates/config.yml downstream/.github/template-files/config.yml
-          true
 
       - name: (downstream) Commit changes
         # no-op if there are no updates
+        continue-on-error: true
         run: |
           cd downstream
           git add .
           git commit --message "🤖 updated file(s)"
-          true
 
       - name: (downstream) Create fork
         # no-op if the repository is already forked
