@@ -59,16 +59,22 @@ jobs:
       - uses: conda/actions/template-files@976289d0cfd85139701b26ddd133abdd025a7b5f # v24.5.0
 
       - name: Commit changes
-        run: git add . && git commit --message "🤖 updated file(s)" || true
+        # no-op if there are no updates
+        continue-on-error: true
+        run: |
+          git add .
+          git commit --message "🤖 updated file(s)"
 
       - if: github.event.comment.body != '@conda-bot render'
         name: Create fork
-        run: echo FORK=$(gh repo fork --clone=false --default-branch-only | awk '{print $1}') >> $GITHUB_ENV
+        # no-op if the repository is already forked
+        run: echo FORK=$(gh repo fork --clone=false --default-branch-only 2>&1 | awk '{print $1}') >> $GITHUB_ENV
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
 
       - if: github.event.comment.body != '@conda-bot render'
         id: create
+        # no-op if no commits were made
         uses: peter-evans/create-pull-request@6d6857d36972b65feb161a90e484f2984215f83e # v6.0.5
         with:
           push-to-fork: ${{ env.FORK }}
