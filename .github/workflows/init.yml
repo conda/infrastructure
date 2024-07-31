@@ -10,7 +10,6 @@ on:
         options:
           - conda
           - conda-incubator
-          - conda-sandbox
         default: conda
       repo:
         description: The repository to push the update workflow to.
