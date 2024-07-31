@@ -78,12 +78,14 @@ jobs:
       - name: (downstream) Copy (overwrite) update.yml
         # no-op if the latest file already exists in the downstream repository
         run: |
+          mkdir -p downstream/.github/workflows/
           cp -f upstream/.github/workflows/update.yml downstream/.github/workflows/update.yml
           true
 
       - name: (downstream) Copy (do not overwrite) config.yml
         # no-op if the file already exists in the downstream repository
         run: |
+          mkdir -p downstream/.github/template-files/
           cp -n upstream/templates/config.yml downstream/.github/template-files/config.yml
           true
 
