@@ -12,7 +12,7 @@ on:
       - sync/ISSUE_TEMPLATE/2_documentation.yml
       - sync/PULL_REQUEST_TEMPLATE/with_releases.md
       - sync/PULL_REQUEST_TEMPLATE/without_releases.md
-      - sync/sync/config.yml  # trigger sync if config is modified
+      - sync/config.yml  # trigger sync if config is modified
       - templates/releases/RELEASE.md
       - templates/releases/rever.xsh
       - templates/releases/TEMPLATE
