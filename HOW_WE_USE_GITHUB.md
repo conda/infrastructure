@@ -23,7 +23,7 @@
 <!-- relative URLs -->
 [workflow-cla]: https://github.com/conda/infrastructure/blob/main/.github/workflows/cla.yml
 [workflow-issues]: https://github.com/conda/infrastructure/blob/main/.github/workflows/issues.yml
-[workflow-update]: https://github.com/conda/infrastructure/blob/main/.github/workflows/update.yml
+[workflow-labels]: https://github.com/conda/infrastructure/blob/main/.github/workflows/labels.yml
 [workflow-lock]: https://github.com/conda/infrastructure/blob/main/.github/workflows/lock.yml
 [workflow-project]: https://github.com/conda/infrastructure/blob/main/.github/workflows/project.yml
 [workflow-stale]: https://github.com/conda/infrastructure/blob/main/.github/workflows/stale.yml
@@ -199,7 +199,7 @@ There are a number of labels that have been defined for the different repositori
 
 ### How are new labels added?
 
-New **global** labels (_i.e._, labels that apply equally to all repositories within the conda GitHub organization) are added to [`conda/infrastructure`][infrastructure]'s [`.github/global.yml` file][labels-global]; new **local** labels (_i.e._, labels specific to particular repositories) are added to each repository's [`.github/labels.yml` file][labels-local]. All new labels should follow the labeling syntax described in ["How are new labels defined?"](#how-are-new-labels-defined). Global labels are combined with any local labels and these aggregated labels are used by the [`.github/workflows/update.yml` workflow][workflow-update] to synchronize the labels available for the repository.
+New **global** labels (_i.e._, labels that apply equally to all repositories within the conda GitHub organization) are added to [`conda/infrastructure`][infrastructure]'s [`.github/global.yml` file][labels-global]; new **local** labels (_i.e._, labels specific to particular repositories) are added to each repository's [`.github/labels.yml` file][labels-local]. All new labels should follow the labeling syntax described in ["How are new labels defined?"](#how-are-new-labels-defined). Global labels are combined with any local labels and these aggregated labels are used by the [`.github/workflows/labels.yml` workflow][workflow-labels] to synchronize the labels available for the repository.
 
 ### Are there any templates to use as responses for commonly-seen issues?
 
