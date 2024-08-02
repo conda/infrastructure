@@ -54,6 +54,9 @@ group:
       # issue sorting
       - source: HOW_WE_USE_GITHUB.md
         dest: HOW_WE_USE_GITHUB.md
+      # profanity filter
+      - source: .github/workflows/profanity-filter.yml
+        dest: .github/workflows/profanity-filter.yml
   # projects with releases
   - repos: |
       conda/conda
