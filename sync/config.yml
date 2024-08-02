@@ -43,16 +43,16 @@ group:
       - source: .github/workflows/cla.yml
         dest: .github/workflows/cla.yml
       # issue forms
-      - source: .github/ISSUE_TEMPLATE/0_bug.yml
+      - source: sync/ISSUE_TEMPLATE/0_bug.yml
         dest: .github/ISSUE_TEMPLATE/0_bug.yml
-      - source: .github/ISSUE_TEMPLATE/1_feature.yml
+      - source: sync/ISSUE_TEMPLATE/1_feature.yml
         dest: .github/ISSUE_TEMPLATE/1_feature.yml
-      - source: .github/ISSUE_TEMPLATE/epic.yml
+      - source: sync/ISSUE_TEMPLATE/epic.yml
         dest: .github/ISSUE_TEMPLATE/epic.yml
-      - source: .github/ISSUE_TEMPLATE/2_documentation.yml
+      - source: sync/ISSUE_TEMPLATE/2_documentation.yml
         dest: .github/ISSUE_TEMPLATE/2_documentation.yml
       # issue sorting
-      - source: HOW_WE_USE_GITHUB.md
+      - source: sync/HOW_WE_USE_GITHUB.md
         dest: HOW_WE_USE_GITHUB.md
   # projects with releases
   - repos: |
@@ -74,7 +74,7 @@ group:
       conda/schemas
     files:
       # PR template
-      - source: .github/PULL_REQUEST_TEMPLATE/with_releases.md
+      - source: sync/PULL_REQUEST_TEMPLATE/with_releases.md
         dest: .github/PULL_REQUEST_TEMPLATE.md
       # news snippet template
       - source: templates/releases/TEMPLATE
@@ -88,7 +88,7 @@ group:
       conda/issue-tracker
     files:
       # PR template
-      - source: .github/PULL_REQUEST_TEMPLATE/without_releases.md
+      - source: sync/PULL_REQUEST_TEMPLATE/without_releases.md
         dest: .github/PULL_REQUEST_TEMPLATE.md
   # projects with rever releases
   - repos: |
@@ -133,5 +133,5 @@ group:
       conda/pycosat
       conda/schemas
     files:
-      - source: CODE_OF_CONDUCT.md
+      - source: sync/CODE_OF_CONDUCT.md
         dest: CODE_OF_CONDUCT.md
