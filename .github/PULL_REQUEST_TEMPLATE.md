@@ -1,1 +1,0 @@
-PULL_REQUEST_TEMPLATE/without_releases.md
