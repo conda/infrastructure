@@ -48,6 +48,7 @@ jobs:
         with:
           repository: ${{ env.REPOSITORY || github.repository }}
           ref: ${{ env.REF || '' }}
+          token: ${{ secrets.SYNC_TOKEN }}
 
       - name: Configure git user
         run: |
