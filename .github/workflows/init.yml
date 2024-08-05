@@ -66,7 +66,7 @@ jobs:
           token: ${{ secrets.SYNC_TOKEN }}
           branch: init-${{ github.event.inputs.org }}-${{ github.event.inputs.repo }}
           delete-branch: true
-          title: 🤖 Init ${{ github.event.inputs.org }}/${{ github.event.inputs.repo }}
+          title: 🤖 Initialize infrastructure updates for ${{ github.event.inputs.org }}/${{ github.event.inputs.repo }}
           body: |
             [init.yml]: ${{ github.server_url }}/${{ github.repository }}/blob/main/.github/workflows/init.yml
 

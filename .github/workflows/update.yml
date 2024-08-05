@@ -81,7 +81,7 @@ jobs:
           token: ${{ secrets.SYNC_TOKEN }}
           branch: update
           delete-branch: true
-          title: 🤖 Update
+          title: 🤖 Update infrastructure file(s)
           body: |
             [update.yml]: ${{ github.server_url }}/${{ github.repository }}/blob/main/.github/workflows/update.yml
 
