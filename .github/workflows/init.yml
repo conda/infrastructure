@@ -66,7 +66,7 @@ jobs:
           token: ${{ secrets.SYNC_TOKEN }}
           branch: init-${{ github.event.inputs.org }}-${{ github.event.inputs.repo }}
           delete-branch: true
-          title: 🤖 Initialize infrastructure updates for ${{ github.event.inputs.org }}/${{ github.event.inputs.repo }}
+          title: 🤖 Remove ${{ github.event.inputs.org }}/${{ github.event.inputs.repo }} from `sync.yml`
           body: |
             [init.yml]: ${{ github.server_url }}/${{ github.repository }}/blob/main/.github/workflows/init.yml
 
@@ -115,7 +115,7 @@ jobs:
           token: ${{ secrets.SYNC_TOKEN }}
           branch: init
           delete-branch: true
-          title: 🤖 Init
+          title: 🤖 Init `update.yml` workflow
           body: |
             [init.yml]: ${{ github.server_url }}/${{ github.repository }}/blob/main/.github/workflows/init.yml
 
