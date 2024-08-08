@@ -4,7 +4,6 @@ group:
       conda/.github
       conda/actions
       conda/conda-benchmarks
-      conda/conda-build
       conda/conda-content-trust
       conda/conda-docs
       conda/conda-index
@@ -56,7 +55,6 @@ group:
   # projects with releases
   - repos: |
       conda/conda-benchmarks
-      conda/conda-build
       conda/conda-content-trust
       conda/conda-index
       conda/conda-libmamba-solver
@@ -90,7 +88,6 @@ group:
         dest: .github/PULL_REQUEST_TEMPLATE.md
   # projects with rever releases
   - repos: |
-      conda/conda-build
       conda/conda-content-trust
       conda/conda-libmamba-solver
       conda/conda-package-handling
@@ -108,7 +105,6 @@ group:
       conda/actions
       conda/communications
       conda/conda-benchmarks
-      conda/conda-build
       conda/conda-content-trust
       conda/conda-docs
       conda/conda-index
