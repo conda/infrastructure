@@ -15,7 +15,6 @@ group:
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
-      conda/constructor
       conda/cookiecutter-conda-python
       conda/issue-tracker
       conda/menuinst
@@ -63,7 +62,6 @@ group:
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
-      conda/constructor
       conda/cookiecutter-conda-python
       conda/menuinst
       conda/pycosat
@@ -117,7 +115,6 @@ group:
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
-      conda/constructor
       conda/cookiecutter-conda-python
       conda/grayskull
       conda/issue-tracker
