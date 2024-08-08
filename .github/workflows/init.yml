@@ -53,6 +53,9 @@ jobs:
         # no-op if the repository is already forked
         run: |
           cd upstream
+          echo ::group::Fork debugging
+          gh repo fork --clone=false --default-branch-only
+          echo ::endgroup::
           echo UPSTREAM=$(gh repo fork --clone=false --default-branch-only 2>&1 | awk '{print $1}') >> $GITHUB_ENV
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
@@ -102,6 +105,9 @@ jobs:
         # no-op if the repository is already forked
         run: |
           cd downstream
+          echo ::group::Fork debugging
+          gh repo fork --clone=false --default-branch-only
+          echo ::endgroup::
           echo DOWNSTREAM=$(gh repo fork --clone=false --default-branch-only 2>&1 | awk '{print $1}') >> $GITHUB_ENV
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
