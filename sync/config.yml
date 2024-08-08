@@ -1,7 +1,6 @@
 group:
   # all projects
   - repos: |
-      conda/.github
       conda/actions
       conda/conda-benchmarks
       conda/conda-content-trust
@@ -77,7 +76,6 @@ group:
         dest: news/TEMPLATE
   # projects without releases
   - repos: |
-      conda/.github
       conda/actions
       conda/conda-docs
       conda/conda-plugin-template
@@ -101,7 +99,6 @@ group:
         dest: RELEASE.md
   # Code of Conduct sync
   - repos: |
-      conda/.github
       conda/actions
       conda/communications
       conda/conda-benchmarks
