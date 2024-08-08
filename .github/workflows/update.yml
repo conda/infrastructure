@@ -55,9 +55,13 @@ jobs:
           git config --global user.name 'Conda Bot'
           git config --global user.email '18747875+conda-bot@users.noreply.github.com'
 
-      - uses: conda/actions/combine-durations@976289d0cfd85139701b26ddd133abdd025a7b5f # v24.5.0
+      - uses: conda/actions/combine-durations@15f883f14f4232f83658e3609c3316d58905138f # v24.8.0
+        id: durations
+        continue-on-error: true
 
-      - uses: conda/actions/template-files@976289d0cfd85139701b26ddd133abdd025a7b5f # v24.5.0
+      - uses: conda/actions/template-files@15f883f14f4232f83658e3609c3316d58905138f # v24.8.0
+        id: templates
+        continue-on-error: true
 
       - name: Commit changes
         # no-op if there are no updates
@@ -87,6 +91,10 @@ jobs:
             [update.yml]: ${{ github.server_url }}/${{ github.repository }}/blob/main/.github/workflows/update.yml
 
             Your friendly repository updater.
+
+            ${{ steps.durations.outputs.summary }}
+
+            ${{ steps.templates.outputs.summary }}
 
             This PR was triggered by @${{ github.triggering_actor }} via ${{ github.event_name }}.
 
