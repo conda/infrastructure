@@ -8,7 +8,6 @@ group:
       conda/conda-pack
       conda/conda-package-handling
       conda/conda-package-streaming
-      conda/conda-plugin-template
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
@@ -67,7 +66,6 @@ group:
   # projects without releases
   - repos: |
       conda/conda-docs
-      conda/conda-plugin-template
     files:
       # PR template
       - source: sync/PULL_REQUEST_TEMPLATE/without_releases.md
@@ -95,7 +93,6 @@ group:
       conda/conda-pack
       conda/conda-package-handling
       conda/conda-package-streaming
-      conda/conda-plugin-template
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
