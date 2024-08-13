@@ -14,7 +14,6 @@ group:
       conda/conda-standalone
       conda/conda-verify
       conda/cookiecutter-conda-python
-      conda/issue-tracker
       conda/menuinst
       conda/schemas
     files:
@@ -73,7 +72,6 @@ group:
   - repos: |
       conda/conda-docs
       conda/conda-plugin-template
-      conda/issue-tracker
     files:
       # PR template
       - source: sync/PULL_REQUEST_TEMPLATE/without_releases.md
@@ -108,7 +106,6 @@ group:
       conda/conda-verify
       conda/cookiecutter-conda-python
       conda/grayskull
-      conda/issue-tracker
       conda/menuinst
       conda/schemas
     files:
