@@ -12,7 +12,6 @@ group:
       conda/conda-standalone
       conda/conda-verify
       conda/menuinst
-      conda/schemas
     files:
       # add to GitHub Project board
       - source: .github/workflows/project.yml
@@ -55,7 +54,6 @@ group:
       conda/conda-standalone
       conda/conda-verify
       conda/menuinst
-      conda/schemas
     files:
       # PR template
       - source: sync/PULL_REQUEST_TEMPLATE/with_releases.md
@@ -98,7 +96,6 @@ group:
       conda/conda-verify
       conda/grayskull
       conda/menuinst
-      conda/schemas
     files:
       - source: sync/CODE_OF_CONDUCT.md
         dest: CODE_OF_CONDUCT.md
