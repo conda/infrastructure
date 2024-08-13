@@ -1,7 +1,6 @@
 group:
   # all projects
   - repos: |
-      conda/conda-benchmarks
       conda/conda-content-trust
       conda/conda-docs
       conda/conda-index
@@ -49,7 +48,6 @@ group:
         dest: HOW_WE_USE_GITHUB.md
   # projects with releases
   - repos: |
-      conda/conda-benchmarks
       conda/conda-content-trust
       conda/conda-index
       conda/conda-libmamba-solver
@@ -91,7 +89,6 @@ group:
   # Code of Conduct sync
   - repos: |
       conda/communications
-      conda/conda-benchmarks
       conda/conda-content-trust
       conda/conda-docs
       conda/conda-index
