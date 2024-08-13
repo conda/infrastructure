@@ -2,7 +2,6 @@ group:
   # all projects
   - repos: |
       conda/conda-content-trust
-      conda/conda-docs
       conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
@@ -65,7 +64,6 @@ group:
         dest: news/TEMPLATE
   # projects without releases
   - repos: |
-      conda/conda-docs
     files:
       # PR template
       - source: sync/PULL_REQUEST_TEMPLATE/without_releases.md
@@ -86,7 +84,6 @@ group:
   - repos: |
       conda/communications
       conda/conda-content-trust
-      conda/conda-docs
       conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-lock
