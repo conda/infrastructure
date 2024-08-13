@@ -17,7 +17,6 @@ group:
       conda/cookiecutter-conda-python
       conda/issue-tracker
       conda/menuinst
-      conda/pycosat
       conda/schemas
     files:
       # add to GitHub Project board
@@ -63,7 +62,6 @@ group:
       conda/conda-verify
       conda/cookiecutter-conda-python
       conda/menuinst
-      conda/pycosat
       conda/schemas
     files:
       # PR template
@@ -87,7 +85,6 @@ group:
       conda/conda-content-trust
       conda/conda-libmamba-solver
       conda/conda-package-handling
-      conda/pycosat
     files:
       # rever config
       - source: templates/releases/rever.xsh
@@ -116,7 +113,6 @@ group:
       conda/grayskull
       conda/issue-tracker
       conda/menuinst
-      conda/pycosat
       conda/schemas
     files:
       - source: sync/CODE_OF_CONDUCT.md
