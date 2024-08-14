@@ -2,6 +2,7 @@ group:
   # all projects
   - repos: |
       conda/conda-content-trust
+      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
       conda/conda-package-handling
@@ -44,6 +45,7 @@ group:
   # projects with releases
   - repos: |
       conda/conda-content-trust
+      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
       conda/conda-package-handling
@@ -66,7 +68,6 @@ group:
         dest: .github/PULL_REQUEST_TEMPLATE.md
   # projects with rever releases
   - repos: |
-      conda/conda-content-trust
       conda/conda-libmamba-solver
       conda/conda-package-handling
     files:
@@ -79,6 +80,7 @@ group:
   # Code of Conduct sync
   - repos: |
       conda/conda-content-trust
+      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-lock
       conda/conda-pack
