@@ -1,11 +1,8 @@
 group:
   # all projects
   - repos: |
-      conda/conda-content-trust
-      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
-      conda/conda-package-handling
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
@@ -43,11 +40,8 @@ group:
         dest: HOW_WE_USE_GITHUB.md
   # projects with releases
   - repos: |
-      conda/conda-content-trust
-      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
-      conda/conda-package-handling
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
@@ -67,9 +61,7 @@ group:
         dest: .github/PULL_REQUEST_TEMPLATE.md
   # projects with rever releases
   - repos: |
-      conda/conda-content-trust
       conda/conda-libmamba-solver
-      conda/conda-package-handling
     files:
       # rever config
       - source: templates/releases/rever.xsh
@@ -79,12 +71,9 @@ group:
         dest: RELEASE.md
   # Code of Conduct sync
   - repos: |
-      conda/conda-content-trust
-      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-lock
       conda/conda-pack
-      conda/conda-package-handling
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
