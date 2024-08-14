@@ -2,7 +2,6 @@ group:
   # all projects
   - repos: |
       conda/conda-content-trust
-      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
       conda/conda-package-handling
@@ -45,7 +44,6 @@ group:
   # projects with releases
   - repos: |
       conda/conda-content-trust
-      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
       conda/conda-package-handling
@@ -81,7 +79,6 @@ group:
   # Code of Conduct sync
   - repos: |
       conda/conda-content-trust
-      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-lock
       conda/conda-pack
