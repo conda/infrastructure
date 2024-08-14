@@ -1,8 +1,6 @@
 group:
   # all projects
   - repos: |
-      conda/conda-content-trust
-      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
       conda/conda-package-handling
@@ -44,8 +42,6 @@ group:
         dest: HOW_WE_USE_GITHUB.md
   # projects with releases
   - repos: |
-      conda/conda-content-trust
-      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-pack
       conda/conda-package-handling
@@ -79,8 +75,6 @@ group:
         dest: RELEASE.md
   # Code of Conduct sync
   - repos: |
-      conda/conda-content-trust
-      conda/conda-index
       conda/conda-libmamba-solver
       conda/conda-lock
       conda/conda-pack
