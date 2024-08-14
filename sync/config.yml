@@ -6,7 +6,6 @@ group:
       conda/conda-libmamba-solver
       conda/conda-pack
       conda/conda-package-handling
-      conda/conda-package-streaming
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
@@ -86,7 +85,6 @@ group:
       conda/conda-lock
       conda/conda-pack
       conda/conda-package-handling
-      conda/conda-package-streaming
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
