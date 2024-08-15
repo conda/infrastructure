@@ -2,7 +2,6 @@ group:
   # all projects
   - repos: |
       conda/conda-standalone
-      conda/conda-verify
     files:
       # add to GitHub Project board
       - source: .github/workflows/project.yml
@@ -37,7 +36,6 @@ group:
   # projects with releases
   - repos: |
       conda/conda-standalone
-      conda/conda-verify
     files:
       # PR template
       - source: sync/PULL_REQUEST_TEMPLATE/with_releases.md
@@ -64,7 +62,6 @@ group:
   - repos: |
       conda/conda-lock
       conda/conda-standalone
-      conda/conda-verify
       conda/grayskull
     files:
       - source: sync/CODE_OF_CONDUCT.md
