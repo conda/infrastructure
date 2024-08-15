@@ -1,7 +1,6 @@
 group:
   # all projects
   - repos: |
-      conda/conda-standalone
     files:
       # add to GitHub Project board
       - source: .github/workflows/project.yml
@@ -35,7 +34,6 @@ group:
         dest: HOW_WE_USE_GITHUB.md
   # projects with releases
   - repos: |
-      conda/conda-standalone
     files:
       # PR template
       - source: sync/PULL_REQUEST_TEMPLATE/with_releases.md
@@ -61,7 +59,6 @@ group:
   # Code of Conduct sync
   - repos: |
       conda/conda-lock
-      conda/conda-standalone
       conda/grayskull
     files:
       - source: sync/CODE_OF_CONDUCT.md
