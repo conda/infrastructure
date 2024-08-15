@@ -5,7 +5,6 @@ group:
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
-      conda/menuinst
     files:
       # add to GitHub Project board
       - source: .github/workflows/project.yml
@@ -43,7 +42,6 @@ group:
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
-      conda/menuinst
     files:
       # PR template
       - source: sync/PULL_REQUEST_TEMPLATE/with_releases.md
@@ -74,7 +72,6 @@ group:
       conda/conda-standalone
       conda/conda-verify
       conda/grayskull
-      conda/menuinst
     files:
       - source: sync/CODE_OF_CONDUCT.md
         dest: CODE_OF_CONDUCT.md
