@@ -1,7 +1,6 @@
 group:
   # all projects
   - repos: |
-      conda/conda-pack
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
@@ -39,7 +38,6 @@ group:
         dest: HOW_WE_USE_GITHUB.md
   # projects with releases
   - repos: |
-      conda/conda-pack
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
@@ -69,7 +67,6 @@ group:
   # Code of Conduct sync
   - repos: |
       conda/conda-lock
-      conda/conda-pack
       conda/conda-prefix-replacement
       conda/conda-standalone
       conda/conda-verify
