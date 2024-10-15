@@ -58,7 +58,6 @@ group:
         dest: RELEASE.md
   # Code of Conduct sync
   - repos: |
-      conda/conda-lock
       conda/grayskull
     files:
       - source: sync/CODE_OF_CONDUCT.md
