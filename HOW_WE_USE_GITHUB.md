@@ -2,7 +2,7 @@
 
 <!-- absolute URLs -->
 [conda-org]: https://github.com/conda
-[sub-team]: https://github.com/conda-incubator/governance#sub-teams
+[project-teams]: https://github.com/conda/governance#project-teams
 
 [project-planning]: https://github.com/orgs/conda/projects/2/views/11
 [project-sorting]: https://github.com/orgs/conda/projects/2/views/11
@@ -102,7 +102,7 @@ There will always be broad-scope design and architecture implementations that th
 
 ### Who does the sorting?
 
-Sorting engineers are a conda governance [sub-team][sub-team]; they are a group of community members who are responsible for making decisions regarding closing issues and setting feature work priorities, among other sorting-related tasks.
+The various [project-teams][project-teams] are responsible to sort issues, e.g. for the conda CLI project it's the conda-maintainers team, for the constructor project it's the constructor team etc.
 
 ### How do items show up for sorting?
 
