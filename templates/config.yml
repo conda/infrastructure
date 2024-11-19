@@ -43,7 +43,8 @@ conda/infrastructure:
   # - src: templates/releases/RELEASE.md
   #   dst: RELEASE.md
   #   with:
-  #     placeholder: YY.M
+  #     placeholder: YY.M.[$patch_number]
+  #     placeholder-x: YY.M.x
   # - src: templates/releases/rever.xsh
   #   dst: rever.xsh
   # - src: templates/releases/TEMPLATE
