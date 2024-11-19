@@ -18,7 +18,7 @@
 ## 1. Open the release issue and cut a release branch. (do this ~1 week prior to release)
 
 > [!NOTE]
-> The new release branch should adhere to the naming convention of `[[ placeholder-x ]]` (make sure to put the `.x` at the end!). In the case of patch/hotfix releases, however, do NOT cut a new release branch; instead, use the previously-cut release branch with the appropriate `[[ placeholder-x ]]` version numbers.
+> The new release branch should adhere to the naming convention of `[[ placeholder-x ]]` (note the difference to `[[ placeholder ]]`). In the case of patch/hotfix releases, however, do NOT cut a new release branch; instead, use the previously-cut `[[ placeholder-x ]]` release branch.
 
 Use the issue template below to create the release issue. After creating the release issue, pin it for easy access.
 
@@ -117,7 +117,7 @@ Let various interested parties know about the upcoming release; at minimum, cond
 
 ### Canary Builds for Manual Testing
 
-Once the release PRs are filed, successful canary builds will be available on `https://anaconda.org/conda-canary/conda/files?channel=rc-[[ repo.name ]]-[[ placeholder-x ]]` for manual testing.
+Once the release PRs are filed, successful canary builds will be available on `[[ canary-channel ]]/[[ repo.name ]]/files?channel=rc-[[ repo.name ]]-[[ placeholder-x ]]` for manual testing.
 
 > [!NOTE]
 > You do not need to apply the `build::review` label for release PRs; every commit to the release branch builds and uploads canary builds to the respective `rc-` label.
@@ -253,7 +253,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     > * Add `win-arm64` as a known platform (subdir). (#11778)
     > ```
 
-    - You can utilize [GitHub's compare view][compare] to review what changes are to be included in this release. Make sure you compare the current release branch against the previous one (e.g., `24.5.x` would be compared against `24.3.x`)
+    - You can utilize [GitHub's compare view][compare] to review what changes are to be included in this release. Make sure you compare the current release branch against the previous one
 
     - Add a new news snippet for any PRs of importance that are missing.
 
@@ -346,7 +346,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     (rever) $ git push -u upstream changelog-[[ placeholder ]]
     ```
 
-9. Open the Release PR targing the `[[ placeholder-x ]]` branch.
+9. Open the Release PR targeting the `[[ placeholder-x ]]` branch.
 
     <details>
     <summary>GitHub PR Template</summary>

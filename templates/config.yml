@@ -43,8 +43,13 @@ conda/infrastructure:
   # - src: templates/releases/RELEASE.md
   #   dst: RELEASE.md
   #   with:
-  #     placeholder: YY.M.[$patch_number]
+  #     canary-channel: https://anaconda.org/conda-canary
+  #     # CalVer placeholders
+  #     placeholder: YY.M.PATCH
   #     placeholder-x: YY.M.x
+  #     # SemVer placeholders
+  #     placeholder: MAJOR.MINOR.MINOR
+  #     placeholder-x: MAJOR.MINOR.x
   # - src: templates/releases/rever.xsh
   #   dst: rever.xsh
   # - src: templates/releases/TEMPLATE
