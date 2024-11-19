@@ -106,6 +106,9 @@ If a patch release is necessary, reopen the original release issue and append th
 > [!NOTE]
 > The [epic template][epic template] is perfect for this; remember to remove the **`epic`** label.
 
+> [!NOTE]
+> A patch release is like a regular, i.e., follow the same steps in the process as you would for a regular release. Most patches are authored by existing contributors (most likely maintainers themselves) so running `rever <VERSION>` may succeed on the first pass.
+
 ## 2. Alert various parties of the upcoming release. (do this ~1 week prior to release)
 
 Let various interested parties know about the upcoming release; at minimum, conda-forge maintainers should be informed. For major features, a blog post describing the new features should be prepared and posted once the release is completed (see the announcements section of the release issue).
