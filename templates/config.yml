@@ -46,10 +46,10 @@ conda/infrastructure:
   #     canary-channel: https://anaconda.org/conda-canary
   #     # CalVer placeholders
   #     placeholder: YY.M.PATCH
-  #     placeholder-x: YY.M.x
+  #     placeholder_x: YY.M.x
   #     # SemVer placeholders
   #     placeholder: MAJOR.MINOR.MINOR
-  #     placeholder-x: MAJOR.MINOR.x
+  #     placeholder_x: MAJOR.MINOR.x
   # - src: templates/releases/rever.xsh
   #   dst: rever.xsh
   # - src: templates/releases/TEMPLATE

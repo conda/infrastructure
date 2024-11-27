@@ -18,7 +18,7 @@
 ## 1. Open the release issue and cut a release branch. (do this ~1 week prior to release)
 
 > [!NOTE]
-> The new release branch should adhere to the naming convention of `[[ placeholder-x ]]` (note the difference to `[[ placeholder ]]`). In the case of patch/hotfix releases, however, do NOT cut a new release branch; instead, use the previously-cut `[[ placeholder-x ]]` release branch.
+> The new release branch should adhere to the naming convention of `[[ placeholder_x ]]` (note the difference to `[[ placeholder ]]`). In the case of patch/hotfix releases, however, do NOT cut a new release branch; instead, use the previously-cut `[[ placeholder_x ]]` release branch.
 
 Use the issue template below to create the release issue. After creating the release issue, pin it for easy access.
 
@@ -28,7 +28,7 @@ Use the issue template below to create the release issue. After creating the rel
 ```markdown
 ### Summary
 
-Placeholder for `[[ repo.name ]] [[ placeholder-x ]]` release.
+Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 
 | Pilot | <pilot> |
 |---|---|
@@ -46,8 +46,8 @@ Placeholder for `[[ repo.name ]] [[ placeholder-x ]]` release.
 <details open>  <!-- feel free to remove the open attribute once this section is completed -->
 <summary><h4>The week before release week</h4></summary>
 
-- [ ] Create release branch (named `[[ placeholder-x ]]`)
-- [ ] Ensure release candidates are being successfully built (see `conda-canary/label/rc-[[ repo.name ]]-[[ placeholder-x ]]`)
+- [ ] Create release branch (named `[[ placeholder_x ]]`)
+- [ ] Ensure release candidates are being successfully built (see `conda-canary/label/rc-[[ repo.name ]]-[[ placeholder_x ]]`)
 - [ ] [Complete outstanding PRs][milestone]
 - [ ] Test release candidates
     <!-- indicate here who has signed off on testing -->
@@ -59,8 +59,8 @@ Placeholder for `[[ repo.name ]] [[ placeholder-x ]]` release.
 
 - [ ] Create release PR (see [release process][process])
 - [ ] [Publish release][releases]
-- [ ] Merge `[[ placeholder-x ]]` back into `main`
-- [ ] Activate the `[[ placeholder-x ]]` branch on [ReadTheDocs][ReadTheDocs]
+- [ ] Merge `[[ placeholder_x ]]` back into `main`
+- [ ] Activate the `[[ placeholder_x ]]` branch on [ReadTheDocs][ReadTheDocs]
 - [ ] Feedstocks
     - [ ] Bump version & update dependencies/tests in [Anaconda, Inc.'s feedstock][main]
     - [ ] Bump version & update dependencies/tests in [conda-forge feedstock][conda-forge]
@@ -92,7 +92,7 @@ If a patch release is necessary, reopen the original release issue and append th
 - [ ] <!-- list issues & PRs that need to be resolved here -->
 - [ ] Create release PR (see [release process][process])
 - [ ] [Publish release][releases]
-- [ ] Merge `[[ placeholder-x ]]` back into `main`
+- [ ] Merge `[[ placeholder_x ]]` back into `main`
 - [ ] Feedstocks
     - [ ] Bump version & update dependencies/tests in [Anaconda, Inc.'s feedstock][main]
     - [ ] Bump version & update dependencies/tests in [conda-forge feedstock][conda-forge]
@@ -117,7 +117,7 @@ Let various interested parties know about the upcoming release; at minimum, cond
 
 ### Canary Builds for Manual Testing
 
-Once the release PRs are filed, successful canary builds will be available on `[[ canary-channel ]]/[[ repo.name ]]/files?channel=rc-[[ repo.name ]]-[[ placeholder-x ]]` for manual testing.
+Once the release PRs are filed, successful canary builds will be available on `[[ canary-channel ]]/[[ repo.name ]]/files?channel=rc-[[ repo.name ]]-[[ placeholder_x ]]` for manual testing.
 
 > [!NOTE]
 > You do not need to apply the `build::review` label for release PRs; every commit to the release branch builds and uploads canary builds to the respective `rc-` label.
@@ -150,7 +150,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
     ```bash
     (rever) $ git fetch upstream
-    (rever) $ git checkout [[ placeholder-x ]]
+    (rever) $ git checkout [[ placeholder_x ]]
     ```
 
 2. Create a versioned branch, this is where rever will make its changes:
@@ -346,7 +346,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     (rever) $ git push -u upstream changelog-[[ placeholder ]]
     ```
 
-9. Open the Release PR targeting the `[[ placeholder-x ]]` branch.
+9. Open the Release PR targeting the `[[ placeholder_x ]]` branch.
 
     <details>
     <summary>GitHub PR Template</summary>
@@ -371,7 +371,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
     | Field | Value |
     |---|---|
     | Choose a tag | `[[ placeholder ]]` |
-    | Target | `[[ placeholder-x ]]` |
+    | Target | `[[ placeholder_x ]]` |
     | Body | copy/paste blurb from `CHANGELOG.md` |
 
 </details>
@@ -392,14 +392,14 @@ To publish the release, go to the project's release page (e.g., https://github.c
 
 1. From the main "< > Code" page of the repository, select the drop down menu next to the `main` branch button and then select "View all branches" at the very bottom.
 
-2. Find the applicable `[[ placeholder-x ]]` branch and click the "New pull request" button.
+2. Find the applicable `[[ placeholder_x ]]` branch and click the "New pull request" button.
 
-3. "Base" should point to `main` while "Compare" should point to `[[ placeholder-x ]]`.
+3. "Base" should point to `main` while "Compare" should point to `[[ placeholder_x ]]`.
 
 4. Ensure that all of the commits being pulled in look accurate, then select "Create pull request".
 
 > [!NOTE]
-> Make sure NOT to push the "Update Branch" button. If there are [merge conflicts][merge conflicts], create a temporary "connector branch" dedicated to fixing merge conflicts separately from the `[[ placeholder-x ]]` and `main` branches.
+> Make sure NOT to push the "Update Branch" button. If there are [merge conflicts][merge conflicts], create a temporary "connector branch" dedicated to fixing merge conflicts separately from the `[[ placeholder_x ]]` and `main` branches.
 
 5. Review and merge the pull request the same as any code change pull request.
 
