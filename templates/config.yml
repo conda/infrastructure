@@ -43,7 +43,7 @@ conda/infrastructure:
   # - src: templates/releases/RELEASE.md
   #   dst: RELEASE.md
   #   with:
-  #     canary-channel: https://anaconda.org/conda-canary
+  #     canary_channel: https://anaconda.org/conda-canary
   #     # CalVer placeholders
   #     placeholder: YY.M.PATCH
   #     placeholder_x: YY.M.x
