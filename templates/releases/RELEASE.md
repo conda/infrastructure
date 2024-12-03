@@ -117,7 +117,7 @@ Let various interested parties know about the upcoming release; at minimum, cond
 
 ### Canary Builds for Manual Testing
 
-Once the release PRs are filed, successful canary builds will be available on `[[ canary-channel ]]/[[ repo.name ]]/files?channel=rc-[[ repo.name ]]-[[ placeholder_x ]]` for manual testing.
+Once the release PRs are filed, successful canary builds will be available on `[[ canary_channel ]]/[[ repo.name ]]/files?channel=rc-[[ repo.name ]]-[[ placeholder_x ]]` for manual testing.
 
 > [!NOTE]
 > You do not need to apply the `build::review` label for release PRs; every commit to the release branch builds and uploads canary builds to the respective `rc-` label.
