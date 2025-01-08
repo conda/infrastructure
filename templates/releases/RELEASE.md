@@ -25,6 +25,12 @@ Use the issue template below to create the release issue. After creating the rel
 <details>
 <summary><h3>Release Template</h3></summary>
 
+#### Title:
+```markdown
+Release `[[ placeholder_x ]]`
+```
+
+#### Body:
 ```markdown
 ### Summary
 
@@ -42,6 +48,7 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 [main]: https://github.com/AnacondaRecipes/[[ repo.name ]]-feedstock
 [conda-forge]: https://github.com/conda-forge/[[ repo.name ]]-feedstock
 [ReadTheDocs]: https://readthedocs.com/projects/continuumio-[[ repo.name ]]/
+[zulip]: https://conda.zulipchat.com/#narrow/channel/464880-conda-maintainers
 
 <details open>  <!-- feel free to remove the open attribute once this section is completed -->
 <summary><h4>The week before release week</h4></summary>
@@ -58,23 +65,18 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 <summary><h4>Release week</h4></summary>
 
 - [ ] Create release PR (see [release process][process])
+- [ ] Create Zulip thread on [#conda-maintainers][zulip]
+    - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
 - [ ] Merge `[[ placeholder_x ]]` back into `main`
 - [ ] Activate the `[[ placeholder_x ]]` branch on [ReadTheDocs][ReadTheDocs]
-- [ ] Feedstocks
-    - [ ] Bump version & update dependencies/tests in [Anaconda, Inc.'s feedstock][main]
-    - [ ] Bump version & update dependencies/tests in [conda-forge feedstock][conda-forge]
-    <!-- link any other feedstock PRs here -->
-- [ ] Hand off to the Anaconda packaging team
+- [ ] Bump/update feedstocks
+    - [ ] [Anaconda, Inc.'s feedstock][main]
+    - [ ] [conda-forge feedstock][conda-forge]
+- [ ] Hand off to packaging team(s)
 - [ ] Announce release
-    - Blog Post (optional)
-        - [ ] conda.org (link to pull request)
-    - Long form
-        - [ ] Create release [announcement draft](https://github.com/conda/communications)
-        - [ ] [Discourse](https://conda.discourse.group/)
-        - [ ] [Matrix (conda/conda)](https://matrix.to/#/#conda_conda:gitter.im) (this auto posts from Discourse)
-    - Summary
-        - [ ] [Twitter](https://twitter.com/condaproject)
+    - [ ] Create & publish conda.org blog post
+    - [ ] Post on Zulip thread
 
 </details>
 ```
@@ -85,18 +87,23 @@ If a patch release is necessary, reopen the original release issue and append th
 <details>
 <summary><h3>Patch Release Template</h3></summary>
 
+#### Append to existing 'Release `[[ placeholder_x ]]`' issue:
 ```markdown
 <details open>  <!-- feel free to remove the open attribute once this section is completed -->
 <summary><h4>Patch [[ placeholder ]]</h4></summary>
 
 - [ ] <!-- list issues & PRs that need to be resolved here -->
 - [ ] Create release PR (see [release process][process])
+- [ ] Update Zulip thread on [#conda-maintainers][zulip]
+    - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
 - [ ] Merge `[[ placeholder_x ]]` back into `main`
-- [ ] Feedstocks
-    - [ ] Bump version & update dependencies/tests in [Anaconda, Inc.'s feedstock][main]
-    - [ ] Bump version & update dependencies/tests in [conda-forge feedstock][conda-forge]
-- [ ] Hand off to the Anaconda packaging team
+- [ ] Bump/update feedstocks
+    - [ ] [Anaconda, Inc.'s feedstock][main]
+    - [ ] [conda-forge feedstock][conda-forge]
+- [ ] Hand off to packaging team(s)
+- [ ] Announce release
+    - [ ] Post on Zulip thread
 
 </details>
 ```
