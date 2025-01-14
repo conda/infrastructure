@@ -150,7 +150,7 @@ Currently, there are only 2 activities we use rever for, (1) aggregating the aut
 
     ```bash
     (rever) $ git clone git@github.com:[[ repo.user ]]/[[ repo.name ]].git
-    (rever) $ cd conda
+    (rever) $ cd [[ repo.name ]]
     ```
 
 2. Fetch the latest changes from the remote and checkout the release branch created a week ago:
