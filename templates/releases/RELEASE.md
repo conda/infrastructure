@@ -56,6 +56,7 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 - [ ] Create release branch (named `[[ placeholder_x ]]`)
 - [ ] Ensure release candidates are being successfully built (see `conda-canary/label/rc-[[ repo.name ]]-[[ placeholder_x ]]`)
 - [ ] [Complete outstanding PRs][milestone]
+- [ ] Check for deprecated features
 - [ ] Test release candidates
     <!-- indicate here who has signed off on testing -->
 
