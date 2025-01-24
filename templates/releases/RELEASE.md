@@ -48,7 +48,7 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 [main]: https://github.com/AnacondaRecipes/[[ repo.name ]]-feedstock
 [conda-forge]: https://github.com/conda-forge/[[ repo.name ]]-feedstock
 [ReadTheDocs]: https://readthedocs.com/projects/continuumio-[[ repo.name ]]/
-[zulip]: https://conda.zulipchat.com/#narrow/channel/464880-conda-maintainers
+[zulip]: https://conda.zulipchat.com/#narrow/channel/480811-releases
 
 <details open>  <!-- feel free to remove the open attribute once this section is completed -->
 <summary><h4>The week before release week</h4></summary>
@@ -66,7 +66,7 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 <summary><h4>Release week</h4></summary>
 
 - [ ] Create release PR (see [release process][process])
-- [ ] Create Zulip thread on [#conda-maintainers][zulip]
+- [ ] Create Zulip thread on [#releases][zulip]
     - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
 - [ ] Merge `[[ placeholder_x ]]` back into `main`
@@ -95,7 +95,7 @@ If a patch release is necessary, reopen the original release issue and append th
 
 - [ ] <!-- list issues & PRs that need to be resolved here -->
 - [ ] Create release PR (see [release process][process])
-- [ ] Update Zulip thread on [#conda-maintainers][zulip]
+- [ ] Update Zulip thread on [#releases][zulip]
     - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
 - [ ] Merge `[[ placeholder_x ]]` back into `main`
