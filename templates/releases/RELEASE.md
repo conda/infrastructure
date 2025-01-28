@@ -66,7 +66,7 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 <summary><h4>Release week</h4></summary>
 
 - [ ] Create release PR (see [release process][process])
-- [ ] Create Zulip thread on [#releases][zulip]
+- [ ] Create Zulip thread on [[ '[#releases][zulip]' ]]
     - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
 - [ ] Merge `[[ placeholder_x ]]` back into `main`
@@ -95,7 +95,7 @@ If a patch release is necessary, reopen the original release issue and append th
 
 - [ ] <!-- list issues & PRs that need to be resolved here -->
 - [ ] Create release PR (see [release process][process])
-- [ ] Update Zulip thread on [#releases][zulip]
+- [ ] Update Zulip thread on [[ '[#releases][zulip]' ]]
     - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
 - [ ] Merge `[[ placeholder_x ]]` back into `main`
