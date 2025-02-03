@@ -26,7 +26,7 @@ repos:
         require_serial: true
         args: [--sort-keys=contributors]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.3
+    rev: v0.9.4
     hooks:
       # lint & attempt to correct failures (e.g. pyupgrade)
       - id: ruff
@@ -50,14 +50,14 @@ repos:
             templates/issues/bug.yml
           )
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.31.0
+    rev: 0.31.1
     hooks:
       # verify github syntaxes
       - id: check-github-workflows
       - id: check-dependabot
   - repo: https://github.com/codespell-project/codespell
     # see pyproject.toml
-    rev: v2.4.0
+    rev: v2.4.1
     hooks:
       - id: codespell
         args: [--write-changes]
