@@ -2,6 +2,7 @@ name: GitHub Project Requests
 description: Use this template to request a new project or edits to an existing project.
 labels:
   - type::task
+  - type::github
 body:
   - type: dropdown
     id: org
@@ -27,7 +28,12 @@ body:
       label: Admin Role(s)
       description: Provide the GitHub team(s) that need admin access to the project.
   - type: textarea
-    id: collaborators
+    id: write
     attributes:
-      label: User Team
+      label: Write Role(s)
       description: Provide the GitHub team(s) that need write access to the project.
+  - type: textarea
+    id: read
+    attributes:
+      label: Read Role(s)
+      description: Provide the GitHub team(s) that need read access to the project.
