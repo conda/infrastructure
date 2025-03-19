@@ -4,6 +4,10 @@ labels:
   - type::task
   - type::github
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Basic Information
   - type: dropdown
     id: org
     attributes:
@@ -22,10 +26,11 @@ body:
       description: Provide the new project name or provide the URL to the existing project.
     validations:
       required: true
+
   - type: markdown
     attributes:
       value: |
-        # GitHub Project Roles
+        ## Roles
         > [!WARNING]
         > GitHub project roles are only granted on a GitHub team basis, i.e., we will not grant roles on a per user basis.
   - type: textarea
