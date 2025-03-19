@@ -1,0 +1,30 @@
+name: GitHub Project Requests
+description: Use this template to request a new project or edits to an existing project.
+labels:
+  - type::task
+body:
+  - type: dropdown
+    id: org
+    attributes:
+      label: Organization
+      description: Select the organization for which you are requesting a new project.
+      options:
+        - conda
+        - conda-incubator
+  - type: input
+    id: title
+    attributes:
+      label: Project Name or URL
+      description: Provide the new project name or provide the URL to the existing project.
+    validations:
+      required: true
+  - type: textarea
+    id: admin
+    attributes:
+      label: Admin Role(s)
+      description: Provide the GitHub team(s) that need admin access to the project.
+  - type: textarea
+    id: collaborators
+    attributes:
+      label: User Team
+      description: Provide the GitHub team(s) that need write access to the project.
