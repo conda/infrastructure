@@ -22,6 +22,11 @@ body:
       description: Provide the new project name or provide the URL to the existing project.
     validations:
       required: true
+  - type: markdown
+    attributes:
+      value: |
+        > [!WARNING]
+        > GitHub project roles are only granted on a GitHub team basis, i.e., we will not grant roles on a per user basis.
   - type: textarea
     id: admin
     attributes:
