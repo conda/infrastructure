@@ -1,4 +1,4 @@
-name: CND Issues
+name: Anaconda.org CDN Issues
 description: Use this template to report issues with the CDN.
 labels:
   - type::hosting
@@ -14,7 +14,7 @@ body:
     id: date
     attributes:
       label: When
-      description: Provide when the problem was first noticed.
+      description: Provide UTC date & time when the problem was first noticed.
     validations:
       required: true
   - type: dropdown
