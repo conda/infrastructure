@@ -11,6 +11,9 @@ body:
       options:
         - conda
         - conda-incubator
+      default: 0
+    validations:
+      required: true
   - type: input
     id: title
     attributes:
