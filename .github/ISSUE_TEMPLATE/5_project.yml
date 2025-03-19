@@ -32,7 +32,7 @@ body:
       value: |
         ## Roles
         > [!WARNING]
-        > GitHub project roles are only granted on a GitHub team ([Sub-teams per Conda Governance](https://github.com/conda/governance#sub-teams)) basis, i.e., we will not grant roles on a per user basis.
+        > GitHub project roles are only granted on a GitHub team ([sub-teams per Conda Governance](https://github.com/conda/governance#sub-teams)) basis, i.e., we will not grant roles on a per user basis.
   - type: textarea
     id: admin
     attributes:
