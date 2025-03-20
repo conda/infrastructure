@@ -5,6 +5,11 @@ This is a centralized location for infrastructure codes and any related inquirie
 > [!NOTE]
 > This is not a forum for end-user questions.
 
+## Quick Links
+
+I need:
+- [New/Edit GitHub Project](issues/new?template=5_project.yml)
+
 ## 👋 Welcome!
 
 We are using [GitHub discussions in this repo](https://github.com/conda/infra/discussions) as a place for [Conda core and community members](https://github.com/conda-incubator/governance#teams--roles) to raise issues about the Conda community infrastructure such as:
