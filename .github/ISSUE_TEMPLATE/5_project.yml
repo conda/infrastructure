@@ -1,5 +1,6 @@
-name: GitHub Project Requests
+name: GitHub Project Request
 description: Use this template to request a new project or edits to an existing project.
+title: Requesting New/Edit GitHub Project
 labels:
   - type::task
   - type::github

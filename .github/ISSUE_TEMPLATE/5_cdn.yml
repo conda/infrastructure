@@ -1,5 +1,6 @@
-name: Anaconda.org CDN Issues
+name: Anaconda.org CDN Issue
 description: Use this template to report issues with the CDN.
+title: Reporting Anaconda.org CDN Issue
 labels:
   - type::hosting
 body:
