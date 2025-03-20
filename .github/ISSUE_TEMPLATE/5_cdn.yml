@@ -40,12 +40,3 @@ body:
     attributes:
       label: Output of `curl -sSLI EXAMPLE_URL`
       description: Please provide the output of the `curl` command for the impacted packages.
-  - type: dropdown
-    id: urgency
-    attributes:
-      label: Urgency
-      description: Select the urgency level of this issue.
-      options:
-        - High (will impact many users)
-        - Medium (will impact some users)
-        - Low (will impact few users)
