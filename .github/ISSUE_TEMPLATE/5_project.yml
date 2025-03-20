@@ -1,0 +1,50 @@
+name: GitHub Project Requests
+description: Use this template to request a new project or edits to an existing project.
+labels:
+  - type::task
+  - type::github
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Basic Information
+  - type: dropdown
+    id: org
+    attributes:
+      label: Organization
+      description: Select the organization for which you are requesting a new project.
+      options:
+        - conda
+        - conda-incubator
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Project Name or URL
+      description: Provide the new project name or provide the URL to the existing project.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Roles
+        > [!WARNING]
+        > GitHub project roles are only granted on a GitHub team (e.g. [sub-teams per Conda Governance](https://github.com/conda/governance#sub-teams) or [project-teams per Conda Governance](https://github.com/conda/governance#project-teams)) basis, i.e., we will not grant roles on an individual basis.
+  - type: textarea
+    id: admin
+    attributes:
+      label: Admin Role(s)
+      description: Provide the GitHub team(s) that need admin access to the project.
+  - type: textarea
+    id: write
+    attributes:
+      label: Write Role(s)
+      description: Provide the GitHub team(s) that need write access to the project.
+  - type: textarea
+    id: read
+    attributes:
+      label: Read Role(s)
+      description: Provide the GitHub team(s) that need read access to the project.
