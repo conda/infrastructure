@@ -4,6 +4,10 @@ title: Reporting Anaconda.org CDN Issue
 labels:
   - type::hosting
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Basic Information
   - type: textarea
     id: channels
     attributes:
@@ -36,8 +40,18 @@ body:
     attributes:
       label: Packages
       description: Example packages or URLs to investigate.
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Details
   - type: textarea
     id: curl_output
     attributes:
       label: Output of `curl -sSLI EXAMPLE_URL`
       description: Please provide the output of the `curl` command for the impacted packages.
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: Any additional information that might be helpful for us to know.
