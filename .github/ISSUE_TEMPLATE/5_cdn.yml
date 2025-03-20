@@ -1,0 +1,57 @@
+name: Anaconda.org CDN Issue
+description: Use this template to report issues with the CDN.
+title: Reporting Anaconda.org CDN Issue
+labels:
+  - type::hosting
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Basic Information
+  - type: textarea
+    id: channels
+    attributes:
+      label: Channel(s)
+      description: List the affected channel(s) (e.g., conda-forge, bioconda).
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: When
+      description: Provide UTC date & time when the problem was first noticed.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Problems
+      description: Select the type of problem you are reporting.
+      multiple: true
+      options:
+        - repodata completeness
+        - package download speed
+        - channel availability / accessibility
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: packages
+    attributes:
+      label: Packages
+      description: Example packages or URLs to investigate.
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Details
+  - type: textarea
+    id: curl_output
+    attributes:
+      label: Output of `curl -sSLI EXAMPLE_URL`
+      description: Please provide the output of the `curl` command for the impacted packages.
+  - type: textarea
+    id: additional_info
+    attributes:
+      label: Additional Information
+      description: Any additional information that might be helpful for us to know.
