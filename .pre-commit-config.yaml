@@ -26,7 +26,7 @@ repos:
         require_serial: true
         args: [--sort-keys=contributors]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.6
+    rev: v0.12.5
     hooks:
       # lint & attempt to correct failures (e.g. pyupgrade)
       - id: ruff
@@ -34,7 +34,7 @@ repos:
       # compatible replacement for black
       - id: ruff-format
   - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
-    rev: v2.14.0
+    rev: v2.15.0
     hooks:
       - id: pretty-format-toml
         args: [--autofix, --trailing-commas]
@@ -50,7 +50,7 @@ repos:
             templates/issues/bug.yml
           )
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.33.0
+    rev: 0.33.2
     hooks:
       # verify github syntaxes
       - id: check-github-workflows
