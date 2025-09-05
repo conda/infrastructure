@@ -47,7 +47,7 @@ This document seeks to outline how we as a community use GitHub Issues to track 
   - [Working on Issues](#working-on-issues)
 
 > [!NOTE]
-> This document is written in the style of an FAQ. For easier navigation, use [GitHub's table of contents feature][docs-toc].
+> This document is written in the style of an FAQ. For easier navigation, use [GitHub's Markdown outline][docs-toc].
 
 ## What is "Issue Sorting"?
 
