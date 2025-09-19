@@ -39,8 +39,8 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 
   - [What is "Issue Sorting"?](#what-is-issue-sorting)
   - [Issue Sorting Procedures](#issue-sorting-procedures)
-  - [Development Processes](#)
-  - [Code Review and Merging]()
+  - [Development Processes](#development-processes)
+  - [Code Review and Merging](#code-review-and-merging)
   - [Commit Signing](#commit-signing)
   - [Types of Issues](#types-of-issues)
     - [Standard Issue](#standard-issue)
