@@ -41,23 +41,6 @@
     description: '[bot] PRs that update a dependency file'
     color: '#0366d6'
 
-# Planning
-  - name: planning::backlog
-    description: issue has been triaged but has not been earmarked for any upcoming release
-    color: '#a7f3d0'
-    aliases:
-      - 1_Backlog_Long_Term
-      - backlog
-  - name: planning::in-progress
-    description: issue is actively being worked on
-    color: '#a7f3d0'
-    aliases:
-      - sprint
-      - in-progress
-  - name: planning::refinement
-    description: issue is on the backlog but needs refinement or story points estimated
-    color: '#a7f3d0'
-
 # Sync
   - name: sync::anaconda
     description: sync internally with Anaconda, Inc. ticket tracker
