@@ -41,22 +41,6 @@
     description: '[bot] PRs that update a dependency file'
     color: '#0366d6'
 
-# Planning
-  - name: epic
-    description: a highlevel collection of smaller related issues
-    color: '#ededed'
-  - name: backlog
-    description: issue has been triaged but has not been earmarked for any upcoming release
-    color: '#ededed'
-    aliases: [1_Backlog_Long_Term]
-  - name: in-progress
-    description: issue is actively being worked on
-    color: '#ededed'
-    aliases: [sprint]
-  - name: spike
-    description: issue is for doing research work or prototyping; outcome is optional and not required
-    color: '#ededed'
-
 # Sync
   - name: sync::anaconda
     description: sync internally with Anaconda, Inc. ticket tracker
@@ -119,6 +103,11 @@
       - type-bug
       - 'Type: Bug'
       - type:bug
+  - name: type::epic
+    description: a highlevel collection of smaller related issues
+    color: '#fff2cc'
+    aliases:
+      - epic
   - name: type::feature
     description: request for a new feature or capability
     color: '#fff2cc'
@@ -130,6 +119,11 @@
       - type-feature
       - 'Type: Feature'
       - type:enhancement
+  - name: type::spike
+    description: issue is for doing research work or prototyping; outcome is optional and not required
+    color: '#fff2cc'
+    aliases:
+      - spike
   - name: type::documentation
     description: request for improved documentation
     color: '#fff2cc'
