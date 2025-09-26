@@ -298,10 +298,11 @@ improving readability, or fixing minor bugs.
 
 #### Standard Review
 
-Most code changes require one reviewer from the conda-maintainers team.
-Directly request a review from the person you previously identified. If you
-paired with them during development, continuous review counts as this
-requirement.
+Most code changes require one reviewer from someone on the maintainer team for
+the repository. Instead of waiting for someone on the team to review it,
+directly requesting a review from the person you previously identified to work
+with is preferred to optimize teamwork. If you paired with them during
+development, continuous review counts as this requirement.
 
 #### Second Review
 
