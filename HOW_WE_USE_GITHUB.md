@@ -269,13 +269,18 @@ In order to not have to manually type or copy/paste the above repeatedly, note t
 
 ## Development Processes
 
+The following are best practices the conda organization encourages for feature
+development. While we recommend projects under the conda organization adopt
+these practices, they are not strictly required.
+
 ### How should we approach feature development?
 
-For new features, begin by creating documentation for the new feature within
-the project so that you can get early input on the design. Documentation
-includes design mockups, API reference docs, recording the planned approach
-in the feature issue, and creating CLI argument demos without the
-functionality of the feature.
+For new features, begin by creating an issue for the feature if one doesn't
+already exist. Once a new feature has been added to the backlog, next create a
+specification for the new feature within the project so that you can get early
+input on the design. Specification includes design mockups, API or command
+reference docs, recording the planned approach in the feature issue, and
+creating CLI argument demos without the functionality of the feature.
 
 ### What is our change process?
 
@@ -316,6 +321,8 @@ what they want the person to look for.
 If you are conducting a review, adhere to these best practices:
 
 - Provide comprehensive feedback in the first review to minimize review rounds
+- Reserve Request Changes for blocking issues (bugs or other major problems) —
+  Select Comment for suggestions and improvements
 - Follow-up reviews should focus on whether requested changes resolve original
   comments
 - Code should be production-ready and maintainable when merged, but doesn't
@@ -332,7 +339,7 @@ changes, you should merge the code immediately to maintain development
 velocity.
 
 Normally, we use squash and merge to keep a clean git history. If you are
-merging a Pull Request, help ensure that the Pull Request title is updated.
+merging a pull request, help ensure that the pull request title is updated.
 Also you should update the description to remove the list of commit messages
 and instead add a detailed explanation of the "what" and "why" of changes.
 
