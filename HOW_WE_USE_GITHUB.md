@@ -323,6 +323,8 @@ If you are conducting a review, adhere to these best practices:
 - Provide comprehensive feedback in the first review to minimize review rounds
 - Reserve Request Changes for blocking issues (bugs or other major problems) —
   Select Comment for suggestions and improvements
+- Reserve Request Changes for blocking issues (bugs or other major problems) —
+  Select Comment for suggestions and improvements
 - Follow-up reviews should focus on whether requested changes resolve original
   comments
 - Code should be production-ready and maintainable when merged, but doesn't
