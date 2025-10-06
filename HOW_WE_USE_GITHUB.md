@@ -98,7 +98,10 @@ At the most basic "bird's eye view" level, sorted issues will fall into the cate
 
 At its core, sorting enables new issues to be placed into these four categories, which helps to ensure that they will be processed at a velocity similar to or exceeding the rate at which new issues are coming in. One of the benefits of actively sorting issues is to avoid engineer burnout and to make necessary work sustainable; this is done by eliminating a never-ending backlog that has not been reviewed by any maintainers.
 
-There will always be broad-scope design and architecture implementations that the maintainers will be interested in pursuing; by actively organizing issues, the sorting engineers will be able to more easily track and tackle both specific and big-picture goals.
+There will always be broad-scope design and architecture implementations that
+the maintainers will be interested in pursuing; by actively organizing issues,
+they will be able to more easily track and tackle both specific and big-picture
+goals.
 
 ### Who does the sorting?
 
@@ -120,7 +123,11 @@ Issues in the ["Sorting" tab of the project board][project-sorting] are consider
 - Determining if support can be provided for errors and questions
 - Closing out of any duplicate/off-topic issues
 
-The sorting engineers on rotation are not seeking to _resolve_ issues that arise. Instead, the goal is to understand the issue and to determine whether it is legitimate, and then to collect as much relevant information as possible so that the maintainers can make an informed decision about the appropriate resolution schedule.
+The core maintainers are not seeking to _resolve_ issues that arise. Instead,
+the goal is to understand the issue and to determine whether it is legitimate,
+and then to collect as much relevant information as possible so that the
+maintainers can make an informed decision about the appropriate resolution
+schedule.
 
 Issues will remain in the ["Sorting" tab][project-sorting] as long as the issue is in an investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest, but should still be progressing over the course of 1-2 weeks.
 
@@ -167,7 +174,7 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
   - all inactive pull requests being labeled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
 - [Locking of closed issues and pull requests with no further activity][workflow-lock] after 365 days
 - [Adding new issues and pull requests to the respective project boards][workflow-project]
-- [Indicating an issue is ready for the sorting engineer's attention][workflow-issues] by toggling https://github.com/conda/infrastructure/labels/pending%3A%3Afeedback with https://github.com/conda/infrastructure/labels/pending%3A%3Asupport after a contributor leaves a comment
+- [Indicating an issue is ready for a maintainer's attention][workflow-issues] by toggling https://github.com/conda/infrastructure/labels/pending%3A%3Afeedback with https://github.com/conda/infrastructure/labels/pending%3A%3Asupport after a contributor leaves a comment
 - [Verifying that contributors have signed the CLA][workflow-cla] before allowing pull requests to be merged; if the contributor hasn't signed the CLA previously, merging is be blocked until a manual review can be done
 - [Syncing out templates, labels, workflows, and documentation][workflow-sync] from [`conda/infrastructure`][infrastructure] to the other repositories
 
@@ -176,13 +183,17 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
 ### How are issues sorted?
 
 Issues in the ["Sorting" tab of the Planning board][project-sorting] are
-reviewed by core maintainers. In the process of sorting issues, engineers label
+reviewed by core maintainers. In the process of sorting issues, they label
 the issues and move them to the other tabs of the project board for further
 action.
 
 ### How does labeling work?
 
-Labeling is a very important means for sorting engineers to keep track of the current state of an issue with regards to the asynchronous nature of communicating with users. Utilizing the proper labels helps to identify the severity of the issue as well as to quickly understand the current state of a discussion.
+Labeling is a very important means for core maintainers to keep track of the
+current state of an issue with regards to the asynchronous nature of
+communicating with users. Utilizing the proper labels helps to identify the
+severity of the issue as well as to quickly understand the current state of a
+discussion.
 
 Each label has an associated description that clarifies how the label should be used. Hover on the label to see its description. Label colors are used to distinguish labels by category.
 
