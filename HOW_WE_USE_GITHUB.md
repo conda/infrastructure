@@ -269,7 +269,7 @@ In order to not have to manually type or copy/paste the above repeatedly, note t
 
 ## Development Processes
 
-The following are best practices the conda organization encourages for feature
+The following are practices the conda organization encourages for feature
 development. While we recommend projects under the conda organization adopt
 these practices, they are not strictly required.
 
