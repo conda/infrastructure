@@ -5,10 +5,10 @@
 [sub-team]: https://github.com/conda-incubator/governance#sub-teams
 
 [project-planning]: https://github.com/orgs/conda/projects/2/views/11
-[project-sorting]: https://github.com/orgs/conda/projects/2/views/11
-[project-support]: https://github.com/orgs/conda/projects/2/views/12
-[project-backlog]: https://github.com/orgs/conda/projects/2/views/13
-[project-in-progress]: https://github.com/orgs/conda/projects/2/views/14
+[project-sorting]: https://github.com/orgs/conda/projects/22/views/16
+[project-support]: https://github.com/orgs/conda/projects/22/views/12
+[project-refinement]: https://github.com/orgs/conda/projects/22/views/14
+[project-current-sprint]: https://github.com/orgs/conda/projects/22/views/10
 
 [docs-toc]: https://github.blog/changelog/2021-04-13-table-of-contents-support-in-markdown-files/
 [docs-actions]: https://docs.github.com/en/actions
@@ -102,7 +102,8 @@ There will always be broad-scope design and architecture implementations that th
 
 ### Who does the sorting?
 
-Sorting engineers are a conda governance [sub-team][sub-team]; they are a group of community members who are responsible for making decisions regarding closing issues and setting feature work priorities, among other sorting-related tasks.
+Core maintainers help with sorting issues, making decisions regarding closing
+issues and setting feature work priorities, among other sorting-related tasks.
 
 ### How do items show up for sorting?
 
@@ -127,19 +128,34 @@ For more information on the sorting process, see [Issue Sorting Procedures](#iss
 
 ### When do items move out of the "Sorting" tab?
 
-Items move out of the ["Sorting" tab][project-sorting] once the investigatory phase described in [What is done about the issues in the "Sorting" tab?](#what-is-done-about-the-issues-in-the-sorting-tab) has concluded and the sorting engineer has enough information to make a decision about the appropriate resolution schedule for the issue. The additional tabs in the project board that the issues can be moved to include the following:
+Items move out of the ["Sorting" tab][project-sorting] once the investigatory
+phase described in [What is done about the issues in the "Sorting"
+tab?](#what-is-done-about-the-issues-in-the-sorting-tab) has concluded and the
+core maintainer has enough information to make a decision about the
+appropriate resolution schedule for the issue. The additional tabs in the
+project board that the issues can be moved to include the following:
 
 - **"Support"** - Any issue in the ["Support" tab of the Planning board][project-support] is a request for support and is not a feature request or a bug report. Add the https://github.com/conda/infrastructure/labels/type%3A%3Asupport label to move an issue to this tab.
-- **"Backlog"** - The issue has revealed a bug or feature request. We have collected enough details to understand the problem/request and to reproduce it on our own. These issues have been moved into the [Backlog tab of the Planning board][project-backlog] at the end of the sorting rotation during Refinement. Add the https://github.com/conda/infrastructure/labels/backlog label to move an issue to this tab.
+- **"Refinement"** - The issue has revealed a bug or feature request. We have
+  collected enough details to understand the problem/request and to reproduce
+  it on our own. These issues have been moved into the [Refinement tab of the
+  Planning board][project-refinement] for clarifying what technical work needs
+  to be performed and for estimating effort using story pointing. Change the
+  status to Refinement🃏.
 - **"Closed"** - The issue was closed due to being a duplicate, being redirected to a different project, was a user error, a question that has been resolved, etc.
 
 ### Where do work issues go after being sorted?
 
-Once issues are deemed ready to be worked on, they will be moved to the ["Backlog" tab of the Planning board][project-backlog]. Once actively in progress, the issues will be moved to the ["In Progress" tab of the Planning board][project-in-progress] and then closed out once the work is complete.
+Once issues are accepted to be worked on, they will be moved to the
+["Refinement" tab of the Planning board][project-refinement]. Once an issue has
+been prioritized for a sprint, the issues will be moved to the ["Current
+Sprint" tab of the Planning board][project-current-sprint] and then closed once
+the work is complete.
 
 ### What is the purpose of having a "Backlog"?
 
-Issues are "backlogged" when they have been sorted but not yet earmarked for an upcoming release.
+Issues are "backlogged" when they have been sorted but have not yet planned to
+be completed in a sprint through assigning an iteration.
 
 ### What automation procedures are currently in place?
 
@@ -159,9 +175,10 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
 
 ### How are issues sorted?
 
-Issues in the ["Sorting" tab of the Planning board][project-sorting] are reviewed by issue sorting engineers, who take rotational sorting shifts. In the process of sorting issues, engineers label the issues and move them to the other tabs of the project board for further action.
-
-Issues that require input from multiple members of the sorting team will be brought up during refinement meetings in order to understand how those particular issues fit into the short- and long-term roadmap. These meetings enable the sorting engineers to get together to collectively prioritize issues, earmark feature requests for specific future releases (versus a more open-ended backlog), tag issues as ideal for first-time contributors, as well as whether or not to close/reject specific feature requests.
+Issues in the ["Sorting" tab of the Planning board][project-sorting] are
+reviewed by core maintainers. In the process of sorting issues, engineers label
+the issues and move them to the other tabs of the project board for further
+action.
 
 ### How does labeling work?
 
@@ -175,7 +192,9 @@ Please note that there are also automation policies in place that are affected b
 
 ### What labels are required for each issue?
 
-At minimum, both `type` and `source` labels should be specified on each issue before moving it from the "Sorting" tab to the "Backlog" tab. All issues that are bugs should also be tagged with a `severity` label.
+At minimum, both `type` and `source` labels should be specified on each issue
+before moving it from the "Sorting" tab to the "Refinement" tab. All issues
+that are bugs should also be tagged with a `severity` label.
 
 The `type` labels are exclusive of each other: each sorted issue should have exactly one `type` label. These labels give high-level information on the issue's classification (_e.g._, bug, feature, tech debt, etc.)
 
