@@ -275,12 +275,11 @@ these practices, they are not strictly required.
 
 ### How should we approach feature development?
 
-For new features, begin by creating an issue for the feature if one doesn't
-already exist. Once a new feature has been added to the backlog, next create a
-specification for the new feature within the project so that you can get early
-input on the design. Specification includes design mockups, API or command
-reference docs, recording the planned approach in the feature issue, and
-creating CLI argument demos without the functionality of the feature.
+For new features, first open an issue if one doesn’t exist. Once the feature
+has been accepted by the issue's status transitioning from the Sorting state to
+Refinement, create a specification to gather early feedback. This can include
+mockups, API/command references, a written plan in the issue, and sample CLI
+arguments (without functionality).
 
 ### What is our change process?
 
