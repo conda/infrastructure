@@ -275,9 +275,9 @@ these practices, they are not strictly required.
 
 ### How should we approach feature development?
 
-For new features, first open an issue if one doesn’t exist. Once the feature
-has been accepted by the issue's status transitioning from the Sorting state to
-Refinement, create a specification to gather early feedback. This can include
+For new features, first open an issue if one doesn’t exist. Once the feature request
+has been accepted (indicated by the issue's status transitioning from "Sorting" to
+"Refinement"), create a specification to gather early feedback. This can include
 mockups, API/command references, a written plan in the issue, and sample CLI
 arguments (without functionality).
 
