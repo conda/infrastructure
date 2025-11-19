@@ -264,12 +264,6 @@ Community support can be found elsewhere, though, and we encourage you to explor
 
 In order to not have to manually type or copy/paste the above repeatedly, note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply].
 
-## Commit Signing
-
-For all maintainers, we require commit signing and strongly recommend it for all others wishing to contribute. More information about how to set this up within GitHub can be found here:
-
-- [GitHub's signing commits docs][docs-commit-signing]
-
 ## Types of Issues
 
 ### Standard Issue
