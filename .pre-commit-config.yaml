@@ -26,7 +26,7 @@ repos:
         require_serial: true
         args: [--sort-keys=contributors]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.13
+    rev: v0.14.14
     hooks:
       # lint & attempt to correct failures (e.g. pyupgrade)
       - id: ruff-check
@@ -50,7 +50,7 @@ repos:
             templates/issues/bug.yml
           )
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.36.0
+    rev: 0.36.1
     hooks:
       # verify github syntaxes
       - id: check-github-workflows
