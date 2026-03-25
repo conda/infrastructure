@@ -103,8 +103,6 @@ issues and setting feature work priorities, among other sorting-related tasks.
 
 New issues that are opened in any of the repositories in the [conda GitHub organization][conda-org] are reviewed in the repository issue tracker first. Core maintainers manually add issues to the [Refinement tab of the Roadmap Board][project-refinement] once they are sorted and accepted for planned work. Newly opened pull requests are automatically added to the [Review board][project-review] by [`.github/workflows/project.yml`][workflow-project].
 
-The GitHub workflows in the [`conda/infrastructure`][infrastructure] repository are viewed as canonical; the [`.github/workflows/sync.yml` workflow][workflow-sync] pushes any modifications to other repositories from there and individual repositories can pull additional files using the [`.github/workflows/update.yml`][workflow-update] workflow.
-
 ### What is done during issue sorting?
 
 During sorting in the issue tracker, issues are reviewed for the following outcomes:
