@@ -36,7 +36,6 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 - [Labeling](#labeling)
 - [Commit Signing](#commit-signing)
 - [Types of Issues](#types-of-issues)
-  - [Standard Issue](#standard-issue)
   - [Epics](#epics)
   - [Spikes](#spikes)
 - [Working on Issues](#working-on-issues)
@@ -247,13 +246,9 @@ For all maintainers, we require commit signing and strongly recommend it for all
 
 ## Types of Issues
 
-### Standard Issue
-
-TODO
-
 ### Epics
 
-TODO
+An epic is a parent issue used to group related tickets so we can track scope, outcomes, and dependencies for a larger body of work. In practice, an epic should clearly describe the problem/feature (`What`), rationale (`Why`), expected user impact, goals, and linked tasks/dependencies (`blocked by` / `blocks`) so maintainers can plan and sequence implementation.
 
 ### Spikes
 
