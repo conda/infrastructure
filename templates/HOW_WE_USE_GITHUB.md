@@ -11,7 +11,6 @@
 
 [docs-toc]: https://github.blog/changelog/2021-04-13-table-of-contents-support-in-markdown-files/
 [docs-saved-reply]: https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply
-[docs-commit-signing]: https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits
 
 [infrastructure]: https://github.com/conda/infrastructure
 [workflow-sync]: https://github.com/conda/infrastructure/blob/main/.github/workflows/sync.yml
@@ -36,8 +35,8 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 - [Development Processes](#development-processes)
 - [Code Review and Merging](#code-review-and-merging)
 - [Labeling](#labeling)
-- [Commit Signing](#commit-signing)
 - [Types of Issues](#types-of-issues)
+  - [Standard Issue](#standard-issue)
   - [Epics](#epics)
   - [Spikes](#spikes)
 - [Working on Issues](#working-on-issues)
@@ -240,12 +239,6 @@ There are a number of labels that have been defined for the different repositori
 
 New **global** labels (_i.e._, labels that apply equally to all repositories within the conda GitHub organization) are added to [`conda/infrastructure`][infrastructure]'s [`.github/global.yml` file][labels-global]; new **local** labels (_i.e._, labels specific to particular repositories) are added to each repository's [`.github/labels.yml` file][labels-local]. All new labels should follow the labeling syntax described in ["How are new labels defined?"](#how-are-new-labels-defined). Global labels are combined with any local labels and these aggregated labels are used by the [`.github/workflows/labels.yml` workflow][workflow-labels] to synchronize the labels available for the repository.
 
-## Commit Signing
-
-For all maintainers, we require commit signing and strongly recommend it for all others wishing to contribute. More information about how to set this up within GitHub can be found here:
-
-- [GitHub's signing commits docs][docs-commit-signing]
-
 ## Development Processes
 
 The following are practices the conda organization encourages for feature
@@ -321,9 +314,13 @@ merging a pull request, help ensure that the pull request title is updated.
 
 ## Types of Issues
 
+### Standard Issue
+
+Standard issues represent typical bug reports, feature requests, or other work items that have a clear definition and expected outcome.
+
 ### Epics
 
-An epic is a parent issue used to group related tickets so we can track scope, outcomes, and dependencies for a larger body of work. In practice, an epic should clearly describe the problem/feature (`What`), rationale (`Why`), expected user impact, goals, and linked tasks/dependencies (`blocked by` / `blocks`) so maintainers can plan and sequence implementation.
+Epics are large work items that can be broken down into smaller, more manageable issues. They typically represent major features or significant changes that span multiple iterations or releases. Relate the smaller issues to the epic using the sub-issues feature in GitHub.
 
 ### Spikes
 
