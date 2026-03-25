@@ -5,6 +5,7 @@
 [conda-org]: https://github.com/conda
 
 [project-refinement]: https://github.com/orgs/conda/projects/22/views/14
+[project-backlog]: https://github.com/orgs/conda/projects/22/views/2
 [project-current-sprint]: https://github.com/orgs/conda/projects/22/views/10
 [project-review]: https://github.com/orgs/conda/projects/16
 
@@ -121,7 +122,7 @@ Issues that are not accepted for planned work are closed instead (_e.g._ duplica
 
 ### Where do work issues go after being sorted?
 
-Once issues are accepted for work, they are added to the ["Refinement" tab of the Roadmap Board][project-refinement]. After refinement and prioritization, issues move to the Backlog view and then to ["Current Sprint"][project-current-sprint] when actively being worked. Issues are closed once the work is complete.
+Once issues are accepted for work, they are added to the ["Refinement" tab of the Roadmap Board][project-refinement]. After refinement and prioritization, issues move to ["Backlog"][project-backlog] and then to ["Current Sprint"][project-current-sprint] when actively being worked. Issues are closed once the work is complete.
 
 ### What is the purpose of having a "Backlog"?
 
