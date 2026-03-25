@@ -36,8 +36,6 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 - [Labeling](#labeling)
 - [Commit Signing](#commit-signing)
 - [Types of Issues](#types-of-issues)
-  - [Epics](#epics)
-  - [Spikes](#spikes)
 - [Working on Issues](#working-on-issues)
 
 > [!NOTE]
