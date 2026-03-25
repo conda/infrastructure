@@ -157,8 +157,6 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
 
 ## Issue Sorting Procedures
 
-### How are issues sorted?
-
 Issues are sorted by core maintainers in the repository issue tracker. In that
 process, maintainers label issues, request additional information when needed,
 and decide whether to close the issue or add it to the
