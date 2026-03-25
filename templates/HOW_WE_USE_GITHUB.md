@@ -4,15 +4,13 @@
 [conda-org]: https://github.com/conda
 [sub-team]: https://github.com/conda/governance#sub-teams
 
-<!-- TODO: remove project-planning since it has been closed/archived -->
-[project-planning]: <https://github.com/orgs/conda/projects/2/views/11>
 [project-sorting]: https://github.com/orgs/conda/projects/22/views/16
 [project-support]: https://github.com/orgs/conda/projects/22/views/17
 [project-refinement]: https://github.com/orgs/conda/projects/22/views/14
 [project-current-sprint]: https://github.com/orgs/conda/projects/22/views/10
+[project-review]: https://github.com/orgs/conda/projects/16
 
 [docs-toc]: https://github.blog/changelog/2021-04-13-table-of-contents-support-in-markdown-files/
-[docs-actions]: https://docs.github.com/en/actions
 [docs-saved-reply]: https://docs.github.com/en/get-started/writing-on-github/working-with-saved-replies/creating-a-saved-reply
 [docs-commit-signing]: https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits
 
@@ -111,7 +109,7 @@ issues and setting feature work priorities, among other sorting-related tasks.
 
 ### How do items show up for sorting?
 
-New issues that are opened in any of the repositories in the [conda GitHub organization][conda-org] will show up in the "Sorting" tab of the [Planning project][project-planning]. There are two [GitHub Actions][docs-actions] workflows utilized for this purpose; [`.github/workflows/issues.yml`][workflow-issues] and [`.github/workflows/project.yml`][workflow-project].
+New issues that are opened in any of the repositories in the [conda GitHub organization][conda-org] are reviewed in the repository issue tracker first, and core maintainers manually add issues to the ["Sorting" tab of the project board][project-sorting] once they are ready to start planning or work. Newly opened pull requests are automatically added to the [Review board][project-review] by [`.github/workflows/project.yml`][workflow-project].
 
 The GitHub workflows in the [`conda/infrastructure`][infrastructure] repository are viewed as canonical; the [`.github/workflows/sync.yml` workflow][workflow-sync] pushes any modifications to other repositories from there and individual repositories can pull additional files using the [`.github/workflows/update.yml`][workflow-update] workflow.
 
@@ -174,7 +172,7 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
   - all other inactive issues (not labeled as [[ repo.html_url ]]/labels/type%3A%3Asupport being labeled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
   - all inactive pull requests being labeled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
 - [Locking of closed issues and pull requests with no further activity][workflow-lock] after 365 days
-- [Adding new issues and pull requests to the respective project boards][workflow-project]
+- [Adding new pull requests to the Review board][workflow-project]
 - [Indicating an issue is ready for a maintainer's attention][workflow-issues] by toggling [[ repo.html_url ]]/labels/pending%3A%3Afeedback with [[ repo.html_url ]]/labels/pending%3A%3Asupport after a contributor leaves a comment
 - [Verifying that contributors have signed the CLA][workflow-cla] before allowing pull requests to be merged; if the contributor hasn't signed the CLA previously, merging is be blocked until a manual review can be done
 - [Syncing out templates, labels, workflows, and documentation][workflow-sync] from [`conda/infrastructure`][infrastructure] to the other repositories
