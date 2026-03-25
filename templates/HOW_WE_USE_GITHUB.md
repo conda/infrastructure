@@ -33,7 +33,7 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 **Topics:**
 
 - [What is "Issue Sorting"?](#what-is-issue-sorting)
-- [Issue Sorting Procedures](#issue-sorting-procedures)
+- [Labeling](#labeling)
 - [Commit Signing](#commit-signing)
 - [Types of Issues](#types-of-issues)
   - [Standard Issue](#standard-issue)
@@ -134,48 +134,6 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
 - [Verifying that contributors have signed the CLA][workflow-cla] before allowing pull requests to be merged; if the contributor hasn't signed the CLA previously, merging is blocked until a manual review can be done
 - [Syncing out templates, labels, workflows, and documentation][workflow-sync] from [`conda/infrastructure`][infrastructure] to the other repositories
 
-## Issue Sorting Procedures
-
-This section covers the labels and conventions used during issue sorting.
-
-### How does labeling work?
-
-Labeling is a very important means for core maintainers to keep track of the current state of an issue with regards to the asynchronous nature of communicating with users. Utilizing the proper labels helps to identify the severity of the issue as well as to quickly understand the current state of a discussion.
-
-Each label has an associated description that clarifies how the label should be used. Hover on the label to see its description. Label colors are used to distinguish labels by category.
-
-Generally speaking, labels with the same category are considered mutually exclusive, but in some cases labels sharing the same category can occur concurrently, as they indicate qualifiers as opposed to types. For example, we may have the following types, [[ repo.html_url ]]/labels/type%3A%3Abug, [[ repo.html_url ]]/labels/type%3A%3Afeature, and [[ repo.html_url ]]/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue should not be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, [[ repo.html_url ]]/labels/os%3A%3Alinux, [[ repo.html_url ]]/labels/os%3A%3Amacos, and [[ repo.html_url ]]/labels/os%3A%3Awindows), an issue could be labeled with one or more, depending on the system(s) the issue occurs on.
-
-Please note that there are also automation policies in place that are affected by labeling. For example, if an issue is labeled as [[ repo.html_url ]]/labels/type%3A%3Asupport, that issue will be marked [[ repo.html_url ]]/labels/stale after 21 days of inactivity and auto-closed after seven more days without activity (30 inactive days total), which is earlier than issues without this label. See [What automation procedures are currently in place?](#what-automation-procedures-are-currently-in-place) for more details.
-
-### What labels are required for each issue?
-
-At minimum, both `type` and `source` labels should be specified on each issue before adding it to the "Refinement" tab of the Roadmap Board. All issues that are bugs should also be tagged with a `severity` label.
-
-The `type` labels are exclusive of each other: each sorted issue should have exactly one `type` label. These labels give high-level information on the issue's classification (_e.g._, bug, feature, tech debt, etc.)
-
-The `source` labels are exclusive of each other: each sorted issue should have exactly one `source` label. These labels give information on the sub-group to which the issue's author belongs (_e.g._, a partner, a frequent contributor, the wider community, etc.). Through these labels, maintainers gain insight into how well we're meeting the needs of various groups.
-
-The `severity` labels are exclusive of each other and, while required for the [[ repo.html_url ]]/labels/type%3A%3Abug label, they can also be applied to other types to indicate demand or need. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
-
-Please review the descriptions of the `type`, `source`, and `severity` labels on the [labels page][labels-page] prior to use.
-
-### How are new labels defined?
-
-Labels are defined using a scoped syntax with an optional high-level category (_e.g._, `source`, `tag`, `type`, etc.) and a specific topic, much like the following:
-
-- `[topic]`
-- `[category::topic]`
-- `[category::topic-phrase]`
-
-This syntax helps with issue sorting enforcement, as it helps to ensure that sorted issues are, at minimum, categorized by type and source.
-
-There are a number of labels that have been defined for the different repositories. In order to create a streamlined sorting process, label terminologies are standardized using similar (if not the same) labels.
-
-### How are new labels added?
-
-New **global** labels (_i.e._, labels that apply equally to all repositories within the conda GitHub organization) are added to [`conda/infrastructure`][infrastructure]'s [`.github/global.yml` file][labels-global]; new **local** labels (_i.e._, labels specific to particular repositories) are added to each repository's [`.github/labels.yml` file][labels-local]. All new labels should follow the labeling syntax described in ["How are new labels defined?"](#how-are-new-labels-defined). Global labels are combined with any local labels and these aggregated labels are used by the [`.github/workflows/labels.yml` workflow][workflow-labels] to synchronize the labels available for the repository.
-
 ### Are there any templates to use as responses for commonly-seen issues?
 
 Some of the same types of issues appear regularly (_e.g._, issues that are duplicates of others, issues that should be filed in the Anaconda issue tracker, errors that are due to a user's specific setup/environment, etc.).
@@ -238,6 +196,48 @@ Community support can be found elsewhere, though, and we encourage you to explor
 </details>
 
 In order to not have to manually type or copy/paste the above repeatedly, note that it's possible to add text for the most commonly-used responses via [GitHub's "Add Saved Reply" option][docs-saved-reply].
+
+## Labeling
+
+This section covers the labels and conventions used during issue sorting.
+
+### How does labeling work?
+
+Labeling is a very important means for core maintainers to keep track of the current state of an issue with regards to the asynchronous nature of communicating with users. Utilizing the proper labels helps to identify the severity of the issue as well as to quickly understand the current state of a discussion.
+
+Each label has an associated description that clarifies how the label should be used. Hover on the label to see its description. Label colors are used to distinguish labels by category.
+
+Generally speaking, labels with the same category are considered mutually exclusive, but in some cases labels sharing the same category can occur concurrently, as they indicate qualifiers as opposed to types. For example, we may have the following types, [[ repo.html_url ]]/labels/type%3A%3Abug, [[ repo.html_url ]]/labels/type%3A%3Afeature, and [[ repo.html_url ]]/labels/type%3A%3Adocumentation, where for any one issue there would be _at most_ **one** of these to be defined (_i.e._ an issue should not be a bug _and_ a feature request at the same time). Alternatively, with issues involving specific operating systems (_i.e._, [[ repo.html_url ]]/labels/os%3A%3Alinux, [[ repo.html_url ]]/labels/os%3A%3Amacos, and [[ repo.html_url ]]/labels/os%3A%3Awindows), an issue could be labeled with one or more, depending on the system(s) the issue occurs on.
+
+Please note that there are also automation policies in place that are affected by labeling. For example, if an issue is labeled as [[ repo.html_url ]]/labels/type%3A%3Asupport, that issue will be marked [[ repo.html_url ]]/labels/stale after 21 days of inactivity and auto-closed after seven more days without activity (30 inactive days total), which is earlier than issues without this label. See [What automation procedures are currently in place?](#what-automation-procedures-are-currently-in-place) for more details.
+
+### What labels are required for each issue?
+
+At minimum, both `type` and `source` labels should be specified on each issue before adding it to the "Refinement" tab of the Roadmap Board. All issues that are bugs should also be tagged with a `severity` label.
+
+The `type` labels are exclusive of each other: each sorted issue should have exactly one `type` label. These labels give high-level information on the issue's classification (_e.g._, bug, feature, tech debt, etc.)
+
+The `source` labels are exclusive of each other: each sorted issue should have exactly one `source` label. These labels give information on the sub-group to which the issue's author belongs (_e.g._, a partner, a frequent contributor, the wider community, etc.). Through these labels, maintainers gain insight into how well we're meeting the needs of various groups.
+
+The `severity` labels are exclusive of each other and, while required for the [[ repo.html_url ]]/labels/type%3A%3Abug label, they can also be applied to other types to indicate demand or need. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
+
+Please review the descriptions of the `type`, `source`, and `severity` labels on the [labels page][labels-page] prior to use.
+
+### How are new labels defined?
+
+Labels are defined using a scoped syntax with an optional high-level category (_e.g._, `source`, `tag`, `type`, etc.) and a specific topic, much like the following:
+
+- `[topic]`
+- `[category::topic]`
+- `[category::topic-phrase]`
+
+This syntax helps with issue sorting enforcement, as it helps to ensure that sorted issues are, at minimum, categorized by type and source.
+
+There are a number of labels that have been defined for the different repositories. In order to create a streamlined sorting process, label terminologies are standardized using similar (if not the same) labels.
+
+### How are new labels added?
+
+New **global** labels (_i.e._, labels that apply equally to all repositories within the conda GitHub organization) are added to [`conda/infrastructure`][infrastructure]'s [`.github/global.yml` file][labels-global]; new **local** labels (_i.e._, labels specific to particular repositories) are added to each repository's [`.github/labels.yml` file][labels-local]. All new labels should follow the labeling syntax described in ["How are new labels defined?"](#how-are-new-labels-defined). Global labels are combined with any local labels and these aggregated labels are used by the [`.github/workflows/labels.yml` workflow][workflow-labels] to synchronize the labels available for the repository.
 
 ## Commit Signing
 
