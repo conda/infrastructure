@@ -4,6 +4,7 @@ ignore-words-list = "rever,"
 skip = '.git'
 
 [tool.ruff]
+show-fixes = true
 target-version = "py38"
 
 [tool.ruff.lint]
