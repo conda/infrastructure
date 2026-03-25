@@ -1,8 +1,8 @@
 <!-- edit this in [[ source.html_url ]] -->
+# How We Use GitHub
 
 <!-- absolute URLs -->
 [conda-org]: https://github.com/conda
-[sub-team]: https://github.com/conda/governance#sub-teams
 
 [project-sorting]: https://github.com/orgs/conda/projects/22/views/16
 [project-support]: https://github.com/orgs/conda/projects/22/views/17
@@ -29,21 +29,19 @@
 [labels-local]: [[ repo.html_url ]]/blob/main/.github/labels.yml
 [labels-page]: [[ repo.html_url ]]/labels
 
-# How We Use GitHub
-
 This document seeks to outline how we as a community use GitHub Issues to track bugs and feature requests while still catering to development practices & project management (_e.g._, release cycles, feature planning, priority sorting, etc.).
 
 <!-- only include high-level topics or particularly noteworthy sections here -->
 **Topics:**
 
-  - [What is "Issue Sorting"?](#what-is-issue-sorting)
-  - [Issue Sorting Procedures](#issue-sorting-procedures)
-  - [Commit Signing](#commit-signing)
-  - [Types of Issues](#types-of-issues)
-    - [Standard Issue](#standard-issue)
-    - [Epics](#epics)
-    - [Spikes](#spikes)
-  - [Working on Issues](#working-on-issues)
+- [What is "Issue Sorting"?](#what-is-issue-sorting)
+- [Issue Sorting Procedures](#issue-sorting-procedures)
+- [Commit Signing](#commit-signing)
+- [Types of Issues](#types-of-issues)
+  - [Standard Issue](#standard-issue)
+  - [Epics](#epics)
+  - [Spikes](#spikes)
+- [Working on Issues](#working-on-issues)
 
 > [!NOTE]
 > This document is written in the style of an FAQ. For easier navigation, use [GitHub's table of contents feature][docs-toc].
