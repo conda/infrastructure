@@ -63,7 +63,7 @@ flowchart LR
 
         board_refinement-->board_backlog
         board_backlog-- reprioritize -->board_backlog
-        board_progress{{Current Sprint (In Progress)}}
+        board_progress{{Current Sprint - In Progress}}
     end
 
     state_new(New Issues)
