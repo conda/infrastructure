@@ -95,13 +95,9 @@ There will always be broad-scope design and architecture implementations that th
 
 Core maintainers help with sorting issues, making decisions regarding closing issues and setting feature work priorities, among other sorting-related tasks.
 
-### How do items show up on the Roadmap Board?
+### How does issue sorting and board intake work?
 
-New issues that are opened in any of the repositories in the [conda GitHub organization][conda-org] are reviewed in the repository issue tracker first. Core maintainers manually add issues to the [Refinement tab of the Roadmap Board][project-refinement] once they are sorted and accepted for planned work. Newly opened pull requests are automatically added to the [Review board][project-review] by [`.github/workflows/project.yml`][workflow-project].
-
-### What is done during issue sorting?
-
-During sorting in the issue tracker, issues are reviewed for the following outcomes:
+New issues that are opened in any of the repositories in the [conda GitHub organization][conda-org] are reviewed in the repository issue tracker first. During sorting in the issue tracker, issues are reviewed for the following outcomes:
 
 - Mitigation via short-term workarounds and fixes
 - Redirection to the correct project
@@ -112,11 +108,7 @@ The core maintainers are not seeking to _resolve_ issues that arise. Instead, th
 
 Issues can remain in this investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest, but should still be progressing over the course of 1-2 weeks.
 
-For more information on the sorting process, see [Issue Sorting Procedures](#issue-sorting-procedures).
-
-### When are items added to the Roadmap Board?
-
-Items are added to the [Refinement tab of the Roadmap Board][project-refinement] once sorting has concluded and the core maintainer has enough information to make a decision about the appropriate resolution schedule for the issue.
+Items are added to the [Refinement tab of the Roadmap Board][project-refinement] once sorting has concluded and the core maintainer has enough information to make a decision about the appropriate resolution schedule for the issue. Newly opened pull requests are automatically added to the [Review board][project-review] by [`.github/workflows/project.yml`][workflow-project].
 
 Issues that are not accepted for planned work are closed instead (_e.g._ duplicates, redirects, user errors, resolved support questions, etc.).
 
@@ -144,7 +136,7 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
 
 ## Issue Sorting Procedures
 
-Issues are sorted by core maintainers in the repository issue tracker. In that process, maintainers label issues, request additional information when needed, and decide whether to close the issue or add it to the ["Refinement" tab of the Roadmap Board][project-refinement] for planned work.
+This section covers the labels and conventions used during issue sorting.
 
 ### How does labeling work?
 
