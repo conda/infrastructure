@@ -32,14 +32,14 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 **Topics:**
 
 - [What is "Issue Sorting"?](#what-is-issue-sorting)
-- [Development Processes](#development-processes)
-- [Code Review and Merging](#code-review-and-merging)
 - [Labeling](#labeling)
 - [Types of Issues](#types-of-issues)
   - [Standard Issue](#standard-issue)
   - [Epics](#epics)
   - [Spikes](#spikes)
 - [Working on Issues](#working-on-issues)
+- [Development Processes](#development-processes)
+- [Code Review and Merging](#code-review-and-merging)
 
 > [!NOTE]
 > This document is written in the style of an FAQ. For easier navigation, use [GitHub's table of contents feature][docs-toc].
@@ -239,6 +239,50 @@ There are a number of labels that have been defined for the different repositori
 
 New **global** labels (_i.e._, labels that apply equally to all repositories within the conda GitHub organization) are added to [`conda/infrastructure`][infrastructure]'s [`.github/global.yml` file][labels-global]; new **local** labels (_i.e._, labels specific to particular repositories) are added to each repository's [`.github/labels.yml` file][labels-local]. All new labels should follow the labeling syntax described in ["How are new labels defined?"](#how-are-new-labels-defined). Global labels are combined with any local labels and these aggregated labels are used by the [`.github/workflows/labels.yml` workflow][workflow-labels] to synchronize the labels available for the repository.
 
+## Types of Issues
+
+### Standard Issue
+
+Standard issues represent typical bug reports, feature requests, or other work items that have a clear definition and expected outcome.
+
+### Epics
+
+Epics are large work items that can be broken down into smaller, more manageable issues. They typically represent major features or significant changes that span multiple iterations or releases. Relate the smaller issues to the epic using the sub-issues feature in GitHub.
+
+### Spikes
+
+#### What is a spike?
+
+"Spike" is a term that is borrowed from extreme programming and agile development. They are used when the **outcome of an issue is unknown or even optional**. For example, when first coming across a problem that has not been solved before, a project may choose to either research the problem or create a prototype in order to better understand it.
+
+Additionally, spikes represent work that **may or may not actually be completed or implemented**. An example of this are prototypes created to explore possible solutions. Not all prototypes are implemented and the purpose of creating a prototype is often to explore the problem space more. For research-oriented tasks, the end result of this research may be that a feature request simply is not viable at the moment and would result in putting a stop to that work.
+
+Finally, spikes are usually **timeboxed**. However, given the open source/volunteer nature of our contributions, we do not enforce this for our contributors. When a timebox is set, this means that we are limiting how long we want someone to work on said spike. We do this to prevent contributors from falling into a rabbit hole they may never return from. Instead, we set a time limit to perform work on the spike and then have the assignee report back. If the tasks defined in the spike have not yet been completed, a decision is made on whether it makes sense to perform further work on the spike.
+
+#### When do I create a spike?
+
+A spike should be created when we do not have enough information to move forward with solving a problem. That simply means that, whenever we are dealing with unknowns or processes the project team has never encountered before, it may be useful for us to create a spike.
+
+In day-to-day work, this kind of situation may appear when new bug reports or feature requests come in that deal with problems or technologies that the project team is unfamiliar with. All issues that the project team has sufficient knowledge of should instead proceed as regular issues.
+
+#### When do I not create a spike?
+
+Below are some common scenarios where creating a spike is not appropriate:
+
+- Writing a technical specification for a feature we know how to implement
+- Design work that would go into drafting how an API is going to look and function
+- Any work that must be completed or is not optional
+
+## Working on Issues
+
+### How do I assign myself to an issue I am actively reviewing?
+
+If you do **not** have permissions, please indicate that you are working on an issue by leaving a comment. Someone who has permissions will assign you to the issue. If two weeks have passed without a pull request or an additional comment requesting information, you may be removed from the issue and the issue reassigned.
+
+If you are assigned to an issue but will not be able to continue work on it, please comment to indicate that you will no longer be working on it and press `unassign me` next to your username in the `Assignees` section of the issue page (top right).
+
+If you **do** have permissions, please assign yourself to the issue by pressing `assign myself` under the `Assignees` section of the issue page (top right).
+
 ## Development Processes
 
 The following are practices the conda organization encourages for feature
@@ -311,47 +355,3 @@ velocity.
 
 Normally, we use squash and merge to keep a clean git history. If you are
 merging a pull request, help ensure that the pull request title is updated.
-
-## Types of Issues
-
-### Standard Issue
-
-Standard issues represent typical bug reports, feature requests, or other work items that have a clear definition and expected outcome.
-
-### Epics
-
-Epics are large work items that can be broken down into smaller, more manageable issues. They typically represent major features or significant changes that span multiple iterations or releases. Relate the smaller issues to the epic using the sub-issues feature in GitHub.
-
-### Spikes
-
-#### What is a spike?
-
-"Spike" is a term that is borrowed from extreme programming and agile development. They are used when the **outcome of an issue is unknown or even optional**. For example, when first coming across a problem that has not been solved before, a project may choose to either research the problem or create a prototype in order to better understand it.
-
-Additionally, spikes represent work that **may or may not actually be completed or implemented**. An example of this are prototypes created to explore possible solutions. Not all prototypes are implemented and the purpose of creating a prototype is often to explore the problem space more. For research-oriented tasks, the end result of this research may be that a feature request simply is not viable at the moment and would result in putting a stop to that work.
-
-Finally, spikes are usually **timeboxed**. However, given the open source/volunteer nature of our contributions, we do not enforce this for our contributors. When a timebox is set, this means that we are limiting how long we want someone to work on said spike. We do this to prevent contributors from falling into a rabbit hole they may never return from. Instead, we set a time limit to perform work on the spike and then have the assignee report back. If the tasks defined in the spike have not yet been completed, a decision is made on whether it makes sense to perform further work on the spike.
-
-#### When do I create a spike?
-
-A spike should be created when we do not have enough information to move forward with solving a problem. That simply means that, whenever we are dealing with unknowns or processes the project team has never encountered before, it may be useful for us to create a spike.
-
-In day-to-day work, this kind of situation may appear when new bug reports or feature requests come in that deal with problems or technologies that the project team is unfamiliar with. All issues that the project team has sufficient knowledge of should instead proceed as regular issues.
-
-#### When do I not create a spike?
-
-Below are some common scenarios where creating a spike is not appropriate:
-
-- Writing a technical specification for a feature we know how to implement
-- Design work that would go into drafting how an API is going to look and function
-- Any work that must be completed or is not optional
-
-## Working on Issues
-
-### How do I assign myself to an issue I am actively reviewing?
-
-If you do **not** have permissions, please indicate that you are working on an issue by leaving a comment. Someone who has permissions will assign you to the issue. If two weeks have passed without a pull request or an additional comment requesting information, you may be removed from the issue and the issue reassigned.
-
-If you are assigned to an issue but will not be able to continue work on it, please comment to indicate that you will no longer be working on it and press `unassign me` next to your username in the `Assignees` section of the issue page (top right).
-
-If you **do** have permissions, please assign yourself to the issue by pressing `assign myself` under the `Assignees` section of the issue page (top right).
