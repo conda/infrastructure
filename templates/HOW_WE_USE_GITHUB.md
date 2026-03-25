@@ -88,15 +88,11 @@ At the most basic "bird's eye view" level, sorted issues will fall into the cate
 
 At its core, sorting enables new issues to be placed into these four categories, which helps to ensure that they will be processed at a velocity similar to or exceeding the rate at which new issues are coming in. One of the benefits of actively sorting issues is to avoid engineer burnout and to make necessary work sustainable; this is done by eliminating a never-ending backlog that has not been reviewed by any maintainers.
 
-There will always be broad-scope design and architecture implementations that
-the maintainers will be interested in pursuing; by actively organizing issues,
-they will be able to more easily track and tackle both specific and big-picture
-goals.
+There will always be broad-scope design and architecture implementations that the maintainers will be interested in pursuing; by actively organizing issues, they will be able to more easily track and tackle both specific and big-picture goals.
 
 ### Who does the sorting?
 
-Core maintainers help with sorting issues, making decisions regarding closing
-issues and setting feature work priorities, among other sorting-related tasks.
+Core maintainers help with sorting issues, making decisions regarding closing issues and setting feature work priorities, among other sorting-related tasks.
 
 ### How do items show up on the Roadmap Board?
 
@@ -111,11 +107,7 @@ During sorting in the issue tracker, issues are reviewed for the following outco
 - Determining if support can be provided for errors and questions
 - Closing out of any duplicate/off-topic issues
 
-The core maintainers are not seeking to _resolve_ issues that arise. Instead,
-the goal is to understand the issue and to determine whether it is legitimate,
-and then to collect as much relevant information as possible so that the
-maintainers can make an informed decision about the appropriate resolution
-schedule.
+The core maintainers are not seeking to _resolve_ issues that arise. Instead, the goal is to understand the issue and to determine whether it is legitimate, and then to collect as much relevant information as possible so that the maintainers can make an informed decision about the appropriate resolution schedule.
 
 Issues can remain in this investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest, but should still be progressing over the course of 1-2 weeks.
 
@@ -129,16 +121,11 @@ Issues that are not accepted for planned work are closed instead (_e.g._ duplica
 
 ### Where do work issues go after being sorted?
 
-Once issues are accepted for work, they are added to the
-["Refinement" tab of the Roadmap Board][project-refinement]. After refinement
-and prioritization, issues move to the Backlog view and then to
-["Current Sprint"][project-current-sprint] when actively being worked. Issues
-are closed once the work is complete.
+Once issues are accepted for work, they are added to the ["Refinement" tab of the Roadmap Board][project-refinement]. After refinement and prioritization, issues move to the Backlog view and then to ["Current Sprint"][project-current-sprint] when actively being worked. Issues are closed once the work is complete.
 
 ### What is the purpose of having a "Backlog"?
 
-Issues are "backlogged" when they have been accepted and refined but are not
-yet planned into the current sprint.
+Issues are "backlogged" when they have been accepted and refined but are not yet planned into the current sprint.
 
 ### What automation procedures are currently in place?
 
@@ -156,18 +143,11 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
 
 ## Issue Sorting Procedures
 
-Issues are sorted by core maintainers in the repository issue tracker. In that
-process, maintainers label issues, request additional information when needed,
-and decide whether to close the issue or add it to the
-["Refinement" tab of the Roadmap Board][project-refinement] for planned work.
+Issues are sorted by core maintainers in the repository issue tracker. In that process, maintainers label issues, request additional information when needed, and decide whether to close the issue or add it to the ["Refinement" tab of the Roadmap Board][project-refinement] for planned work.
 
 ### How does labeling work?
 
-Labeling is a very important means for core maintainers to keep track of the
-current state of an issue with regards to the asynchronous nature of
-communicating with users. Utilizing the proper labels helps to identify the
-severity of the issue as well as to quickly understand the current state of a
-discussion.
+Labeling is a very important means for core maintainers to keep track of the current state of an issue with regards to the asynchronous nature of communicating with users. Utilizing the proper labels helps to identify the severity of the issue as well as to quickly understand the current state of a discussion.
 
 Each label has an associated description that clarifies how the label should be used. Hover on the label to see its description. Label colors are used to distinguish labels by category.
 
@@ -177,9 +157,7 @@ Please note that there are also automation policies in place that are affected b
 
 ### What labels are required for each issue?
 
-At minimum, both `type` and `source` labels should be specified on each issue
-before adding it to the "Refinement" tab of the Roadmap Board. All issues
-that are bugs should also be tagged with a `severity` label.
+At minimum, both `type` and `source` labels should be specified on each issue before adding it to the "Refinement" tab of the Roadmap Board. All issues that are bugs should also be tagged with a `severity` label.
 
 The `type` labels are exclusive of each other: each sorted issue should have exactly one `type` label. These labels give high-level information on the issue's classification (_e.g._, bug, feature, tech debt, etc.)
 
