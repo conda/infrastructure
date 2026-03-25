@@ -14,7 +14,6 @@
 
 [infrastructure]: https://github.com/conda/infrastructure
 [workflow-sync]: https://github.com/conda/infrastructure/blob/main/.github/workflows/sync.yml
-[workflow-update]: [[ repo.html_url ]]/blob/main/.github/workflows/update.yml
 [labels-global]: https://github.com/conda/infrastructure/blob/main/.github/global.yml
 
 <!-- relative URLs -->
@@ -145,14 +144,14 @@ yet planned into the current sprint.
 
 Global automation procedures synced out from the [`conda/infrastructure`][infrastructure] repo include:
 
-- [Marking of issues and pull requests as stale][workflow-stale], resulting in:
-  - issues marked as [[ repo.html_url ]]/labels/type%3A%3Asupport being labeled stale after 21 days of inactivity and being closed after 7 further days of inactivity (that is, closed after 30 inactive days total)
-  - all other inactive issues (not labeled as [[ repo.html_url ]]/labels/type%3A%3Asupport being labeled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
-  - all inactive pull requests being labeled stale after 365 days of inactivity and being closed after 30 further days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
+- [Marking/Closing stale issues and pull requests][workflow-stale]:
+  - [[ repo.html_url ]]/labels/type%3A%3Asupport issues are labeled as stale after 21 days of inactivity and are closed after 7 more days of inactivity (that is, closed after 30 inactive days total)
+  - non [[ repo.html_url ]]/labels/type%3A%3Asupport issues are labeled as stale after 365 days of inactivity and are closed after 30 more days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
+  - all pull requests are labeled as stale after 365 days of inactivity and are closed after 30 more days of inactivity (that is, closed after an approximate total of 1 year and 1 month of inactivity)
 - [Locking of closed issues and pull requests with no further activity][workflow-lock] after 365 days
 - [Adding new pull requests to the Review board][workflow-project]
 - [Indicating an issue is ready for a maintainer's attention][workflow-issues] by toggling [[ repo.html_url ]]/labels/pending%3A%3Afeedback with [[ repo.html_url ]]/labels/pending%3A%3Asupport after a contributor leaves a comment
-- [Verifying that contributors have signed the CLA][workflow-cla] before allowing pull requests to be merged; if the contributor hasn't signed the CLA previously, merging is be blocked until a manual review can be done
+- [Verifying that contributors have signed the CLA][workflow-cla] before allowing pull requests to be merged; if the contributor hasn't signed the CLA previously, merging is blocked until a manual review can be done
 - [Syncing out templates, labels, workflows, and documentation][workflow-sync] from [`conda/infrastructure`][infrastructure] to the other repositories
 
 ## Issue Sorting Procedures
@@ -186,7 +185,7 @@ The `type` labels are exclusive of each other: each sorted issue should have exa
 
 The `source` labels are exclusive of each other: each sorted issue should have exactly one `source` label. These labels give information on the sub-group to which the issue's author belongs (_e.g._, a partner, a frequent contributor, the wider community, etc.). Through these labels, maintainers gain insight into how well we're meeting the needs of various groups.
 
-The `severity` labels are exclusive of each other and, while required for the [[ repo.html_url ]]/labels/type%3A%bug label, they can also be applied to other types to indicate demand or need. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
+The `severity` labels are exclusive of each other and, while required for the [[ repo.html_url ]]/labels/type%3A%3Abug label, they can also be applied to other types to indicate demand or need. These labels help us to prioritize our work. Severity is not the only factor for work prioritization, but it is an important consideration.
 
 Please review the descriptions of the `type`, `source`, and `severity` labels on the [labels page][labels-page] prior to use.
 
