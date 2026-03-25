@@ -4,8 +4,6 @@
 <!-- absolute URLs -->
 [conda-org]: https://github.com/conda
 
-[project-sorting]: https://github.com/orgs/conda/projects/22/views/16
-[project-support]: https://github.com/orgs/conda/projects/22/views/17
 [project-refinement]: https://github.com/orgs/conda/projects/22/views/14
 [project-current-sprint]: https://github.com/orgs/conda/projects/22/views/10
 [project-review]: https://github.com/orgs/conda/projects/16
@@ -55,31 +53,27 @@ This document seeks to outline how we as a community use GitHub Issues to track 
 
 ```mermaid
 flowchart LR
-    subgraph flow_sorting [Issue Sorting]
-        board_sorting{{Sorting}}
-        board_support{{Support}}
-
-        board_sorting<-->board_support
+    subgraph flow_sorting [Issue Sorting in Issue Tracker]
+        state_sorting{{Maintainer sorting}}
     end
 
-    subgraph flow_refinement [Refinement]
+    subgraph flow_roadmap [Roadmap Board]
+        board_refinement{{Refinement}}
         board_backlog{{Backlog}}
 
-        board_backlog-- refine -->board_backlog
-    end
-
-    subgraph flow_progress [In Progress]
-        board_progress{{In Progress}}
+        board_refinement-->board_backlog
+        board_backlog-- reprioritize -->board_backlog
+        board_progress{{Current Sprint (In Progress)}}
     end
 
     state_new(New Issues)
     state_closed(Closed)
 
-    state_new-->board_sorting
-    board_sorting-- investigated -->board_backlog
-    board_sorting-- duplicates, off-topic -->state_closed
-    board_support-- resolved, unresponsive -->state_closed
+    state_new-->state_sorting
+    state_sorting-- accepted for work -->board_refinement
+    state_sorting-- duplicate, off-topic, support resolved -->state_closed
     board_backlog-- pending work -->board_progress
+    board_refinement-- not actionable -->state_closed
     board_backlog-- resolved, irrelevant -->state_closed
     board_progress-- resolved -->state_closed
 ```
@@ -105,15 +99,15 @@ goals.
 Core maintainers help with sorting issues, making decisions regarding closing
 issues and setting feature work priorities, among other sorting-related tasks.
 
-### How do items show up for sorting?
+### How do items show up on the Roadmap Board?
 
-New issues that are opened in any of the repositories in the [conda GitHub organization][conda-org] are reviewed in the repository issue tracker first, and core maintainers manually add issues to the ["Sorting" tab of the project board][project-sorting] once they are ready to start planning or work. Newly opened pull requests are automatically added to the [Review board][project-review] by [`.github/workflows/project.yml`][workflow-project].
+New issues that are opened in any of the repositories in the [conda GitHub organization][conda-org] are reviewed in the repository issue tracker first. Core maintainers manually add issues to the [Refinement tab of the Roadmap Board][project-refinement] once they are sorted and accepted for planned work. Newly opened pull requests are automatically added to the [Review board][project-review] by [`.github/workflows/project.yml`][workflow-project].
 
 The GitHub workflows in the [`conda/infrastructure`][infrastructure] repository are viewed as canonical; the [`.github/workflows/sync.yml` workflow][workflow-sync] pushes any modifications to other repositories from there and individual repositories can pull additional files using the [`.github/workflows/update.yml`][workflow-update] workflow.
 
-### What is done about the issues in the "Sorting" tab?
+### What is done during issue sorting?
 
-Issues in the ["Sorting" tab of the project board][project-sorting] are considered ready for the following procedures:
+During sorting in the issue tracker, issues are reviewed for the following outcomes:
 
 - Mitigation via short-term workarounds and fixes
 - Redirection to the correct project
@@ -126,40 +120,28 @@ and then to collect as much relevant information as possible so that the
 maintainers can make an informed decision about the appropriate resolution
 schedule.
 
-Issues will remain in the ["Sorting" tab][project-sorting] as long as the issue is in an investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest, but should still be progressing over the course of 1-2 weeks.
+Issues can remain in this investigatory phase (_e.g._, querying the user for more details, asking the user to attempt other workarounds, other debugging efforts, etc.) and are likely to remain in this state the longest, but should still be progressing over the course of 1-2 weeks.
 
 For more information on the sorting process, see [Issue Sorting Procedures](#issue-sorting-procedures).
 
-### When do items move out of the "Sorting" tab?
+### When are items added to the Roadmap Board?
 
-Items move out of the ["Sorting" tab][project-sorting] once the investigatory
-phase described in [What is done about the issues in the "Sorting"
-tab?](#what-is-done-about-the-issues-in-the-sorting-tab) has concluded and the
-core maintainer has enough information to make a decision about the
-appropriate resolution schedule for the issue. The additional tabs in the
-project board that the issues can be moved to include the following:
+Items are added to the [Refinement tab of the Roadmap Board][project-refinement] once sorting has concluded and the core maintainer has enough information to make a decision about the appropriate resolution schedule for the issue.
 
-- **"Support"** - Any issue in the ["Support" tab of the Planning board][project-support] is a request for support and is not a feature request or a bug report. Add the [[ repo.html_url ]]/labels/type%3A%3Asupport label to move an issue to this tab.
-- **"Refinement"** - The issue has revealed a bug or feature request. We have
-  collected enough details to understand the problem/request and to reproduce
-  it on our own. These issues have been moved into the [Refinement tab of the
-  Planning board][project-refinement] for clarifying what technical work needs
-  to be performed and for estimating effort using story pointing. Change the
-  status to Refinement🃏.
-- **"Closed"** - The issue was closed due to being a duplicate, being redirected to a different project, was a user error, a question that has been resolved, etc.
+Issues that are not accepted for planned work are closed instead (_e.g._ duplicates, redirects, user errors, resolved support questions, etc.).
 
 ### Where do work issues go after being sorted?
 
-Once issues are accepted to be worked on, they will be moved to the
-["Refinement" tab of the Planning board][project-refinement]. Once an issue has
-been prioritized for a sprint, the issues will be moved to the ["Current
-Sprint" tab of the Planning board][project-current-sprint] and then closed once
-the work is complete.
+Once issues are accepted for work, they are added to the
+["Refinement" tab of the Roadmap Board][project-refinement]. After refinement
+and prioritization, issues move to the Backlog view and then to
+["Current Sprint"][project-current-sprint] when actively being worked. Issues
+are closed once the work is complete.
 
 ### What is the purpose of having a "Backlog"?
 
-Issues are "backlogged" when they have been sorted but have not yet planned to
-be completed in a sprint through assigning an iteration.
+Issues are "backlogged" when they have been accepted and refined but are not
+yet planned into the current sprint.
 
 ### What automation procedures are currently in place?
 
@@ -179,10 +161,10 @@ Global automation procedures synced out from the [`conda/infrastructure`][infras
 
 ### How are issues sorted?
 
-Issues in the ["Sorting" tab of the Planning board][project-sorting] are
-reviewed by core maintainers. In the process of sorting issues, they label
-the issues and move them to the other tabs of the project board for further
-action.
+Issues are sorted by core maintainers in the repository issue tracker. In that
+process, maintainers label issues, request additional information when needed,
+and decide whether to close the issue or add it to the
+["Refinement" tab of the Roadmap Board][project-refinement] for planned work.
 
 ### How does labeling work?
 
@@ -201,7 +183,7 @@ Please note that there are also automation policies in place that are affected b
 ### What labels are required for each issue?
 
 At minimum, both `type` and `source` labels should be specified on each issue
-before moving it from the "Sorting" tab to the "Refinement" tab. All issues
+before adding it to the "Refinement" tab of the Roadmap Board. All issues
 that are bugs should also be tagged with a `severity` label.
 
 The `type` labels are exclusive of each other: each sorted issue should have exactly one `type` label. These labels give high-level information on the issue's classification (_e.g._, bug, feature, tech debt, etc.)
