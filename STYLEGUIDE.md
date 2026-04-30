@@ -22,6 +22,7 @@
 [check-docstring-first]: https://github.com/pre-commit/pre-commit-hooks#check-docstring-first
 [docformatter]: https://github.com/PyCQA/docformatter
 [sphinx.ext.autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#directive-autoproperty
+[cep9]: https://conda.org/learn/ceps/cep-0009/
 
 ## Conda Style Guide
 
@@ -52,7 +53,7 @@ The table lists **guidelines** first (each optional per repo unless that project
 | <h5>8.1</h5> | Align syntax with supported Python versions—e.g. Ruff **`UP`** (pyupgrade) and **`FA`** / `from __future__ import annotations`. | [`ruff`][ruff] (**`UP`**, **`FA`**) |
 | <h5>9</h5> | All public functions and module constants must include a docstring. | [`flake8-docstrings`][flake8-docstrings] [`docformatter`][docformatter] |
 | <h5>9.1</h5> | Module constants are documented using Sphinx autodoc syntax:<br><pre># before constant<br>#: The Answer to the Ultimate Question of Life<br>ANSWER = 42<br><br># or inline<br>ANSWER = 42  #: Life</pre> | [`sphinx.ext.autodoc`][sphinx.ext.autodoc] |
-| <h5>10</h5> | **[pytest][pytest]:** declare markers in config and use **`--strict-markers`**. Optionally treat **`PendingDeprecationWarning`**, **`DeprecationWarning`**, and **`FutureWarning`** as errors in tests (**`filterwarnings`**) so deprecations surface immediately. | [`pytest`][pytest] |
+| <h5>10</h5> | **[pytest][pytest]:** declare markers in config and use **`--strict-markers`**. Optionally treat **`DeprecationWarning`** and **`FutureWarning`** as errors in tests (**`filterwarnings`**) so active deprecations surface. **`PendingDeprecationWarning`** is different: [CEP 9][cep9] treats pending deprecation as a **comment period**—raising it to errors in CI can nudge **premature removal**; many projects only escalate **`DeprecationWarning`** / **`FutureWarning`**, or handle **`PendingDeprecationWarning`** separately. | [`pytest`][pytest] |
 | <h5>11</h5> | **[coverage][coverage]:** shared **`pragma: no cover`** (and related) conventions; sensible **`omit`** lists so reports stay comparable across modules. | [`coverage`][coverage] |
 
 | Other Tooling (often available as Ruff rules; see [rule index][ruff-rules]) |
