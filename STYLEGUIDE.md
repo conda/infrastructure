@@ -1,30 +1,29 @@
-[ruff]: https://docs.astral.sh/ruff/
-[ruff-rules]: https://docs.astral.sh/ruff/rules/
-[mypy]: https://mypy.readthedocs.io/
-[pytest]: https://docs.pytest.org/
-[coverage]: https://coverage.readthedocs.io/
+# Conda Style Guide
+
 [black]: https://github.com/psf/black
+[cep9]: https://conda.org/learn/ceps/cep-0009/
+[coverage]: https://coverage.readthedocs.io/
 [darker]: https://github.com/akaihola/darker
-[isort]: https://github.com/PyCQA/isort
+[docformatter]: https://github.com/PyCQA/docformatter
+[flake8-annotations]: https://github.com/sco1/flake8-annotations
+[flake8-bugbear]: https://github.com/PyCQA/flake8-bugbear
+[flake8-docstrings]: https://github.com/PyCQA/flake8-docstrings
+[flake8-simplify]: https://github.com/MartinThoma/flake8-simplify
+[flake8-spellcheck]: https://github.com/MichaelAquilina/flake8-spellcheck
+[flake8-typing-imports]: https://github.com/asottile/flake8-typing-imports
 [flake8-use-fstring]: https://github.com/MichaelKim0407/flake8-use-fstring
 [flake8-use-pathlib]: https://gitlab.com/RoPP/flake8-use-pathlib
-[flake8-annotations]: https://github.com/sco1/flake8-annotations
-[flake8-typing-imports]: https://github.com/asottile/flake8-typing-imports
 [flake8-useless-assert]: https://github.com/decorator-factory/flake8-useless-assert
-[flake8-spellcheck]: https://github.com/MichaelAquilina/flake8-spellcheck
+[flake8-variables-names]: https://github.com/best-doctor/flake8-variables-names
+[inclusive-apple]: https://support.apple.com/guide/applestyleguide/intro-apdcb2a65d68/1.0/web/1.0
 [inclusive-google]: https://developers.google.com/style/inclusive-documentation
 [inclusive-hubspot]: https://blog.hubspot.com/marketing/inclusive-language
-[inclusive-apple]: https://support.apple.com/guide/applestyleguide/intro-apdcb2a65d68/1.0/web/1.0
-[flake8-variables-names]: https://github.com/best-doctor/flake8-variables-names
-[flake8-bugbear]: https://github.com/PyCQA/flake8-bugbear
-[flake8-simplify]: https://github.com/MartinThoma/flake8-simplify
-[flake8-docstrings]: https://github.com/PyCQA/flake8-docstrings
-[check-docstring-first]: https://github.com/pre-commit/pre-commit-hooks#check-docstring-first
-[docformatter]: https://github.com/PyCQA/docformatter
+[isort]: https://github.com/PyCQA/isort
+[mypy]: https://mypy.readthedocs.io/
+[pytest]: https://docs.pytest.org/
+[ruff-rules]: https://docs.astral.sh/ruff/rules/
+[ruff]: https://docs.astral.sh/ruff/
 [sphinx.ext.autodoc]: https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html#directive-autoproperty
-[cep9]: https://conda.org/learn/ceps/cep-0009/
-
-## Conda Style Guide
 
 This is a **collection of ideas** for Python-oriented projects in the conda ecosystem—not a single policy enforced everywhere. Repositories choose what runs in CI and pre-commit (for example, **Rust** projects such as **rattler** follow their own tooling and are outside this Python-centric list). When contributing, prefer the target repo’s **`pyproject.toml`**, **`ruff.toml`**, **`mypy`** config, and CI over this document.
 
