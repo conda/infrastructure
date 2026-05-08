@@ -8,3 +8,5 @@ updates:
       workflows:
         patterns:
           - '*'
+    cooldown:
+      default-days: 7
