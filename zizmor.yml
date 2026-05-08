@@ -14,6 +14,12 @@ rules:
       # out any code; it only adds PRs to a GitHub project board.
       - project.yml
 
+  artipacked:
+    ignore:
+      # update.yml needs persisted credentials for the subsequent
+      # git push --force-with-lease step (rendering bot commits).
+      - update.yml
+
   template-injection:
     ignore:
       # stale.yml uses join(steps.stale.outputs.*, ',') in a run
