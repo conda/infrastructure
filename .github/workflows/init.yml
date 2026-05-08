@@ -15,21 +15,29 @@ on:
         description: The repository to push the update workflow to.
         required: true
 
+permissions:
+  contents: read
+
 jobs:
   push:
     if: >-
       !github.event.repository.fork
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           # repository: ${{ github.repository }}
           path: upstream
+          persist-credentials: false
 
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           repository: ${{ github.event.inputs.org }}/${{ github.event.inputs.repo }}
           path: downstream
+          persist-credentials: false
 
       - name: Configure git user
         run: |
@@ -39,7 +47,10 @@ jobs:
       - name: (upstream) Remove repository from sync.yml
         # no-op if the repository is not in the sync.yml file
         continue-on-error: true
-        run: sed -i '\%${{ github.event.inputs.org }}/${{ github.event.inputs.repo }}$%d' upstream/sync/config.yml
+        env:
+          INPUT_ORG: ${{ github.event.inputs.org }}
+          INPUT_REPO: ${{ github.event.inputs.repo }}
+        run: sed -i "\%${INPUT_ORG}/${INPUT_REPO}$%d" upstream/sync/config.yml
 
       - name: (upstream) Commit changes
         # no-op if there are no updates
