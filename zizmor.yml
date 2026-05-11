@@ -1,0 +1,29 @@
+# zizmor configuration file
+# https://docs.zizmor.sh/configuration/
+
+rules:
+  dangerous-triggers:
+    ignore:
+      # cla.yml uses pull_request_target but the workflow only
+      # invokes conda/actions/check-cla which does not check out
+      # untrusted PR code. The trigger is required to react to
+      # new PRs for CLA verification.
+      - cla.yml
+
+      # project.yml uses pull_request_target but does not check
+      # out any code; it only adds PRs to a GitHub project board.
+      - project.yml
+
+  artipacked:
+    ignore:
+      # update.yml needs persisted credentials for the subsequent
+      # git push --force-with-lease step (rendering bot commits).
+      - update.yml
+
+  template-injection:
+    ignore:
+      # stale.yml uses join(steps.stale.outputs.*, ',') in a run
+      # block to echo stale action outputs. These outputs are not
+      # attacker-controlled (they come from the stale action itself).
+      # Low confidence finding.
+      - stale.yml

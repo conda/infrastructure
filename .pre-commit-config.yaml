@@ -61,6 +61,15 @@ repos:
     hooks:
       - id: codespell
         args: [--write-changes]
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: v1.24.1
+    hooks:
+      - id: zizmor
+  - repo: https://github.com/rhysd/actionlint
+    rev: v1.7.12
+    hooks:
+      - id: actionlint
+        exclude: ^\.github/workflows/stale\.yml$
   - repo: meta
     # see https://pre-commit.com/#meta-hooks
     hooks:
