@@ -6,9 +6,8 @@ on:
   issue_comment:
     types: [created]
 
-permissions:
-  contents: read
-  issues: write
+# built-in GitHub token/permissions are not used
+permissions: {}
 
 env:
   FEEDBACK_LBL: pending::feedback
