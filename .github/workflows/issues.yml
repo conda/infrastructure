@@ -15,8 +15,6 @@ env:
 
 jobs:
   # NOTE: will update label if anyone responds, not just the author/reporter
-  # TODO: create conda-issue-sorting team and modify this to toggle label based on
-  # whether a non-issue-sorting engineer commented
   pending_support:
     # if [pending::feedback] and anyone responds
     if: >-
