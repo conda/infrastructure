@@ -77,7 +77,7 @@ Install [`rever`][rever docs] using whatever your project defines (e.g., a conda
 
     ```bash
     $ git fetch upstream
-    $ git switch -c changelog-[[ placeholder ]] upstream/main
+    $ git switch -c changelog-[[ placeholder ]] --no-track upstream/main
     ```
 
 3. Run `rever --activities authors --force [[ placeholder ]]`:
@@ -138,7 +138,7 @@ Install [`rever`][rever docs] using whatever your project defines (e.g., a conda
 8. Push the versioned branch:
 
     ```bash
-    $ git push -u upstream changelog-[[ placeholder ]]
+    $ git push -u upstream
     ```
 
 9. Open the Release PR targeting `main`:
