@@ -42,9 +42,10 @@ conda/infrastructure:
   # [optional] rever release files
   # Select one of the following:
   # conda and conda-build release file or
-  # - src: templates/releases/RELEASE.md
-  # plugins release file
-  # - src: templates/releases/RELEASE_PLUGINS.md
+# Cadence release file
+# - src: templates/releases/RELEASE.md
+  # Continuous release file
+  # - src: templates/releases/CONTINUOUS_RELEASE.md
   #   dst: RELEASE.md
   #   with:
   #     canary_channel: https://anaconda.org/conda-canary
