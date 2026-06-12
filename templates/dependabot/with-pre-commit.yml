@@ -1,3 +1,5 @@
+# edit this in [[ source.html_url ]]
+
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -13,3 +15,11 @@ updates:
           - '*'
     cooldown:
       default-days: 7
+  - package-ecosystem: pre-commit
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      pre-commit:
+        patterns:
+          - '*'

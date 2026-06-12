@@ -39,6 +39,13 @@ conda/infrastructure:
   - src: templates/pull_requests/base.md
     dst: .github/PULL_REQUEST_TEMPLATE.md
 
+  # [optional] dependabot — pick a variant
+  # - src: templates/dependabot/base.yml
+  # - src: templates/dependabot/with-pre-commit.yml
+  # - src: templates/dependabot/with-docs-pip.yml
+  # - src: templates/dependabot/full.yml
+  #   dst: .github/dependabot.yml
+
   # [optional] rever release files
   # - src: templates/releases/RELEASE.md
   #   dst: RELEASE.md
