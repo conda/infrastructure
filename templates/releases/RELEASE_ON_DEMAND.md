@@ -201,4 +201,4 @@ For conda-forge, the `regro-cf-autotick-bot` will usually open a PR automaticall
 
 ## 7. Announce the release.
 
-Post the release announcement on the Zulip thread in [#releases][zulip].
+Post the release announcement on the Zulip thread in [[ '[#releases][zulip]' ]].
