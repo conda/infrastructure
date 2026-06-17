@@ -190,16 +190,6 @@
     color: '#c2e0c6'
     aliases:
       - source:qa
-  - name: source::enterprise
-    description: created by or for an enterprise customer
-    color: '#c2e0c6'
-    aliases:
-      - source-ent
-      - ent
-      - source:enterprise
-  - name: source::partner
-    description: created by or for an Anaconda, Inc. partner company
-    color: '#c2e0c8'
   - name: source::anaconda
     description: created by members of Anaconda, Inc.
     color: '#c2e0c6'
