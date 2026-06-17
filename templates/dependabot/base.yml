@@ -7,10 +7,7 @@ updates:
     schedule:
       interval: weekly
     groups:
-      conda-actions:
-        patterns:
-          - conda/*
-      upstream-actions:
+      workflows:
         patterns:
           - '*'
     cooldown:
