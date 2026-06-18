@@ -55,6 +55,7 @@ repos:
       # verify github syntaxes
       - id: check-github-workflows
       - id: check-dependabot
+        files: ^(\.github/dependabot\.yml|templates/dependabot/.*\.yml)$
   - repo: https://github.com/codespell-project/codespell
     # see pyproject.toml
     rev: v2.4.2
