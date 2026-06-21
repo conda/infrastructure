@@ -1,0 +1,42 @@
+name: GitHub App installation
+description: Use this template to request a new installation of a GitHub app, or an update to its existing scopes and selected repositories.
+title: Requesting New/Edit GitHub App Installation
+labels:
+  - type::task
+  - type::github
+body:
+  - type: dropdown
+    id: org
+    attributes:
+      label: Organization(s)
+      description: Select the organization for which you are requesting a new project.
+      options:
+        - conda
+        - conda-incubator
+        - both
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: GitHub App name
+      description: Provide the name of the GitHub App to be installed or edited. 
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: GitHub App URL
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Provide details about why this app is needed, and how the required permissions are adequate.
+  - type: textarea
+    id: repos
+    attributes:
+      label: Repositories
+      description: Enumerate the repositories the app will be enabled (or disabled) for.
