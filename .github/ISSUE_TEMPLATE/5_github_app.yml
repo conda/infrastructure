@@ -21,7 +21,7 @@ body:
     id: title
     attributes:
       label: GitHub App name
-      description: Provide the name of the GitHub App to be installed or edited. 
+      description: Provide the name of the GitHub App to be installed or edited.
     validations:
       required: true
   - type: input
