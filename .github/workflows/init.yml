@@ -32,13 +32,13 @@ jobs:
       contents: write  # Required to commit the upstream sync.yml removal.
       pull-requests: write  # Required to open upstream and downstream initialization PRs.
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           # repository: ${{ github.repository }}
           path: upstream
           persist-credentials: false
 
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           repository: ${{ github.event.inputs.org }}/${{ github.event.inputs.repo }}
           path: downstream
