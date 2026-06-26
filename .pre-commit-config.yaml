@@ -12,7 +12,8 @@ repos:
         # exclude files that contain jinja templating directives
         exclude: |
           (?x)^(
-            templates/issues/bug.yml
+            templates/issues/bug.yml|
+            templates/workflows/build.yml
           )
       # catch git merge/rebase problems
       - id: check-merge-conflict
@@ -47,7 +48,8 @@ repos:
         # exclude files that contain jinja templating directives
         exclude: |
           (?x)^(
-            templates/issues/bug.yml
+            templates/issues/bug.yml|
+            templates/workflows/build.yml
           )
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.37.3
