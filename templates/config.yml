@@ -22,6 +22,9 @@ conda/infrastructure:
   # For noarch packages, add:
   #   with:
   #     subdir: noarch
+  # For conda itself (isolated activation required), add:
+  #   with:
+  #     conda_build_isolated_activation: true
 
   # [optional] general processes for the conda org
   - src: templates/HOW_WE_USE_GITHUB.md
