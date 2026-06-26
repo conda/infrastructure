@@ -16,6 +16,13 @@ conda/infrastructure:
   - .github/workflows/stale.yml
   - .github/workflows/lock.yml
 
+  # [optional] canary build workflow
+  # - src: templates/workflows/build.yml
+  #   dst: .github/workflows/build.yml
+  # For noarch packages, add:
+  #   with:
+  #     subdir: noarch
+
   # [optional] general processes for the conda org
   - src: templates/HOW_WE_USE_GITHUB.md
     dst: HOW_WE_USE_GITHUB.md
@@ -50,13 +57,6 @@ conda/infrastructure:
   #   dst: .github/dependabot.yml
   # - src: templates/dependabot/github-actions-full.yml
   #   dst: .github/dependabot.yml
-
-  # [optional] canary build workflow
-  # - src: templates/workflows/build.yml
-  #   dst: .github/workflows/build.yml
-  # For noarch packages, add:
-  #   with:
-  #     subdir: noarch
 
   # [optional] rever release files
   # Select one of the following:
