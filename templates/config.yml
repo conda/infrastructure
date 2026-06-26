@@ -21,7 +21,7 @@ conda/infrastructure:
   #   dst: .github/workflows/build.yml
   # For noarch packages, add:
   #   with:
-  #     subdir: noarch
+  #     noarch: true
   # For conda itself (isolated activation required), add:
   #   with:
   #     conda_build_isolated_activation: true

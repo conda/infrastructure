@@ -82,14 +82,19 @@ jobs:
     strategy:
       matrix:
         include:
+        [%- if noarch is defined %]
           - runs-on: ubuntu-latest
-            subdir: [[subdir | default('linux-64')]]
+            subdir: noarch
+        [%- else %]
+          - runs-on: ubuntu-latest
+            subdir: linux-64
           - runs-on: ubuntu-24.04-arm
-            subdir: [[subdir | default('linux-aarch64')]]
+            subdir: linux-aarch64
           - runs-on: macos-latest
-            subdir: [[subdir | default('osx-arm64')]]
+            subdir: osx-arm64
           - runs-on: windows-latest
-            subdir: [[subdir | default('win-64')]]
+            subdir: win-64
+        [%- endif %]
     runs-on: ${{ matrix.runs-on }}
     steps:
       # Clean checkout of specific git ref needed for package metadata version
