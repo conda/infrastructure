@@ -152,7 +152,7 @@ jobs:
 
       - name: Create & Upload
         uses: conda/actions/canary-release@7f6830b1428a9bd47f0b068892c77eae95207037 # v26.1.0
-        [%- if conda_build_isolated_activation is defined %]
+        [%- if conda_build_isolated_activation is defined and conda_build_isolated_activation %]
         env:
           _CONDA_BUILD_ISOLATED_ACTIVATION: 1
         [%- endif %]
