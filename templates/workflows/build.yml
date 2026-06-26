@@ -82,7 +82,7 @@ jobs:
     strategy:
       matrix:
         include:
-        [%- if noarch is defined %]
+        [%- if noarch is defined and noarch %]
           - runs-on: ubuntu-latest
             subdir: noarch
         [%- else %]
