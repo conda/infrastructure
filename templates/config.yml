@@ -22,9 +22,9 @@ conda/infrastructure:
   # For noarch packages, add:
   #   with:
   #     noarch: true
-  # For conda itself (isolated activation required), add:
+  # For repos whose test workflow is not named "Tests", add:
   #   with:
-  #     conda_build_isolated_activation: true
+  #     tests_workflow: Test
 
   # [optional] general processes for the conda org
   - src: templates/HOW_WE_USE_GITHUB.md

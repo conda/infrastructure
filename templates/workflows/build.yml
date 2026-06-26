@@ -14,10 +14,10 @@ on:
       - '[0-9].*.x'  # e.g., 4.14.x
       - '[0-9][0-9].*.x'  # e.g., 23.3.x
 
-  # Build canaries after a successful Tests run on main or feature/* branches.
+  # Build canaries after a successful test workflow run on main or feature/* branches.
   workflow_run:
     workflows:
-      - Tests
+      - [[ tests_workflow | default('Tests') ]]
     types:
       - completed
 
@@ -55,7 +55,7 @@ jobs:
             }
 
   build:
-    # PR label build::review, push to *.x release branches, or successful Tests on main/feature/*.
+    # PR label build::review, push to *.x release branches, or successful test workflow on main/feature/*.
     if: >-
       !github.event.repository.fork
       && (
@@ -152,10 +152,8 @@ jobs:
 
       - name: Create & Upload
         uses: conda/actions/canary-release@7f6830b1428a9bd47f0b068892c77eae95207037 # v26.1.0
-        [%- if conda_build_isolated_activation is defined and conda_build_isolated_activation %]
         env:
           _CONDA_BUILD_ISOLATED_ACTIVATION: 1
-        [%- endif %]
         with:
           package-name: ${{ github.event.repository.name }}
           subdir: ${{ matrix.subdir }}
