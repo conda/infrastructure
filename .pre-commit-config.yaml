@@ -13,7 +13,8 @@ repos:
         exclude: |
           (?x)^(
             templates/issues/bug.yml|
-            templates/workflows/build.yml
+            templates/workflows/build.yml|
+            templates/workflows/slow-tests.yml
           )
       # catch git merge/rebase problems
       - id: check-merge-conflict
@@ -49,7 +50,8 @@ repos:
         exclude: |
           (?x)^(
             templates/issues/bug.yml|
-            templates/workflows/build.yml
+            templates/workflows/build.yml|
+            templates/workflows/slow-tests.yml
           )
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.37.3
