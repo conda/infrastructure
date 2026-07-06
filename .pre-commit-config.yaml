@@ -54,7 +54,7 @@ repos:
             templates/workflows/slow-tests.yml
           )
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.37.3
+    rev: 0.37.4
     hooks:
       # verify github syntaxes
       - id: check-github-workflows
