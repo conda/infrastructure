@@ -2,6 +2,7 @@
 
 version: 2
 updates:
+  [% if github_actions | default(true) %]
   - package-ecosystem: github-actions
     directory: /.github/workflows
     schedule:
@@ -12,6 +13,8 @@ updates:
           - '*'
     cooldown:
       default-days: 7
+  [% endif %]
+  [% if pre_commit | default(false) %]
   - package-ecosystem: pre-commit
     directory: /
     schedule:
@@ -20,15 +23,23 @@ updates:
       pre-commit:
         patterns:
           - '*'
+  [% endif %]
+  [% if pip | default(false) %]
   - package-ecosystem: pip
     directory: /docs/
     schedule:
       interval: monthly
-    allow:
-      # Allow only production updates for Sphinx
-      - dependency-name: sphinx
-        dependency-type: production
     groups:
       docs:
         patterns:
           - '*'
+  [% elif conda | default(false) %]
+  - package-ecosystem: conda
+    directory: /docs/
+    schedule:
+      interval: monthly
+    groups:
+      docs:
+        patterns:
+          - '*'
+  [% endif %]
