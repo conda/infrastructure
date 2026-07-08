@@ -64,10 +64,9 @@ conda/infrastructure:
   # - src: templates/dependabot.yml
   #   dst: .github/dependabot.yml
   #   with:
-  #     github_actions: true
-  #     pre_commit: true
-  #     pip: true
-  #     conda: true
+  #     github_actions: <true|false>
+  #     pre_commit: <true|false>
+  #     docs: <conda|pip|false>
 
   # [optional] rever release files
   # Select one of the following:

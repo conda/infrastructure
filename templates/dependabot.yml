@@ -24,20 +24,17 @@ updates:
         patterns:
           - '*'
   [% endif %]
-  [% if pip | default(false) %]
-  - package-ecosystem: pip
+  [% if docs | default(false) %]
+  - package-ecosystem: [[ 'pip' if docs is true else docs ]]
     directory: /docs/
     schedule:
       interval: monthly
-    groups:
-      docs:
-        patterns:
-          - '*'
-  [% elif conda | default(false) %]
-  - package-ecosystem: conda
-    directory: /docs/
-    schedule:
-      interval: monthly
+    [% if docs == "pip" %]
+    allow:
+      # Allow only production updates for Sphinx
+      - dependency-name: sphinx
+        dependency-type: production
+    [% endif %]
     groups:
       docs:
         patterns:
