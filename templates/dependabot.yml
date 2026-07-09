@@ -40,3 +40,4 @@ updates:
         patterns:
           - '*'
   [%- endif %]
+[% include 'dependabot_extras.yml' ignore missing -%]
