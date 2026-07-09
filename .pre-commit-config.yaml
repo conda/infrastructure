@@ -14,7 +14,8 @@ repos:
           (?x)^(
             templates/issues/bug.yml|
             templates/workflows/build.yml|
-            templates/workflows/slow-tests.yml
+            templates/workflows/slow-tests.yml|
+            templates/dependabot.yml
           )
       # catch git merge/rebase problems
       - id: check-merge-conflict
@@ -51,7 +52,8 @@ repos:
           (?x)^(
             templates/issues/bug.yml|
             templates/workflows/build.yml|
-            templates/workflows/slow-tests.yml
+            templates/workflows/slow-tests.yml|
+            templates/dependabot.yml
           )
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.37.3
