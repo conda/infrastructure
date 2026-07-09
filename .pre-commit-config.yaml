@@ -13,9 +13,8 @@ repos:
         exclude: |
           (?x)^(
             templates/issues/bug.yml|
-            templates/workflows/build.yml|
-            templates/workflows/slow-tests.yml|
-            templates/dependabot.yml
+            templates/dependabot.yml|
+            \.github/template-files/templates/dependabot_extras.yml
           )
       # catch git merge/rebase problems
       - id: check-merge-conflict
@@ -51,9 +50,8 @@ repos:
         exclude: |
           (?x)^(
             templates/issues/bug.yml|
-            templates/workflows/build.yml|
-            templates/workflows/slow-tests.yml|
-            templates/dependabot.yml
+            templates/dependabot.yml|
+            \.github/template-files/templates/dependabot_extras.yml
           )
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.37.4
