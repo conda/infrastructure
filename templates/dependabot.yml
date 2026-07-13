@@ -23,6 +23,8 @@ updates:
       pre-commit:
         patterns:
           - '*'
+    cooldown:
+      default-days: 7
   [%- endif %]
   [%- if docs | default(false) %]
   - package-ecosystem: [[ 'pip' if docs is true else docs ]]
@@ -39,5 +41,7 @@ updates:
       docs:
         patterns:
           - '*'
+    cooldown:
+      default-days: 7
   [%- endif %]
 [% include 'dependabot_extras.yml' ignore missing -%]
