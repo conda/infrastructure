@@ -1,3 +1,5 @@
+# edit this in https://github.com/conda/infrastructure
+
 version: 2
 updates:
   - package-ecosystem: github-actions
