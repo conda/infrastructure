@@ -12,7 +12,9 @@ repos:
         # exclude files that contain jinja templating directives
         exclude: |
           (?x)^(
-            templates/issues/bug.yml
+            templates/issues/bug.yml|
+            templates/dependabot.yml|
+            \.github/template-files/templates/dependabot_extras.yml
           )
       # catch git merge/rebase problems
       - id: check-merge-conflict
@@ -26,7 +28,7 @@ repos:
         require_serial: true
         args: [--sort-keys=contributors]
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.12
+    rev: v0.15.21
     hooks:
       # lint & attempt to correct failures (e.g. pyupgrade)
       - id: ruff-check
@@ -47,14 +49,17 @@ repos:
         # exclude files that contain jinja templating directives
         exclude: |
           (?x)^(
-            templates/issues/bug.yml
+            templates/issues/bug.yml|
+            templates/dependabot.yml|
+            \.github/template-files/templates/dependabot_extras.yml
           )
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.37.2
+    rev: 0.37.4
     hooks:
       # verify github syntaxes
       - id: check-github-workflows
       - id: check-dependabot
+        files: ^(\.github/dependabot\.yml|templates/dependabot/.*\.yml)$
   - repo: https://github.com/codespell-project/codespell
     # see pyproject.toml
     rev: v2.4.2
@@ -62,9 +67,10 @@ repos:
       - id: codespell
         args: [--write-changes]
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: v1.24.1
+    rev: v1.26.1
     hooks:
       - id: zizmor
+        args: [--persona=auditor, --fix=safe]
   - repo: https://github.com/rhysd/actionlint
     rev: v1.7.12
     hooks:

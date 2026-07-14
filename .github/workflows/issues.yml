@@ -6,6 +6,10 @@ on:
   issue_comment:
     types: [created]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.issue.number || github.run_id }}
+  cancel-in-progress: true
+
 # built-in GitHub token/permissions are not used
 permissions: {}
 
@@ -16,6 +20,7 @@ env:
 jobs:
   # NOTE: will update label if anyone responds, not just the author/reporter
   pending_support:
+    name: Update pending support label
     # if [pending::feedback] and anyone responds
     if: >-
       !github.event.repository.fork

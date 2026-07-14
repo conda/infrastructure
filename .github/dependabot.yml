@@ -1,3 +1,5 @@
+# edit this in https://github.com/conda/infrastructure
+
 version: 2
 updates:
   - package-ecosystem: github-actions
@@ -6,6 +8,16 @@ updates:
       interval: weekly
     groups:
       workflows:
+        patterns:
+          - '*'
+    cooldown:
+      default-days: 7
+  - package-ecosystem: github-actions
+    directory: /templates/workflows
+    schedule:
+      interval: weekly
+    groups:
+      templates-workflows:
         patterns:
           - '*'
     cooldown:

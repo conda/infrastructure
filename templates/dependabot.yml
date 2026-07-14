@@ -1,0 +1,47 @@
+# edit this in [[ source.html_url ]]
+
+version: 2
+updates:
+  [%- if github_actions | default(true) %]
+  - package-ecosystem: github-actions
+    directory: /.github/workflows
+    schedule:
+      interval: weekly
+    groups:
+      workflows:
+        patterns:
+          - '*'
+    cooldown:
+      default-days: 7
+  [%- endif %]
+  [%- if pre_commit | default(false) %]
+  - package-ecosystem: pre-commit
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      pre-commit:
+        patterns:
+          - '*'
+    cooldown:
+      default-days: 7
+  [%- endif %]
+  [%- if docs | default(false) %]
+  - package-ecosystem: [[ 'pip' if docs is true else docs ]]
+    directory: /docs/
+    schedule:
+      interval: monthly
+    [%- if docs == "pip" %]
+    allow:
+      # Allow only production updates for Sphinx
+      - dependency-name: sphinx
+        dependency-type: production
+    [%- endif %]
+    groups:
+      docs:
+        patterns:
+          - '*'
+    cooldown:
+      default-days: 7
+  [%- endif %]
+[% include 'dependabot_extras.yml' ignore missing -%]

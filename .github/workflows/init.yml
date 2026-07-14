@@ -15,25 +15,30 @@ on:
         description: The repository to push the update workflow to.
         required: true
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.inputs.org }}-${{ github.event.inputs.repo }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
 jobs:
   push:
+    name: Push repository updates
     if: >-
       !github.event.repository.fork
     runs-on: ubuntu-latest
     permissions:
-      contents: write
-      pull-requests: write
+      contents: write  # Required to commit the upstream sync.yml removal.
+      pull-requests: write  # Required to open upstream and downstream initialization PRs.
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           # repository: ${{ github.repository }}
           path: upstream
           persist-credentials: false
 
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           repository: ${{ github.event.inputs.org }}/${{ github.event.inputs.repo }}
           path: downstream
@@ -67,7 +72,8 @@ jobs:
           echo ::group::Fork debugging
           gh repo fork --clone=false --default-branch-only
           echo ::endgroup::
-          echo UPSTREAM=$(gh repo fork --clone=false --default-branch-only 2>&1 | awk '{print $1}') >> $GITHUB_ENV
+          UPSTREAM="$(gh repo fork --clone=false --default-branch-only 2>&1 | awk '{print $1}' | sed 's|^https://github.com/||')"
+          echo "UPSTREAM=${UPSTREAM}" >> "$GITHUB_ENV"
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
 
@@ -119,7 +125,8 @@ jobs:
           echo ::group::Fork debugging
           gh repo fork --clone=false --default-branch-only
           echo ::endgroup::
-          echo DOWNSTREAM=$(gh repo fork --clone=false --default-branch-only 2>&1 | awk '{print $1}') >> $GITHUB_ENV
+          DOWNSTREAM="$(gh repo fork --clone=false --default-branch-only 2>&1 | awk '{print $1}' | sed 's|^https://github.com/||')"
+          echo "DOWNSTREAM=${DOWNSTREAM}" >> "$GITHUB_ENV"
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
 

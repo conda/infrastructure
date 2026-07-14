@@ -1,0 +1,10 @@
+  - package-ecosystem: github-actions
+    directory: /templates/workflows
+    schedule:
+      interval: weekly
+    groups:
+      templates-workflows:
+        patterns:
+          - '*'
+    cooldown:
+      default-days: 7

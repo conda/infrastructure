@@ -14,10 +14,26 @@ rules:
       # out any code; it only adds PRs to a GitHub project board.
       - project.yml
 
-  artipacked:
+  secrets-outside-env:
     ignore:
-      # update.yml needs persisted credentials for the subsequent
-      # git push --force-with-lease step (rendering bot commits).
+      # These workflows use repository/org secrets for cross-repo bot
+      # automation. Requiring deployment environments would change the
+      # automation model and is intentionally tracked as a policy decision
+      # outside this audit-hardening pass.
+      - cla.yml
+      - init.yml
+      - issues.yml
+      - project.yml
+      - stale.yml
+      - update.yml
+
+  superfluous-actions:
+    ignore:
+      # These helper actions are pinned and currently provide workflow
+      # behavior that would need dedicated migration PRs before replacing
+      # them with inline GitHub CLI commands.
+      - init.yml
+      - issues.yml
       - update.yml
 
   template-injection:
