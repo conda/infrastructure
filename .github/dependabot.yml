@@ -12,6 +12,8 @@ updates:
           - '*'
     cooldown:
       default-days: 7
+      exclude:
+        - conda/actions
   - package-ecosystem: github-actions
     directory: /templates/workflows
     schedule:
@@ -22,3 +24,5 @@ updates:
           - '*'
     cooldown:
       default-days: 7
+      exclude:
+        - conda/actions
