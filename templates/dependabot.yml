@@ -13,6 +13,8 @@ updates:
           - '*'
     cooldown:
       default-days: 7
+      exclude:
+        - conda/actions
   [%- endif %]
   [%- if pre_commit | default(false) %]
   - package-ecosystem: pre-commit

@@ -8,3 +8,5 @@
           - '*'
     cooldown:
       default-days: 7
+      exclude:
+        - conda/actions
