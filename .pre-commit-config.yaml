@@ -75,7 +75,12 @@ repos:
     rev: v1.7.12
     hooks:
       - id: actionlint
-        exclude: ^\.github/workflows/stale\.yml$
+        files: ^(\.github/workflows/|templates/workflows/)
+        exclude: |
+          (?x)^(
+            \.github/workflows/stale\.yml|
+            templates/workflows/build\.yml
+          )$
   - repo: meta
     # see https://pre-commit.com/#meta-hooks
     hooks:
