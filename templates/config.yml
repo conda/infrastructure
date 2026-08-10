@@ -16,6 +16,27 @@ conda/infrastructure:
   - .github/workflows/stale.yml
   - .github/workflows/lock.yml
 
+  # [optional] canary build workflow
+  # - src: templates/workflows/build.yml
+  #   dst: .github/workflows/build.yml
+  # For noarch packages, add:
+  #   with:
+  #     noarch: true
+  # For repos whose test workflow is not named "Tests", add:
+  #   with:
+  #     tests_workflow: Test
+
+  # [optional] slow test review workflow (requires durations/ from combine-durations)
+  # - src: templates/workflows/slow-tests.yml
+  #   dst: .github/workflows/slow-tests.yml
+  #   with:
+  #     epic_number: '<epic issue number>'
+  # For repos with a subset of platforms, add:
+  #   with:
+  #     epic_number: '<epic issue number>'
+  #     platforms:
+  #       - Linux
+
   # [optional] general processes for the conda org
   - src: templates/HOW_WE_USE_GITHUB.md
     dst: HOW_WE_USE_GITHUB.md
@@ -39,16 +60,29 @@ conda/infrastructure:
   - src: templates/pull_requests/base.md
     dst: .github/PULL_REQUEST_TEMPLATE.md
 
+  # [optional] dependabot
+  # - src: templates/dependabot.yml
+  #   dst: .github/dependabot.yml
+  #   with:
+  #     github_actions: <true|false>
+  #     pre_commit: <true|false>
+  #     docs: <conda|pip|false>
+
   # [optional] rever release files
+  # Select one of the following:
+  # conda and conda-build release file or
+  # Cadence release file
   # - src: templates/releases/RELEASE.md
+  # On demand release file
+  # - src: templates/releases/RELEASE_ON_DEMAND.md
   #   dst: RELEASE.md
   #   with:
   #     canary_channel: https://anaconda.org/conda-canary
   #     # CalVer placeholders
-  #     placeholder: YY.M.PATCH
-  #     placeholder_x: YY.M.x
+  #     placeholder: YY.MM.MICRO
+  #     placeholder_x: YY.MM.x
   #     # SemVer placeholders
-  #     placeholder: MAJOR.MINOR.MINOR
+  #     placeholder: MAJOR.MINOR.PATCH
   #     placeholder_x: MAJOR.MINOR.x
   # - src: templates/releases/rever.xsh
   #   dst: rever.xsh
