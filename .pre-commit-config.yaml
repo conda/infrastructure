@@ -66,6 +66,7 @@ repos:
     hooks:
       - id: codespell
         args: [--write-changes]
+        additional_dependencies: [tomli]
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
     rev: v1.29.0
     hooks:

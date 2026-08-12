@@ -22,6 +22,13 @@ conda/infrastructure:
   # For noarch packages, add:
   #   with:
   #     noarch: true
+  # To toggle individual platforms:
+  #   with:
+  #     linux_64: true
+  #     linux_aarch64: true
+  #     osx_64: true
+  #     osx_arm64: true
+  #     win_64: true
   # For repos whose test workflow is not named "Tests", add:
   #   with:
   #     tests_workflow: Test
