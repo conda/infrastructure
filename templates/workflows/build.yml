@@ -82,18 +82,30 @@ jobs:
     strategy:
       matrix:
         include:
-          # template-files-if [%- if noarch is defined and noarch %]
+          # template-files-if [%- if noarch | default(false) %]
           - runs-on: ubuntu-latest
             subdir: noarch
           # template-files-else [%- else %]
+          # template-files-if [%- if linux_64 | default(true) %]
           - runs-on: ubuntu-latest
             subdir: linux-64
+          # template-files-endif [%- endif %]
+          # template-files-if [%- if linux_aarch64 | default(true) %]
           - runs-on: ubuntu-24.04-arm
             subdir: linux-aarch64
+          # template-files-endif [%- endif %]
+          # template-files-if [%- if osx_arm64 | default(true) %]
           - runs-on: macos-latest
             subdir: osx-arm64
+          # template-files-endif [%- endif %]
+          # template-files-if [%- if osx_64 | default(false) %]
+          - runs-on: macos-15
+            subdir: osx-64
+          # template-files-endif [%- endif %]
+          # template-files-if [%- if win_64 | default(true) %]
           - runs-on: windows-latest
             subdir: win-64
+          # template-files-endif [%- endif %]
           # template-files-endif [%- endif %]
     runs-on: ${{ matrix.runs-on }}
     steps:
