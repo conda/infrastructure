@@ -1,6 +1,6 @@
 # edit this in [[ source.html_url ]]
 
-name: News fragment
+name: Check news
 
 on:
   pull_request:
@@ -17,7 +17,7 @@ permissions:
   pull-requests: read
 
 jobs:
-  news:
+  check-news:
     runs-on: ubuntu-slim
     steps:
       - name: Checkout Source

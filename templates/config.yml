@@ -45,8 +45,8 @@ conda/infrastructure:
   #       - Linux
 
   # [optional] news fragment validation on PRs
-  # - src: templates/workflows/news.yml
-  #   dst: .github/workflows/news.yml
+  # - src: templates/workflows/check-news.yml
+  #   dst: .github/workflows/check-news.yml
 
   # [optional] aggregate news fragments into CHANGELOG on release branches
   # - src: templates/workflows/prepare-release.yml
