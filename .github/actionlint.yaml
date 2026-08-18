@@ -1,0 +1,4 @@
+paths:
+  templates/workflows/prepare-release.yml:
+    ignore:
+      - ^unexpected key "queue" for "concurrency" section\. expected one of "cancel-in-progress", "group"$
