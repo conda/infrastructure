@@ -55,6 +55,17 @@ conda/infrastructure:
   #   with:
   #     tests_workflow: Test
 
+  # [optional] validate .authors.yml on PRs
+  # - src: templates/workflows/check-authors.yml
+  #   dst: .github/workflows/check-authors.yml
+
+  # [optional] keep .authors.yml current (weekly PR)
+  # - src: templates/workflows/prepare-authors.yml
+  #   dst: .github/workflows/prepare-authors.yml
+  # For repos with a non-standard schedule, add:
+  #   with:
+  #     schedule: '0 4 * * 2'
+
   # [optional] general processes for the conda org
   - src: templates/HOW_WE_USE_GITHUB.md
     dst: HOW_WE_USE_GITHUB.md

@@ -1,0 +1,33 @@
+# edit this in [[ source.html_url ]]
+
+name: Prepare authors
+
+on:
+  # every Monday at 03:00 UTC
+  # https://crontab.guru/#0_3_*_*_1
+  schedule:
+    - cron: '[[ schedule | default("0 3 * * 1") ]]'
+
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    if: '!github.event.repository.fork'
+    runs-on: ubuntu-slim
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Prepare Authors
+        uses: conda/actions/prepare-authors@3bdc06c6ada7ab3906280debdd8873810d9f3435 # v26.8.0
+        with:
+          token: ${{ secrets.SYNC_TOKEN }}
+          since: tag
+          base-branch: main

@@ -2,3 +2,6 @@ paths:
   templates/workflows/prepare-release.yml:
     ignore:
       - ^unexpected key "queue" for "concurrency" section\. expected one of "cancel-in-progress", "group"$
+  templates/workflows/prepare-authors.yml:
+    ignore:
+      - ^invalid CRON format
