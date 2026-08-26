@@ -3,8 +3,7 @@
 name: Prepare authors
 
 on:
-  # every Monday at 03:00 UTC
-  # https://crontab.guru/#0_3_*_*_1
+  # https://crontab.guru/#[[ schedule | default("0 3 * * 1") | replace(" ", "_") ]]
   schedule:
     - cron: '[[ schedule | default("0 3 * * 1") ]]'
 
