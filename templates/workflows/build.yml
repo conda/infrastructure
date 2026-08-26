@@ -14,6 +14,9 @@ on:
       - '[0-9].*.x'  # e.g., 4.14.x
       - '[0-9][0-9].*.x'  # e.g., 23.3.x
 
+  # Build canaries on demand
+  workflow_dispatch:
+
   # Build canaries after a successful test workflow run on main or feature/* branches.
   workflow_run:
     workflows:
