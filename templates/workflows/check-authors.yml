@@ -1,0 +1,24 @@
+# edit this in [[ source.html_url ]]
+
+name: Check authors
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Check Authors
+        uses: conda/actions/prepare-authors@d88418cd4e36358ba51e7c88f2d2d5edb9ac49e7 # v26.8.1
+        with:
+          mode: check
+          since: tag
