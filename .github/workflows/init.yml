@@ -72,7 +72,7 @@ jobs:
           echo ::group::Fork debugging
           gh repo fork --clone=false --default-branch-only
           echo ::endgroup::
-          UPSTREAM="$(gh repo fork --clone=false --default-branch-only 2>&1 | awk '{print $1}' | sed 's|^https://github.com/||')"
+          UPSTREAM="$(gh api repos/{owner}/{repo}/forks --method POST -f default_branch_only=true --jq .full_name)"
           echo "UPSTREAM=${UPSTREAM}" >> "$GITHUB_ENV"
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
@@ -125,7 +125,7 @@ jobs:
           echo ::group::Fork debugging
           gh repo fork --clone=false --default-branch-only
           echo ::endgroup::
-          DOWNSTREAM="$(gh repo fork --clone=false --default-branch-only 2>&1 | awk '{print $1}' | sed 's|^https://github.com/||')"
+          DOWNSTREAM="$(gh api repos/{owner}/{repo}/forks --method POST -f default_branch_only=true --jq .full_name)"
           echo "DOWNSTREAM=${DOWNSTREAM}" >> "$GITHUB_ENV"
         env:
           GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
