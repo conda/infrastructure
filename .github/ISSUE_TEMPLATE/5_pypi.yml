@@ -1,0 +1,91 @@
+name: PyPI Organization Request
+description: Request a project, team, membership, or Trusted Publisher change.
+title: Requesting PyPI Organization Change
+labels:
+  - type::hosting
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [How We Use PyPI](https://github.com/conda/infrastructure/blob/main/HOW_WE_USE_PYPI.md) before submitting this request.
+
+        Access is granted through governance-backed teams, not independently to individuals.
+
+        > [!WARNING]
+        > Never include passwords, API tokens, recovery codes, or other credentials in this issue.
+  - type: dropdown
+    id: action
+    attributes:
+      label: Requested action
+      options:
+        - Add a project
+        - Transfer a project
+        - Add an organization member
+        - Remove an organization member
+        - Add a team member
+        - Remove a team member
+        - Create a team
+        - Change a team
+        - Change a team's project role
+        - Add a Trusted Publisher
+        - Change a Trusted Publisher
+        - Remove a Trusted Publisher
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: project
+    attributes:
+      label: PyPI project
+      description: Provide the PyPI project URL, proposed project name, or "Not applicable".
+    validations:
+      required: true
+  - type: input
+    id: repository
+    attributes:
+      label: Source repository
+      description: Provide the source repository URL or "Not applicable".
+    validations:
+      required: true
+  - type: input
+    id: governance_team
+    attributes:
+      label: Governance team or project owners
+      description: Provide the URL of the responsible team in conda/governance. If none is recorded, identify the existing project owners.
+    validations:
+      required: true
+  - type: textarea
+    id: approval
+    attributes:
+      label: Approval record
+      description: For project transfers, new memberships, or additional access, link to the team approval or governance decision. For project transfers, also include existing-owner consent. Enter "Not applicable" for other actions.
+    validations:
+      required: true
+  - type: input
+    id: username
+    attributes:
+      label: PyPI username
+      description: Provide the username when requesting a membership change. PyPI requires two-factor authentication.
+  - type: dropdown
+    id: project_role
+    attributes:
+      label: Project role
+      description: Select the requested role for a PyPI team.
+      options:
+        - Owner
+        - Maintainer
+        - Not applicable
+    validations:
+      required: true
+  - type: textarea
+    id: trusted_publisher
+    attributes:
+      label: Trusted Publisher
+      description: For Trusted Publisher changes, provide the provider and identity details. For GitHub Actions, include the repository, workflow filename, and environment name.
+  - type: textarea
+    id: context
+    attributes:
+      label: Requested change
+      description: Describe the exact change and include any other information needed to complete the request.
+    validations:
+      required: true
