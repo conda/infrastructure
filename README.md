@@ -1,4 +1,4 @@
-# Conda GitHub Org Infrastructure
+# Conda Organization Infrastructure
 
 This is a centralized location for infrastructure codes and any related inquiries or discussions.
 
@@ -8,7 +8,9 @@ This is a centralized location for infrastructure codes and any related inquirie
 ## Quick Links
 
 I need:
+
 - [New/Edit GitHub Project](https://github.com/conda/infrastructure/issues/new?template=5_project.yml)
+- [Use the conda PyPI Organization](HOW_WE_USE_PYPI.md)
 - [Report Anaconda.org CDN Issue](https://github.com/conda/infrastructure/issues/new?template=5_cdn.yml)
 
 ## 👋 Welcome!
