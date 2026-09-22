@@ -84,9 +84,33 @@ def main(argv: Sequence[str] | None = None) -> int:
             if checked % progress_step == 0 or checked == total:
                 logger.info("Checked %d/%d release(s)", checked, total)
 
+    # Never fully empty a package's "dev" canary channel: always keep whichever
+    # release has the most recently uploaded "dev"-labeled distribution, no
+    # matter its age. A newer release under some other (or no) label doesn't
+    # count -- it isn't what people install from conda-canary/label/dev.
+    # Packages with infrequent activity (e.g. conda-launchers) may otherwise
+    # go from "one possibly-stale build" to "nothing at all" once it ages out.
+    latest = {}  # package_name -> (newest "dev" upload_time, version)
+    for (package_name, version), release in releases.items():
+        if not release:
+            continue
+        distributions = [
+            dist for dist in release["distributions"] if "dev" in dist.get("labels", [])
+        ]
+        if not distributions:
+            continue
+        newest = max(
+            datetime.fromisoformat(dist["upload_time"]) for dist in distributions
+        )
+        if package_name not in latest or newest > latest[package_name][0]:
+            latest[package_name] = (newest, version)
+
     for package_name, version in versions:
         release = releases[(package_name, version)]
         if release is None:
+            continue
+
+        if latest.get(package_name, (None, None))[1] == version:
             continue
 
         distributions = release["distributions"]
