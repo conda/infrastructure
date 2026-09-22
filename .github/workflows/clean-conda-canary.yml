@@ -36,7 +36,7 @@ jobs:
           python-version: '3.14'
 
       - name: Install anaconda-client
-        run: pip install anaconda-client
+        run: pip install anaconda-client==1.15.0
 
       - name: Remove stale conda-canary packages
         env:
