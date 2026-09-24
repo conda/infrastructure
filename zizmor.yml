@@ -21,6 +21,7 @@ rules:
       # automation model and is intentionally tracked as a policy decision
       # outside this audit-hardening pass.
       - cla.yml
+      - clean-conda-canary.yml
       - init.yml
       - issues.yml
       - project.yml
