@@ -23,12 +23,17 @@ conda/infrastructure:
   #   with:
   #     noarch: true
   # To toggle individual platforms:
+  # osx_64 and win_arm64 default to false. Other platforms default to true.
   #   with:
   #     linux_64: true
   #     linux_aarch64: true
   #     osx_64: true
   #     osx_arm64: true
   #     win_64: true
+  #     win_arm64: true
+  # To pass recipe arguments to conda-build, add:
+  #   with:
+  #     conda_build_arguments: --override-channels -c conda-forge
   # For repos whose test workflow is not named "Tests", add:
   #   with:
   #     tests_workflow: Test
