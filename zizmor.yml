@@ -44,3 +44,10 @@ rules:
       # attacker-controlled (they come from the stale action itself).
       # Low confidence finding.
       - stale.yml
+
+      # update.yml passes bot-generated step outputs into a run block
+      # exclusively via environment variables, so shell expansion cannot
+      # execute their contents. They cannot be inlined into the run block
+      # because large summaries exceed the E2BIG argument limit for
+      # create-pull-request inputs.
+      - update.yml
