@@ -31,6 +31,9 @@ conda/infrastructure:
   #     osx_arm64: true
   #     win_64: true
   #     win_arm64: true
+  # To pass recipe arguments to conda-build, add:
+  #   with:
+  #     conda_build_arguments: --override-channels -c conda-forge
   # For repos whose test workflow is not named "Tests", add:
   #   with:
   #     tests_workflow: Test
