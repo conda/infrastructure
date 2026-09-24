@@ -42,3 +42,22 @@ That is fine when `uses:` pins are not duplicated across branches (as in `build.
 
 **Pre-commit** — `templates/workflows/*.yml` are checked by `check-yaml` and `yamlfmt`. Other
 Jinja templates (for example `templates/dependabot.yml`) stay excluded.
+
+## Release archive attestations
+
+The `upload.yml` template generates GitHub build provenance attestations for the source
+archive and its SHA-256 checksum file before uploading them to a release. If attestation
+fails, the workflow stops before uploading the assets. GitHub stores the attestations in
+the repository where the workflow runs.
+
+After a downstream repository syncs this template and publishes a new release, consumers
+can verify either downloaded file with the GitHub CLI. Replace `ARCHIVE.tar.gz` with the
+archive's filename and `OWNER/REPO` with its repository:
+
+```sh
+gh attestation verify ARCHIVE.tar.gz --repo OWNER/REPO
+gh attestation verify ARCHIVE.tar.gz.sha256sum --repo OWNER/REPO
+```
+
+See [GitHub's artifact attestation documentation](https://docs.github.com/en/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations)
+for details.
