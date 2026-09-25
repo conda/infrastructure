@@ -10,3 +10,4 @@
       default-days: 7
       exclude:
         - conda/actions
+        - conda/actions/*
