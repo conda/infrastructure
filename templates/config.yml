@@ -122,6 +122,9 @@ conda/infrastructure:
   #     # SemVer placeholders
   #     placeholder: MAJOR.MINOR.PATCH
   #     placeholder_x: MAJOR.MINOR.x
+  #     # Opt in when pushing a version tag starts the publishing workflow.
+  #     # Provide RELEASE_PUBLISHING.md with repository-specific setup and retry steps.
+  #     tag_triggered_release: true
   # - src: templates/releases/rever.xsh
   #   dst: rever.xsh
   # - src: templates/releases/TEMPLATE
