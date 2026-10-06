@@ -17,6 +17,9 @@ conda/infrastructure:
   - .github/workflows/lock.yml
 
   # [optional] canary build workflow
+  # The build tool is detected at runtime from the project's recipe:
+  #   recipe/recipe.yaml -> rattler-build
+  #   recipe/meta.yaml   -> conda-build
   # - src: templates/workflows/build.yml
   #   dst: .github/workflows/build.yml
   # For noarch packages, add:
@@ -31,7 +34,7 @@ conda/infrastructure:
   #     osx_arm64: true
   #     win_64: true
   #     win_arm64: true
-  # To pass recipe arguments to conda-build, add:
+  # To pass recipe arguments to conda-build (ignored for rattler-build recipes), add:
   #   with:
   #     conda_build_arguments: --override-channels -c conda-forge
   # For repos whose test workflow is not named "Tests", add:

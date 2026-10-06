@@ -43,6 +43,24 @@ That is fine when `uses:` pins are not duplicated across branches (as in `build.
 **Pre-commit** — `templates/workflows/*.yml` are checked by `check-yaml` and `yamlfmt`. Other
 Jinja templates (for example `templates/dependabot.yml`) stay excluded.
 
+## Canary builds: conda-build or rattler-build
+
+`build.yml` picks the build tool at runtime (not at sync time) by looking at the recipe
+in the checked-out repository:
+
+| File present         | Build tool     |
+| -------------------- | -------------- |
+| `recipe/recipe.yaml` | rattler-build  |
+| `recipe/meta.yaml`   | conda-build    |
+
+If both exist, `recipe/recipe.yaml` is used; if neither exists the job fails. The result is
+stored in the `RECIPE_TOOL` environment variable, which gates the tool-specific steps.
+
+- conda-build recipes are built and uploaded with `conda/actions/canary-release`.
+- rattler-build recipes are built with `rattler-build build --experimental` (so `git.*` Jinja
+  functions work) and uploaded with `anaconda-client`.
+- `conda_build_arguments` only applies to conda-build recipes.
+
 ## Release archive attestations
 
 The `upload.yml` template generates GitHub build provenance attestations for the source
