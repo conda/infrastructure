@@ -38,7 +38,7 @@ Placeholder for `[[ repo.name ]] [[ placeholder ]]` release.
 ### Tasks
 
 [milestone]: [[ repo.html_url ]]/milestone/<milestone>
-[process]: [[ repo.html_url ]]/blob/main/RELEASE.md
+[process]: [[ repo.html_url ]]/blob/main/[[ release_process_path | default("RELEASE.md") ]]
 [releases]: [[ repo.html_url ]]/releases
 [main]: https://github.com/AnacondaRecipes/[[ repo.name ]]-feedstock
 [conda-forge]: https://github.com/conda-forge/[[ repo.name ]]-feedstock

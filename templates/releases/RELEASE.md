@@ -1,6 +1,5 @@
 <!-- edit this in [[ source.html_url ]] -->
 
-[epic template]: [[ repo.html_url ]]/issues/new?assignees=&labels=epic&template=epic.yml
 [compare]: [[ repo.html_url ]]/compare
 [new release]: [[ repo.html_url ]]/releases/new
 [infrastructure]: https://github.com/conda/infrastructure
@@ -43,15 +42,15 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 ### Tasks
 
 [milestone]: [[ repo.html_url ]]/milestone/<milestone>
-[process]: [[ repo.html_url ]]/blob/main/RELEASE.md
+[process]: [[ repo.html_url ]]/blob/main/[[ release_process_path | default("RELEASE.md") ]]
+[merge-back]: [[ repo.html_url ]]/blob/main/[[ release_process_path | default("RELEASE.md") ]]#8-merge-the-release-branch-back-into-main
 [releases]: [[ repo.html_url ]]/releases
 [main]: https://github.com/AnacondaRecipes/[[ repo.name ]]-feedstock
 [conda-forge]: https://github.com/conda-forge/[[ repo.name ]]-feedstock
 [ReadTheDocs]: https://readthedocs.com/projects/continuumio-[[ repo.name ]]/
 [zulip]: https://conda.zulipchat.com/#narrow/channel/480811-releases
 
-<details open>  <!-- feel free to remove the open attribute once this section is completed -->
-<summary><h4>The week before release week</h4></summary>
+#### The week before release week
 
 - [ ] Create release branch (named `[[ placeholder_x ]]`)
 - [ ] Ensure release candidates are being successfully built (see `conda-canary/label/conda-[[ repo.name ]]-rc-[[ placeholder_x ]]`)
@@ -60,16 +59,13 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 - [ ] Test release candidates
     <!-- indicate here who has signed off on testing -->
 
-</details>
-
-<details open>  <!-- feel free to remove the open attribute once this section is completed -->
-<summary><h4>Release week</h4></summary>
+#### Release week
 
 - [ ] Create release PR (see [release process][process])
 - [ ] Create Zulip thread on [[ '[#releases][zulip]' ]]
     - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
-- [ ] Review and merge the automated merge-back pull request (see [step 8](#8-merge-the-release-branch-back-into-main))
+- [ ] Review and merge the automated merge-back pull request (see [step 8][merge-back])
 - [ ] Activate the `[[ placeholder_x ]]` branch on [ReadTheDocs][ReadTheDocs]
 - [ ] Bump/update feedstocks
     - [ ] [Anaconda, Inc.'s feedstock][main]
@@ -78,8 +74,6 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 - [ ] Announce release
     - [ ] Create & publish conda.org blog post
     - [ ] Post on Zulip thread
-
-</details>
 ```
 </details>
 
@@ -95,29 +89,28 @@ Release `[[ placeholder ]]`
 
 #### Body:
 ```markdown
-<details open>  <!-- feel free to remove the open attribute once this section is completed -->
-<summary><h4>Patch [[ placeholder ]]</h4></summary>
+[process]: [[ repo.html_url ]]/blob/main/[[ release_process_path | default("RELEASE.md") ]]
+[merge-back]: [[ repo.html_url ]]/blob/main/[[ release_process_path | default("RELEASE.md") ]]#8-merge-the-release-branch-back-into-main
+[releases]: [[ repo.html_url ]]/releases
+[main]: https://github.com/AnacondaRecipes/[[ repo.name ]]-feedstock
+[conda-forge]: https://github.com/conda-forge/[[ repo.name ]]-feedstock
+[zulip]: https://conda.zulipchat.com/#narrow/channel/480811-releases
 
 - [ ] <!-- list issues & PRs that need to be resolved here -->
 - [ ] Create release PR (see [release process][process])
 - [ ] Update Zulip thread on [[ '[#releases][zulip]' ]]
     - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
-- [ ] Review and merge the automated merge-back pull request (see [step 8](#8-merge-the-release-branch-back-into-main))
+- [ ] Review and merge the automated merge-back pull request (see [step 8][merge-back])
 - [ ] Bump/update feedstocks
     - [ ] [Anaconda, Inc.'s feedstock][main]
     - [ ] [conda-forge feedstock][conda-forge]
 - [ ] Hand off to packaging team(s)
 - [ ] Announce release
     - [ ] Post on Zulip thread
-
-</details>
 ```
 
 </details>
-
-> [!NOTE]
-> The [epic template][epic template] is perfect for this; remember to remove the **`epic`** label.
 
 > [!NOTE]
 > A patch release is like a regular, i.e., follow the same steps in the process as you would for a regular release. Most patches are authored by existing contributors (most likely maintainers themselves) so running `rever <VERSION>` may succeed on the first pass.
