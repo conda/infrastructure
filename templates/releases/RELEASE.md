@@ -69,7 +69,7 @@ Placeholder for `[[ repo.name ]] [[ placeholder_x ]]` release.
 - [ ] Create Zulip thread on [[ '[#releases][zulip]' ]]
     - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
-- [ ] Merge `[[ placeholder_x ]]` back into `main`
+- [ ] Review and merge the automated merge-back pull request (see [step 8](#8-merge-the-release-branch-back-into-main))
 - [ ] Activate the `[[ placeholder_x ]]` branch on [ReadTheDocs][ReadTheDocs]
 - [ ] Bump/update feedstocks
     - [ ] [Anaconda, Inc.'s feedstock][main]
@@ -103,7 +103,7 @@ Release `[[ placeholder ]]`
 - [ ] Update Zulip thread on [[ '[#releases][zulip]' ]]
     - [ ] Announce `[[ placeholder ]]` in-progress
 - [ ] [Publish release][releases]
-- [ ] Merge `[[ placeholder_x ]]` back into `main`
+- [ ] Review and merge the automated merge-back pull request (see [step 8](#8-merge-the-release-branch-back-into-main))
 - [ ] Bump/update feedstocks
     - [ ] [Anaconda, Inc.'s feedstock][main]
     - [ ] [conda-forge feedstock][conda-forge]
@@ -246,28 +246,17 @@ To publish the release, go to the project's release page (e.g., [[ repo.html_url
 > [!NOTE]
 > Release notes can be drafted and saved ahead of time.
 
-## 8. Merge/cherry pick the release branch over to the `main` branch.
+## 8. Merge the release branch back into `main`.
 
-<details>
-<summary>Internal process</summary>
+After the release is published, the [`merge-back.yml`][infrastructure] workflow automatically pushes a `connector-[[ placeholder_x ]]` branch (a copy of `[[ placeholder_x ]]`) and opens a pull request merging it into `main`.
 
-1. From the main "< > Code" page of the repository, select the drop down menu next to the `main` branch button and then select "View all branches" at the very bottom.
+> [!IMPORTANT]
+> If the pull request has [merge conflicts][merge conflicts], resolve them by merging `main` into `connector-[[ placeholder_x ]]` and pushing the resulting merge commit there. Do **not** push `main` onto `[[ placeholder_x ]]` itself; `connector-[[ placeholder_x ]]` exists specifically so conflict resolution never touches the release branch.
 
-2. Find the applicable `[[ placeholder_x ]]` branch and click the "New pull request" button.
-
-3. "Base" should point to `main` while "Compare" should point to `[[ placeholder_x ]]`.
-
-4. Ensure that all of the commits being pulled in look accurate, then select "Create pull request".
-
-> [!NOTE]
-> Make sure NOT to push the "Update Branch" button. If there are [merge conflicts][merge conflicts], resolve them by merging `main` into the `[[ placeholder_x ]]` branch, then push the resulting merge commit. This is now a "bridging branch" to resolve the merge conflict without placing changes from `main` on to the `[[ placeholder_x ]]` branch.
-
-5. Review and merge the pull request the same as any code change pull request.
+Review and merge the pull request the same as any code change pull request.
 
 > [!NOTE]
 > The commits from the release branch need to be retained in order to be able to compare individual commits; in other words, a "merge commit" is required when merging the resulting pull request vs. a "squash merge". Protected branches will require permissions to be temporarily relaxed in order to enable this action.
-
-</details>
 
 ## 9. Open PRs to bump [Anaconda Recipes][Anaconda Recipes] and [conda-forge][conda-forge] feedstocks to use `[[ placeholder ]]`.
 
