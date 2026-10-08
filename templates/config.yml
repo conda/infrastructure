@@ -66,6 +66,14 @@ conda/infrastructure:
   #   with:
   #     news_directory: releases/news
 
+  # [optional] push a connector branch and open a PR merging the release
+  # branch back into main after a release is published
+  # - src: templates/workflows/merge-back.yml
+  #   dst: .github/workflows/merge-back.yml
+  # For repos whose release process doc isn't at the repo root, add:
+  #   with:
+  #     release_process_path: releases/RELEASE.md
+
   # [optional] keep .authors.yml current (weekly PR)
   # - src: templates/workflows/prepare-authors.yml
   #   dst: .github/workflows/prepare-authors.yml
@@ -125,6 +133,9 @@ conda/infrastructure:
   #     # Opt in when pushing a version tag starts the publishing workflow.
   #     # Provide RELEASE_PUBLISHING.md with repository-specific setup and retry steps.
   #     tag_triggered_release: true
+  #     # Must match the above `dst` so the doc's self-referential links
+  #     # (and merge-back.yml's PR body link) resolve correctly, e.g.:
+  #     release_process_path: releases/RELEASE.md
   # - src: templates/releases/rever.xsh
   #   dst: rever.xsh
   # - src: templates/releases/TEMPLATE
