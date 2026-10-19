@@ -56,7 +56,9 @@ conda/infrastructure:
   #   with:
   #     news_directory: releases/news
 
-  # [optional] aggregate news fragments into CHANGELOG on release branches
+  # [optional] aggregate news fragments into CHANGELOG on release branches;
+  # also supports manual workflow_dispatch runs with a `version` input for
+  # on-demand release projects without `.x` release branches
   # - src: templates/workflows/prepare-release.yml
   #   dst: .github/workflows/prepare-release.yml
   # For repos whose test workflow is not named "Tests", add:
