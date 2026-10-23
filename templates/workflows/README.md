@@ -22,11 +22,14 @@ should be updated when they do.
 - `# template-files-if [%- if ... %]`
 - `# template-files-else [%- else %]`
 - `# template-files-endif [%- endif %]`
+- `# template-files-set [%- set ... %]`
 - `# template-files-raw [%- raw %]`
 - `# template-files-endraw [%- endraw %]`
 
-Use `raw`/`endraw` around shell that contains `[[ ... ]]`. Rendered workflows keep the
-`# template-files-*` lines; GitHub Actions ignores them.
+Use `set` to normalize config parameters once at the top of the template, before any conditional
+reads them (`prepare-release.yml` applies its `on_demand` default this way). Use `raw`/`endraw`
+around shell that contains `[[ ... ]]`. Rendered workflows keep the `# template-files-*` lines;
+GitHub Actions ignores them.
 
 **Expressions** — do not start an unquoted scalar with `[[ ... ]]`. Use a quoted string or a
 literal block:
@@ -38,7 +41,13 @@ literal block:
 ```
 
 **Conditionals and Dependabot** — both branches of an `if`/`else` remain in the unrendered YAML.
-That is fine when `uses:` pins are not duplicated across branches (as in `build.yml`).
+That is fine when `uses:` pins are not duplicated across branches (as in `build.yml`), and when
+the variants are different keys (as in `prepare-release.yml`, which keeps both `workflow_run` and
+`workflow_dispatch` under `on:`). YAML forbids duplicate mapping keys, so a conditional that
+toggles a key keeps one variant in the source — `prepare-release.yml` drops its `if:` job guard
+and `version` input line in the other style — or inlines a conditional expression into a single
+value, which is how `prepare-release.yml` picks its `concurrency.group` suffix:
+`group: ${{ github.workflow }}-[[ "${{ github.ref_name }}" if on_demand else "..." ]]`.
 
 **Pre-commit** — `templates/workflows/*.yml` are checked by `check-yaml` and `yamlfmt`. Other
 Jinja templates (for example `templates/dependabot.yml`) stay excluded.
