@@ -1,8 +1,10 @@
 # edit this in [[ source.html_url ]]
+# template-files-set [%- set on_demand = on_demand | default(false) %]
 
 name: Prepare release notes
 
 on:
+  # template-files-if [%- if not on_demand %]
   workflow_run:
     workflows:
       - '[[ tests_workflow | default("Tests") ]]'
@@ -11,15 +13,17 @@ on:
     branches:
       - '[0-9].*.x'
       - '[0-9][0-9].*.x'
+  # template-files-else [%- else %]
   workflow_dispatch:
     inputs:
       version:
         description: Release version to prepare (MAJOR.MINOR.PATCH).
         required: true
         type: string
+  # template-files-endif [%- endif %]
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.workflow_run.head_branch || github.ref_name }}
+  group: ${{ github.workflow }}-[[ "${{ github.ref_name }}" if on_demand else "${{ github.event.workflow_run.head_branch }}" ]]
   cancel-in-progress: false
 
 permissions:
@@ -27,13 +31,12 @@ permissions:
 
 jobs:
   prepare:
+    # template-files-if [%- if not on_demand %]
     if: >-
-      github.event_name == 'workflow_dispatch'
-      || (
-        github.event.workflow_run.conclusion == 'success'
-        && github.event.workflow_run.event == 'push'
-        && github.event.workflow_run.head_repository.full_name == github.repository
-      )
+      github.event.workflow_run.conclusion == 'success'
+      && github.event.workflow_run.event == 'push'
+      && github.event.workflow_run.head_repository.full_name == github.repository
+    # template-files-endif [%- endif %]
     runs-on: ubuntu-slim
     steps:
       - name: Prepare Release Notes
@@ -42,7 +45,9 @@ jobs:
           token: ${{ secrets.SYNC_TOKEN }}
           news-directory: '[[news_directory | default("news")]]'
           changelog-path: CHANGELOG.md
+          # template-files-if [%- if on_demand %]
           version: ${{ inputs.version }}
+          # template-files-endif [%- endif %]
           release-branch-pattern: |
             [0-9].*.x
             [0-9][0-9].*.x
