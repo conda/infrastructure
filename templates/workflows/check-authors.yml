@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Check Authors
-        uses: conda/actions/prepare-authors@c8ad4261cc1d49709cb774289c68e63663bdc9d5 # v26.9.5
+        uses: conda/actions/prepare-authors@8153f7f73472ac36d654d5111be19abaecc48cc6 # v26.10.0
         with:
           mode: check
           since: tag
