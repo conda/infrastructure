@@ -10,6 +10,11 @@ rules:
       # new PRs for CLA verification.
       - cla.yml
 
+      # issues.yml uses issue_comment only to update fixed labels on
+      # non-PR issues. It never checks out code or evaluates comment content.
+      # Any commenter is intentionally allowed to trigger this transition.
+      - issues.yml
+
       # project.yml uses pull_request_target but does not check
       # out any code; it only adds PRs to a GitHub project board.
       - project.yml

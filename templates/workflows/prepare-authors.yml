@@ -20,13 +20,10 @@ jobs:
   prepare:
     if: '!github.event.repository.fork'
     runs-on: ubuntu-slim
-    permissions:
-      contents: write
-      pull-requests: write
     steps:
       - name: Prepare Authors
         uses: conda/actions/prepare-authors@c8ad4261cc1d49709cb774289c68e63663bdc9d5 # v26.9.5
         with:
-          token: ${{ secrets.SYNC_TOKEN }}
+          token: ${{ secrets.RELEASE_TOKEN }}
           since: tag
           base-branch: main
