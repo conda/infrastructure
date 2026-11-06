@@ -1,58 +1,8 @@
 # zizmor configuration file
 # https://docs.zizmor.sh/configuration/
-
-rules:
-  dangerous-triggers:
-    ignore:
-      # cla.yml uses pull_request_target but the workflow only
-      # invokes conda/actions/check-cla which does not check out
-      # untrusted PR code. The trigger is required to react to
-      # new PRs for CLA verification.
-      - cla.yml
-
-      # issues.yml uses issue_comment only to update fixed labels on
-      # non-PR issues. It never checks out code or evaluates comment content.
-      # Any commenter is intentionally allowed to trigger this transition.
-      - issues.yml
-
-      # project.yml uses pull_request_target but does not check
-      # out any code; it only adds PRs to a GitHub project board.
-      - project.yml
-
-  secrets-outside-env:
-    ignore:
-      # These workflows use repository/org secrets for cross-repo bot
-      # automation. Requiring deployment environments would change the
-      # automation model and is intentionally tracked as a policy decision
-      # outside this audit-hardening pass.
-      - cla.yml
-      - clean-conda-canary.yml
-      - init.yml
-      - issues.yml
-      - project.yml
-      - stale.yml
-      - update.yml
-
-  superfluous-actions:
-    ignore:
-      # These helper actions are pinned and currently provide workflow
-      # behavior that would need dedicated migration PRs before replacing
-      # them with inline GitHub CLI commands.
-      - init.yml
-      - issues.yml
-      - update.yml
-
-  template-injection:
-    ignore:
-      # stale.yml uses join(steps.stale.outputs.*, ',') in a run
-      # block to echo stale action outputs. These outputs are not
-      # attacker-controlled (they come from the stale action itself).
-      # Low confidence finding.
-      - stale.yml
-
-      # update.yml passes bot-generated step outputs into a run block
-      # exclusively via environment variables, so shell expansion cannot
-      # execute their contents. They cannot be inlined into the run block
-      # because large summaries exceed the E2BIG argument limit for
-      # create-pull-request inputs.
-      - update.yml
+#
+# Suppressions are intentionally kept inline in the workflow files, e.g.
+# `# zizmor: ignore[<audit>] <reason>`, instead of being listed here. This
+# documents each exception next to the code it applies to and lets
+# suppressions travel with workflows synced from this repository.
+rules: {}

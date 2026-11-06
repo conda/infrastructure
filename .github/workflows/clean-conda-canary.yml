@@ -40,7 +40,7 @@ jobs:
 
       - name: Remove stale conda-canary packages
         env:
-          ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_ORG_CONDA_CANARY_TOKEN }}
+          ANACONDA_API_TOKEN: ${{ secrets.ANACONDA_ORG_CONDA_CANARY_TOKEN }}  # zizmor: ignore[secrets-outside-env] Canary release token; environment policy unchanged.
           DRYRUN: ${{ inputs.dryrun || false }}
         run: |
           [ "${DRYRUN}" = "true" ] && args=(--dry-run) || args=()

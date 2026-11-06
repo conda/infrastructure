@@ -72,18 +72,19 @@ jobs:
           echo ::group::Fork debugging
           gh repo fork --clone=false --default-branch-only
           echo ::endgroup::
+          # shellcheck disable=SC1083
           UPSTREAM="$(gh api repos/{owner}/{repo}/forks --method POST -f default_branch_only=true --jq .full_name)"
           echo "UPSTREAM=${UPSTREAM}" >> "$GITHUB_ENV"
         env:
-          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}  # zizmor: ignore[secrets-outside-env] Sync token for bot automation; environment policy unchanged.
 
       - name: (upstream) Create PR
         # no-op if no commits were made
-        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1  # zizmor: ignore[superfluous-actions] Needs fork push support.
         with:
           path: upstream
           push-to-fork: ${{ env.UPSTREAM }}
-          token: ${{ secrets.SYNC_TOKEN }}
+          token: ${{ secrets.SYNC_TOKEN }}  # zizmor: ignore[secrets-outside-env] Sync token for bot automation; environment policy unchanged.
           branch: init-${{ github.event.inputs.org }}-${{ github.event.inputs.repo }}
           delete-branch: true
           title: 🤖 Remove ${{ github.event.inputs.org }}/${{ github.event.inputs.repo }} from `sync.yml`
@@ -125,18 +126,19 @@ jobs:
           echo ::group::Fork debugging
           gh repo fork --clone=false --default-branch-only
           echo ::endgroup::
+          # shellcheck disable=SC1083
           DOWNSTREAM="$(gh api repos/{owner}/{repo}/forks --method POST -f default_branch_only=true --jq .full_name)"
           echo "DOWNSTREAM=${DOWNSTREAM}" >> "$GITHUB_ENV"
         env:
-          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}  # zizmor: ignore[secrets-outside-env] Sync token for bot automation; environment policy unchanged.
 
       - name: (downstream) Create PR
         # no-op if no commits were made
-        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1  # zizmor: ignore[superfluous-actions] Needs fork push support.
         with:
           path: downstream
           push-to-fork: ${{ env.DOWNSTREAM }}
-          token: ${{ secrets.SYNC_TOKEN }}
+          token: ${{ secrets.SYNC_TOKEN }}  # zizmor: ignore[secrets-outside-env] Sync token for bot automation; environment policy unchanged.
           branch: init
           delete-branch: true
           title: 🤖 Init `update.yml` workflow
