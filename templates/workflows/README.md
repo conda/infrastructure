@@ -70,3 +70,18 @@ gh attestation verify ARCHIVE.tar.gz.sha256sum --repo OWNER/REPO
 
 See [GitHub's artifact attestation documentation](https://docs.github.com/en/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations)
 for details.
+
+## Release publishing is repository-owned
+
+`upload.yml` and `merge-back.yml` run after a release is published, but publishing
+itself is not templated: build commands and package upload targets differ per
+repository. Repositories that publish from a merged release PR (see
+`templates/releases/RELEASE_ON_DEMAND.md`) keep a `.github/workflows/release.yml`
+that builds its artifacts and then calls
+[`conda/actions/create-release`](https://github.com/conda/actions/tree/main/create-release).
+The action publishes the release after the build job finishes, which is when the
+version tag is created.
+
+`upload.yml` attaches its source archive after publication, which immutable
+releases do not allow. Repositories with immutable releases must build the
+archive in their release workflow before publishing.

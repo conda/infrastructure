@@ -136,9 +136,10 @@ conda/infrastructure:
   #     # SemVer placeholders
   #     placeholder: MAJOR.MINOR.PATCH
   #     placeholder_x: MAJOR.MINOR.x
-  #     # Opt in when pushing a version tag starts the publishing workflow.
-  #     # Provide RELEASE_PUBLISHING.md with repository-specific setup and retry steps.
-  #     tag_triggered_release: true
+  #     # The doc links to a RELEASE_PUBLISHING.md beside it, which describes the
+  #     # repository's release workflow and recovery steps. That workflow runs
+  #     # when a release-notes-<version> PR merges and calls
+  #     # conda/actions/create-release, whose publishing step creates the tag.
   #     # Must match the above `dst` so the doc's self-referential links
   #     # (and merge-back.yml's PR body link) resolve correctly, e.g.:
   #     release_process_path: releases/RELEASE.md
