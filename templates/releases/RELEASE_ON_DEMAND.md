@@ -1,7 +1,6 @@
 <!-- edit this in [[ source.html_url ]] -->
 
 [compare]: [[ repo.html_url ]]/compare
-[new release]: [[ repo.html_url ]]/releases/new
 [rever docs]: https://regro.github.io/rever-docs
 [Anaconda Recipes]: https://github.com/AnacondaRecipes/[[ repo.name ]]-feedstock
 [conda-forge]: https://github.com/conda-forge/[[ repo.name ]]-feedstock
@@ -38,7 +37,6 @@ Placeholder for `[[ repo.name ]] [[ placeholder ]]` release.
 
 [milestone]: [[ repo.html_url ]]/milestone/<milestone>
 [process]: [[ repo.html_url ]]/blob/main/[[ release_process_path | default("RELEASE.md") ]]
-[releases]: [[ repo.html_url ]]/releases
 [main]: https://github.com/AnacondaRecipes/[[ repo.name ]]-feedstock
 [conda-forge]: https://github.com/conda-forge/[[ repo.name ]]-feedstock
 [zulip]: https://conda.zulipchat.com/#narrow/channel/480811-releases
@@ -47,11 +45,7 @@ Placeholder for `[[ repo.name ]] [[ placeholder ]]` release.
 - [ ] Create release PR (see [release process][process])
 - [ ] Create Zulip thread on [[ '[#releases][zulip]' ]]
     - [ ] Announce `[[ placeholder ]]` in-progress
-[% if tag_triggered_release | default(false) -%]
-- [ ] Push the `[[ placeholder ]]` tag and complete the release workflow
-[% else -%]
-- [ ] [Publish release][releases]
-[% endif -%]
+- [ ] Merge the release PR and complete the release workflow
 - [ ] Bump/update feedstocks
     - [ ] [Anaconda, Inc.'s feedstock][main]
     - [ ] [conda-forge feedstock][conda-forge]
@@ -131,40 +125,12 @@ Install [`rever`][rever docs] using whatever your project defines (e.g., a conda
 
 ## 4. Wait for review and approval of the release PR.
 
-[% if tag_triggered_release | default(false) -%]
-## 5. Merge the release PR and push the version tag.
+## 5. Merge the release PR.
 
-Follow the [repository-specific publishing instructions](RELEASE_PUBLISHING.md) to complete any required setup before pushing the tag.
+Merging the release PR starts the repository's release workflow at the merge commit. It takes the release notes from the `[[ placeholder ]]` entry in `CHANGELOG.md`, attaches the artifacts, and publishes the release. Publishing creates the `[[ placeholder ]]` tag, so do not create, sign, or push the tag or publish the release by hand.
 
-After the release PR is reviewed and merged, fetch `main`:
+The [repository-specific publishing instructions](RELEASE_PUBLISHING.md) cover the workflow setup and recovery steps. Re-running the release workflow is safe until the release is published.
 
-```bash
-git fetch origin main
-```
-
-Confirm that `origin/main` is the intended release commit and that its required checks have passed. Then [create the release][new release] and **save as draft**:
-
-| Field | Value |
-|---|---|
-| Choose a tag | `[[ placeholder ]]` |
-| Target | `main` |
-| Body | copy/paste the `[[ placeholder ]]` entry from `CHANGELOG.md` |
-
-> **Note:** Leave this release as a draft. The publishing workflow publishes it after its package publication steps succeed.
-
-Create and push a signed version tag:
-
-```bash
-git tag -s [[ placeholder ]] origin/main -m "Release [[ placeholder ]]"
-git push origin [[ placeholder ]]
-```
-
-Follow the publishing workflow and complete any required approvals. The workflow publishes the draft release after its package publication steps succeed. Verify the published assets before updating feedstocks.
-[% else -%]
-## 5. Merge the release PR and publish the release.
-
-After the release PR is reviewed and merged, go to the [releases page][new release], create the release with the release notes from the `[[ placeholder ]]` entry in `CHANGELOG.md`, and publish.
-[% endif %]
 ## 6. Bump [Anaconda Recipes][Anaconda Recipes] and [conda-forge][conda-forge] feedstocks to use `[[ placeholder ]]`.
 
 Open a PR to bump the Anaconda Recipes feedstock.

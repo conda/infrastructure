@@ -2,6 +2,9 @@
 
 name: Upload release
 
+# Attaches the source archive after a release is published. Repositories with
+# immutable releases that publish from a merged release PR must build and
+# attach the archive before publishing.
 on:
   # https://docs.github.com/en/webhooks/webhook-events-and-payloads#release
   release:
