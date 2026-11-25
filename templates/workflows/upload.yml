@@ -2,6 +2,9 @@
 
 name: Upload release
 
+# Attaches the source archive after a release is published. Repositories that
+# opt into merge-triggered publishing (merge_triggered_release) use immutable
+# releases and must build and attach the archive before publishing.
 on:
   # https://docs.github.com/en/webhooks/webhook-events-and-payloads#release
   release:

@@ -49,6 +49,8 @@ Placeholder for `[[ repo.name ]] [[ placeholder ]]` release.
     - [ ] Announce `[[ placeholder ]]` in-progress
 [% if tag_triggered_release | default(false) -%]
 - [ ] Push the `[[ placeholder ]]` tag and complete the release workflow
+[% elif merge_triggered_release | default(false) -%]
+- [ ] Merge the release PR and complete the release workflow
 [% else -%]
 - [ ] [Publish release][releases]
 [% endif -%]
@@ -160,6 +162,12 @@ git push origin [[ placeholder ]]
 ```
 
 Follow the publishing workflow and complete any required approvals. The workflow publishes the draft release after its package publication steps succeed. Verify the published assets before updating feedstocks.
+[% elif merge_triggered_release | default(false) -%]
+## 5. Merge the release PR.
+
+Merging the release PR starts the repository's release workflow at the merge commit. It takes the release notes from the `[[ placeholder ]]` entry in `CHANGELOG.md`, attaches the artifacts, and publishes the release. Publishing creates the `[[ placeholder ]]` tag, so do not create, sign, or push the tag or publish the release by hand.
+
+The [repository-specific publishing instructions](RELEASE_PUBLISHING.md) cover the workflow setup and recovery steps. Re-running the release workflow is safe until the release is published.
 [% else -%]
 ## 5. Merge the release PR and publish the release.
 
