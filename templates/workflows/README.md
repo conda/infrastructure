@@ -75,13 +75,16 @@ for details.
 
 `upload.yml` and `merge-back.yml` run after a release is published, but publishing
 itself is not templated: build commands and package upload targets differ per
-repository. Repositories that publish from a merged release PR (see
-`templates/releases/RELEASE_ON_DEMAND.md`) keep a `.github/workflows/release.yml`
-that builds its artifacts and then calls
+repository. Repositories that opt into merge-triggered publishing with
+`merge_triggered_release: true` (see `templates/releases/RELEASE_ON_DEMAND.md`)
+keep a `.github/workflows/release.yml` that builds its artifacts and then calls
 [`conda/actions/create-release`](https://github.com/conda/actions/tree/main/create-release).
 The action publishes the release after the build job finishes, which is when the
-version tag is created.
+version tag is created. Repositories that have not migrated keep their existing
+workflow; `tag_triggered_release: true` still starts publishing from a pushed
+version tag.
 
 `upload.yml` attaches its source archive after publication, which immutable
-releases do not allow. Repositories with immutable releases must build the
-archive in their release workflow before publishing.
+releases do not allow. Repositories that opt into merge-triggered publishing use
+immutable releases and must build the archive in their release workflow before
+publishing.
